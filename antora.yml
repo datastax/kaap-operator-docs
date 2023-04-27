@@ -1,0 +1,12 @@
+name: pulsar-operator
+title: Pulsar Operator Documentation
+start_page: index.adoc
+
+asciidoc:
+  attributes:
+    protocol_version: '2.10'
+
+nav:
+  - modules/installation/nav.adoc
+  - modules/configuration/nav.adoc
+  - modules/operations/nav.adoc

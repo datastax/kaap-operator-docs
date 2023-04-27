@@ -1,1 +1,0 @@
-# pulsar-operator-docs
