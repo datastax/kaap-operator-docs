@@ -1,1 +1,10 @@
-= Configuration
+= Examples
+
+== Bookie autoscaling
+[source,bash]
+----
+helm install pulsar-operator helm/pulsar-operator \
+    --values helm/examples/bookie-autoscaling/values.yaml
+----
+
+== Scan a cluster and generate CRD
