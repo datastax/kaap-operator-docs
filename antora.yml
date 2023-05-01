@@ -6,6 +6,7 @@ asciidoc:
   attributes:
     protocol_version: '2.10'
     pulsar-operator: 'Pulsar Operator'
+    pulsar-stack: 'Pulsar Stack'
 
 nav:
   - modules/installation/nav.adoc
