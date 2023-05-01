@@ -1,0 +1,72 @@
+= Migrate existing Pulsar clusters
+
+What if you already have an existing Pulsar cluster, and want to control it with {pulsar-operator}?
+To migrate from the charts to the Pulsar operator there’s a new tool called “migration-tool” which is able to scan a Pulsar cluster and generates an equivalent PulsarCluster CRD. This tool also simulates the upgrade and generates a diff report that helps the user in the migration procedure spotting potential breaking changes.
+The tool is in the operator repository: https://github.com/riptano/pulsar-operator/tree/main/migration-examples
+
+The tool has been built to target both the Datastax Pulsar Helm Chart and the Astra Streaming Helm Chart.
+
+Astra Streaming chart overview
+Repository: https://github.com/riptano/astra-streaming/tree/master/helm_charts/pulsar
+
+The chart contains the Pulsar “builtin” resources (zk, bk, autorecovery, bastion, broker, proxy, function) that are already covered by the migration tool.
+However there are additional resources that need to be modified manually or refactored
+
+Chart separation
+
+The operator used in AS won’t be the pulsar-stack chart. This means all the 3rd party dependencies still have to be handled by the AS chart:
+Kafka/RabbitMQ proxies
+Admin Console
+Heartbeat
+CertManager
+KeyCloak
+Prometheus - Grafana
+Thanos
+…
+
+All these components MUST HAVE AN INDEPENDENT CONFIGURATION from the current cluster deployment. 
+For example, the value “.Values.enableTokenAuth” must not be used in the admin console resources because that value will be replaced by the CRD configuration.
+
+BellBurnell
+BellBurnell is deployed as a container in the proxy. The operator is able to configure sidecars for each component and so BB will continue to live inside the proxy pod. This is important because it can’t be directly configured in the operator because BellBurnell is a private application.
+Kafka/Rabbit proxies
+They are real Pulsar proxies, with a specific dns prefix. In the operator we can just create different proxy sets. This is already supported by the migration tool.
+
+Cluster definition configuration
+Currently each cluster has its own values file.
+After the migration, the pulsar cluster definition must be stored in the repo as well.
+The operator supports declaring a cluster in the values file. It makes sense to use it and have only one single file per deployment (like now).
+New values.yaml
+
+pulsar-operator:
+  cluster:
+     name: cluster-aws-dev-blabla
+     spec:
+        broker:..........
+adminConsole:
+…..
+
+
+One disadvantage is that the cluster definition is not “templateble”. This can lead to redundant configurations. For example, BellBurnell will be declared as a side-container of the proxy.
+
+Astra Streaming actions required before the migration
+Move Admin Console to his own values section
+Move Pulsar Heartbeat to his own values section
+Add the pulsar-operator as dependency
+Implement the new “migrateToOperator” flag
+
+Astra Streaming Migration Procedure
+Add a flag “migrateToOperator” with 3 possible values:
+“”: default value
+“in_progress”: that sets “helm.sh/release-policy: keep” to ALL the Pulsar resources that will be replaced by the operator
+“done”: in_progress + do not create any pulsar resources handled by the operator
+Add the pulsar-operator dependency to the chart
+Install the PulsarCluster CRD
+At this point, the operator will replace the existing resources and will perform a complete upgrade of the cluster
+Wait for the PulsarCluster to be up and running 
+Set migrateToOperator=done. This should make the chart continue working but not handling the Pulsar resources anymore.
+
+This procedure can handle rollback in case it’s needed:
+Delete the operator
+Set migrateToOperator to ””
+

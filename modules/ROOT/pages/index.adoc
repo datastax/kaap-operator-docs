@@ -26,6 +26,14 @@ You can install just the operator pod into an existing cluster, or you can insta
 
 You can also scan an exiting Pulsar cluster and generate an equivalent PulsarCluster CRD.
 
-=== CRDs
+== CRDs
 
 After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
+
+Autoscalers
+
+Resource sets
+
+Rack awareness
+
+Staged upgrades

@@ -1,0 +1,4 @@
+* xref:index.adoc[]
+* xref:operator.adoc[]
+* xref:chart.adoc[]
+* xref:stack.adoc[]

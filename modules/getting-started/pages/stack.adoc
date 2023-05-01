@@ -1,0 +1,111 @@
+= Install {pulsar-stack}
+
+Need more monitoring and management capabilities?
+Check out the {pulsar-stack}.
+It includes:
+
+* Pulsar Operator
+* Prometheus Stack (Grafana)
+* Pulsar Grafana dashboards
+* Cert Manager
+* Keycloak
+
+To install a PulsarCluster with the Pulsar stack included:
+[source,bash]
+----
+helm install pulsar pulsar-stack-0.0.2.tgz --set pulsar-operator.cluster.create=true
+----
+
+Wait for the cluster to be up and running:
+
+[source,bash]
+----
+kubectl wait pulsar pulsar --for condition=Ready=True --timeout=240s
+----
+
+To check the status of your deployments:
+
+[source,bash]
+----
+kubectl get deployment
+----
+
+result
+----
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+pulsar-autorecovery   1/1     1            1           24m
+pulsar-bastion        1/1     1            1           24m
+pulsar-operator       1/1     1            1           27m
+pulsar-proxy          2/3     3            2           24m
+----
+
+And describe the pulsar-operator deployment:
+
+[source,bash]
+----
+kubectl describe deployment pulsar-operator
+----
+
+result
+----
+Name:                   pulsar-operator
+Namespace:              pulsar-stack
+CreationTimestamp:      Tue, 28 Mar 2023 21:38:51 -0400
+Labels:                 app.kubernetes.io/managed-by=Helm
+                        app.kubernetes.io/name=pulsar-operator
+                        app.kubernetes.io/version=
+Annotations:            deployment.kubernetes.io/revision: 1
+                        meta.helm.sh/release-name: pulsar
+                        meta.helm.sh/release-namespace: pulsar-stack
+                        prometheus.io/path: /q/metrics
+                        prometheus.io/port: 8080
+                        prometheus.io/scheme: http
+                        prometheus.io/scrape: true
+Selector:               app.kubernetes.io/name=pulsar-operator,app.kubernetes.io/version=
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:           app.kubernetes.io/name=pulsar-operator
+                    app.kubernetes.io/version=
+  Annotations:      prometheus.io/path: /q/metrics
+                    prometheus.io/port: 8080
+                    prometheus.io/scheme: http
+                    prometheus.io/scrape: true
+  Service Account:  pulsar-operator
+  Containers:
+   pulsar-operator:
+    Image:      datastax/lunastreaming-operator:latest
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Liveness:   http-get http://:8080/q/health/live delay=0s timeout=10s period=30s #success=1 #failure=3
+    Readiness:  http-get http://:8080/q/health/ready delay=0s timeout=10s period=30s #success=1 #failure=3
+    Environment:
+      KUBERNETES_NAMESPACE:   (v1:metadata.namespace)
+    Mounts:                  <none>
+  Volumes:                   <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   pulsar-operator-7975c847d4 (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  27m   deployment-controller  Scaled up replica set pulsar-operator-7975c847d4 to 1
+----
+
+
+To uninstall the operator and the cluster:
+[source,bash]
+----
+helm delete pulsar
+----
+
+result
+----
+release "pulsar" uninstalled
+----
