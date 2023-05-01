@@ -9,6 +9,6 @@ asciidoc:
     pulsar-stack: 'Pulsar Stack'
 
 nav:
-  - modules/installation/nav.adoc
+  - modules/getting-started/nav.adoc
+  - modules/migration/nav.adoc
   - modules/configuration/nav.adoc
-  - modules/operations/nav.adoc

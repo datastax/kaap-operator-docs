@@ -30,9 +30,10 @@ TEST SUITE: None
 ----
 
 . Ensure pulsar-operator is up and running:
++
 [tabs]
 ====
-Helm::
+Kubectl::
 +
 --
 [source,helm]
@@ -44,19 +45,18 @@ kubectl get deployment
 Result::
 +
 --
-[source,console]
-----
+[source,bash]
 ----
 NAME              READY   UP-TO-DATE   AVAILABLE   AGE
 pulsar-operator   1/1     1            1           13m
 ----
-----
 --
 ====
-
+. Describe the deployment:
++
 [tabs]
 ====
-Helm::
+Kubectl::
 +
 --
 [source,helm]
@@ -68,8 +68,7 @@ kubectl describe deployment pulsar-operator
 Result::
 +
 --
-[source,console]
-----
+[source,plain]
 ----
 Name:                   pulsar-operator
 Namespace:              pulsar-stack
@@ -119,7 +118,6 @@ Events:
   Type    Reason             Age    From                   Message
   ----    ------             ----   ----                   -------
   Normal  ScalingReplicaSet  5m48s  deployment-controller  Scaled up replica set pulsar-operator-7975c847d4 to 1
-----
 ----
 --
 ====

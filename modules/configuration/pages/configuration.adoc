@@ -1,4 +1,4 @@
-= Examples
+= Configuration
 
 == Bookie autoscaling
 [source,bash]
