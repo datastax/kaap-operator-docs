@@ -1,10 +1,14 @@
-= Configuration
+= Configuration Reference
 
-== Bookie autoscaling
-[source,bash]
-----
-helm install pulsar-operator helm/pulsar-operator \
-    --values helm/examples/bookie-autoscaling/values.yaml
-----
+== {pulsar-operator}
+[%header,format=csv,cols="2,1,3,1"]
+|===
+include::example$/operator-configuration.csv[]
+|===
 
-== Scan a cluster and generate CRD
+
+== {pulsar-stack}
+[%header,format=csv,cols="2,1,3,1"]
+|===
+include::example$/stack-configuration.csv[]
+|===

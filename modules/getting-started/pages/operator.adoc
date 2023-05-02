@@ -36,7 +36,7 @@ TEST SUITE: None
 Kubectl::
 +
 --
-[source,helm]
+[source,kubectl]
 ----
 kubectl get deployment
 ----
@@ -122,9 +122,14 @@ Events:
 --
 ====
 
-You've now installed Pulsar Operator within your Pulsar cluster.
+You've now installed {pulsar-operator} within your Pulsar cluster.
+
+== Upgrade
+
+kubectl replace -f helm/pulsar-operator/crds
 
 == Uninstall
+
 To uninstall the operator:
 [tabs]
 ====
@@ -147,4 +152,6 @@ release "pulsar-operator" uninstalled
 --
 ====
 
+== What's next?
 
+With 

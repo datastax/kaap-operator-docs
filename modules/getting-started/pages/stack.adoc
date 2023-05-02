@@ -13,7 +13,7 @@ It includes:
 To install a PulsarCluster with the Pulsar stack included:
 [source,bash]
 ----
-helm install pulsar pulsar-stack-0.0.2.tgz --set pulsar-operator.cluster.create=true
+helm install pulsar pulsar-stack-0.0.4.tgz --set pulsar-operator.cluster.create=true
 ----
 
 Wait for the cluster to be up and running:
@@ -25,12 +25,23 @@ kubectl wait pulsar pulsar --for condition=Ready=True --timeout=240s
 
 To check the status of your deployments:
 
-[source,bash]
+. Ensure pulsar-operator is up and running:
++
+[tabs]
+====
+Kubectl::
++
+--
+[source,kubectl]
 ----
 kubectl get deployment
 ----
+--
 
-result
+Result::
++
+--
+[source,bash]
 ----
 NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
 pulsar-autorecovery   1/1     1            1           24m
@@ -38,15 +49,24 @@ pulsar-bastion        1/1     1            1           24m
 pulsar-operator       1/1     1            1           27m
 pulsar-proxy          2/3     3            2           24m
 ----
-
-And describe the pulsar-operator deployment:
-
-[source,bash]
+--
+====
+. Describe the deployment:
+[tabs]
+====
+Kubectl::
++
+--
+[source,kubectl]
 ----
 kubectl describe deployment pulsar-operator
 ----
+--
 
-result
+Result::
++
+--
+[source,plain]
 ----
 Name:                   pulsar-operator
 Namespace:              pulsar-stack
@@ -97,15 +117,34 @@ Events:
   ----    ------             ----  ----                   -------
   Normal  ScalingReplicaSet  27m   deployment-controller  Scaled up replica set pulsar-operator-7975c847d4 to 1
 ----
+--
+====
 
+You've now installed {pulsar-stack}.
 
+== Uninstall
 To uninstall the operator and the cluster:
-[source,bash]
+[tabs]
+====
+Helm::
++
+--
+[source,kubectl]
 ----
 helm delete pulsar
 ----
+--
 
-result
+Result::
++
+--
+[source,console]
 ----
 release "pulsar" uninstalled
 ----
+--
+====
+
+== What's next?
+
+With {pulsar-stack} installed, continue on to 

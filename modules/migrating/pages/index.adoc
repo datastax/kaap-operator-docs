@@ -1,6 +1,7 @@
 = Migrate existing Pulsar clusters
 
 What if you already have an existing Pulsar cluster, and want to control it with {pulsar-operator}?
+To migrate charts 
 To migrate from the charts to the Pulsar operator there’s a new tool called “migration-tool” which is able to scan a Pulsar cluster and generates an equivalent PulsarCluster CRD. This tool also simulates the upgrade and generates a diff report that helps the user in the migration procedure spotting potential breaking changes.
 The tool is in the operator repository: https://github.com/riptano/pulsar-operator/tree/main/migration-examples
 
