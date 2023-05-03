@@ -1,8 +1,8 @@
-= Install {pulsar-stack}
+= Install {pulsar-stack} Helm chart
 
 Need more monitoring and management capabilities?
 Check out the {pulsar-stack}.
-It includes:
+{pulsar-stack} includes:
 
 * Pulsar Operator
 * Prometheus Stack (Grafana)

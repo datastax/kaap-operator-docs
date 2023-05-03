@@ -14,7 +14,7 @@ Learn more about installing the Luna Streaming Helm chart xref:install-upgrade:q
 ====
 
 . The {pulsar-operator} Helm chart is currently only available privately.
-Download it here: https://github.com/riptano/pulsar-operator/releases/download/pulsar-operator-0.0.2/pulsar-operator-0.0.2.tgz
+Download it here: https://github.com/riptano/pulsar-operator/releases/download/pulsar-operator-0.0.4/pulsar-operator-0.0.4.tgz
 . Install the {pulsar-operator} Helm chart:
 +
 [source,helm]
@@ -71,7 +71,7 @@ Result::
 [source,plain]
 ----
 Name:                   pulsar-operator
-Namespace:              pulsar-stack
+Namespace:              pulsar-operator
 CreationTimestamp:      Tue, 28 Mar 2023 22:14:35 -0400
 Labels:                 app.kubernetes.io/managed-by=Helm
                         app.kubernetes.io/name=pulsar-operator

@@ -1,5 +1,4 @@
 = Build {pulsar-operator} from source
-Development
 
 The operator is built on the https://quarkiverse.github.io/quarkiverse-docs/quarkus-operator-sdk/dev/index.html[Quarkus Operator SDK] library.
 
@@ -7,16 +6,14 @@ The operator is built on the https://quarkiverse.github.io/quarkiverse-docs/quar
 * JDK17+
 * Maven
 * Docker
-Creates the operator docker image
-mvn package -DskipTests -pl pulsar-operator -am -Pskip-crds
 
-To build the operator from source:
+To build the operator Docker image (without CRDs):
 [tabs]
 ====
 Console::
 +
 --
-[source,helm]
+[source,bash]
 ----
 mvn package -DskipTests -pl pulsar-operator -am -Pskip-crds
 ----
@@ -25,7 +22,7 @@ mvn package -DskipTests -pl pulsar-operator -am -Pskip-crds
 Result::
 +
 --
-[source,console]
+[source,bash]
 ----
 [INFO] --- maven-jar-plugin:3.3.0:test-jar (default) @ pulsar-operator ---
 [INFO] Building jar: /Users/mendon.kissling/Documents/GitHub/pulsar-operator/pulsar-operator/target/pulsar-operator-0.0.4-SNAPSHOT-tests.jar
@@ -45,33 +42,84 @@ Result::
 --
 ====
 
-If you want to use a public k8s cluster, you would need to deploy the operator image to DockerHub or another public registry.
-
-$dockerhub_repo=<your dockerhub repo>
+If you want to use a public k8s cluster, deploy the operator image to DockerHub or another public registry:
+[source,bash]
+----
+dockerhub_repo=<your dockerhub repo>
 docker tag datastax/lunastreaming-operator:latest-dev
-$dockerhub_repo/lunastreaming-operator:latest
+dockerhub_repo/lunastreaming-operator:latest
 docker push $dockerhub_repo/lunastreaming-operator:latest
+----
 
 == Local deployment
-In order to quickly test your changes, it’s possible to create a local k8s cluster. This repository contains several scripts to work with a K3s cluster. The only requirements is Docker.
+To quickly test your changes, we've included a script to create a local k3s cluster in a Docker container.
+This repository contains several scripts to work with a K3s cluster.
+The below script deploys a k3s cluster in a docker container.
+No mounts are configured.
+[source,bash]
+----
+cd pulsar-operator
+pulsar-operator git:(main) ./tests/src/test/scripts/local-k3s.sh
+----
 
-Startup K3s
-./tests/src/test/scripts/local-k3s.sh
-It creates a namespace ns for convenience. Now the ~/.kube/config has been modified to point to the local k3s cluster.
-
+This script creates a namespace called 'ns' and modifies `~/.kube/config` to point to the newly created k3s cluster.
+Confirm your configuration has been modified and the container created:
+[tabs]
+====
+Kubectl::
++
+--
+[source,bash]
+----
 kubectl config get-contexts
-The cluster is deployed in a docker container. You can kill and recreate it whenever you want. No mounts are configured.
+----
+--
 
+Result::
++
+--
+[source,bash]
+----
+CURRENT   NAME                                         CLUSTER                                      AUTHINFO                                     NAMESPACE
+          gke_gcp-techpubs_us-east1-b_luna-streaming   gke_gcp-techpubs_us-east1-b_luna-streaming   gke_gcp-techpubs_us-east1-b_luna-streaming
+*         pulsaroperator-local-k3s                     pulsaroperator-local-k3s                     pulsaroperator-local-k3s
+----
+--
+====
+
+. See the container in Docker:
+[tabs]
+====
+Docker::
++
+--
+[source,bash]
+----
 docker ps
-After testing, do remember to remove unused volumes from docker.
+----
+--
 
-docker volume prune -f
+Result::
++
+--
+[source,bash]
+----
+CONTAINER ID   IMAGE                                        COMMAND                  CREATED              STATUS          PORTS                NAMES
+a45161757a5f   datastax/lunastreaming-operator:latest-dev   "java -Djava.util.lo…"   About a minute ago   Up 25 seconds   8080/tcp, 8443/tcp interesting_thompson
+----
+--
+====
+
+After testing, remember to remove unused Docker volumes with `docker volume prune -f`.
+
+
+
 If you did some changes to the operator code and wants to redeploy it, you can use the following script.
 
 ./tests/src/test/scripts/local-k3s-update-operator-no-crds.sh
 This will build and push the new docker image to the container. You’ll need to manually restart the operator pod.
 
-Use the Quarkus dev mode
+== Quarkus dev mode
 In this mode, the pulsar-operator code is hot reloaded at every change in the source code.
 
 mvn quarkus:dev -pl pulsar-operator -am -Pskip-crds
@@ -82,9 +130,28 @@ Integration tests
 Integration tests under tests spin up a K3s cluster in docker. In order to troubleshoot a failure test, sometimes it’s useful to use your own cluster to run the tests. All the tests create a new temporary namespace but some cluster-wide resources are created and deleted, so be careful.
 
 In order to run a test targeting the current kube context:
-
+[tabs]
+====
+Maven::
++
+--
+[source,bash]
+----
 mvn -pl tests test -Dtest='CRDsTest' -Prun-tests-current-context
-If you’re using a public cluster (e.g. GCP, EKS) you have to deploy the operator image to a public Docker registry. You can also use a specific StorageClass for the test by setting ´pulsaroperator.tests.existingenv.storageclass`.
+----
+--
+
+Result::
++
+--
+[source,bash]
+----
+
+----
+--
+====
+
+If you’re using a public cloud (e.g. GCP, EKS), you have to first deploy the operator image to a public Docker registry.
 
 To run a test in GCP:
 
