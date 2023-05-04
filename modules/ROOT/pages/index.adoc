@@ -22,11 +22,11 @@ Think of {pulsar-operator} as a manager for the individual components of Pulsar.
 
 {pulsar-operator} comes in two distinct flavors.
 
-* xref:getting-started/operator.adoc[Pulsar Operator] - Install just the operator pod into an existing Pulsar cluster.
+* xref:getting-started:operator.adoc[Pulsar Operator] - Install just the operator pod into an existing Pulsar cluster.
 
-* xref:getting-started/stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
+* xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
 
-You can also scan an existing Pulsar cluster and generate an equivalent PulsarCluster CRD. For more, see xref:migrating/index.adoc[].
+You can also scan an existing Pulsar cluster and generate an equivalent PulsarCluster CRD. For more, see xref:migrating:index.adoc[].
 
 == Features
 After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
