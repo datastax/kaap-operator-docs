@@ -8,5 +8,8 @@ To preview docs locally:
 ```
 cd pulsar-operator-docs                             
 pulsar-operator-docs git:(main) antora --fetch --clean antora-playbooks/develop.yaml
+...
+Site generation complete!
+Open file:///Users/mendon.kissling/Documents/GitHub/datastax-streaming-site/pulsar-operator-docs/build/site/index.html in a browser to view your site.
 ```
 3. A /Build folder with the site build is generated. 
