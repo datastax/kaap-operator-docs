@@ -1,0 +1,53 @@
+= PulsarCluster Resource Definition
+A custom resource is an extension of the Kubernetes API, and a Custom Resource Definition defines the state of a resource and how it is managed.
+The PulsarCluster resource is a custom resource that defines the PulsarCluster resource, which is used by the {pulsar-operator} to manage Pulsar cluster resources.
+A Pulsar cluster can be deployed and managed just by generating a PulsarCluster resource and applying it to the Kubernetes cluster.
+Subsequent changes to the PulsarCluster resource will be applied to the Pulsar cluster.
+This greatly simplifies Pulsar cluster management. Old difficulties like decommissioning bookies or scaling brokers are now as simple as editing a PulsarCluster resource and applying the changes with the {pulsar-operator}.
+
+Read on to see how to install the {pulsar-operator}, create the PulsarCluster resource, and deploy a Pulsar cluster.
+
+== Install the Pulsar Operator
+. Install the pulsar-operator Helm chart.
+[source,helm]
+----
+helm install pulsar-operator pulsar-operator-0.0.4.tgz
+...
+NAME: pulsar-operator
+LAST DEPLOYED: Wed Mar 15 12:22:29 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+----
+. Install the PulsarCluster resource.
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+helm upgrade pulsar-operator pulsar-operator-0.0.4.tgz -f helm/examples/grafana/values.yaml
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+Release "pulsar-operator" has been upgraded. Happy Helming!
+NAME: pulsar-operator
+LAST DEPLOYED: Thu May 11 16:05:30 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 2
+TEST SUITE: None
+----
+--
+====
+
+== Create the PulsarCluster Resource
+
+==
