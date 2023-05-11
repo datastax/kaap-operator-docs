@@ -1,1 +1,12 @@
 = pulsar-operator-docs
+
+Documentation for Pulsar Operator project.
+To preview docs locally:  
+
+1. Install Antora[https://docs.antora.org/antora/latest/install-and-run-quickstart/]
+2. Build documentation with Antora:
+```
+cd pulsar-operator-docs                             
+pulsar-operator-docs git:(main) antora --fetch --clean antora-playbooks/develop.yaml
+```
+3. A /Build folder with the site build is generated. 
