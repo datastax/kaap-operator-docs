@@ -5,8 +5,3 @@ A Pulsar cluster can be deployed and managed just by generating a PulsarCluster 
 Subsequent changes to the PulsarCluster resource will be applied to the Pulsar cluster.
 This greatly simplifies Pulsar cluster management. Difficulties like decommissioning bookies or scaling brokers are now as simple as editing a PulsarCluster resource and applying the changes with the {pulsar-operator}.
 
-Read on to see how to install the {pulsar-operator}, create the PulsarCluster resource, and deploy a Pulsar cluster.
-
-
-
-==

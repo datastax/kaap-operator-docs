@@ -1,4 +1,7 @@
 * xref:index.adoc[]
 ** xref:operator.adoc[]
 ** xref:stack.adoc[]
+** xref:pulsar-cluster-resource.adoc[]
+** xref:upgrades.adoc[]
+** xref:upgrade-crds.adoc[]
 ** xref:source.adoc[]

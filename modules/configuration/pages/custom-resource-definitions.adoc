@@ -1,3 +1,0 @@
-= PulsarCluster CRDs
-
-The {pulsar-operator} installs with a PulsarCluster custom resource. 

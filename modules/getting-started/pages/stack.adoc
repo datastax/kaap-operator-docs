@@ -25,7 +25,7 @@ kubectl wait pulsar pulsar --for condition=Ready=True --timeout=240s
 
 To check the status of your deployments:
 
-. Ensure pulsar-operator is up and running:
+. Ensure pulsar-stack is up and running:
 +
 [tabs]
 ====
@@ -59,7 +59,7 @@ Kubectl::
 --
 [source,kubectl]
 ----
-kubectl describe deployment pulsar-operator
+kubectl describe deployment pulsar-stack
 ----
 --
 
@@ -68,7 +68,7 @@ Result::
 --
 [source,plain]
 ----
-Name:                   pulsar-operator
+Name:                   pulsar-stack
 Namespace:              pulsar-stack
 CreationTimestamp:      Tue, 28 Mar 2023 21:38:51 -0400
 Labels:                 app.kubernetes.io/managed-by=Helm

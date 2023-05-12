@@ -255,8 +255,6 @@ pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1 
 
 You did it!
 You now have a Pulsar cluster up and running with auto-scaling capabilities managed by {pulsar-operator}.
-//== Upgrade
-//kubectl replace -f helm/pulsar-operator/crds
 
 == Uninstall
 

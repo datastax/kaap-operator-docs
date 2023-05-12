@@ -1,0 +1,32 @@
+= Upgrade CRDs
+
+To upgrade CRDs:
++
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+kubectl replace -f helm/pulsar-operator/crds
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+customresourcedefinition.apiextensions.k8s.io/autorecoveries.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/bastions.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/bookkeepers.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/brokers.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/functionsworkers.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/proxies.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/pulsarclusters.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/zookeepers.pulsar.oss.datastax.com replaced
+----
+--
+====
+
