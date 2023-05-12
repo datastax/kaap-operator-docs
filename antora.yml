@@ -10,5 +10,5 @@ asciidoc:
 
 nav:
   - modules/getting-started/nav.adoc
-  - modules/migration/nav.adoc
+  - modules/migrating/nav.adoc
   - modules/configuration/nav.adoc
