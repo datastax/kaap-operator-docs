@@ -1,12 +1,18 @@
 = Install {pulsar-operator} Helm chart
 
-You need to have an existing Pulsar cluster up and running first - might we suggest our DataStax Pulsar Helm chart?
+// Operator Hub
+// The install will be updated when chart is available publicly
+
+{pulsar-operator} is installed using Helm.
+You can install <<operator,(1)>> just the operator and the PulsarCluster CRDs, or you can install <<values,(2)>> the operator, CRDs, and a Pulsar cluster defined with a values.yaml file.
+[#operator]
+== Install {pulsar-operator}
+
+Install the DataStax Helm repository:
 [source,helm]
 ----
 helm repo add datastax-pulsar https://datastax.github.io/pulsar-helm-chart
 helm repo update
-curl -LOs https://datastax.github.io/pulsar-helm-chart/examples/dev-values.yaml
-helm install pulsar -f dev-values.yaml datastax-pulsar/pulsar
 ----
 [TIP]
 ====
@@ -28,7 +34,6 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
-
 . Ensure pulsar-operator is up and running:
 +
 [tabs]
@@ -78,7 +83,7 @@ Labels:                 app.kubernetes.io/managed-by=Helm
                         app.kubernetes.io/version=
 Annotations:            deployment.kubernetes.io/revision: 1
                         meta.helm.sh/release-name: pulsar-operator
-                        meta.helm.sh/release-namespace: pulsar-stack
+                        meta.helm.sh/release-namespace: pulsar-cluster
                         prometheus.io/path: /q/metrics
                         prometheus.io/port: 8080
                         prometheus.io/scheme: http
@@ -122,11 +127,136 @@ Events:
 --
 ====
 
-You've now installed {pulsar-operator} within your Pulsar cluster.
+. You've now installed {pulsar-operator}.
 
-== Upgrade
+By default, when {pulsar-operator} is installed, the PulsarCluster CRDs are also created.
+This setting is defined in the {pulsar-operator} values.yaml file as `crd: create: true`.
 
-kubectl replace -f helm/pulsar-operator/crds
+. To see the available CRDs:
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+kubectl get crds | grep datastax
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+autorecoveries.pulsar.oss.datastax.com           2023-05-12T16:35:59Z
+bastions.pulsar.oss.datastax.com                 2023-05-12T16:36:00Z
+bookkeepers.pulsar.oss.datastax.com              2023-05-12T16:36:00Z
+brokers.pulsar.oss.datastax.com                  2023-05-12T16:36:01Z
+functionsworkers.pulsar.oss.datastax.com         2023-05-12T16:36:01Z
+proxies.pulsar.oss.datastax.com                  2023-05-12T16:36:02Z
+pulsarclusters.pulsar.oss.datastax.com           2023-05-12T16:36:04Z
+zookeepers.pulsar.oss.datastax.com               2023-05-12T16:36:06Z
+----
+--
+====
+
+[#values]
+== Install {pulsar-operator} Helm chart and a values.yaml file
+
+You can install the {pulsar-operator} with a pre-configured values.yaml file.
+This values file configures additional components, such as Broker, Zookeeper, and Bookkeeper pods for your Pulsar cluster.
+This is a great way to get a cluster up and running quickly, while still having fine-grained control of each component.
+For this example, we'll install the Pulsar Operator *and* a complete Pulsar cluster with auto-scaling capabilities.
++
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+helm install pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+NAME: pulsar
+LAST DEPLOYED: Fri May 12 12:36:13 2023
+NAMESPACE: pulsar-cluster
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+----
+--
+====
+
+To see the available CRDs:
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+kubectl get crds | grep datastax
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+autorecoveries.pulsar.oss.datastax.com           2023-05-12T16:35:59Z
+bastions.pulsar.oss.datastax.com                 2023-05-12T16:36:00Z
+bookkeepers.pulsar.oss.datastax.com              2023-05-12T16:36:00Z
+brokers.pulsar.oss.datastax.com                  2023-05-12T16:36:01Z
+functionsworkers.pulsar.oss.datastax.com         2023-05-12T16:36:01Z
+proxies.pulsar.oss.datastax.com                  2023-05-12T16:36:02Z
+pulsarclusters.pulsar.oss.datastax.com           2023-05-12T16:36:04Z
+zookeepers.pulsar.oss.datastax.com               2023-05-12T16:36:06Z
+----
+--
+====
+
+To see your new Pulsar cluster up and running:
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+kubectl get pods -A
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+pulsar-cluster   pulsar-autorecovery-57cfc8b84d-xvchb                       1/1     Running     0          53m
+pulsar-cluster   pulsar-bastion-74777cbbf9-pcq5x                            1/1     Running     0          53m
+pulsar-cluster   pulsar-bookkeeper-0                                        1/1     Running     0          55m
+pulsar-cluster   pulsar-broker-0                                            1/1     Running     0          53m
+pulsar-cluster   pulsar-operator-7d8cc69df5-ncs5j                           1/1     Running     0          66m
+pulsar-cluster   pulsar-proxy-5bd5cc4fb6-9pnl7                              1/1     Running     0          53m
+pulsar-cluster   pulsar-zookeeper-0                                         1/1     Running     0          58m
+pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1     Completed   0          56m
+----
+--
+====
+
+You did it!
+You now have a Pulsar cluster up and running with auto-scaling capabilities managed by {pulsar-operator}.
+//== Upgrade
+//kubectl replace -f helm/pulsar-operator/crds
 
 == Uninstall
 
@@ -154,4 +284,7 @@ release "pulsar-operator" uninstalled
 
 == What's next?
 
-With 
+With your new operator and PulsarCluster resources, you can automate some amazing things.
+* xref:
+* xref:
+* xref:
