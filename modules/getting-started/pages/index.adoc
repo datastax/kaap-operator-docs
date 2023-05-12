@@ -1,5 +1,4 @@
-= Install
-
+= Getting started
 {pulsar-operator} comes in two distinct flavors:
 
 * xref:getting-started:operator.adoc[Pulsar Operator] - Install just the operator pod into an existing Pulsar cluster.
