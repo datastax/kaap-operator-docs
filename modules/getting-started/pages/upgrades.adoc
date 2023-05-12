@@ -1,6 +1,6 @@
 
 = Upgrades
-The operator performs cluster upgrades in a very conservative manner, with the primary goal of reducing maintenance window time during upgrades.
+The operator performs cluster upgrades in a very conservative manner, with the primary goal of reducing maintenance time during upgrades.
 Components are updated and then restarted *only* if strictly needed. For example, if only the broker needs to be upgraded, then all other services will be left up and running.
 If there is an error or interruption during upgrade, the operator will apply the desired state defined in the PulsarCluster custom resource until the resource matches the actual state.
 
@@ -34,7 +34,7 @@ stateDiagram-v2
 
 == Example
 
-For example, if you've installed the operator with autoscaling enabled:
+For example, if you've installed the operator with a yaml file:
 +
 [tabs]
 ====
@@ -61,4 +61,91 @@ TEST SUITE: None
 ----
 --
 ====
+
+Looking over your configuration, you decide you also need more Brokers to handle requests.
+Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3
++
+[source,helm]
+----
+broker:
+      replicas: 3
+      config:
+        managedLedgerDefaultAckQuorum: 3
+        managedLedgerDefaultEnsembleSize: 3
+        managedLedgerDefaultWriteQuorum: 3
+      resources:
+        requests:
+          cpu: "0.1"
+          memory: "128Mi"
+----
+
+... Upgrade the cluster with the new values.yaml file:
++
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+helm upgrade pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+Release "pulsar" has been upgraded. Happy Helming!
+NAME: pulsar
+LAST DEPLOYED: Fri May 12 15:11:51 2023
+NAMESPACE: pulsar-cluster
+STATUS: deployed
+REVISION: 5
+TEST SUITE: None
+----
+--
+====
+
+. The operator will upgrade the cluster to the new desired state. In this case, the operator adds two more brokers, and touches nothing else.
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+kubectl get pods -A
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+pulsar-cluster   pulsar-autorecovery-57cfc8b84d-xvchb                       1/1     Running     0          150m
+pulsar-cluster   pulsar-bastion-74777cbbf9-pcq5x                            1/1     Running     0          150m
+pulsar-cluster   pulsar-bookkeeper-0                                        1/1     Running     0          152m
+pulsar-cluster   pulsar-broker-0                                            1/1     Running     0          150m
+pulsar-cluster   pulsar-broker-1                                            1/1     Running     0          8m9s
+pulsar-cluster   pulsar-broker-2                                            1/1     Running     0          7m36s
+pulsar-cluster   pulsar-operator-7d8cc69df5-ncs5j                           1/1     Running     0          163m
+pulsar-cluster   pulsar-proxy-5bd5cc4fb6-9pnl7                              1/1     Running     0          150m
+pulsar-cluster   pulsar-zookeeper-0                                         1/1     Running     0          155m
+pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1     Completed   0          153m
+----
+--
+====
+
+. You've successfully upgraded your deployment by just managing a single .yaml file. Thanks, {pulsar-operator}!
+
+== What's next?
+
+
+
+
+
+
 
