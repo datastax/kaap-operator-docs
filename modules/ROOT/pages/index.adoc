@@ -47,7 +47,7 @@ Pulsar proxy also offers special options for cluster extensions, like our xref:s
 
 {pulsar-operator} is packaged in two distinct flavors.
 
-* xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator pod into an existing Pulsar cluster.
+* xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator and CRDs into an existing Pulsar cluster.
 
 * xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
 
@@ -91,38 +91,6 @@ Note that these features require `bookkeeperClientRegionawarePolicyEnabled=true`
 The operator will automatically add this configuration property in the broker and autorecovery.
 If you wish to disable the region aware policy, you need to explicitly set `bookkeeperClientRegionawarePolicyEnabled=false` in the broker and autorecovery.
 
-=== Staged upgrades
-The operator performs cluster upgrades in a very conservative manner, with the primary goal of reducing maintenance window time during upgrades.
-Components are updated and then restarted *only* if strictly needed. For example, if only the broker needs to be upgraded, then all other services will be left up and running.
-If there is an error or interruption during upgrade, the operator will apply the desired state defined in the PulsarCluster custom resource until the resource matches the actual state.
-
-The operator follows a fixed schema to upgrade the cluster:
-[source,plain]
-----
-stateDiagram-v2
-    zk: Zookeeper Statefulset
-    zkinit: Zookeeper Metadata Initialization Job
-    bk: BookKeeper
-    broker: Broker
-    brokertxn: Broker Transactions Initialization Job
-    ar: Autorecovery
-    proxy: Proxy
-    ba: Bastion
-    fn: Functions Worker
-    [*] --> zk
-    zk --> zkinit : Ready
-    zkinit --> bk : Completed
-    bk --> broker : Ready
-    bk --> proxy : Ready
-    bk --> ba : Ready
-    bk --> ar : Ready
-    broker --> brokertxn : Ready
-    brokertxn --> fn : Completed
-    fn --> [*] : Ready
-    proxy --> [*] : Ready
-    ba --> [*] : Ready
-    ar --> [*] : Ready
-----
 
 === Pod placement affinity and affinity
 For a single resource set, it’s possible to specify the antiAffinity.
