@@ -112,9 +112,7 @@ a45161757a5f   datastax/lunastreaming-operator:latest-dev   "java -Djava.util.lo
 
 After testing, remember to remove unused Docker volumes with `docker volume prune -f`.
 
-
-
-If you did some changes to the operator code and wants to redeploy it, you can use the following script.
+If you did some changes to the operator code and want to redeploy it, you can use the following script.
 
 ./tests/src/test/scripts/local-k3s-update-operator-no-crds.sh
 This will build and push the new docker image to the container. You’ll need to manually restart the operator pod.

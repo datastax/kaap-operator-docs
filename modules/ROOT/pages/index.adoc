@@ -5,8 +5,6 @@
 This guide offers a starting point for {pulsar-operator}.
 We will cover installation and deployment, configuration points, and further options for managing Pulsar components with the {pulsar-operator}.
 
-Operator is configured, deployed, and packaged with Helm charts and based on the https://quarkiverse.github.io/quarkiverse-docs/quarkus-operator-sdk/dev/index.html[Quarkus Operator SDK].
-
 == How {pulsar-operator} supports Pulsar
 
 Operators are a common pattern for packaging, deploying, and managing Kubernetes applications.
@@ -15,8 +13,10 @@ Think of {pulsar-operator} as a manager for the individual components of Pulsar.
 
 * Deploying a Pulsar cluster
 * Deploying monitoring and logging components
-* Autoscaling bookies based on load
+* Autoscaling bookies based on memory usage, or brokers based on CPU load
 * Assigning resources to specific availability zones (AZs)
+
+{pulsar-operator} is configured, deployed, and packaged with Helm charts and based on the https://quarkiverse.github.io/quarkiverse-docs/quarkus-operator-sdk/dev/index.html[Quarkus Operator SDK].
 
 == Pulsar component architecture
 
@@ -47,7 +47,7 @@ Pulsar proxy also offers special options for cluster extensions, like our xref:s
 
 {pulsar-operator} is packaged in two distinct flavors.
 
-* xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator and CRDs into an existing Pulsar cluster.
+* xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator and PulsarCluster CRDs into an existing Pulsar cluster.
 
 * xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
 
@@ -57,127 +57,9 @@ You can also scan an existing Pulsar cluster and generate an equivalent PulsarCl
 After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
 The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a Pulsar cluster.
 
-=== Autoscalers
-
-=== Resource sets
-Create multiple sets of Pulsar proxies, brokers, and bookies, each set a dedicated deployment/statefulset with its own service and configmap.
-When multiple sets are specified, an umbrella service is created as the main entrypoint of the cluster. Other than that, a dedicated service is created for each set. You can customize the service singularly. For example, it’s straightforward to have different dns domains for each set.
-
-Having different endpoints for the cluster allows new deployment strategies, such as canary deployments.
-
-=== Rack awareness
-A rack defines a fault domain. A resource set can be mapped to a rack. 
-When a resource set is mapped to a rack, all their replicas will be placed in the same failure domain.
-
-Available failure domains are “zone”, a region’s availability zone and “host”, a cluster node.
-In order to guarantee high availability over different availability zones, it’s required to create multiple sets in different racks.
-
-One of the benefits of using racks is that you can know in advance if a proxy and a broker are in the same zone.
-
-=== Bookkeeper
-
-Thanks to the racks, the operator is able to set the data placement policy automatically.
-Leveraging the rack-awareness concept of Pulsar and BookKeeper clients, every entry will be stored as much as possible in different failure domains.
-
-The auto configuration of rack-awareness is enabled by default. It’s configurable in the bookkeeper configuration section:
-```
-Bookkeeper:
-	autoRackConfig:
-		Enabled: true
-		periodMs: 60000
-```
-
-Note that these features require `bookkeeperClientRegionawarePolicyEnabled=true` in the broker.
-The operator will automatically add this configuration property in the broker and autorecovery.
-If you wish to disable the region aware policy, you need to explicitly set `bookkeeperClientRegionawarePolicyEnabled=false` in the broker and autorecovery.
+* xref:configuration:features.adoc#bookkeeper-autoscaler[Bookkeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
+* xref:configuration:features.adoc#broker-autoscaler[Broker autoscaler] - Automatically scale the number of brokers based on CPU load.
+* xref:configuration:features.adoc#rackaware-bookie[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
+* xref:configuration:features.adoc#resource-sets[Resource sets] - Create multiple distinct sets of Pulsar components, each with a dedicated deployment/StatefulSet with its own service and configmap.
 
 
-=== Pod placement affinity and affinity
-For a single resource set, it’s possible to specify the antiAffinity.
-There are two levels of affinity, zone and host.
-The first one will set the failure domain to the region’s availability zone.
-The latter one will set the failure domain to the node.
-
-It’s possible to configure if the requirements must be satisfied or it should be only if possible.
-This mechanism leverages the K8s “requiredDuringSchedulingIgnoredDuringExecution” and “preferredDuringSchedulingIgnoredDuringExecution” properties.
-
-
-The default is:
-```
-host:
-Enabled: true
-Required: true
-Zone:
-Enabled: false
-Required: false
-```
-This means each replica of any deployment/statefulset will be forced to be placed on different nodes. There’s no requests for placing the pods in different availability zones, therefore each pod could be in the same node.
-In order to achieve multi-zone availability, it’s required to set:
-```
-Zone:
-	Enabled: true
-```
-In this way each pod will be placed to a different zone, if possible.
-If you want to enforce it, you have to set:
-```
-Zone:
-	Enabled: true
-	Required: true
-```
-Note that if an availability zone without any pods of that kind is not available during the upgrades, the pod won’t be scheduled and the upgrade will be blocked until a pod is manually deleted and the zone is then freed.
-
-
-
-
-
-
-=== Resource sets pods placement affinity and affinity
-A rack defines a fault domain. A resource set can be mapped to a rack.
-When a resource set is mapped to a rack, all their replicas will be placed in the same failure domain.
-There are two levels of affinity, zone and host.
-The first one will set the failure domain to the region’s availability zone.
-The latter one will set the failure domain to the node.
-
-When a rack is specified, the default configuration is:
-```
-Global:
-Racks:
-Rack1:
-	Host:
-		Enabled: false
-		requireRackAffinity: false
-		requireRackAntiAffinity: true
-Zone:
-		Enabled: false
-		requireRackAffinity: false
-		requireRackAntiAffinity: true
-		enableHostAntiAffinity: true
-		requireRackHostAntiAffinity: true
-```
-
-The default configuration won’t enable any placement policy.
-If you want to place all the pods in the same node, you have to set
-```
-Global:
-Racks:
-Rack1:
-	Host:
-		Enabled: true
-```
-
-With `requireRackAffinity=false`, each pods of the same rack will be placed wheres a new pod of the same rack exists (if any exists), if possible.
-Set `requireRackAffinity=true` to enforce it. Note that if the target node is full (can’t accept new pod with those requirements), the pod will wait until the node is able to accept new pods.
-
-With `requireRackAntiAffinity=false`, each pods of the same rack will be placed in a node where any other pod of any other racks is already scheduled, if possible.
-With `requireRackAntiAffinity=true`, this behavior is enforced. Note that if no node is free, the pod will wait until a new node is added. 
-
-If you want to place all the pods in the same zone, you have to set:
-```
-Global:
-Racks:
-Rack1:
-	Zone:
-		Enabled: true
-```
-
-With `enableHostAntiAffinity=true`, other than placing pods in different availability zones, a different node will be chosen. This requirements can be disabled (`enableHostAntiAffinity=false`), enforced (`requireRackHostAntiAffinity: true`) or done in best-effort (`requireRackHostAntiAffinity: false`)

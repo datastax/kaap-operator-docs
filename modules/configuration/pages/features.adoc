@@ -1,0 +1,294 @@
+= Features
+
+After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
+The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a Pulsar cluster.
+
+[#bookkeeper-autoscaler]
+== Bookkeeper autoscaler
+
+The operator scales the number of bookies pods in a cluster up and down based on current disk usage.
+
+=== Install Operator with Bookkeeper autoscaler enabled
+[source,bash]
+----
+helm install pulsar-operator helm/pulsar-operator \
+    --values helm/examples/bookie-autoscaling/values.yaml
+----
+
+=== Bookkeeper autoscaler configuration
+
+The operator will scale the number of bookies pods in a cluster up and down based on current disk usage.
+The operator's thresholds are set in the values.yaml file. +
+[source,helm]
+----
+    bookkeeper:
+      replicas: 2
+      autoscaler:
+        enabled: true
+        periodMs: 10000
+        diskUsageToleranceHwm: 0.8
+        diskUsageToleranceLwm: 0.2
+        minWritableBookies: 1
+        scaleUpBy: 1
+        scaleDownBy: 1
+        stabilizationWindowMs: 30000
+----
+
+[cols=3, options="header"]
+|===
+|Name
+|Type
+|Description
+|Notes
+
+|diskUsageToleranceLwm
+|Double
+|The threshold to trigger a scale up. The autoscaler will scale up if all the bookies' disk usage is higher than this threshold.
+|Default is 0.75. Min 0.0d, Max 1.0d.
+
+|diskUsageToleranceHwm
+|Double
+|The threshold to trigger a scale down. The autoscaler will scale down if all the bookies' disk usage is lower than this threshold.
+|Default is 0.92d. Min(0.0d), Max(1.0d)
+
+|enabled
+|Boolean
+|Enable autoscaling for bookies.
+|
+
+|minWritableBookies
+|Integer
+|Minimum number of writable bookies. The autoscaler will scale up if not enough writable bookies are detected. For example, if a bookie goes to read-only mode, the autoscaler will scale up to replace it.
+|Default is 3. Min 1.
+
+|periodMs
+|Long
+|The interval in milliseconds between two consecutive autoscaling checks.
+|Minimum value is 1000 ms.
+
+|scaleDownBy
+|Integer
+|The number of bookies to remove at each scale down.
+|Default is 1. Min 1.
+
+|scaleUpBy
+|Integer
+|The number of bookies to add at each scale up.
+|Default is 1. Min 1.
+
+|scaleUpMaxLimit
+|Integer
+|Max number of bookies. If the number of bookies is equal to this value, the autoscaler will never scale up.
+|Min 1.
+
+|stabilizationWindowMs
+|Long
+|The stabilization window restricts rapid changes in replica count when the metrics used for scaling are fluctuating. The autoscaling algorithm uses this window to infer a previous desired state and avoid unwanted changes to workload scale.
+|Default value is 5 minutes after the pod's state is Ready.
+|===
+
+[#broker-autoscaler]
+== Broker autoscaler
+
+The operator scales the number of broker pods in a cluster up and down based on current CPU usage.
+
+=== Install Operator with broker autoscaler enabled
+[source,bash]
+----
+helm install pulsar-operator helm/pulsar-stack \
+    --values helm/examples/broker-autoscaling/values.yaml
+----
+The operator will scale the number of broker pods in a cluster up and down based on current disk usage.
+The operator's thresholds are set in the values.yaml file. +
+[source,helm]
+----
+      broker:
+        replicas: 2
+        autoscaler:
+          enabled: true
+          periodMs: 20000
+          min: 2
+          max: 10
+          lowerCpuThreshold: 0.4
+          higherCpuThreshold: 0.8
+          scaleUpBy: 1
+          scaleDownBy: 1
+          stabilizationWindowMs: 60000
+----
+.Broker autoscaler configuration
+[cols=3, options="header"]
+|===
+|Name
+|Type
+|Description
+|Notes
+
+|enabled
+|Boolean
+|Enable autoscaling for brokers.
+|
+
+|higherCpuThreshold
+|Double
+|The threshold to trigger a scale up. The autoscaler will scale up if all the brokers' CPU usage is higher than this threshold.
+|Default is 0.8. Min 0.0, Max 1.0.
+
+|lowerCpuThreshold
+|Double
+|The threshold to trigger a scale down. The autoscaler will scale down if all the brokers' CPU usage is lower than this threshold.
+|Default is 0.4. Min(0.0), Max(1.0)
+
+|max
+|Integer
+|Maximum number of brokers. If the number of brokers is equal to this value, the autoscaler will never scale up.
+|Min 1.
+
+|min
+|Integer
+|Minimum number of brokers. If the number of brokers is equal to this value, the autoscaler will never scale down.
+|Min 1.
+
+|periodMs
+|Long
+|The interval in milliseconds between two consecutive autoscaling checks.
+|Minimum value is 1000 ms.
+
+|scaleDownBy
+|Integer
+|The number of brokers to remove at each scale down.
+|Default is 1. Min 1.
+
+|scaleUpBy
+|Integer
+|The number of brokers to add at each scale up.
+|Default is 1. Min 1.
+
+|stabilizationWindowMs
+|Long
+|The stabilization window restricts rapid changes in replica count when the metrics used for scaling are fluctuating. The autoscaling algorithm uses this window to infer a previous desired state and avoid unwanted changes to workload scale.
+|Default value is 5 minutes after the pod's state is Ready.
+|===
+
+== Resource sets
+Create multiple sets of Pulsar proxies, brokers, and bookies, each set a dedicated deployment/statefulset with its own service and configmap.
+When multiple sets are specified, an umbrella service is created as the main entrypoint of the cluster. Other than that, a dedicated service is created for each set. You can customize the service singularly. For example, it’s straightforward to have different dns domains for each set.
+
+Having different endpoints for the cluster allows new deployment strategies, such as canary deployments.
+
+=== Install operator with resource s
+== Rack awareness
+A rack defines a fault domain. A resource set can be mapped to a rack. 
+When a resource set is mapped to a rack, all their replicas will be placed in the same failure domain.
+
+Available failure domains are “zone”, a region’s availability zone and “host”, a cluster node.
+In order to guarantee high availability over different availability zones, it’s required to create multiple sets in different racks.
+
+One of the benefits of using racks is that you can know in advance if a proxy and a broker are in the same zone.
+
+== Bookkeeper
+
+Thanks to the racks, the operator is able to set the data placement policy automatically.
+Leveraging the rack-awareness concept of Pulsar and BookKeeper clients, every entry will be stored as much as possible in different failure domains.
+
+The auto configuration of rack-awareness is enabled by default. It’s configurable in the bookkeeper configuration section:
+```
+Bookkeeper:
+	autoRackConfig:
+		Enabled: true
+		periodMs: 60000
+```
+
+Note that these features require `bookkeeperClientRegionawarePolicyEnabled=true` in the broker.
+The operator will automatically add this configuration property in the broker and autorecovery.
+If you wish to disable the region aware policy, you need to explicitly set `bookkeeperClientRegionawarePolicyEnabled=false` in the broker and autorecovery.
+
+
+== Pod placement affinity and affinity
+For a single resource set, it’s possible to specify the antiAffinity.
+There are two levels of affinity, zone and host.
+The first one will set the failure domain to the region’s availability zone.
+The latter one will set the failure domain to the node.
+
+It’s possible to configure if the requirements must be satisfied or it should be only if possible.
+This mechanism leverages the K8s “requiredDuringSchedulingIgnoredDuringExecution” and “preferredDuringSchedulingIgnoredDuringExecution” properties.
+
+
+The default is:
+```
+host:
+Enabled: true
+Required: true
+Zone:
+Enabled: false
+Required: false
+```
+This means each replica of any deployment/statefulset will be forced to be placed on different nodes. There’s no requests for placing the pods in different availability zones, therefore each pod could be in the same node.
+In order to achieve multi-zone availability, it’s required to set:
+```
+Zone:
+	Enabled: true
+```
+In this way each pod will be placed to a different zone, if possible.
+If you want to enforce it, you have to set:
+```
+Zone:
+	Enabled: true
+	Required: true
+```
+Note that if an availability zone without any pods of that kind is not available during the upgrades, the pod won’t be scheduled and the upgrade will be blocked until a pod is manually deleted and the zone is then freed.
+
+
+
+
+
+
+== Resource sets pods placement affinity and affinity
+A rack defines a fault domain. A resource set can be mapped to a rack.
+When a resource set is mapped to a rack, all their replicas will be placed in the same failure domain.
+There are two levels of affinity, zone and host.
+The first one will set the failure domain to the region’s availability zone.
+The latter one will set the failure domain to the node.
+
+When a rack is specified, the default configuration is:
+```
+Global:
+Racks:
+Rack1:
+	Host:
+		Enabled: false
+		requireRackAffinity: false
+		requireRackAntiAffinity: true
+Zone:
+		Enabled: false
+		requireRackAffinity: false
+		requireRackAntiAffinity: true
+		enableHostAntiAffinity: true
+		requireRackHostAntiAffinity: true
+```
+
+The default configuration won’t enable any placement policy.
+If you want to place all the pods in the same node, you have to set
+```
+Global:
+Racks:
+Rack1:
+	Host:
+		Enabled: true
+```
+
+With `requireRackAffinity=false`, each pods of the same rack will be placed wheres a new pod of the same rack exists (if any exists), if possible.
+Set `requireRackAffinity=true` to enforce it. Note that if the target node is full (can’t accept new pod with those requirements), the pod will wait until the node is able to accept new pods.
+
+With `requireRackAntiAffinity=false`, each pods of the same rack will be placed in a node where any other pod of any other racks is already scheduled, if possible.
+With `requireRackAntiAffinity=true`, this behavior is enforced. Note that if no node is free, the pod will wait until a new node is added. 
+
+If you want to place all the pods in the same zone, you have to set:
+```
+Global:
+Racks:
+Rack1:
+	Zone:
+		Enabled: true
+```
+
+With `enableHostAntiAffinity=true`, other than placing pods in different availability zones, a different node will be chosen. This requirements can be disabled (`enableHostAntiAffinity=false`), enforced (`requireRackHostAntiAffinity: true`) or done in best-effort (`requireRackHostAntiAffinity: false`)

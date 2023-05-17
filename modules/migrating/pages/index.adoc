@@ -1,73 +1,114 @@
-= Migrate existing Pulsar clusters
+= Migrate existing cluster to the operator
 
-What if you already have an existing Pulsar cluster and want to control it with {pulsar-operator}?
-To migrate charts 
-To migrate from the charts to the Pulsar operator there’s a new tool called “migration-tool” which is able to scan a Pulsar cluster and generates an equivalent PulsarCluster CRD. This tool also simulates the upgrade and generates a diff report that helps the user in the migration procedure spotting potential breaking changes.
-The tool is in the operator repository: https://github.com/riptano/pulsar-operator/tree/main/migration-examples
+Migrating an existing Apache Pulsar cluster to one controlled by the {pulsar-operator} is a manual process, but the included migration-tool CLI is a great friend to help you migrating your cluster.
 
-The tool has been built to target both the Datastax Pulsar Helm Chart and the Astra Streaming Helm Chart.
+== Migration tool
 
-Astra Streaming chart overview
-Repository: https://github.com/riptano/astra-streaming/tree/master/helm_charts/pulsar
+The migration tool is a CLI application that connects to an existing Apache Pulsar cluster and generates a valid and equivalent `PulsarCluster` CRD.
+The tool also simulates what would happen if the generated `PulsarCluster` would be submitted. Then it retrieves the kubernetes resources that would be created and compares them with the existing ones, generating a fancy HTML report.
+Once the report is generated, is up to you to decide if you want to proceed with the migration or not.
 
-The chart contains the Pulsar “builtin” resources (zk, bk, autorecovery, bastion, broker, proxy, function) that are already covered by the migration tool.
-However there are additional resources that need to be modified manually or refactored
+== Prerequisites
+* Java 17
+* An existing Apache Pulsar cluster
+* Download the JAR from the https://github.com/riptano/pulsar-operator/releases[latest release].
 
-Chart separation
+== Migrate cluster
+. Create an input file called `input-cluster-specs.yaml` with the following content:
++
+[source,yaml]
+----
+context: <context-name>
+namespace: <namespace>
+clusterName: <cluster-name>
+----
 
-The operator used in AS won’t be the pulsar-stack chart. This means all the 3rd party dependencies still have to be handled by the AS chart:
-Kafka/RabbitMQ proxies
-Admin Console
-Heartbeat
-CertManager
-KeyCloak
-Prometheus - Grafana
-Thanos
-…
+.. To retrieve the context-name:
++
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+kubectl config get-contexts
+----
+--
 
-All these components MUST HAVE AN INDEPENDENT CONFIGURATION from the current cluster deployment. 
-For example, the value “.Values.enableTokenAuth” must not be used in the admin console resources because that value will be replaced by the CRD configuration.
+Result::
++
+--
+[source,console]
+----
+CURRENT   NAME                                         CLUSTER                                      AUTHINFO                                     NAMESPACE
+*         gke_gcp-techpubs_us-east1-b_pulsar-cluster   gke_gcp-techpubs_us-east1-b_pulsar-cluster   gke_gcp-techpubs_us-east1-b_pulsar-cluster   pulsar-cluster
+----
+--
+====
++
+[NOTE]
+====
+We recommend switching to K8's current context and ensuring connectivity (`kubectl get pods`) before running the migration tool.
+====
 
-BellBurnell
-BellBurnell is deployed as a container in the proxy. The operator is able to configure sidecars for each component and so BB will continue to live inside the proxy pod. This is important because it can’t be directly configured in the operator because BellBurnell is a private application.
-Kafka/Rabbit proxies
-They are real Pulsar proxies, with a specific dns prefix. In the operator we can just create different proxy sets. This is already supported by the migration tool.
+.. The namespace is the namespace with the Apache Pulsar resources you wish to scan.
+.. The clusterName is the prefix of each pod. For example, if the broker pod is `pulsar-prod-cluster-broker-0`, the `clusterName` is `pulsar-prod-cluster`.
 
-Cluster definition configuration
-Currently each cluster has its own values file.
-After the migration, the pulsar cluster definition must be stored in the repo as well.
-The operator supports declaring a cluster in the values file. It makes sense to use it and have only one single file per deployment (like now).
-New values.yaml
+. After you've added the retrieved values to input-cluster-specs.yaml, generate the report with:
++
+[source,java]
+----
+java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
+----
 
+In the logs you'll see a link of the generated report. Open the generated report in your browser and check the differences between the existing cluster and the operator.
+
+Sometimes you might need to change the generated CRD and simulate the migration again. To do that, you can run:
++
+[source,java]
+----
+java -jar migration-tool.jar diff -d output/<context-name>
+----
+
+
+
+## Migration procedure
+Once you're happy with the report, you can proceed with the migration. 
+The migration supposes the existing cluster has been created using Helm.
+
+Create a new `values.yaml` file for the operator. Then in the `pulsar-operator.cluster` section copy the crd's spec.
+```
 pulsar-operator:
-  cluster:
-     name: cluster-aws-dev-blabla
-     spec:
-        broker:..........
-adminConsole:
-…..
+    cluster:
+        create: true
+        name: <cluster-name>
+        spec:
+            <copy here the spec from the CRD>
+```
 
 
-One disadvantage is that the cluster definition is not “templateble”. This can lead to redundant configurations. For example, BellBurnell will be declared as a side-container of the proxy.
+1. Install the operator release with the above values. 
+    ```
+    helm install pulsar-operator datastax/pulsar-stack --values <values.yaml>
+    ```
 
-Astra Streaming actions required before the migration
-Move Admin Console to his own values section
-Move Pulsar Heartbeat to his own values section
-Add the pulsar-operator as dependency
-Implement the new “migrateToOperator” flag
+2. Wait for the operator to take control of the cluster. Check the PulsarCluster status to be ready. Since each resource will match the existing ones, the following behaviours are expected:
+  - The operator will not create any new resource.
+  - The operator will not delete any existing resource.
+  - The operator will restart every statefulset/deployments. This will be done in a safe manner using the staged upgrades feature of the operator.
+3. Delete the existing chart release.
+    ```
+    kubectl delete secret -l name=<old-release-name>,owner=helm
+    ```
+4. Cleanup helm annotations and labels from the new values.
 
-Astra Streaming Migration Procedure
-Add a flag “migrateToOperator” with 3 possible values:
-“”: default value
-“in_progress”: that sets “helm.sh/release-policy: keep” to ALL the Pulsar resources that will be replaced by the operator
-“done”: in_progress + do not create any pulsar resources handled by the operator
-Add the pulsar-operator dependency to the chart
-Install the PulsarCluster CRD
-At this point, the operator will replace the existing resources and will perform a complete upgrade of the cluster
-Wait for the PulsarCluster to be up and running 
-Set migrateToOperator=done. This should make the chart continue working but not handling the Pulsar resources anymore.
+   You can safely remove the following annotations:
+    - meta.helm.sh/release-name
+    - meta.helm.sh/release-namespace
 
-This procedure can handle rollback in case it’s needed:
-Delete the operator
-Set migrateToOperator to ””
-
+   and labels:
+    - app.kubernetes.io/managed-by
+    - chart
+    - release
+    - heritage
