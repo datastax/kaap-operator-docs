@@ -114,9 +114,9 @@ jobs:
 
       - name: Generate navigation adoc
         run: |
-          for spec in pulsar-operator-docs/modules/crd-spec/*.adoc;
+          for spec in openapi_specs/*.adoc;
           do
-            echo "** xref:$(basename $spec)[]" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
+            echo "** xref:$spec[]" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
           done
 
       - name: Add, Commit, and Push
