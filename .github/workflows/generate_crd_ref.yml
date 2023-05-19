@@ -64,7 +64,7 @@ jobs:
             ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh generate \
               -g asciidoc \
               -o openapi_specs \
-              -i $spec[] \
+              -i $spec \
               --additional-properties=legacyDiscriminatorBehavior=false,disallowAdditionalPropertiesIfNotPresent=false,sortModelPropertiesByRequiredFlag=true,sortParamsByRequiredFlag=true \
               --remove-operation-id-prefix \
               -t ./pulsar-operator-docs/.github/openapi/templates \
