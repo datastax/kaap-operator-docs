@@ -12,82 +12,84 @@ on:
         description: 'Pulsar Operator Repo'
         required: true
         type: string
-        default: 'https://github.com/riptano/pulsar-operator'
+        default: 'riptano/pulsar-operator'
 
 jobs:
   generate_crd_ref:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        path: pulsar-operator-docs
+      - uses: actions/checkout@v2
+        with:
+          path: pulsar-operator-docs
 
-    - uses: actions/checkout@v2
-      with:
-        repository: ${{ github.event.inputs.operatorRepo }}
-        tag: ${{ github.event.inputs.operatorVersionTag }}
-        path: pulsar-operator-src
-        token: ${{ secrets.DDIERUF_TOKEN }}
+      - uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.inputs.operatorRepo }}
+          ref: ${{ github.event.inputs.operatorVersionTag }}
+          path: pulsar-operator-src
+          token: ${{ secrets.DDIERUF_TOKEN }}
 
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.8'
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
 
-    - name: Install deps
-      run: |
-        pip install -r pulsar-operator-docs/.github/generator/requirements.txt
+      - name: Install deps
+        run: |
+          pip install -r pulsar-operator-docs/.github/generator/requirements.txt
 
-    - name: Clear existing docs
-      run: |
-        rm -rf pulsar-operator-docs/modules/crd-spec/pages/*
-        rm -rf pulsar-operator-docs/modules/crd-spec/*.adoc
+      - name: Clear existing docs
+        run: |
+          rm -rf pulsar-operator-docs/modules/crd-spec/pages/*
+          rm -rf pulsar-operator-docs/modules/crd-spec/*.adoc
 
-    - name: Convert CRDs to OpenApi v3
-      run: |
-        python pulsar-operator-docs/.github/generator/crds_to_openapi.py \
-          --crds_dir pulsar-operator-src/helm/pulsar-operator/crds \
-          --output_dir generated_specs
+      - name: Convert CRDs to OpenApi v3
+        run: |
+          python pulsar-operator-docs/.github/generator/crds_to_openapi.py \
+            --crds_dir pulsar-operator-src/helm/pulsar-operator/crds \
+            --output_dir generated_specs
 
-    - name: Preprocess specs
-      run: |
-        python pulsar-operator-docs/.github/generator/preprocess_specs.py \
-          --specs_dir generated_specs \
-          --output_dir preprocess_specs
+      - name: Preprocess specs
+        run: |
+          python pulsar-operator-docs/.github/generator/preprocess_specs.py \
+            --specs_dir generated_specs \
+            --output_dir preprocess_specs
 
-    - name: Generate asciidoc CRD reference
-      run: |
-        for spec in preprocess_specs/*.yaml;
-        do
-          pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh generate \
-            -g asciidoc \
-            -o openapi_specs \
-            -i $spec[] \
-            --additional-properties=legacyDiscriminatorBehavior=false,disallowAdditionalPropertiesIfNotPresent=false,sortModelPropertiesByRequiredFlag=true,sortParamsByRequiredFlag=true \
-            --remove-operation-id-prefix \
-            -t ./pulsar-operator-docs/.github/openapi/templates \
-            --inline-schema-name-defaults arrayItemSuffix=,mapItemSuffix=
-        done
+      - name: Generate asciidoc CRD reference
+        run: |
+          chmod +x ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh
+          
+          for spec in preprocess_specs/*.yaml;
+          do
+            ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh generate \
+              -g asciidoc \
+              -o openapi_specs \
+              -i $spec[] \
+              --additional-properties=legacyDiscriminatorBehavior=false,disallowAdditionalPropertiesIfNotPresent=false,sortModelPropertiesByRequiredFlag=true,sortParamsByRequiredFlag=true \
+              --remove-operation-id-prefix \
+              -t ./pulsar-operator-docs/.github/openapi/templates \
+              --inline-schema-name-defaults arrayItemSuffix=,mapItemSuffix=
+          done
 
-    - name: Postprocess adoc
-      run: |
-        python pulsar-operator-docs/.github/generator/postprocess_adoc.py \
-          --adoc_dir openapi_specs \
-          --output_dir pulsar-operator-docs/modules/crd-spec/pages
+      - name: Postprocess adoc
+        run: |
+          python pulsar-operator-docs/.github/generator/postprocess_adoc.py \
+            --adoc_dir openapi_specs \
+            --output_dir pulsar-operator-docs/modules/crd-spec/pages
 
-    - name: Generate navigation adoc
-      run: |
-        for spec in pulsar-operator-docs/modules/crd-spec/*.adoc;
-        do
-          echo "** xref:$(basename $spec[])" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
-        done
+      - name: Generate navigation adoc
+        run: |
+          for spec in pulsar-operator-docs/modules/crd-spec/*.adoc;
+          do
+            echo "** xref:$(basename $spec[])" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
+          done
 
-    - name: Add, Commit, and Push
-      uses: EndBug/add-and-commit@v9
-      with:
-        add: ./pulsar-operator-docs
-        author_name: "DataStax Docs Bot"
-        author_email: "docsbot@datastax.com"
-        new_branch: ${{ github.event.inputs.operatorVersionTag }}-generated-crd-docs
-        message: 'Automated generation from Pulsar Operator ${{ github.event.inputs.operatorVersionTag }}'
-        push: true
+      - name: Add, Commit, and Push
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: ./pulsar-operator-docs
+          author_name: "DataStax Docs Bot"
+          author_email: "docsbot@datastax.com"
+          new_branch: ${{ github.event.inputs.operatorVersionTag }}-generated-crd-docs
+          message: 'Automated generation from Pulsar Operator ${{ github.event.inputs.operatorVersionTag }}'
+          push: true
