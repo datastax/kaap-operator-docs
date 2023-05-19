@@ -116,7 +116,7 @@ jobs:
         run: |
           for spec in openapi_specs/*.adoc;
           do
-            echo "** xref:$spec[]" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
+            echo "** xref:$(basename $spec)[]" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
           done
 
       - name: Add, Commit, and Push
