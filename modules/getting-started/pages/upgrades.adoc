@@ -172,6 +172,10 @@ customresourcedefinition.apiextensions.k8s.io/zookeepers.pulsar.oss.datastax.com
 --
 ====
 
+== Upgrade {pulsar-operator}
+
+Coming soon.
+
 == What's next?
 
 

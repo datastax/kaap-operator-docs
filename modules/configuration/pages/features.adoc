@@ -1,7 +1,16 @@
-= Features
+= Custom Resources
 
-After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
-The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a Pulsar cluster.
+A custom resource is an extension of the Kubernetes API, and a Custom Resource Definition defines the state of a resource and how it is managed.
+The PulsarCluster resource is a custom resource that defines the PulsarCluster resources, which is used by the {pulsar-operator} to manage Pulsar cluster resources.
+A Pulsar cluster can be deployed and managed just by generating a PulsarCluster resource and applying it to the Kubernetes cluster.
+Subsequent changes to the PulsarCluster resource will be applied to the Pulsar cluster by the {pulsar-operator}.
+This greatly simplifies Pulsar cluster management. Difficulties like decommissioning bookies or scaling brokers are now as simple as editing a PulsarCluster resource and applying the changes with the {pulsar-operator}.
+
+== Managing Pulsar clusters with the PulsarCluster resource
+
+There are multiple CRDs in the operator - one for each Pulsar component.
+You should only modify the PulsarCluster CRD. The operator uses the individual component CRDs internally.
+For example, the ZooKeeper CRD contains spec related to ZooKeeper that is passed to the Pulsar operator. To change your cluster's ZooKeeper configuration, the user should change the ZooKeeper spec in the PulsarCluster CRD, not the ZooKeeper CRD.
 
 [#bookkeeper-autoscaler]
 == Bookkeeper autoscaler
@@ -18,6 +27,9 @@ helm install pulsar-operator helm/pulsar-operator \
 === Bookkeeper autoscaler configuration
 
 The operator will scale the number of bookies pods in a cluster up and down based on current disk usage.
+The operator checks the disk usage percentage of all bookies at a regular interval. If all of the bookies' memory is over a percentage threshold, the operator will add bookies, and if under the low threshold, will decommission a bookie to save resources.
+When a bookie's memory is underutilized, you want to decommission it to save resources.
+The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/[Kubernetes Horizontal Pod Autoscaler^]{external-link-icon}.
 The operator's thresholds are set in the values.yaml file. +
 [source,helm]
 ----
@@ -87,10 +99,88 @@ The operator's thresholds are set in the values.yaml file. +
 |Default value is 5 minutes after the pod's state is Ready.
 |===
 
+=== Test bookie autoscaler
+
+Once you've deployed a Pulsar cluster with bookie autoscaling enabled, test it by adding load to the cluster and watching the operator pod's logs.
+[NOTE]
+====
+If you don't have a bastion pod, you can add it to your cluster in the same values.yaml file you used to deploy the operator.
+[source,helm]
+----
+bastion:
+  replicas: 1
+  resources:
+    requests:
+      cpu: "0.1"
+      memory: "128Mi"
+----
+====
+
+. Exec into your bastion pod.
++
+[source,bash]
+----
+kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
+----
+
+. Run a https://pulsar.apache.org/docs/performance-pulsar-perf/[Pulsar perf] test in your deployment, and follow the operator's logs to see the autoscaler in action.
++
+[tabs]
+====
+Bastion pod::
++
+--
+[source,helm]
+----
+bin/pulsar-perf produce topic
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+2023-05-19T14:39:34,726+0000 [pulsar-perf-producer-exec-1-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Created 1 producers
+2023-05-19T14:39:34,778+0000 [pulsar-client-io-2-1] INFO  com.scurrilous.circe.checksum.Crc32cIntChecksum - SSE4.2 CRC32C provider initialized
+2023-05-19T14:39:43,190+0000 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced:     817 msg ---     81.7 msg/s ---      0.6 Mbit/s  --- failure      0.0 msg/s --- Latency: mean:  12.008 ms - med:  10.571 - 95pct:  20.821 - 99pct:  32.194 - 99.9pct:  46.759 - 99.99pct:  56.243 - Max:  56.243
+----
+--
+====
+
+. The operator notices the differing values and patches the bookkeeper-set to keep up with the increased memory usage of the bookkeeper pods.
++
+[source,console]
+----
+| 14:41:07 INFO  [com.dat.oss.pul.crd.SpecDiffer] (ReconcilerExecutor-pulsar-bk-controller-69) 'bookkeeper.replicas' value differs:
+  was: 7
+  now: 8
+│ 14:41:07 INFO  [com.dat.oss.pul.con.AbstractResourceSetsController] (ReconcilerExecutor-pulsar-bk-controller-69) bookkeeper-set 'bookkeeper' patched                 │
+│ 14:41:07 INFO  [com.dat.oss.pul.con.AbstractResourceSetsController] (ReconcilerExecutor-pulsar-bk-controller-69) All bookkeeper-sets ready                           │
+│ 14:41:07 INFO  [com.dat.oss.pul.con.boo.BookKeeperResourcesFactory] (ReconcilerExecutor-pulsar-bk-controller-69) Cleaning up orphan PVCs for bookie-s
+----
+
+. Cancel the Pulsar perf test with Ctrl-C. The operator will notice the decreased load and scale down the number of bookies. Notice that the operator scales down the number of bookies by 1 at a time, as specified in the `scaleDownBy` parameter, and properly decommissions them.
++
+[source,console]
+----
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Some writable bookies can be released, removing 1                                     │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Bookies scaled up/down from 10 to 9                                                   │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Start decommissioning bookies: pulsar-bookkeeper-9.puls │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.boo.PodExecBookieAdminClient] (OkHttp https://10.12.0.1/...) Bookie pulsar-bookkeeper-9 is set to read-only=true                 │
+│ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Attempting decommission of bookie pulsar-bookkeeper-9 w │
+│ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.PodExecBookieAdminClient] (ReconcilerExecutor-pulsar-bk-controller-74) Starting bookie recovery for bookie pulsar-bookkeeper │
+----
+
 [#broker-autoscaler]
 == Broker autoscaler
 
 The operator scales the number of broker pods in a cluster up and down based on current CPU usage.
+The CPU usage of each broker is checked at the Pulsar load balancer, not just at the Kubenetes pod level. This means that the operator can scale brokers based on the CPU usage of all brokers in the cluster, not just the CPU usage of a single broker pod.
+When the operator sees that the Pulsar load balancer is having trouble finding brokers to assign topic bundles to, it will scale up the number of brokers to handle the load.
+When the operator sees that the CPU usage of all brokers is low, it will scale down the number of brokers to save resources.
+CPU usage is tightly coupled to traffic, so you can expect to see significant scaling activity with broker autoscaler enabled. This value can be controlled with the `stabilizationWindowMs` parameter, which tells the operator how long to wait between scaling events.
 
 === Install Operator with broker autoscaler enabled
 [source,bash]
@@ -98,7 +188,6 @@ The operator scales the number of broker pods in a cluster up and down based on 
 helm install pulsar-operator helm/pulsar-stack \
     --values helm/examples/broker-autoscaling/values.yaml
 ----
-The operator will scale the number of broker pods in a cluster up and down based on current disk usage.
 The operator's thresholds are set in the values.yaml file. +
 [source,helm]
 ----
@@ -175,9 +264,9 @@ When multiple sets are specified, an umbrella service is created as the main ent
 
 Having different endpoints for the cluster allows new deployment strategies, such as canary deployments.
 
-=== Install operator with resource s
+=== Install operator with resource sets
 == Rack awareness
-A rack defines a fault domain. A resource set can be mapped to a rack. 
+A rack defines a fault domain. A resource set can be mapped to a rack.
 When a resource set is mapped to a rack, all their replicas will be placed in the same failure domain.
 
 Available failure domains are “zone”, a region’s availability zone and “host”, a cluster node.
@@ -280,7 +369,7 @@ With `requireRackAffinity=false`, each pods of the same rack will be placed wher
 Set `requireRackAffinity=true` to enforce it. Note that if the target node is full (can’t accept new pod with those requirements), the pod will wait until the node is able to accept new pods.
 
 With `requireRackAntiAffinity=false`, each pods of the same rack will be placed in a node where any other pod of any other racks is already scheduled, if possible.
-With `requireRackAntiAffinity=true`, this behavior is enforced. Note that if no node is free, the pod will wait until a new node is added. 
+With `requireRackAntiAffinity=true`, this behavior is enforced. Note that if no node is free, the pod will wait until a new node is added.
 
 If you want to place all the pods in the same zone, you have to set:
 ```
