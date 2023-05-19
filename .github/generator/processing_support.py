@@ -24,13 +24,11 @@ class Adoc:
   @staticmethod
   def __add_yaml_model_example(lines: list, kind: str, splitModelNames: list):
 
-    example = """
-apiVersion: pulsar.oss.datastax.com/v1alpha1
+    example = """apiVersion: pulsar.oss.datastax.com/v1alpha1
 kind:
 metadata:
   name: example-pulsarcluster
-spec: {}
-"""
+spec: {}"""
 
     yamlExample = yaml.load(example, Loader=yaml.FullLoader)
     yamlExample["kind"] = kind.title()
@@ -47,6 +45,12 @@ spec: {}
     lines.append("----")
     lines.extend(yaml.dump(yamlExample).split("\n"))
     lines.append("----")
+    lines.append("")
+
+  @staticmethod
+  def ensure_line_endings(lines: list):
+    for i, line in enumerate(lines):
+      lines[i] = line + ' \n'
 
   @staticmethod
   def process_adoc(adocLines: list, partialsDir: str = None):

@@ -25,14 +25,15 @@ class TestAdocPostProcessing(unittest.TestCase):
     ]
 
     Adoc.process_adoc(adocLines)
+    Adoc.ensure_line_endings(adocLines)
 
-    self.assertGreater(adocLines.index("== Pulsarcluster [[PulsarCluster]]"), -1)
+    self.assertGreater(adocLines.index("== Pulsarcluster [[PulsarCluster]] \n"), -1)
 
-    self.assertGreater(adocLines.index("=== Spec [[PulsarCluster_spec]]"), -1)
+    self.assertGreater(adocLines.index("=== Spec [[PulsarCluster_spec]] \n"), -1)
 
-    self.assertGreater(adocLines.index("==== Broker [[PulsarCluster_spec_broker]]"), -1)
+    self.assertGreater(adocLines.index("==== Broker [[PulsarCluster_spec_broker]] \n"), -1)
 
-    self.assertGreater(adocLines.index("==== Autoscaler [[PulsarCluster_spec_broker_autoscaler]]"), -1)
+    self.assertGreater(adocLines.index("==== Autoscaler [[PulsarCluster_spec_broker_autoscaler]] \n"), -1)
 
-    with open('test.adoc', "w") as processedAdocFile:
-      processedAdocFile.writelines(adocLines)
+    #with open('test.adoc', "w") as processedAdocFile:
+    #  processedAdocFile.writelines(adocLines)
