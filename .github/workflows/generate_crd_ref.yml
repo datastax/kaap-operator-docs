@@ -85,12 +85,16 @@ jobs:
           do
             ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh generate \
               -g asciidoc \
-              -o openapi_specs \
+              -o gen \
               -i $spec \
               --additional-properties=legacyDiscriminatorBehavior=false,disallowAdditionalPropertiesIfNotPresent=false,sortModelPropertiesByRequiredFlag=true,sortParamsByRequiredFlag=true \
               --remove-operation-id-prefix \
               -t ./pulsar-operator-docs/.github/openapi/templates \
               --inline-schema-name-defaults arrayItemSuffix=,mapItemSuffix=
+            
+            fileName=$(basename $spec .yaml)
+            definitionType=$(echo ${fileName%.*})
+            cp "gen/index.adoc" "openapi_specs/${definitionType}.adoc"
           done
 
       - name: Upload generated ADOC
@@ -111,7 +115,7 @@ jobs:
         run: |
           for spec in pulsar-operator-docs/modules/crd-spec/*.adoc;
           do
-            echo "** xref:$(basename $spec[])" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
+            echo "** xref:$(basename $spec)[]" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
           done
 
       - name: Add, Commit, and Push
