@@ -14,6 +14,12 @@ on:
         type: string
         default: 'riptano/pulsar-operator'
 
+      saveGeneratedFiles:
+        required: true
+        type: boolean
+        default: false
+        description: "Update all generated files and error if there are none"
+
 jobs:
   generate_crd_ref:
     runs-on: ubuntu-latest
@@ -49,11 +55,27 @@ jobs:
             --crds_dir pulsar-operator-src/helm/pulsar-operator/crds \
             --output_dir generated_specs
 
+      - name: Upload generated CRD specs
+        uses: actions/upload-artifact@v3
+        if: ${{ github.event.inputs.saveGeneratedFiles }}
+        with:
+          name: generated_specs
+          path: generated_specs
+          if-no-files-found: error
+
       - name: Preprocess specs
         run: |
           python pulsar-operator-docs/.github/generator/preprocess_specs.py \
             --specs_dir generated_specs \
             --output_dir preprocess_specs
+
+      - name: Upload preprocessed specs
+        uses: actions/upload-artifact@v3
+        if: ${{ github.event.inputs.saveGeneratedFiles }}
+        with:
+          name: preprocess_specs
+          path: preprocess_specs
+          if-no-files-found: error
 
       - name: Generate asciidoc CRD reference
         run: |
@@ -70,6 +92,14 @@ jobs:
               -t ./pulsar-operator-docs/.github/openapi/templates \
               --inline-schema-name-defaults arrayItemSuffix=,mapItemSuffix=
           done
+
+      - name: Upload generated ADOC
+        uses: actions/upload-artifact@v3
+        if: ${{ github.event.inputs.saveGeneratedFiles }}
+        with:
+          name: openapi_specs
+          path: openapi_specs
+          if-no-files-found: error
 
       - name: Postprocess adoc
         run: |
