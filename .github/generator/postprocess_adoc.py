@@ -36,13 +36,13 @@ def main(params=None):
 
   for docDirFile in os.listdir(args.adoc_dir):
     if docDirFile.endswith(".adoc"):
-      with open(os.path.join(args.adoc_dir, docDirFile), "r") as docFile:
-        lines = docFile.readlines()
+      with open(os.path.join(args.adoc_dir, docDirFile), "r") as adocFile:
+        adocLines = adocFile.readlines()
 
-      processedAdoc = Adoc.process_adoc(lines, args.partials_dir)
+      Adoc.process_adoc(adocLines, args.partials_dir)
 
       with open(os.path.join(args.output_dir, docDirFile), "w") as processedAdocFile:
-        processedAdocFile.writelines(processedAdoc)
+        processedAdocFile.writelines(adocLines)
 
   return 0
 
