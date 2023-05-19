@@ -80,6 +80,7 @@ jobs:
       - name: Generate asciidoc CRD reference
         run: |
           chmod +x ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh
+          mkdir openapi_specs
           
           for spec in preprocess_specs/*.yaml;
           do
