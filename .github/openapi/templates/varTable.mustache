@@ -1,0 +1,19 @@
+[.fields-{{classname}}]
+[cols="2,1,2,4"]
+|===
+| Name| Required| Type| Description
+
+{{#vars}}
+    | {{#isModel}}
+        {{#vendorExtensions}}
+            {{#x-kubernetes-int-or-string}}{{baseName}}{{/x-kubernetes-int-or-string}}
+            {{^x-kubernetes-int-or-string}}<<{{datatype}},{{baseName}}>>{{/x-kubernetes-int-or-string}}
+        {{/vendorExtensions}}
+        {{^vendorExtensions}}<<{{datatype}},{{baseName}}>>{{/vendorExtensions}}
+    {{/isModel}}
+    {{^isModel}}{{baseName}}{{/isModel}}
+    | {{#required}}X{{/required}}
+    | {{> varType}}
+    | {{description}}
+{{/vars}}
+|===

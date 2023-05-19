@@ -1,0 +1,11 @@
+{{^isModel}}
+    {{^isAnyType}}
+        {{#isContainer}}
+            {{#isMap}}
+                {{#items}}
+{{^isModel}}key/value{{/isModel}}
+                {{/items}}
+            {{/isMap}}
+        {{/isContainer}}
+    {{/isAnyType}}
+{{/isModel}}

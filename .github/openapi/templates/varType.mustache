@@ -1,0 +1,8 @@
+{{! SINGLES }}
+{{> types/single-int-or-string }}
+{{> types/single-primitive }}
+{{> types/single-object }}
+{{> types/any }}
+{{! COLLECTIONS }}
+{{! Include the "map|list of" prefix, everything past this point is some sort of collection }}
+{{> types/list-or-map-of-prefix }}{{> types/object-list }}{{> types/object-map }}{{> types/key-value-map }}{{> types/int-or-string-map }}{{> types/primitive-list }}

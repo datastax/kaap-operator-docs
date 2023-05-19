@@ -1,0 +1,36 @@
+= {{{appName}}}
+{{#headerAttributes}}
+{{infoEmail}}
+{{{version}}}
+:numbered:
+:source-highlighter: highlightjs
+:keywords: openapi, rest, {{appName}}
+:specDir: {{specDir}}
+:snippetDir: {{snippetDir}}
+:generator-template: v1 2019-12-20
+:info-url: {{infoUrl}}
+:app-name: {{appName}}
+{{/headerAttributes}}
+
+{{#useIntroduction}}
+== Introduction
+{{/useIntroduction}}
+{{^useIntroduction}}
+[abstract]
+.Abstract
+{{/useIntroduction}}
+{{{appDescription}}}
+
+{{#specinclude}}intro.adoc{{/specinclude}}
+
+{{#models}}
+    {{#model}}
+        {{^isAnyType}}
+{{> baseInfo}}
+
+=== {{name}} [[{{name}}]]
+
+{{> varTable}}
+        {{/isAnyType}}
+    {{/model}}
+{{/models}}

@@ -1,0 +1,6 @@
+{{#isModel}}
+    {{#vendorExtensions}}
+{{^x-kubernetes-int-or-string}}object{{/x-kubernetes-int-or-string}}
+    {{/vendorExtensions}}
+{{^vendorExtensions}}object{{/vendorExtensions}}
+{{/isModel}}

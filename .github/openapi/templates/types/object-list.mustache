@@ -1,0 +1,11 @@
+{{^isModel}}
+    {{^isAnyType}}
+        {{#isContainer}}
+            {{#isArray}}
+                {{#items}}
+{{#isModel}}<<{{complexType}},{{#lambda.lowercase}}{{baseName}}{{/lambda.lowercase}}>>{{/isModel}}
+                {{/items}}
+            {{/isArray}}
+        {{/isContainer}}
+    {{/isAnyType}}
+{{/isModel}}
