@@ -18,7 +18,7 @@ on:
         required: true
         type: boolean
         default: false
-        description: "Update all generated files and error if there are none"
+        description: "Save all generated files to the job and error if there are none"
 
 jobs:
   generate_crd_ref:

@@ -32,13 +32,13 @@ def main(params=None):
       with open(os.path.join(args.specs_dir, specDirFile), "r") as specFile:
         spec = yaml.load(specFile, Loader=yaml.FullLoader)
 
-      processedSpec = OpenApi.process_spec(spec)
+      OpenApi.process_spec(spec)
 
       if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
 
       with open(os.path.join(args.output_dir, spec["info"]["title"] + ".openapi.processed.yaml"), "w") as processedSpecFile:
-        yaml.dump(processedSpec, processedSpecFile)
+        yaml.dump(spec, processedSpecFile)
 
   return 0
 
