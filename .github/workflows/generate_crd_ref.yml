@@ -12,7 +12,7 @@ on:
         description: 'Pulsar Operator Repo'
         required: true
         type: string
-        default: 'https://github.com/riptano/pulsar-operator'
+        default: 'riptano/pulsar-operator'
 
 jobs:
   generate_crd_ref:
@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: ${{ github.event.inputs.operatorRepo }}
-        tag: ${{ github.event.inputs.operatorVersionTag }}
+        ref: ${{ github.event.inputs.operatorVersionTag }}
         path: pulsar-operator-src
         token: ${{ secrets.DDIERUF_TOKEN }}
 
