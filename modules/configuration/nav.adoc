@@ -1,2 +1,1 @@
 * xref:configuration.adoc[Configuration]
-* xref:api.adoc[API Reference]

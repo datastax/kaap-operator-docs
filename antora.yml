@@ -1,6 +1,7 @@
 name: pulsar-operator
 title: Pulsar Operator Documentation
 start_page: index.adoc
+version: 0.0.5
 
 asciidoc:
   attributes:
@@ -12,3 +13,4 @@ nav:
   - modules/getting-started/nav.adoc
   - modules/migrating/nav.adoc
   - modules/configuration/nav.adoc
+  - modules/crd-spec/nav.adoc

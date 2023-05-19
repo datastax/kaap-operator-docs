@@ -1,0 +1,12 @@
+{{#isMap}}
+    {{#additionalProperties}}
+        {{#vendorExtensions}}
+{{#x-kubernetes-int-or-string}}integer or string{{/x-kubernetes-int-or-string}}
+        {{/vendorExtensions}}
+    {{/additionalProperties}}
+    {{^additionalProperties}}
+        {{#vendorExtensions}}
+{{#x-kubernetes-int-or-string}}integer or string{{/x-kubernetes-int-or-string}}
+        {{/vendorExtensions}}
+    {{/additionalProperties}}
+{{/isMap}}
