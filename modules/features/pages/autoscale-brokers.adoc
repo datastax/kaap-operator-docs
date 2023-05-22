@@ -81,3 +81,86 @@ The operator's thresholds are set in the values.yaml file. +
 |The stabilization window restricts rapid changes in replica count when the metrics used for scaling are fluctuating. The autoscaling algorithm uses this window to infer a previous desired state and avoid unwanted changes to workload scale.
 |Default value is 5 minutes after the pod's state is Ready.
 |===
+
+== Test broker autoscaler
+
+
+
+
+
+== Test bookie autoscaler
+
+Once you've deployed a Pulsar cluster with broker autoscaling enabled, test it by adding load to the cluster and watching the operator pod's logs.
+[NOTE]
+====
+If you don't have a bastion pod, you can add it to your cluster in the same values.yaml file you used to deploy the operator.
+[source,helm]
+----
+bastion:
+  replicas: 1
+  resources:
+    requests:
+      cpu: "0.1"
+      memory: "128Mi"
+----
+====
+
+. Exec into your bastion pod.
++
+[source,bash]
+----
+kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
+----
+
+. Run a https://pulsar.apache.org/docs/performance-pulsar-perf/[Pulsar perf] test in your deployment, and follow the operator's logs to see the autoscaler in action.
++
+[tabs]
+====
+Bastion pod::
++
+--
+[source,helm]
+----
+bin/pulsar-perf produce topic
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+2023-05-19T14:39:34,726+0000 [pulsar-perf-producer-exec-1-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Created 1 producers
+2023-05-19T14:39:34,778+0000 [pulsar-client-io-2-1] INFO  com.scurrilous.circe.checksum.Crc32cIntChecksum - SSE4.2 CRC32C provider initialized
+2023-05-19T14:39:43,190+0000 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced:     817 msg ---     81.7 msg/s ---      0.6 Mbit/s  --- failure      0.0 msg/s --- Latency: mean:  12.008 ms - med:  10.571 - 95pct:  20.821 - 99pct:  32.194 - 99.9pct:  46.759 - 99.99pct:  56.243 - Max:  56.243
+----
+--
+====
+
+. The operator notices the differing values and patches the broker-set to keep up with the increased CPU usage of the broker pods.
++
+[source,console]
+----
+17:06:09 INFO  [com.dat.oss.pul.aut.bro.LoadReportResourceUsageSource] (pool-9-thread-1) Broker pulsar-broker-0 cpu usage: 7.000000 %
+│ 17:06:10 INFO  [com.dat.oss.pul.aut.bro.LoadReportResourceUsageSource] (pool-9-thread-1) Broker pulsar-broker-1 cpu usage: 15.000001 %
+│ 17:06:10 INFO  [com.dat.oss.pul.aut.BrokerSetAutoscaler] (pool-9-thread-1) Scaled brokers for broker set broker from 2 to 3
+│ 17:06:10 INFO  [com.dat.oss.pul.crd.SpecDiffer] (ReconcilerExecutor-pulsar-broker-controller-67) 'broker.replicas' value differs:
+was:2
+now: 3
+----
++
+[NOTE]
+====
+The default for lowerCpuThreshold is `0.4` and higherCpuThreshold is `0.8`. You may need to set these values lower in values.yaml to trigger broker scaling.
+====
+. Cancel the Pulsar perf test with Ctrl-C. The operator will notice the decreased load and scale down the number of brokers. Notice that the operator scales down the number of brokers by 1 at a time, as specified in the `scaleDownBy` parameter, and properly decommissions them.
++
+[source,console]
+----
+17:18:39 INFO  [com.dat.oss.pul.aut.bro.LoadReportResourceUsageSource] (pool-9-thread-1) Broker pulsar-broker-6 cpu usage: 2.000000 %
+17:18:39 INFO  [com.dat.oss.pul.aut.BrokerSetAutoscaler] (pool-9-thread-1) Scaled brokers for broker set broker from 7 to 6
+17:18:39 INFO  [com.dat.oss.pul.crd.SpecDiffer] (ReconcilerExecutor-pulsar-broker-controller-74) 'broker.replicas' value differs:
+was: 7
+now: 6                                                                                                                                          │
+│ 17:18:40 INFO  [com.dat.oss.pul.con.AbstractResourceSetsController] (ReconcilerExecutor-pulsar-broker-controller-74) broker-set 'broker' patched
+----

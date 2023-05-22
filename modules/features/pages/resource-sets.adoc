@@ -1,13 +1,26 @@
-# Resource Sets and Racks
+= Resource Sets and Racks
 
-## Resource Sets
-The operator allows you to create multiple sets of Pulsar proxies/broker/bookies. Each set is a dedicated deployment/statefulset with its own service and configmap.
-When multiple sets are specified, an umbrella service is created as the main entrypoint of the cluster. Other than that, a dedicated service is created for each set. You can customize the service singularly. For example, it’s straightforward to have different dns domains for each set.
+The operator allows you to create multiple sets of Pulsar proxies, brokers, and bookies, called resource sets.
+Each set is a dedicated deployment/statefulset with its own service and configmap.
+When multiple sets are specified, an umbrella service is created as the main entrypoint of the cluster, but otherwise, a dedicated service is created for each set. You can customize the service per set - for example, you might assign different DNS domains for each resource set.
 
-Having different endpoints for the cluster allows new deployment strategies, such as canary deployments.
+Resource sets are a very powerful addition to a {pulsar-operator}-managed cluster, allowing you to create different configurations for the same components. For example, you might dedicate a set of brokers to a single customer, or you can create a set of brokers with a different configuration for testing purposes.
 
+== Install Operator with resource sets enabled
++
+[source,helm]
+----
+helm install pulsar-operator helm/pulsar-operator \
+    --values helm/examples/resource-sets/values.yaml
+----
 
-## Racks
+== Resource Sets
+
+[source,yaml]
+----
+
+----
+== Racks
 A rack defines a fault domain. A resource set can be mapped to a rack.
 When a resource set is mapped to a rack, all their replicas will be placed in the same failure domain.
 
@@ -33,7 +46,7 @@ spec:
             rack: rack3
 ```        
 
-## Proxy Sets
+== Proxy Sets
 With proxy sets it’s straightforward to have dedicated proxy sets per extensions. Pulsar is able to communicate with different applications clients, such as Apache Kafka and RabbitMQ, through proxy extensions. It’s therefore possible to have a dedicated proxy to only accept specific protocol commands.
 
 ```
@@ -59,7 +72,7 @@ spec:
 ```
 
 
-## Bookkeeper Sets
+== Bookkeeper Sets
 Thanks to the racks, the operator is able to set the data placement policy automatically.
 Leveraging the rack-awareness concept of Pulsar and BookKeeper clients, every entry will be stored as much as possible in different failure domains.
 
@@ -77,7 +90,7 @@ If you wish to disable the region aware policy, you need to explicitly set `book
 
 
 
-## Pod placement affinity and affinity
+== Pod placement affinity and affinity
 For a single resource set, it’s possible to specify the antiAffinity.
 There are two levels of affinity, zone and host.
 The first one will set the failure domain to the region’s availability zone.
@@ -125,7 +138,7 @@ Note that if an availability zone without any pods of that kind is not available
 
 
 
-## Resource sets pods placement affinity and affinity
+== Resource sets pods placement affinity and affinity
 A rack defines a fault domain. A resource set can be mapped to a rack.
 When a resource set is mapped to a rack, all their replicas will be placed in the same failure domain.
 There are two levels of affinity, zone and host.
