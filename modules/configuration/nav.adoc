@@ -1,4 +1,4 @@
-* xref:features.adoc[Custom Resources]
+* xref:features.adoc[Features]
 ** xref:features.adoc#bookkeeper-autoscaler[Bookkeeper autoscaler]
 ** xref:features.adoc#broker-autoscaler[Broker autoscaler]
 ** xref:features.adoc#rackaware-bookie[Rack-aware bookkeeper placement]
