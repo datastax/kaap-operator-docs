@@ -1,0 +1,172 @@
+
+= Authentication
+
+Apache Pulsar supports different authentication ways.
+The operator comes with options to facilitate the authentication.
+In order to setup the [JWT Authentication](https://pulsar.apache.org/docs/2.11.x/security-jwt/), you can simply set authentication to `true`.
++
+[source,yaml]
+----
+global:
+    auth:
+        enabled: true
+----
+
+Since the only supported authentication mechanism by the operator is JWT, it's not required to specify JWT related options.
+If you want to use a different authentication mechanism, you can disable authentication and manually configure the authentication options in the config section.
+
+When setting up authentication, the operator will automatically generate the secret containing the private key and the public key.
+If you wish to use your own key pairs, you can disable the secret generation by setting `initialize` to false.
+[source,yaml]
+----
+global:
+    auth:
+        enabled: true
+        token:
+            initialize: false
+----
+Note that the operator will expect secrets with the same name to be already present in the namespace.
+Secrets must be named `token-private-key` and `token-public-key`.
+[source,yaml]
+----
+apiVersion: v1
+kind: Secret
+metadata:
+  name: token-private-key
+type: Opaque
+data:
+  my-private.key: <base64 encoded private key>
+----
+
+[source,yaml]
+----
+apiVersion: v1
+kind: Secret
+metadata:
+  name: token-public-key
+type: Opaque
+data:
+  my-public.key: <base64 encoded private key>
+----
+
+[NOTE]
+====
+Symmetric secret key is not supported.
+====
+
+The operator will also generate tokens for super user roles.
+By default, the super users are `superuser`, `admin`, `websocket` and `proxy`.
+If you wish to use another set of super users, you can specify them in the `superUserRoles` option, along with the `proxyRoles`.
+[source,yaml]
+----
+global:
+    auth:
+        enabled: true
+        token:
+            superUserRoles:
+                - superuser
+                - admin
+                - websocket
+                - proxy
+                - my-custom-user
+                - my-custom-proxy-user
+            proxyRoles:
+                - proxy
+                - my-custom-proxy-user
+----
+
+
+To generate a token for a given subject, you can then login to the bastion and perform Pulsar Admin operations since the Bastion pod already mount the super user token:
+
+[source,bash]
+----
+PULSAR_TOKEN=$(kubectl exec deployment/pulsar-bastion -- bin/pulsar tokens create --private-key token-private-key/my-private.key --subject myuser)
+echo $PULSAR_TOKEN
+kubectl exec deployment/pulsar-bastion -- bin/pulsar-shell -e 'admin namespaces grant-permission --role myuser --actions produce,consume public/default'
+kubectl exec deployment/pulsar-bastion -- bin/pulsar-shell -e "client --auth-params \"token:$PULSAR_TOKEN\" produce -m hello public/default/topic"
+----
+
+=== Secure your cluster with TLS
+You can setup TLS for each component in the Pulsar cluster or you can only enable it for the specific components.
+Each component has its own dedicated configuration section but they're all under the `global.tls` section.
+
+Once the TLS setup is done, the operator will take care of updating the components configuration to use TLS.
+
+
+To setup a zero-trust cluster with TLS, you need to set `enabled` to true for each component
+
+[source,yaml]
+----
+global:
+    tls:
+      enabled: true
+      zookeeper:
+        enabled: true
+        secretName: zk-tls
+      bookkeeper:
+        enabled: true
+        secretName: bk-tls
+      autorecovery:
+        enabled: true
+        secretName: autorecovery-tls
+      proxy:
+        enabled: true
+        enabledWithBroker: true
+        secretName: proxy-tls
+      broker:
+        enabled: true
+        secretName: broker-tls
+      functionsWorker:
+        enabled: true
+        enabledWithBroker: true
+        secretName: fnw-tls
+----
+Note that each component has its own secret name.
+The secret name can be auto provisioned by the operator using `cert-manager`. You can share the same certificate across multiple components, although it's not a recommended practice for security reasons.
+
+The secret must follow the [cert-manager Certificate](https://cert-manager.io/docs/concepts/certificate/) structure:
+- `tls.crt`: the certificate
+- `tls.key`: the private key
+
+[source,yaml]
+----
+apiVersion: v1
+kind: Secret
+metadata:
+  name: pulsar-tls
+data:
+  tls.crt: <base64 encoded certificate>
+  tls.key: <base64 encoded key>
+----
+
+The operator only needs to know the secret name and it will automatically use it as is.
+In some cases, like test clusters, you might wish to generate self signed certificates.
+The operator integrates well with cert-manager to generate a self-signed CA and all the needed certificates.
+
+In order to enable the certificate provisioning you have to configure it in the `global.tls` section.
+[source,yaml]
+----
+global:
+    tls:
+        certProvisioner:
+            selfSigned:
+              enabled: true
+              perComponent: true
+              zookeeper:
+                generate: true
+              broker:
+                generate: true
+              bookkeeper:
+                generate: true
+              autorecovery:
+                generate: true
+              proxy:
+                generate: true
+              functionsWorker:
+                generate: true
+----
+This will generate all the secrets needed by the components. The name of each secret is gathered from the `secretName` configured.
+
+
+The repository contains examples for [real TLS example with acme](https://github.com/riptano/pulsar-operator/tree/main/helm/examples/cert-manager-acme) 
+and [self-signed certificates](https://github.com/riptano/pulsar-operator/tree/main/helm/examples/cert-manager-self-signed). 

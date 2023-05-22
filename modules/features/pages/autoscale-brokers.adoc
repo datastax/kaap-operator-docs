@@ -84,12 +84,6 @@ The operator's thresholds are set in the values.yaml file. +
 
 == Test broker autoscaler
 
-
-
-
-
-== Test bookie autoscaler
-
 Once you've deployed a Pulsar cluster with broker autoscaling enabled, test it by adding load to the cluster and watching the operator pod's logs.
 [NOTE]
 ====
