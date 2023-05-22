@@ -9,7 +9,6 @@ Resource sets are a very powerful addition to a {pulsar-operator}-managed cluste
 <<racks,Racks>>,<<proxies,proxies>>,<<bookies,bookies>>, and <<pods,pods>> can likewise be created as resource sets with their own configurations.
 
 == Install Operator with resource sets enabled
-+
 [source,helm]
 ----
 helm install pulsar-operator helm/pulsar-operator \
@@ -134,7 +133,6 @@ With `requireRackAntiAffinity=false`, each pod of the same rack will be placed i
 Set `requireRackAntiAffinity=true`, to strictly enforce this behavior. If no node is free, the pod will wait until a new node is added.
 
 To place all pods in the same zone, you must set:
-+
 [source,helm]
 ----
 global:
