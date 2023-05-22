@@ -97,6 +97,8 @@ Since the generated resources will match the existing cluster's resources, the f
 * The operator will not delete any existing resources.
 * The operator will restart every statefulset/deployment. This will be done in a safe manner using the staged upgrades feature of the operator.
 
+== Cleanup
+
 . Delete the existing chart release.
 +
 [source,kubectl]
@@ -106,11 +108,13 @@ kubectl delete secret -l name=<old-release-name>,owner=helm
 
 . Clean up Helm annotations and labels.
 
-You can safely remove the following annotations:
+.. You can safely remove the following annotations:
+
 * meta.helm.sh/release-name
 * meta.helm.sh/release-namespace
 
-You can safely remove the following labels:
+.. You can safely remove the following labels:
+
 * app.kubernetes.io/managed-by
 * chart
 * release
@@ -120,4 +124,6 @@ You can safely remove the following labels:
 
 Now that you've migrated your existing cluster to the operator, you can start using the operator's features to manage your cluster.
 
-* xref:configuration:features.adoc#auto-scaling[Auto-scaling]
+* xref:features:autoscale-bookies.adoc[Auto-scale bookies]
+* xref:features:autoscale-brokers.adoc[Auto-scale brokers]
+* xref:features:resource-sets.adoc[Resource sets]

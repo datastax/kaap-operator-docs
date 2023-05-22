@@ -34,7 +34,6 @@ stateDiagram-v2
 == Example
 
 For example, if you've installed the operator and a Pulsar cluster with this yaml file:
-+
 [tabs]
 ====
 Helm::
@@ -61,7 +60,7 @@ TEST SUITE: None
 --
 ====
 
-Looking over your configuration, you decide you also need more Brokers to handle requests.
+. Looking over your configuration, you decide you also need more Brokers to handle requests.
 Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3
 +
 [source,helm]
@@ -78,7 +77,7 @@ broker:
           memory: "128Mi"
 ----
 
-... Upgrade the cluster with the new values.yaml file:
+. Upgrade the cluster with the new values.yaml file:
 +
 [tabs]
 ====
@@ -107,13 +106,14 @@ TEST SUITE: None
 --
 ====
 
-. The operator will upgrade the cluster to the new desired state. In this case, the operator adds two more brokers, and touches nothing else.
+. The operator will upgrade the cluster to the new desired state. In this case, the operator adds two more broker pods, and touches nothing else.
++
 [tabs]
 ====
-Helm::
+Kubectl::
 +
 --
-[source,helm]
+[source,bash]
 ----
 kubectl get pods -A
 ----
@@ -143,7 +143,6 @@ pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1 
 == Upgrade CRDs
 
 To upgrade CRDs:
-+
 [tabs]
 ====
 Helm::
