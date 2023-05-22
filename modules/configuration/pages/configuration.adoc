@@ -2,8 +2,9 @@
 
 The `PulsarCluster` custom resource definition represents the desired state of your Apache Pulsar cluster.
 The main structure is:
-- Global section, containing configurations shared by each component
-- a section for each component
+
+* Global section, containing configurations shared by each component
+* A section for each component
 
 == Global configurations
 The global section contains the main characteristics of the cluster.

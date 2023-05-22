@@ -1,2 +1,4 @@
-** xref:configuration.adoc[Configuration]
+* xref:configuration.adoc[Configuration]
+** xref:auth.adoc[Authentication]
 ** xref:api.adoc[API Reference]
+** xref:custom-resource-definitions.adoc[]

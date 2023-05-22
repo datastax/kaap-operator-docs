@@ -1,4 +1,4 @@
-= Custom Resources
+= Custom Resources Definitions
 
 A custom resource is an extension of the Kubernetes API, and a Custom Resource Definition defines the state of a resource and how it is managed.
 The PulsarCluster resource is a custom resource that defines the PulsarCluster resources, which is used by the {pulsar-operator} to manage Pulsar cluster resources.
