@@ -6,7 +6,7 @@ When multiple sets are specified, an umbrella service is created as the main ent
 
 Resource sets are a very powerful addition to a {pulsar-operator}-managed cluster, allowing you to create different configurations for the same components. For example, you might dedicate a set of brokers to a single customer, or you can create a set of brokers with a different configuration for testing purposes.
 
-<<racks,Racks>>,<<proxies,proxies>>,<<bookies,bookies>>, and <<pods,pods>> can likewise be created as resource sets with their own configurations, 
+<<racks,Racks>>,<<proxies,proxies>>,<<bookies,bookies>>, and <<pods,pods>> can likewise be created as resource sets with their own configurations.
 
 == Install Operator with resource sets enabled
 +
@@ -16,6 +16,7 @@ helm install pulsar-operator helm/pulsar-operator \
     --values helm/examples/resource-sets/values.yaml
 ----
 
+[#racks]
 == Racks
 A rack defines a failure domain.
 A failure domain can be a region's availability zone (`zone`), or a cluster node (`host`).
@@ -41,6 +42,7 @@ spec:
             rack: rack3
 ----
 
+[#proxies]
 == Proxy Sets
 Proxy resource sets are used to create multiple sets of Pulsar proxies. Each resource set has its own configuration.
 Pulsar can communicate with many different application clients, such as Apache Kafka and RabbitMQ, through proxy extensions.
@@ -68,6 +70,7 @@ spec:
                   external-dns.alpha.kubernetes.io/hostname: kafka.proxy.pulsar.local
 ----
 
+[#bookies]
 == Bookkeeper Sets
 With a https://pulsar.apache.org/docs/administration-isolation-bookie/#rack-aware-placement-policy[rack-aware deployment], {pulsar-operator} can set the data placement policy automatically.
 Every entry will be stored as much as possible in different failure domains to guarantee rack-level fault tolerance.
@@ -88,6 +91,7 @@ Fortunately, {pulsar-operator} will automatically add this configuration propert
 
 If you wish to disable the region-aware policy, you need to explicitly set `bookkeeperClientRegionawarePolicyEnabled=false` in the broker and autorecovery configuration.
 
+[#pods]
 == Resource sets pod placement affinity
 A rack defines a fault domain. A resource set can be mapped to a rack.
 When a resource set is mapped to a rack, that set's replicas will be placed in the same failure domain.
