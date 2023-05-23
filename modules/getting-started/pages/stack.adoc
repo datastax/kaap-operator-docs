@@ -13,12 +13,12 @@ Check out the {pulsar-stack}.
 To install a PulsarCluster with the Pulsar stack included:
 [source,bash]
 ----
-helm install pulsar pulsar-stack-0.0.4.tgz --set pulsar-operator.cluster.create=true
+helm install pulsar pulsar-stack-0.0.5.tgz --set pulsar-operator.cluster.create=true
 ----
 
 Wait for the cluster to be up and running:
 
-[source,bash]
+[source,kubectl]
 ----
 kubectl wait pulsar pulsar --for condition=Ready=True --timeout=240s
 ----
@@ -51,7 +51,9 @@ pulsar-proxy          2/3     3            2           24m
 ----
 --
 ====
+
 . Describe the deployment:
++
 [tabs]
 ====
 Kubectl::
@@ -129,7 +131,7 @@ To uninstall the operator and the cluster:
 Helm::
 +
 --
-[source,kubectl]
+[source,helm]
 ----
 helm delete pulsar
 ----

@@ -2,4 +2,3 @@
 ** xref:operator.adoc[]
 ** xref:stack.adoc[]
 ** xref:upgrades.adoc[]
-** xref:source.adoc[]

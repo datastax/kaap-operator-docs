@@ -60,8 +60,8 @@ TEST SUITE: None
 --
 ====
 
-. Looking over your configuration, you decide you also need more Brokers to handle requests.
-Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3
+. While looking over your configuration, you decide you also need more brokers to handle requests.
+Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3:
 +
 [source,helm]
 ----

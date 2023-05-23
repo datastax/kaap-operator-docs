@@ -1,7 +1,7 @@
 = Getting started
 {pulsar-operator} comes in two distinct flavors:
 
-* xref:getting-started:operator.adoc[Pulsar Operator] - Install just the operator pod into an existing Pulsar cluster.
+* xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator pod and PulsarCluster CRDs.
 
 * xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
 
