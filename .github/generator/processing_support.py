@@ -31,7 +31,7 @@ metadata:
 spec: {}"""
 
     yamlExample = yaml.load(example, Loader=yaml.FullLoader)
-    yamlExample["kind"] = kind.title()
+    yamlExample["kind"] = kind
 
     current_dict = yamlExample["spec"]
 
@@ -65,30 +65,27 @@ spec: {}"""
 
       newLines = []
       splitLine = line.replace("=== ", "").split(" ")
-      modelName = splitLine[0].strip().lower()
+      modelName = splitLine[0].strip()
       modelLink = splitLine[1].strip()
       splitModelNames = modelName.split("_")
       newModelName = Adoc.__calculate_new_model_name(splitModelNames)
       headerDepth = len(splitModelNames) + 1
-      modelNamespace = ".".join(splitModelNames).title()
+      modelNamespace = ".".join(splitModelNames)
 
       if len(splitModelNames) == 1:
         kind = modelName
 
-      if headerDepth > 4:
-        headerDepth = 4
+      if headerDepth > 3:  # max header depth is 3 "==="
+        headerDepth = 3
 
-      newLines.append(('=' * headerDepth) + " " + newModelName.title() + " " + modelLink)
+      #  note the model name is already camelcased, so to make it pascalcase just caps  the first letter
+      newLines.append(('=' * headerDepth) + " " + newModelName[0].upper() + newModelName[1:] + " " + modelLink)
       newLines.append("")
 
       if partialsDir:
         for partial in Adoc.__find_partials_for_model(modelNamespace, partialsDir):
           newLines.append(partial + " \n")
           newLines.append("")
-
-      if len(splitModelNames) > 1:
-        newLines.append("Complete namespace: " + modelNamespace)
-        newLines.append("")
 
       if len(splitModelNames) > 2:
         Adoc.__add_yaml_model_example(newLines, kind, splitModelNames)
@@ -107,7 +104,7 @@ spec: {}"""
 class Crd:
   @staticmethod
   def convert_crd_to_openapi(crdSpec: yaml) -> yaml:
-    crdKind = crdSpec["spec"]["names"]["kind"]
+    crdKind = crdSpec["spec"]["names"]["kind"].tolower()
 
     apiSpec = """
       openapi: 3.0.0

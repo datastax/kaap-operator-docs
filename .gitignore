@@ -3,3 +3,7 @@
 **/*.jar
 **/__pycache__/
 venv
+.github/out
+.github/openapi-output.json
+
+.github/crds/

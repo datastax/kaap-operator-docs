@@ -1,19 +1,19 @@
 [.fields-{{classname}}]
-[cols="2,1,2,4"]
+[cols="2,4"]
 |===
-| Name| Required| Type| Description
+| Field| Description
 
 {{#vars}}
-    | {{#isModel}}
+    | *{{baseName}}* +
+    {{#isModel}}
         {{#vendorExtensions}}
-            {{#x-kubernetes-int-or-string}}{{baseName}}{{/x-kubernetes-int-or-string}}
-            {{^x-kubernetes-int-or-string}}<<{{datatype}},{{baseName}}>>{{/x-kubernetes-int-or-string}}
+            {{#x-kubernetes-int-or-string}}{{> varType}}{{/x-kubernetes-int-or-string}}
+            {{^x-kubernetes-int-or-string}}<<{{datatype}},{{> varType}}>>{{/x-kubernetes-int-or-string}}
         {{/vendorExtensions}}
-        {{^vendorExtensions}}<<{{datatype}},{{baseName}}>>{{/vendorExtensions}}
+        {{^vendorExtensions}}<<{{datatype}},{{> varType}}>>{{/vendorExtensions}}
     {{/isModel}}
-    {{^isModel}}{{baseName}}{{/isModel}}
-    | {{#required}}X{{/required}}
-    | {{> varType}}
-    | {{description}}
+    {{^isModel}}{{> varType}}{{/isModel}}
+    | {{#required}}_(Optional)_ + {{/required}}
+    {{description}}
 {{/vars}}
 |===
