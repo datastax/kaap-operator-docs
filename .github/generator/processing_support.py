@@ -104,7 +104,7 @@ spec: {}"""
 class Crd:
   @staticmethod
   def convert_crd_to_openapi(crdSpec: yaml) -> yaml:
-    crdKind = crdSpec["spec"]["names"]["kind"].tolower()
+    crdKind = crdSpec["spec"]["names"]["kind"]
 
     apiSpec = """
       openapi: 3.0.0
