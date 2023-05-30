@@ -16,7 +16,7 @@ helm repo update
 ----
 [TIP]
 ====
-Learn more about installing the Luna Streaming Helm chart xref:install-upgrade:quickstart-helm-installs.adoc[here].
+//Learn more about installing the Luna Streaming Helm chart xref:install-upgrade:quickstart-helm-installs.adoc[here].
 ====
 
 . The {pulsar-operator} Helm chart is currently only available privately.
