@@ -41,15 +41,18 @@ jobs:
           python-version: '3.8'
 
       - name: Install deps
+        continue-on-error: true
         run: |
           pip install -r pulsar-operator-docs/.github/generator/requirements.txt
 
       - name: Clear existing docs
+        continue-on-error: true
         run: |
           rm -rf pulsar-operator-docs/modules/crd-spec/pages/*
           rm -rf pulsar-operator-docs/modules/crd-spec/*.adoc
 
       - name: Convert CRDs to OpenApi v3
+        continue-on-error: true
         run: |
           python pulsar-operator-docs/.github/generator/crds_to_openapi.py \
             --crds_dir pulsar-operator-src/helm/pulsar-operator/crds \
@@ -64,6 +67,7 @@ jobs:
           if-no-files-found: error
 
       - name: Preprocess specs
+        continue-on-error: true
         run: |
           python pulsar-operator-docs/.github/generator/preprocess_specs.py \
             --specs_dir generated_specs \
@@ -78,6 +82,10 @@ jobs:
           if-no-files-found: error
 
       - name: Generate asciidoc CRD reference
+        env:
+          OPENAPI_GENERATOR_VERSION: v6.6.0
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
         run: |
           chmod +x ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh
           mkdir openapi_specs
@@ -107,12 +115,14 @@ jobs:
           if-no-files-found: error
 
       - name: Postprocess adoc
+        continue-on-error: true
         run: |
           python pulsar-operator-docs/.github/generator/postprocess_adoc.py \
             --adoc_dir openapi_specs \
             --output_dir pulsar-operator-docs/modules/crd-spec/pages
 
       - name: Generate navigation adoc
+        continue-on-error: true
         run: |
           for spec in openapi_specs/*.adoc;
           do
