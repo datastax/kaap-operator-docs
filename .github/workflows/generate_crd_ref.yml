@@ -83,7 +83,7 @@ jobs:
 
       - name: Generate asciidoc CRD reference
         env:
-          OPENAPI_GENERATOR_VERSION: v6.6.0
+          OPENAPI_GENERATOR_VERSION: 6.6.0
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
         run: |
