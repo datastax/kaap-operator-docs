@@ -1,0 +1,8 @@
+** xref:Autorecovery.openapi.adoc[]
+** xref:Bastion.openapi.adoc[]
+** xref:BookKeeper.openapi.adoc[]
+** xref:Broker.openapi.adoc[]
+** xref:FunctionsWorker.openapi.adoc[]
+** xref:Proxy.openapi.adoc[]
+** xref:PulsarCluster.openapi.adoc[]
+** xref:ZooKeeper.openapi.adoc[]
