@@ -1,6 +1,5 @@
 = {{{appName}}}
 {{#headerAttributes}}
-{{infoEmail}}
 {{{version}}}
 :source-highlighter: highlightjs
 :keywords: openapi, rest, {{appName}}
@@ -11,13 +10,6 @@
 :app-name: {{appName}}
 {{/headerAttributes}}
 
-{{#useIntroduction}}
-== Introduction
-{{/useIntroduction}}
-{{^useIntroduction}}
-[abstract]
-.Abstract
-{{/useIntroduction}}
 {{{appDescription}}}
 
 {{#specinclude}}intro.adoc{{/specinclude}}
