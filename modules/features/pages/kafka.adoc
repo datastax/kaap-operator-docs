@@ -1,7 +1,7 @@
 = Kafka
 
 Have an Apache Kafka® workload you want to control with {pulsar-operator}?
-Thanks to xref:starlight-for-kafka::index.adoc[], you can run your Kafka workload on a Pulsar cluster, and with {pulsar-operator}, the scaling of the Kafka pods is handled for you.
+Thanks to Starlight for Kafka, you can run your Kafka workload on a Pulsar cluster, and with {pulsar-operator}, the scaling of the Kafka pods is handled for you.
 
 == Scaling the Pulsar Broker with a Kafka Client Workload
 
