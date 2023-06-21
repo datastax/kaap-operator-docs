@@ -37,7 +37,7 @@ In addition to the required components, you might want to include some *optional
 
 * https://bookkeeper.apache.org/docs/admin/autorecovery[Bookkeeper AutoRecovery^]{external-link-icon} - This is a Pulsar component that recovers Bookkeeper data in the event of a bookie outage.
 * https://pulsar.apache.org/docs/concepts-architecture-overview/#pulsar-proxy[Pulsar proxy^]{external-link-icon} - The Pulsar proxy is just that - a proxy that runs at the edge of the cluster with public facing endpoints.
-Pulsar proxy also offers special options for cluster extensions, like our xref:starlight-for-kafka::index.adoc[Starlight Suite of APIs].
+Pulsar proxy also offers special options for cluster extensions, like our [Starlight Suite of APIs].
 * https://pulsar.apache.org/docs/functions-worker-run-separately/[Dedicated functions worker(s)^]{external-link-icon} - You can optionally run dedicated function workers in a Pulsar cluster.
 * xref:luna-streaming:components:admin-console-tutorial.adoc[Pulsar AdminConsole] - This is an optional web-based admin console for managing Pulsar clusters.
 * xref:luna-streaming:components:heartbeat-vm.adoc[Pulsar Heartbeat] - This is an optional component that monitors the health of Pulsar cluster and emits metrics about the cluster that are helpful for observing and debugging issues.
@@ -51,7 +51,7 @@ Pulsar proxy also offers special options for cluster extensions, like our xref:s
 
 * xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
 
-You can also scan an existing Pulsar cluster and generate an equivalent PulsarCluster CRD. For more, see xref:migrating:index.adoc[].
+You can also scan an existing Pulsar cluster and generate an equivalent PulsarCluster CRD. For more, see xref:features:migrate-cluster.adoc[].
 
 == Features
 After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
