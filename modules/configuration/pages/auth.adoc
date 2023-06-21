@@ -86,7 +86,7 @@ kubectl exec deployment/pulsar-bastion -- bin/pulsar-shell -e 'admin namespaces 
 kubectl exec deployment/pulsar-bastion -- bin/pulsar-shell -e "client --auth-params \"token:$PULSAR_TOKEN\" produce -m hello public/default/topic"
 ----
 
-=== Secure your cluster with TLS
+== Secure your cluster with TLS
 You can setup TLS for each component in the Pulsar cluster or you can only enable it for the specific components.
 Each component has its own dedicated configuration section but they're all under the `global.tls` section.
 

@@ -5,6 +5,7 @@
 
 {pulsar-operator} is installed using Helm.
 You can install <<operator,(1)>> just the operator and the PulsarCluster CRDs, or you can install <<values,(2)>> the operator, CRDs, and a Pulsar cluster defined with a values.yaml file.
+
 [#operator]
 == Install {pulsar-operator}
 
@@ -16,7 +17,7 @@ helm repo update
 ----
 [TIP]
 ====
-Learn more about installing the Luna Streaming Helm chart xref:install-upgrade:quickstart-helm-installs.adoc[here].
+Learn more about installing the Luna Streaming Helm chart xref:luna-streaming:install-upgrade:quickstart-helm-installs.adoc[here].
 ====
 
 . The {pulsar-operator} Helm chart is currently only available privately.
