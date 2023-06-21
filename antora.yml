@@ -1,7 +1,7 @@
 name: pulsar-operator
 title: Pulsar Operator Documentation
-version: ~
 start_page: index.adoc
+version: 0.0.5
 
 asciidoc:
   attributes:
