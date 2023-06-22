@@ -1,0 +1,19 @@
+= Bookkeeper Sets
+With a https://pulsar.apache.org/docs/administration-isolation-bookie/#rack-aware-placement-policy[rack-aware deployment], {pulsar-operator} can set the data placement policy automatically.
+Every entry will be stored as much as possible in different failure domains to guarantee rack-level fault tolerance.
+
+The auto-configuration of rack-awareness is enabled by default, and is configured in the Bookkeeper configuration section:
+[source,helm]
+----
+bookkeeper:
+	autoRackConfig:
+		enabled: true
+		periodMs: 60000
+----
+[NOTE]
+====
+The autoRackConfig feature requires `bookkeeperClientRegionawarePolicyEnabled=true` in the broker configuration.
+Fortunately, {pulsar-operator} will automatically add this configuration property in the broker and autorecovery values.
+====
+
+If you wish to disable the region-aware policy, you need to explicitly set `bookkeeperClientRegionawarePolicyEnabled=false` in the broker and autorecovery configuration.

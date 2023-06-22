@@ -36,7 +36,7 @@ functionsWorker:
 
 === Authentication
 
-See xref:auth.adoc[Authentication] for more information.
+See xref:authentication:auth-jwt.adoc[] for more information.
 
 === Affinity, antiaffinity and high availability
 
