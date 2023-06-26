@@ -11,8 +11,8 @@ asciidoc:
 
 nav:
   - modules/getting-started/nav.adoc
-  - modules/resource-sets/nav.adoc
+  - modules/migration/nav.adoc
   - modules/authentication/nav.adoc
   - modules/scaling-components/nav.adoc
-  - modules/migration/nav.adoc
+  - modules/resource-sets/nav.adoc
   - modules/api-reference/nav.adoc

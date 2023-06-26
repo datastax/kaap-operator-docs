@@ -51,8 +51,8 @@ data:
   tls.key: <base64 encoded key>
 ----
 
-The operator only needs to know the secret name and it will automatically use it as is.
-In some cases, like test clusters, you might wish to generate self signed certificates.
+The operator only needs to know the secret name and it will automatically use it as-is.
+In some cases, like test clusters, you might wish to generate self-signed certificates.
 The operator integrates well with cert-manager to generate a self-signed CA and all the needed certificates.
 
 In order to enable the certificate provisioning you have to configure it in the `global.tls` section.

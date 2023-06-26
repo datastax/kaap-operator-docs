@@ -126,4 +126,4 @@ Now that you've migrated your existing cluster to the operator, you can start us
 
 * xref:scaling-components:autoscale-bookies.adoc[Auto-scale bookies]
 * xref:scaling-components:autoscale-brokers.adoc[Auto-scale brokers]
-* xref:resource-sets:resource-sets.adoc[Resource sets]
+* xref:resource-sets:index.adoc[Resource sets]

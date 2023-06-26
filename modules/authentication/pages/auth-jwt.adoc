@@ -72,7 +72,7 @@ global:
 ----
 
 
-To generate a token for a given subject, you can then login to the bastion and perform Pulsar Admin operations since the Bastion pod already mount the super user token:
+To generate a token for a given subject, login to the bastion pod and perform Pulsar Admin operations since the bastion pod already mounts the super user token:
 
 [source,bash]
 ----

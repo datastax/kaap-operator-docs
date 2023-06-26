@@ -2,5 +2,3 @@
 ** xref:autoscale-bookies.adoc[]
 ** xref:autoscale-brokers.adoc[]
 ** xref:kafka.adoc[]
-** xref:migrate-cluster.adoc[]
-** xref:resource-sets.adoc[]

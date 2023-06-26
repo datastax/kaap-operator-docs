@@ -5,5 +5,5 @@ The Kubernetes API can be extended to support the new resource type, automating 
 
 * xref:scaling-components:autoscale-bookies.adoc[Bookkeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
 * xref:scaling-components:autoscale-brokers.adoc[Broker autoscaler] - Automatically scale the number of brokers based on CPU load.
-* xref:resource-sets:resource-sets.adoc[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
+* xref:resource-sets:bookies.adoc[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
 * xref:scaling-components:kafka.adoc[Kafka API] - Use the Starlight for Kafka API to bring your Kafka message traffic to Pulsar.
