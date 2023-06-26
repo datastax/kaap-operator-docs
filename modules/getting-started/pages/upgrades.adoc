@@ -1,4 +1,3 @@
-
 = Upgrade deployments
 The operator performs cluster upgrades in a very conservative manner, with the primary goal of reducing maintenance time during upgrades.
 Components are updated and then restarted *only* if strictly needed. For example, if only the broker needs to be upgraded, then all other services will be left up and running.
@@ -35,7 +34,6 @@ stateDiagram-v2
 == Example
 
 For example, if you've installed the operator and a Pulsar cluster with this yaml file:
-+
 [tabs]
 ====
 Helm::
@@ -62,8 +60,8 @@ TEST SUITE: None
 --
 ====
 
-Looking over your configuration, you decide you also need more Brokers to handle requests.
-Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3
+. While looking over your configuration, you decide you also need more brokers to handle requests.
+Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3:
 +
 [source,helm]
 ----
@@ -79,7 +77,7 @@ broker:
           memory: "128Mi"
 ----
 
-... Upgrade the cluster with the new values.yaml file:
+. Upgrade the cluster with the new values.yaml file:
 +
 [tabs]
 ====
@@ -108,13 +106,14 @@ TEST SUITE: None
 --
 ====
 
-. The operator will upgrade the cluster to the new desired state. In this case, the operator adds two more brokers, and touches nothing else.
+. The operator will upgrade the cluster to the new desired state. In this case, the operator adds two more broker pods, and touches nothing else.
++
 [tabs]
 ====
-Helm::
+Kubectl::
 +
 --
-[source,helm]
+[source,bash]
 ----
 kubectl get pods -A
 ----
@@ -140,6 +139,41 @@ pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1 
 ====
 
 . You've successfully upgraded your deployment by just managing a single .yaml file. Thanks, {pulsar-operator}!
+
+== Upgrade CRDs
+
+To upgrade CRDs:
+[tabs]
+====
+Helm::
++
+--
+[source,helm]
+----
+kubectl replace -f helm/pulsar-operator/crds
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+customresourcedefinition.apiextensions.k8s.io/autorecoveries.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/bastions.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/bookkeepers.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/brokers.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/functionsworkers.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/proxies.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/pulsarclusters.pulsar.oss.datastax.com replaced
+customresourcedefinition.apiextensions.k8s.io/zookeepers.pulsar.oss.datastax.com replaced
+----
+--
+====
+
+== Upgrade {pulsar-operator}
+
+Coming soon.
 
 == What's next?
 

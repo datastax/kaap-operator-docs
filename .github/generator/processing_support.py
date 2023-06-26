@@ -24,14 +24,16 @@ class Adoc:
   @staticmethod
   def __add_yaml_model_example(lines: list, kind: str, splitModelNames: list):
 
-    example = """apiVersion: pulsar.oss.datastax.com/v1alpha1
+    example = """
+apiVersion: pulsar.oss.datastax.com/v1alpha1
 kind:
 metadata:
   name: example-pulsarcluster
-spec: {}"""
+spec: {}
+"""
 
     yamlExample = yaml.load(example, Loader=yaml.FullLoader)
-    yamlExample["kind"] = kind
+    yamlExample["kind"] = kind.title()
 
     current_dict = yamlExample["spec"]
 
@@ -45,12 +47,6 @@ spec: {}"""
     lines.append("----")
     lines.extend(yaml.dump(yamlExample).split("\n"))
     lines.append("----")
-    lines.append("")
-
-  @staticmethod
-  def ensure_line_endings(lines: list):
-    for i, line in enumerate(lines):
-      lines[i] = line + ' \n'
 
   @staticmethod
   def process_adoc(adocLines: list, partialsDir: str = None):
@@ -65,27 +61,30 @@ spec: {}"""
 
       newLines = []
       splitLine = line.replace("=== ", "").split(" ")
-      modelName = splitLine[0].strip()
+      modelName = splitLine[0].strip().lower()
       modelLink = splitLine[1].strip()
       splitModelNames = modelName.split("_")
       newModelName = Adoc.__calculate_new_model_name(splitModelNames)
       headerDepth = len(splitModelNames) + 1
-      modelNamespace = ".".join(splitModelNames)
+      modelNamespace = ".".join(splitModelNames).title()
 
       if len(splitModelNames) == 1:
         kind = modelName
 
-      if headerDepth > 3:  # max header depth is 3 "==="
-        headerDepth = 3
+      if headerDepth > 4:
+        headerDepth = 4
 
-      #  note the model name is already camelcased, so to make it pascalcase just caps  the first letter
-      newLines.append(('=' * headerDepth) + " " + newModelName[0].upper() + newModelName[1:] + " " + modelLink)
+      newLines.append(('=' * headerDepth) + " " + newModelName.title() + " " + modelLink)
       newLines.append("")
 
       if partialsDir:
         for partial in Adoc.__find_partials_for_model(modelNamespace, partialsDir):
           newLines.append(partial + " \n")
           newLines.append("")
+
+      if len(splitModelNames) > 1:
+        newLines.append("Complete namespace: " + modelNamespace)
+        newLines.append("")
 
       if len(splitModelNames) > 2:
         Adoc.__add_yaml_model_example(newLines, kind, splitModelNames)

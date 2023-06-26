@@ -1,0 +1,13 @@
+= Custom Resource Definitions
+
+A custom resource is an extension of the Kubernetes API, and a Custom Resource Definition defines the state of a resource and how it is managed.
+The PulsarCluster resource is a custom resource that defines the PulsarCluster resources, which is used by the {pulsar-operator} to manage Pulsar cluster resources.
+A Pulsar cluster can be deployed and managed just by generating a PulsarCluster resource and applying it to the Kubernetes cluster.
+Subsequent changes to the PulsarCluster resource will be applied to the Pulsar cluster by the {pulsar-operator}.
+This greatly simplifies Pulsar cluster management. Difficulties like decommissioning bookies or scaling brokers are now as simple as editing a PulsarCluster resource and applying the changes with the {pulsar-operator}.
+
+== Managing Pulsar clusters with the PulsarCluster resource
+
+There are multiple CRDs in the operator - one for each Pulsar component.
+You should only modify the PulsarCluster CRD. The operator uses the individual component CRDs internally.
+For example, the ZooKeeper CRD contains spec related to ZooKeeper that is passed to the Pulsar operator. To change your cluster's ZooKeeper configuration, the user should change the ZooKeeper spec in the PulsarCluster CRD, not the ZooKeeper CRD.

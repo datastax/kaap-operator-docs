@@ -1,0 +1,159 @@
+= Bookkeeper autoscaler
+
+The operator scales the number of bookies pods in a cluster up and down based on current disk usage.
+
+== Install Operator with Bookkeeper autoscaler enabled
+[source,bash]
+----
+helm install pulsar-operator helm/pulsar-operator \
+    --values helm/examples/bookie-autoscaling/values.yaml
+----
+
+== Bookkeeper autoscaler configuration
+
+The operator will scale the number of bookies pods in a cluster up and down based on current disk usage.
+The operator checks the disk usage percentage of all bookies at a regular interval. If all of the bookies' memory is over a percentage threshold, the operator will add bookies, and if under the low threshold, will decommission a bookie to save resources.
+When a bookie's memory is underutilized, you want to decommission it to save resources.
+The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/[Kubernetes Horizontal Pod Autoscaler^]{external-link-icon}.
+The operator's thresholds are set in the values.yaml file. +
+[source,helm]
+----
+    bookkeeper:
+      replicas: 2
+      autoscaler:
+        enabled: true
+        periodMs: 10000
+        diskUsageToleranceHwm: 0.8
+        diskUsageToleranceLwm: 0.2
+        minWritableBookies: 1
+        scaleUpBy: 1
+        scaleDownBy: 1
+        stabilizationWindowMs: 30000
+----
+.Bookkeeper autoscaler configuration
+[cols=4*,options="header"]
+|===
+|Name
+|Type
+|Description
+|Notes
+
+|diskUsageToleranceLwm
+|Double
+|The threshold to trigger a scale up. The autoscaler will scale up if all the bookies' disk usage is higher than this threshold.
+|Default is 0.75. Min 0.0d, Max 1.0d.
+
+|diskUsageToleranceHwm
+|Double
+|The threshold to trigger a scale down. The autoscaler will scale down if all the bookies' disk usage is lower than this threshold.
+|Default is 0.92d. Min(0.0d), Max(1.0d)
+
+|enabled
+|Boolean
+|Enable autoscaling for bookies.
+|
+
+|minWritableBookies
+|Integer
+|Minimum number of writable bookies. The autoscaler will scale up if not enough writable bookies are detected. For example, if a bookie goes to read-only mode, the autoscaler will scale up to replace it.
+|Default is 3. Min 1.
+
+|periodMs
+|Long
+|The interval in milliseconds between two consecutive autoscaling checks.
+|Minimum value is 1000 ms.
+
+|scaleDownBy
+|Integer
+|The number of bookies to remove at each scale down.
+|Default is 1. Min 1.
+
+|scaleUpBy
+|Integer
+|The number of bookies to add at each scale up.
+|Default is 1. Min 1.
+
+|scaleUpMaxLimit
+|Integer
+|Max number of bookies. If the number of bookies is equal to this value, the autoscaler will never scale up.
+|Min 1.
+
+|stabilizationWindowMs
+|Long
+|The stabilization window restricts rapid changes in replica count when the metrics used for scaling are fluctuating. The autoscaling algorithm uses this window to infer a previous desired state and avoid unwanted changes to workload scale.
+|Default value is 5 minutes after the pod's state is Ready.
+|===
+
+== Test bookie autoscaler
+
+Once you've deployed a Pulsar cluster with bookie autoscaling enabled, test it by adding load to the cluster and watching the operator pod's logs.
+[NOTE]
+====
+If you don't have a bastion pod, you can add it to your cluster in the same values.yaml file you used to deploy the operator.
+[source,helm]
+----
+bastion:
+  replicas: 1
+  resources:
+    requests:
+      cpu: "0.1"
+      memory: "128Mi"
+----
+====
+
+. Exec into your bastion pod.
++
+[source,bash]
+----
+kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
+----
+
+. Run a https://pulsar.apache.org/docs/performance-pulsar-perf/[Pulsar perf] test in your deployment, and follow the operator's logs to see the autoscaler in action.
++
+[tabs]
+====
+Bastion pod::
++
+--
+[source,helm]
+----
+bin/pulsar-perf produce topic
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+2023-05-19T14:39:34,726+0000 [pulsar-perf-producer-exec-1-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Created 1 producers
+2023-05-19T14:39:34,778+0000 [pulsar-client-io-2-1] INFO  com.scurrilous.circe.checksum.Crc32cIntChecksum - SSE4.2 CRC32C provider initialized
+2023-05-19T14:39:43,190+0000 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced:     817 msg ---     81.7 msg/s ---      0.6 Mbit/s  --- failure      0.0 msg/s --- Latency: mean:  12.008 ms - med:  10.571 - 95pct:  20.821 - 99pct:  32.194 - 99.9pct:  46.759 - 99.99pct:  56.243 - Max:  56.243
+----
+--
+====
+
+. The operator notices the differing values and patches the bookkeeper-set to keep up with the increased memory usage of the bookkeeper pods.
++
+[source,console]
+----
+| 14:41:07 INFO  [com.dat.oss.pul.crd.SpecDiffer] (ReconcilerExecutor-pulsar-bk-controller-69) 'bookkeeper.replicas' value differs:
+  was: 7
+  now: 8
+│ 14:41:07 INFO  [com.dat.oss.pul.con.AbstractResourceSetsController] (ReconcilerExecutor-pulsar-bk-controller-69) bookkeeper-set 'bookkeeper' patched                 │
+│ 14:41:07 INFO  [com.dat.oss.pul.con.AbstractResourceSetsController] (ReconcilerExecutor-pulsar-bk-controller-69) All bookkeeper-sets ready                           │
+│ 14:41:07 INFO  [com.dat.oss.pul.con.boo.BookKeeperResourcesFactory] (ReconcilerExecutor-pulsar-bk-controller-69) Cleaning up orphan PVCs for bookie-s
+----
+
+. Cancel the Pulsar perf test with Ctrl-C. The operator will notice the decreased load and scale down the number of bookies. Notice that the operator scales down the number of bookies by 1 at a time, as specified in the `scaleDownBy` parameter, and properly decommissions them.
++
+[source,console]
+----
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Some writable bookies can be released, removing 1                                     │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Bookies scaled up/down from 10 to 9                                                   │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Start decommissioning bookies: pulsar-bookkeeper-9.puls │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.boo.PodExecBookieAdminClient] (OkHttp https://10.12.0.1/...) Bookie pulsar-bookkeeper-9 is set to read-only=true                 │
+│ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Attempting decommission of bookie pulsar-bookkeeper-9 w │
+│ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.PodExecBookieAdminClient] (ReconcilerExecutor-pulsar-bk-controller-74) Starting bookie recovery for bookie pulsar-bookkeeper │
+----

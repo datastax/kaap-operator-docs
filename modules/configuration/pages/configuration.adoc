@@ -1,5 +1,113 @@
 = Configuration Reference
 
+The `PulsarCluster` custom resource definition represents the desired state of your Apache Pulsar cluster.
+The main structure is:
+
+* Global section, containing configurations shared by each component
+* A section for each component
+
+== Global configurations
+The global section contains the main characteristics of the cluster.
+
+=== Cluster name
+The base name of each resource created in the k8s cluster. This option is required.
+[source,yaml]
+----
+global:
+    name: my-pulsar-cluster
+----
+
+=== Pulsar image
+The Apache Pulsar image used by all the components. This option is required.
+[source,yaml]
+----
+global:
+    image: apachepulsar/pulsar:2.11.0
+----
+
+Each component can override this value and use a different image. For example, the functions worker might requires an image with more built-in Pulsar IO connectors:
+[source,yaml]
+----
+global:
+    image: apachepulsar/pulsar:2.11.0
+functionsWorker:
+    image: apachepulsar/pulsar-all:2.11.0
+----
+
+=== Authentication
+
+See xref:auth.adoc[Authentication] for more information.
+
+=== Affinity, antiaffinity and high availability
+
+See xref:features:resource-sets.adoc[Resource sets] for more information.
+
+== Common configuration for each components
+All the components are based on the same configuration structure.
+
+=== Application configuration
+Under `<component>.config` you can specify the runtime options for the application.
+Those properties will be stored in the appropriate `ConfigMap`.
+
+For example, if you wish to change the replication factor for topics, you can set it in the `broker.config` section.
+[source,yaml]
+----
+broker:
+    config:
+        managedLedgerDefaultAckQuorum: 1
+        managedLedgerDefaultEnsembleSize: 1
+        managedLedgerDefaultWriteQuorum: 1
+----
+
+or if you want to enable debug logging: 
+[source,yaml]
+----
+broker:
+    config:
+        PULSAR_LOG_LEVEL: debug
+        PULSAR_LOG_ROOT_LEVEL: debug
+----
+or if you want to change the JVM options:
+[source,yaml]
+----
+broker:
+    config:
+        PULSAR_MEM: "-Xms2g -Xmx2g -XX:MaxDirectMemorySize=2g"
+----
+
+Note that this will override the default setting provided by the operator.
+
+=== Pod resources
+You can specify the resources for each component using the `resources` section.
+[source,yaml]
+----
+broker:
+    resources:
+        requests:
+            cpu: 1000m
+            memory: 2Gi
+        limits:
+            cpu: 2000m
+            memory: 4Gi
+----
+
+
+=== Replicas
+You can specify the resources for each component using the `replicas` section.
+[source,yaml]
+----
+broker:
+    replicas: 7
+----
+
+=== Full list
+To get a full list of the spec you can check the [API reference](api-reference.md).
+
+
+== Examples
+
+See some examples in the [docs](https://github.com/riptano/pulsar-operator/tree/main/helm/examples).
+
 == {pulsar-operator}
 [%header,format=csv,cols="2,1,3,1"]
 |===

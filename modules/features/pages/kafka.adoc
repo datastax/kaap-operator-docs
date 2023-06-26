@@ -1,0 +1,103 @@
+= Kafka
+
+Have an Apache Kafka® workload you want to control with {pulsar-operator}?
+Thanks to xref:starlight-for-kafka.adoc[Starlight for Kafka], you can run your Kafka workload on a Pulsar cluster, and with {pulsar-operator}, the scaling of the Kafka pods is handled for you.
+
+== Scaling the Pulsar Broker with a Kafka Client Workload
+
+This folder contains a sample configuration and demo about how to run a workload
+on an Apache Pulsar® cluster with the Broker Auto Scaling feature.
+
+Support for the Kafka wire protocol is provided by [Starlight for Kafka](https://github.com/datastax/starlight-for-kafka).
+
+The client work load is generated using the basic Kafka Performance tools.
+
+== Install
+
+. Install the operator and a Pulsar cluster.
+In this case, we're installing xref:getting-started:stack.adoc[Pulsar Stack] with the Kafka protocol enabled.
++
+[source,bash]
+----
+helm install pos helm/pulsar-stack --values helm/examples/kafka/values.yaml
+----
++
+The Kafka protocol is controlled in the deployment's `values.yaml` file.
++
+[source,yaml]
+----
+kafka:
+        enabled: true
+    autoscaler:
+        enabled: true
+        periodMs: 20000
+        min: 2
+        max: 10
+        lowerCpuThreshold: 0.2
+        higherCpuThreshold: 0.4
+        scaleUpBy: 1
+        scaleDownBy: 1
+        stabilizationWindowMs: 120000
+    config: {}
+----
++
+Additionally, you can proxy the Kafka connection in the Pulsar Proxy with `kafka:enabled:true`.
++
+[source,yaml]
+----
+proxy:
+        replicas: 1
+        resources:
+          requests:
+            cpu: "0.2"
+            memory: "128Mi"
+        kafka:
+          enabled: true
+        config: {}
+----
+
+. Deploy the Kafka producers.
++
+[source,bash]
+----
+kubectl apply -f helm/examples/kafka/kafka-producer-perf.yaml
+----
+
+. See the logs of the Kafka producers.
++
+[source,bash]
+----
+kubectl logs -f deploy/kafka-client-producer
+----
+
+. Deploy the Kafka consumers.
++
+[source,bash]
+----
+kubectl apply -f helm/examples/kafka/kafka-consumer-perf.yaml
+----
+
+. See the logs of the Kafka consumers.
++
+[source,bash]
+----
+kubectl logs -f deploy/kafka-client-consumer
+----
+
+== Scaling the client workloads
+
+. Open a terminal and view the logs of the Operator.
++
+[source,bash]
+----
+kubectl logs -f deploy/pulsar-operator
+----
+
+. You can use Kubectl to scale the client applications up and down.
++
+[source,bash]
+----
+kubectl scale deploy/kafka-client-consumer  --replicas 10
+----
+
+As the load increases you will see the Operator scales out the Broker STS.

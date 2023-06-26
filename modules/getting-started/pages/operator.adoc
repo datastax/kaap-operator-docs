@@ -64,7 +64,7 @@ pulsar-operator   1/1     1            1           13m
 Kubectl::
 +
 --
-[source,helm]
+[source,kubectl]
 ----
 kubectl describe deployment pulsar-operator
 ----
@@ -128,17 +128,18 @@ Events:
 ====
 
 . You've now installed {pulsar-operator}.
-
++
 By default, when {pulsar-operator} is installed, the PulsarCluster CRDs are also created.
 This setting is defined in the {pulsar-operator} values.yaml file as `crd: create: true`.
-
++
 . To see the available CRDs:
++
 [tabs]
 ====
-Helm::
+Kubectl::
 +
 --
-[source,helm]
+[source,kubectl]
 ----
 kubectl get crds | grep datastax
 ----
@@ -167,7 +168,8 @@ zookeepers.pulsar.oss.datastax.com               2023-05-12T16:36:06Z
 You can install the {pulsar-operator} with a pre-configured values.yaml file.
 This values file configures additional components, such as Broker, Zookeeper, and Bookkeeper pods for your Pulsar cluster.
 This is a great way to get a cluster up and running quickly, while still having fine-grained control of each component.
-For this example, we'll install the Pulsar Operator *and* a complete Pulsar cluster with auto-scaling capabilities.
+
+. For this example, we'll install the Pulsar Operator *and* a complete Pulsar cluster with auto-scaling capabilities.
 +
 [tabs]
 ====
@@ -195,13 +197,14 @@ TEST SUITE: None
 --
 ====
 
-To see the available CRDs:
+. To see the available CRDs:
++
 [tabs]
 ====
-Helm::
+Kubectl::
 +
 --
-[source,helm]
+[source,kubectl]
 ----
 kubectl get crds | grep datastax
 ----
@@ -224,13 +227,14 @@ zookeepers.pulsar.oss.datastax.com               2023-05-12T16:36:06Z
 --
 ====
 
-To see your new Pulsar cluster up and running:
+. To see your new Pulsar cluster up and running:
++
 [tabs]
 ====
-Helm::
+Kubectl::
 +
 --
-[source,helm]
+[source,kubectl]
 ----
 kubectl get pods -A
 ----

@@ -1,7 +1,0 @@
-= PulsarCluster Resource Definition
-A custom resource is an extension of the Kubernetes API, and a Custom Resource Definition defines the state of a resource and how it is managed.
-The PulsarCluster resource is a custom resource that defines the PulsarCluster resource, which is used by the {pulsar-operator} to manage Pulsar cluster resources.
-A Pulsar cluster can be deployed and managed just by generating a PulsarCluster resource and applying it to the Kubernetes cluster.
-Subsequent changes to the PulsarCluster resource will be applied to the Pulsar cluster.
-This greatly simplifies Pulsar cluster management. Difficulties like decommissioning bookies or scaling brokers are now as simple as editing a PulsarCluster resource and applying the changes with the {pulsar-operator}.
-
