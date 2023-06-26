@@ -1,0 +1,25187 @@
+= BookKeeper
+ 
+v1alpha1
+ 
+:source-highlighter: highlightjs
+ 
+:keywords: openapi, rest, BookKeeper
+ 
+:specDir: 
+ 
+:snippetDir: 
+ 
+:generator-template: v1 2019-12-20
+ 
+:info-url: https://openapi-generator.tech
+ 
+:app-name: BookKeeper
+ 
+
+ 
+Auto generated from CRD spec
+ 
+
+ 
+
+ 
+// markup not found, no include::{specDir}intro.adoc[opts=optional]
+ 
+
+ 
+
+ 
+Version: v1alpha1
+ 
+
+ 
+Namespace: pulsar.oss.datastax.com
+ 
+
+ 
+== BookKeeper [[BookKeeper]] 
+ 
+
+ 
+[.fields-BookKeeper]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *spec* +
+ 
+            
+ 
+            <<BookKeeper_spec,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Spec
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *status* +
+ 
+            
+ 
+            <<BookKeeper_status,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Status
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Spec [[BookKeeper_spec]] 
+ 
+
+ 
+[.fields-BookKeeperSpec]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *bookkeeper* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Bookkeeper
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *global* +
+ 
+            
+ 
+            <<BookKeeper_spec_global,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Global
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Bookkeeper [[BookKeeper_spec_bookkeeper]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeper]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *additionalVolumes* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AdditionalVolumes
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *annotations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Annotations to add to each resource (except pods).
+ 
+    | *antiAffinity* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_antiAffinity,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AntiAffinity
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *autoRackConfig* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_autoRackConfig,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AutoRackConfig
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *autoscaler* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_autoscaler,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Autoscaler
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *cleanUpPvcs* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Cleanup PVCs after the bookie has been removed.
+ 
+    | *config* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+any
+ 
+
+ 
+
+ 
+    | 
+ 
+    Configuration.
+ 
+    | *env* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_env,Env>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Additional container env variables.
+ 
+    | *gracePeriod* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Termination grace period in seconds.
+ 
+    | *image* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override Pulsar image.
+ 
+    | *imagePullPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override image pull policy.
+ 
+    | *imagePullSecrets* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,ImagePullSecrets>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Image pull secrets.
+ 
+    | *initContainers* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers,InitContainers>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Init containers
+ 
+    | *labels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Labels to add to each resource (except pods).
+ 
+    | *matchLabels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Match labels selectors to add to each pod.
+ 
+    | *nodeAffinity* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_nodeAffinity,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+NodeAffinity
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *nodeSelectors* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Additional node selectors.
+ 
+    | *overrideResourceName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the resource names generated by the operator.
+ 
+    | *pdb* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_pdb,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Pdb
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *podAnnotations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Annotations to add to pod.
+ 
+    | *podLabels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Labels to add to each pod.
+ 
+    | *podManagementPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Pod management policy. Default value is &#39;Parallel&#39;.
+ 
+    | *probes* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_probes,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Probes
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *pvcPrefix* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Prefix for each PVC created.
+ 
+    | *replicas* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Number of desired replicas.
+ 
+    | *resources* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_resources,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Resources
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *service* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_service,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Service
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *sets* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+
+ 
+
+ 
+    | 
+ 
+    Bookie sets.
+ 
+    | *setsUpdateStrategy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Sets update strategy. &#39;RollingUpdate&#39; or &#39;Parallel&#39;. Default is &#39;RollingUpdate&#39;.
+ 
+    | *sidecars* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers,Sidecars>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Sidecar containers
+ 
+    | *tolerations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_sets_tolerations,Tolerations>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Pod tolerations.
+ 
+    | *updateStrategy* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_updateStrategy,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+UpdateStrategy
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *volumes* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_volumes,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Volumes
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AdditionalVolumes [[BookKeeper_spec_bookkeeper_additionalVolumes]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumes]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *mounts* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_mounts,Mounts>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Mount points for the additional volumes
+ 
+    | *volumes* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes,Volumes>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Additional volumes to be mounted to the pod
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Mounts [[BookKeeper_spec_bookkeeper_additionalVolumes_mounts]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      mounts: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesMounts]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *mountPath* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *mountPropagation* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *subPath* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *subPathExpr* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Volumes [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumes]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *awsElasticBlockStore* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_awsElasticBlockStore,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AwsElasticBlockStore
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *azureDisk* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_azureDisk,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AzureDisk
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *azureFile* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_azureFile,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AzureFile
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *cephfs* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Cephfs
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *cinder* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cinder,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Cinder
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *configMap* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_configMap,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ConfigMap
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *csi* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_csi,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Csi
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *downwardAPI* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+DownwardAPI
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *emptyDir* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_emptyDir,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+EmptyDir
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *ephemeral* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Ephemeral
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *fc* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_fc,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Fc
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *flexVolume* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_flexVolume,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+FlexVolume
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *flocker* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_flocker,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Flocker
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *gcePersistentDisk* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_gcePersistentDisk,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+GcePersistentDisk
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *gitRepo* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_gitRepo,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+GitRepo
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *glusterfs* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_glusterfs,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Glusterfs
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *hostPath* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_hostPath,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+HostPath
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *iscsi* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_iscsi,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Iscsi
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *nfs* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_nfs,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Nfs
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *persistentVolumeClaim* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_persistentVolumeClaim,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PersistentVolumeClaim
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *photonPersistentDisk* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_photonPersistentDisk,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PhotonPersistentDisk
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *portworxVolume* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_portworxVolume,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PortworxVolume
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *projected* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Projected
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *quobyte* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_quobyte,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Quobyte
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *rbd* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_rbd,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Rbd
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *scaleIO* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_scaleIO,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ScaleIO
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *secret* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_secret,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Secret
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *storageos* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_storageos,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Storageos
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *vsphereVolume* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_vsphereVolume,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+VsphereVolume
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AwsElasticBlockStore [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_awsElasticBlockStore]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        awsElasticBlockStore: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesAwsElasticBlockStore]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *partition* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeID* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AzureDisk [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_azureDisk]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        azureDisk: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesAzureDisk]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *cachingMode* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *diskName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *diskURI* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *kind* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AzureFile [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_azureFile]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        azureFile: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesAzureFile]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *shareName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Cephfs [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        cephfs: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesCephfs]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *monitors* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretFile* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *user* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== SecretRef [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        cephfs: 
+          secretRef: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesCephfsSecretRef]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Cinder [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cinder]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        cinder: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesCinder]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *volumeID* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ConfigMap [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_configMap]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        configMap: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesConfigMap]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *defaultMode* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *items* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_configMap_items,Items>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *optional* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Items [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_configMap_items]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        configMap: 
+          items: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesConfigMapItems]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *key* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *mode* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Csi [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_csi]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        csi: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesCsi]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *driver* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *nodePublishSecretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+NodePublishSecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeAttributes* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== DownwardAPI [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        downwardAPI: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesDownwardAPI]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *defaultMode* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *items* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items,Items>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Items [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        downwardAPI: 
+          items: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesDownwardAPIItems]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fieldRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items_fieldRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+FieldRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *mode* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *resourceFieldRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ResourceFieldRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== FieldRef [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items_fieldRef]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        downwardAPI: 
+          items: 
+            fieldRef: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesDownwardAPIItemsFieldRef]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *apiVersion* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *fieldPath* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ResourceFieldRef [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        downwardAPI: 
+          items: 
+            resourceFieldRef: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesDownwardAPIItemsResourceFieldRef]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *containerName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *divisor* +
+ 
+            
+ 
+integer or string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+            
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *resource* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== EmptyDir [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_emptyDir]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        emptyDir: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEmptyDir]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *medium* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *sizeLimit* +
+ 
+            
+ 
+integer or string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+            
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Ephemeral [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeral]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *volumeClaimTemplate* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+VolumeClaimTemplate
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== VolumeClaimTemplate [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplate]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *metadata* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Metadata
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *spec* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Spec
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Metadata [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            metadata: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadata]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *annotations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *creationTimestamp* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *deletionGracePeriodSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *deletionTimestamp* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *finalizers* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *generateName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *generation* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *labels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *managedFields* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields,ManagedFields>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *namespace* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *ownerReferences* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences,OwnerReferences>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *resourceVersion* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *selfLink* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *uid* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ManagedFields [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            metadata: 
+              managedFields: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadataManagedFields]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *apiVersion* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *fieldsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *fieldsV1* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *manager* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *operation* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *subresource* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *time* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== OwnerReferences [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            metadata: 
+              ownerReferences: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadataOwnerReferences]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *apiVersion* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *blockOwnerDeletion* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *controller* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *kind* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *uid* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Spec [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            spec: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpec]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *accessModes* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *dataSource* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+DataSource
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *dataSourceRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+DataSourceRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *resources* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Resources
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *selector* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Selector
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *storageClassName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeMode* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== DataSource [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            spec: 
+              dataSource: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecDataSource]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *apiGroup* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *kind* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Resources [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            spec: 
+              resources: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecResources]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *limits* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+integer or string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *requests* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+integer or string
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Selector [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            spec: 
+              selector: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecSelector]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *matchExpressions* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchExpressions>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *matchLabels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== MatchExpressions [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        ephemeral: 
+          volumeClaimTemplate: 
+            spec: 
+              selector: 
+                matchExpressions: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecSelectorMatchExpressions]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *key* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *operator* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *values* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Fc [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_fc]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        fc: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesFc]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *lun* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *targetWWNs* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *wwids* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== FlexVolume [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_flexVolume]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        flexVolume: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesFlexVolume]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *driver* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *options* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Flocker [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_flocker]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        flocker: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesFlocker]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *datasetName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *datasetUUID* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== GcePersistentDisk [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_gcePersistentDisk]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        gcePersistentDisk: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesGcePersistentDisk]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *partition* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *pdName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== GitRepo [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_gitRepo]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        gitRepo: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesGitRepo]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *directory* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *repository* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *revision* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Glusterfs [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_glusterfs]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        glusterfs: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesGlusterfs]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *endpoints* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== HostPath [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_hostPath]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        hostPath: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesHostPath]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *type* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Iscsi [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_iscsi]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        iscsi: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesIscsi]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *chapAuthDiscovery* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *chapAuthSession* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *initiatorName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *iqn* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *iscsiInterface* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *lun* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *portals* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *targetPortal* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Nfs [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_nfs]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        nfs: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesNfs]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *server* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== PersistentVolumeClaim [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_persistentVolumeClaim]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        persistentVolumeClaim: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesPersistentVolumeClaim]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *claimName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== PhotonPersistentDisk [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_photonPersistentDisk]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        photonPersistentDisk: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesPhotonPersistentDisk]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *pdID* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== PortworxVolume [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_portworxVolume]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        portworxVolume: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesPortworxVolume]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeID* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Projected [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        projected: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesProjected]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *defaultMode* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *sources* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources,Sources>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Sources [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        projected: 
+          sources: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesProjectedSources]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *configMap* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources_configMap,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ConfigMap
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *downwardAPI* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources_downwardAPI,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+DownwardAPI
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *secret* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources_configMap,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Secret
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *serviceAccountToken* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources_serviceAccountToken,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ServiceAccountToken
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ConfigMap [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources_configMap]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        projected: 
+          sources: 
+            configMap: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesProjectedSourcesConfigMap]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *items* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_configMap_items,Items>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *optional* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== DownwardAPI [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources_downwardAPI]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        projected: 
+          sources: 
+            downwardAPI: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesProjectedSourcesDownwardAPI]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *items* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items,Items>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ServiceAccountToken [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_projected_sources_serviceAccountToken]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        projected: 
+          sources: 
+            serviceAccountToken: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesProjectedSourcesServiceAccountToken]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *audience* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *expirationSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Quobyte [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_quobyte]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        quobyte: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesQuobyte]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *group* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *registry* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *tenant* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *user* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volume* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Rbd [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_rbd]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        rbd: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesRbd]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *image* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *keyring* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *monitors* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *pool* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *user* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ScaleIO [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_scaleIO]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        scaleIO: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesScaleIO]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *gateway* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *protectionDomain* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *sslEnabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *storageMode* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *storagePool* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *system* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Secret [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_secret]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        secret: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesSecret]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *defaultMode* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *items* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_configMap_items,Items>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *optional* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Storageos [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_storageos]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        storageos: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesStorageos]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnly* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *volumeName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeNamespace* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== VsphereVolume [[BookKeeper_spec_bookkeeper_additionalVolumes_volumes_vsphereVolume]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    additionalVolumes: 
+      volumes: 
+        vsphereVolume: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAdditionalVolumesVolumesVsphereVolume]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *storagePolicyID* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *storagePolicyName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumePath* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AntiAffinity [[BookKeeper_spec_bookkeeper_antiAffinity]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    antiAffinity: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAntiAffinity]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *host* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_antiAffinity_host,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Host
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *zone* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_antiAffinity_zone,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Zone
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Host [[BookKeeper_spec_bookkeeper_antiAffinity_host]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    antiAffinity: 
+      host: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAntiAffinityHost]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the reclaimPolicy property for the StorageClass.
+ 
+    | *required* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the reclaimPolicy property for the StorageClass.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Zone [[BookKeeper_spec_bookkeeper_antiAffinity_zone]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    antiAffinity: 
+      zone: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAntiAffinityZone]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the reclaimPolicy property for the StorageClass.
+ 
+    | *required* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the reclaimPolicy property for the StorageClass.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AutoRackConfig [[BookKeeper_spec_bookkeeper_autoRackConfig]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    autoRackConfig: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAutoRackConfig]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable rack configuration monitoring.
+ 
+    | *periodMs* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Period for the schedule of the monitoring thread.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Autoscaler [[BookKeeper_spec_bookkeeper_autoscaler]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    autoscaler: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperAutoscaler]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *diskUsageToleranceHwm* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+bigdecimal
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    The threshold to trigger a scale down. The autoscaler will scale down if all the bookies&#39; disk usage is lower than this threshold. Default is &#39;0.92&#39;
+ 
+    | *diskUsageToleranceLwm* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+bigdecimal
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    The threshold to trigger a scale up. The autoscaler will scale up if all the bookies&#39; disk usage is higher than this threshold. Default is &#39;0.75&#39;
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable autoscaling for bookies.
+ 
+    | *minWritableBookies* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Min number of writable bookies. The autoscaler will scale up if not enough writable bookies are detected. For instance, if a bookie went to read-only mode, the autoscaler will scale up to replace it. Default is &#39;3&#39;.
+ 
+    | *periodMs* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    The interval in milliseconds between two consecutive autoscaling checks.
+ 
+    | *scaleDownBy* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    The number of bookies to remove at each scale down. Default is &#39;1&#39;
+ 
+    | *scaleUpBy* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    The number of bookies to add at each scale up. Default is &#39;1&#39;
+ 
+    | *scaleUpMaxLimit* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Max number of bookies. If the number of bookies is equals to this value, the autoscaler will never scale up.
+ 
+    | *stabilizationWindowMs* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    The stabilization window is used to restrict the flapping of replica count when the metrics used for scaling keep fluctuating. The autoscaling algorithm uses this window to infer a previous desired state and avoid unwanted changes to workload scale.Default value is 5 minutes after the pod readiness.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Env [[BookKeeper_spec_bookkeeper_env]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    env: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperEnv]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *value* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *valueFrom* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_env_valueFrom,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ValueFrom
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ValueFrom [[BookKeeper_spec_bookkeeper_env_valueFrom]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    env: 
+      valueFrom: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperEnvValueFrom]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *configMapKeyRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_env_valueFrom_configMapKeyRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ConfigMapKeyRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *fieldRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items_fieldRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+FieldRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *resourceFieldRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ResourceFieldRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *secretKeyRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_env_valueFrom_configMapKeyRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretKeyRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ConfigMapKeyRef [[BookKeeper_spec_bookkeeper_env_valueFrom_configMapKeyRef]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    env: 
+      valueFrom: 
+        configMapKeyRef: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperEnvValueFromConfigMapKeyRef]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *key* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *optional* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== InitContainers [[BookKeeper_spec_bookkeeper_initContainers]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainers]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *args* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *command* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *env* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_env,Env>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *envFrom* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers_envFrom,EnvFrom>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *image* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *imagePullPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *lifecycle* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Lifecycle
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *livenessProbe* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_livenessProbe,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+LivenessProbe
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *ports* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers_ports,Ports>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readinessProbe* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_livenessProbe,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ReadinessProbe
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *resources* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Resources
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *securityContext* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_securityContext,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecurityContext
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *startupProbe* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_livenessProbe,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+StartupProbe
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *stdin* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *stdinOnce* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *terminationMessagePath* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *terminationMessagePolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *tty* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeDevices* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers_volumeDevices,VolumeDevices>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *volumeMounts* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_mounts,VolumeMounts>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *workingDir* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== EnvFrom [[BookKeeper_spec_bookkeeper_initContainers_envFrom]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      envFrom: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersEnvFrom]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *configMapRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_envFrom_configMapRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ConfigMapRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *prefix* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *secretRef* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_envFrom_configMapRef,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SecretRef
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ConfigMapRef [[BookKeeper_spec_bookkeeper_initContainers_envFrom_configMapRef]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      envFrom: 
+        configMapRef: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersEnvFromConfigMapRef]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *optional* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Lifecycle [[BookKeeper_spec_bookkeeper_initContainers_lifecycle]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      lifecycle: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLifecycle]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *postStart* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PostStart
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *preStop* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PreStop
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== PostStart [[BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      lifecycle: 
+        postStart: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLifecyclePostStart]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *exec* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_exec,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Exec
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *httpGet* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_httpGet,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+HttpGet
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *tcpSocket* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_tcpSocket,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+TcpSocket
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Exec [[BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_exec]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      lifecycle: 
+        postStart: 
+          exec: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLifecyclePostStartExec]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *command* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== HttpGet [[BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_httpGet]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      lifecycle: 
+        postStart: 
+          httpGet: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLifecyclePostStartHttpGet]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *host* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *httpHeaders* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_httpGet_httpHeaders,HttpHeaders>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *path* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *port* +
+ 
+            
+ 
+integer or string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+            
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *scheme* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== HttpHeaders [[BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_httpGet_httpHeaders]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      lifecycle: 
+        postStart: 
+          httpGet: 
+            httpHeaders: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLifecyclePostStartHttpGetHttpHeaders]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *value* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== TcpSocket [[BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_tcpSocket]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      lifecycle: 
+        postStart: 
+          tcpSocket: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLifecyclePostStartTcpSocket]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *host* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *port* +
+ 
+            
+ 
+integer or string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+            
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== LivenessProbe [[BookKeeper_spec_bookkeeper_initContainers_livenessProbe]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      livenessProbe: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLivenessProbe]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *exec* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_exec,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Exec
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *failureThreshold* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *grpc* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_livenessProbe_grpc,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Grpc
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *httpGet* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_httpGet,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+HttpGet
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *initialDelaySeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *periodSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *successThreshold* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *tcpSocket* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_tcpSocket,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+TcpSocket
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *terminationGracePeriodSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *timeoutSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Grpc [[BookKeeper_spec_bookkeeper_initContainers_livenessProbe_grpc]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      livenessProbe: 
+        grpc: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersLivenessProbeGrpc]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *port* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *service* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Ports [[BookKeeper_spec_bookkeeper_initContainers_ports]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      ports: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersPorts]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *containerPort* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *hostIP* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *hostPort* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *protocol* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== SecurityContext [[BookKeeper_spec_bookkeeper_initContainers_securityContext]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      securityContext: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersSecurityContext]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *allowPrivilegeEscalation* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *capabilities* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_securityContext_capabilities,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Capabilities
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *privileged* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *procMount* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *readOnlyRootFilesystem* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *runAsGroup* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *runAsNonRoot* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *runAsUser* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *seLinuxOptions* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_securityContext_seLinuxOptions,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SeLinuxOptions
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *seccompProfile* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_securityContext_seccompProfile,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SeccompProfile
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *windowsOptions* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_initContainers_securityContext_windowsOptions,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+WindowsOptions
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Capabilities [[BookKeeper_spec_bookkeeper_initContainers_securityContext_capabilities]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      securityContext: 
+        capabilities: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersSecurityContextCapabilities]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *add* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *drop* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== SeLinuxOptions [[BookKeeper_spec_bookkeeper_initContainers_securityContext_seLinuxOptions]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      securityContext: 
+        seLinuxOptions: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersSecurityContextSeLinuxOptions]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *level* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *role* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *type* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *user* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== SeccompProfile [[BookKeeper_spec_bookkeeper_initContainers_securityContext_seccompProfile]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      securityContext: 
+        seccompProfile: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersSecurityContextSeccompProfile]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *localhostProfile* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *type* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== WindowsOptions [[BookKeeper_spec_bookkeeper_initContainers_securityContext_windowsOptions]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      securityContext: 
+        windowsOptions: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersSecurityContextWindowsOptions]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *gmsaCredentialSpec* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *gmsaCredentialSpecName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *hostProcess* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *runAsUserName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== VolumeDevices [[BookKeeper_spec_bookkeeper_initContainers_volumeDevices]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    initContainers: 
+      volumeDevices: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperInitContainersVolumeDevices]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *devicePath* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== NodeAffinity [[BookKeeper_spec_bookkeeper_nodeAffinity]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    nodeAffinity: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperNodeAffinity]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *preferredDuringSchedulingIgnoredDuringExecution* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution,PreferredDuringSchedulingIgnoredDuringExecution>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *requiredDuringSchedulingIgnoredDuringExecution* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+RequiredDuringSchedulingIgnoredDuringExecution
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== PreferredDuringSchedulingIgnoredDuringExecution [[BookKeeper_spec_bookkeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    nodeAffinity: 
+      preferredDuringSchedulingIgnoredDuringExecution: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *preference* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Preference
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *weight* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Preference [[BookKeeper_spec_bookkeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    nodeAffinity: 
+      preferredDuringSchedulingIgnoredDuringExecution: 
+        preference: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *matchExpressions* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchExpressions>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *matchFields* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchFields>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== RequiredDuringSchedulingIgnoredDuringExecution [[BookKeeper_spec_bookkeeper_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    nodeAffinity: 
+      requiredDuringSchedulingIgnoredDuringExecution: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *nodeSelectorTerms* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,NodeSelectorTerms>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Pdb [[BookKeeper_spec_bookkeeper_pdb]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    pdb: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperPdb]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable Pdb policy.
+ 
+    | *maxUnavailable* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Number of maxUnavailable pods.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Probes [[BookKeeper_spec_bookkeeper_probes]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    probes: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperProbes]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *liveness* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_probes_liveness,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Liveness
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *readiness* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_probes_readiness,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Readiness
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Liveness [[BookKeeper_spec_bookkeeper_probes_liveness]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    probes: 
+      liveness: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperProbesLiveness]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enables the probe.
+ 
+    | *failureThreshold* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Failure threshold.
+ 
+    | *initialDelaySeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the initial delay (in seconds) for the probe.
+ 
+    | *periodSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the period (in seconds) for the probe.
+ 
+    | *successThreshold* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Success threshold.
+ 
+    | *terminationGracePeriodSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the termination grace period (in seconds) for the probe.
+ 
+    | *timeoutSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the timeout (in seconds) for the probe.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Readiness [[BookKeeper_spec_bookkeeper_probes_readiness]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    probes: 
+      readiness: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperProbesReadiness]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enables the probe.
+ 
+    | *failureThreshold* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Failure threshold.
+ 
+    | *initialDelaySeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the initial delay (in seconds) for the probe.
+ 
+    | *periodSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the period (in seconds) for the probe.
+ 
+    | *successThreshold* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Success threshold.
+ 
+    | *terminationGracePeriodSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the termination grace period (in seconds) for the probe.
+ 
+    | *timeoutSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the timeout (in seconds) for the probe.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Resources [[BookKeeper_spec_bookkeeper_resources]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    resources: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperResources]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *limits* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+integer or string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *requests* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+integer or string
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Service [[BookKeeper_spec_bookkeeper_service]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    service: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperService]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *additionalPorts* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_service_additionalPorts,AdditionalPorts>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Additional ports to add to the Service.
+ 
+    | *annotations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Additional annotations to add to the Service.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AdditionalPorts [[BookKeeper_spec_bookkeeper_service_additionalPorts]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    service: 
+      additionalPorts: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperServiceAdditionalPorts]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *appProtocol* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *nodePort* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *port* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *protocol* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *targetPort* +
+ 
+            
+ 
+integer or string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+            
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Sets [[BookKeeper_spec_bookkeeper_sets]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSets]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *additionalVolumes* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_additionalVolumes,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AdditionalVolumes
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *annotations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Annotations to add to each resource (except pods).
+ 
+    | *antiAffinity* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_antiAffinity,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AntiAffinity
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *autoscaler* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_autoscaler,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Autoscaler
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *cleanUpPvcs* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Cleanup PVCs after the bookie has been removed.
+ 
+    | *config* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+any
+ 
+
+ 
+
+ 
+    | 
+ 
+    Configuration.
+ 
+    | *env* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_env,Env>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Additional container env variables.
+ 
+    | *gracePeriod* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Termination grace period in seconds.
+ 
+    | *image* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override Pulsar image.
+ 
+    | *imagePullPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override image pull policy.
+ 
+    | *imagePullSecrets* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_additionalVolumes_volumes_cephfs_secretRef,ImagePullSecrets>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Image pull secrets.
+ 
+    | *initContainers* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers,InitContainers>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Init containers
+ 
+    | *labels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Labels to add to each resource (except pods).
+ 
+    | *matchLabels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Match labels selectors to add to each pod.
+ 
+    | *nodeAffinity* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_nodeAffinity,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+NodeAffinity
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *nodeSelectors* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Additional node selectors.
+ 
+    | *overrideResourceName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the resource names generated by the operator.
+ 
+    | *pdb* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_pdb,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Pdb
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *podAnnotations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Annotations to add to pod.
+ 
+    | *podLabels* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Labels to add to each pod.
+ 
+    | *podManagementPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Pod management policy. Default value is &#39;Parallel&#39;.
+ 
+    | *probes* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_probes,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Probes
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *pvcPrefix* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Prefix for each PVC created.
+ 
+    | *replicas* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Number of desired replicas.
+ 
+    | *resources* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_resources,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Resources
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *service* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_service,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Service
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *sidecars* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers,Sidecars>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Sidecar containers
+ 
+    | *tolerations* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_sets_tolerations,Tolerations>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Pod tolerations.
+ 
+    | *updateStrategy* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_updateStrategy,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+UpdateStrategy
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *volumes* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_volumes,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Volumes
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Tolerations [[BookKeeper_spec_bookkeeper_sets_tolerations]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: 
+      tolerations: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSetsTolerations]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *effect* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *key* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *operator* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *tolerationSeconds* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *value* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== UpdateStrategy [[BookKeeper_spec_bookkeeper_sets_updateStrategy]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: 
+      updateStrategy: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSetsUpdateStrategy]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *rollingUpdate* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_updateStrategy_rollingUpdate,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+RollingUpdate
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *type* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== RollingUpdate [[BookKeeper_spec_bookkeeper_sets_updateStrategy_rollingUpdate]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: 
+      updateStrategy: 
+        rollingUpdate: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSetsUpdateStrategyRollingUpdate]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *maxUnavailable* +
+ 
+            
+ 
+integer or string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+            
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *partition* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Volumes [[BookKeeper_spec_bookkeeper_sets_volumes]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: 
+      volumes: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSetsVolumes]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *journal* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_volumes_journal,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Journal
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *ledgers* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_volumes_ledgers,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Ledgers
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Journal [[BookKeeper_spec_bookkeeper_sets_volumes_journal]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: 
+      volumes: 
+        journal: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSetsVolumesJournal]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *existingStorageClassName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if an already existing storage class should be used.
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the suffix for the volume. Default value is &#39;data&#39;.
+ 
+    | *size* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
+ 
+    | *storageClass* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_volumes_journal_storageClass,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+StorageClass
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== StorageClass [[BookKeeper_spec_bookkeeper_sets_volumes_journal_storageClass]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: 
+      volumes: 
+        journal: 
+          storageClass: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSetsVolumesJournalStorageClass]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *extraParams* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Adds extra parameters for the StorageClass.
+ 
+    | *fsType* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the &#39;fsType&#39; parameter for the StorageClass.
+ 
+    | *provisioner* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the provisioner property for the StorageClass.
+ 
+    | *reclaimPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the reclaimPolicy property for the StorageClass.
+ 
+    | *type* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the &#39;type&#39; parameter for the StorageClass.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Ledgers [[BookKeeper_spec_bookkeeper_sets_volumes_ledgers]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  bookkeeper: 
+    sets: 
+      volumes: 
+        ledgers: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecBookkeeperSetsVolumesLedgers]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *existingStorageClassName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if an already existing storage class should be used.
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the suffix for the volume. Default value is &#39;data&#39;.
+ 
+    | *size* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
+ 
+    | *storageClass* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_volumes_journal_storageClass,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+StorageClass
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Global [[BookKeeper_spec_global]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobal]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *name* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | _(Optional)_ + 
+ 
+    Pulsar cluster name.
+ 
+    | *antiAffinity* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_antiAffinity,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+AntiAffinity
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *auth* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_auth,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Auth
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *components* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_components,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Components
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *dnsConfig* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_dnsConfig,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+DnsConfig
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *dnsName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Public dns name for the cluster&#39;s load balancer.
+ 
+    | *image* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Default Pulsar image to use. Any components can be configured to use a different image.
+ 
+    | *imagePullPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
+ 
+    | *kubernetesClusterDomain* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
+ 
+    | *nodeSelectors* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]key/value
+ 
+
+ 
+
+ 
+    | 
+ 
+    Global node selector. If set, this will apply to all the components.
+ 
+    | *persistence* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
+ 
+    | *priorityClassName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Priority class name to attach to each pod.
+ 
+    | *racks* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+
+ 
+
+ 
+    | 
+ 
+    Racks configuration.
+ 
+    | *resourceSets* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+
+ 
+
+ 
+    | 
+ 
+    Resource sets.
+ 
+    | *restartOnConfigMapChange* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
+ 
+    | *storage* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_storage,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Storage
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *tls* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Tls
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *zookeeperPlainSslStorePassword* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== AntiAffinity [[BookKeeper_spec_global_antiAffinity]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    antiAffinity: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalAntiAffinity]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *host* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_antiAffinity_host,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Host
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *zone* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_antiAffinity_zone,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Zone
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Auth [[BookKeeper_spec_global_auth]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    auth: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalAuth]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable authentication in the cluster. Default is &#39;false&#39;.
+ 
+    | *token* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_auth_token,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Token
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Token [[BookKeeper_spec_global_auth_token]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    auth: 
+      token: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalAuthToken]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *initialize* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
+ 
+    | *privateKeyFile* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
+ 
+    | *proxyRoles* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    Proxy roles.
+ 
+    | *publicKeyFile* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
+ 
+    | *superUserRoles* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    Super user roles.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Components [[BookKeeper_spec_global_components]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    components: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalComponents]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *autorecoveryBaseName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Autorecovery base name. Default value is &#39;autorecovery&#39;.
+ 
+    | *bastionBaseName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Bastion base name. Default value is &#39;bastion&#39;.
+ 
+    | *bookkeeperBaseName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    BookKeeper base name. Default value is &#39;bookkeeper&#39;.
+ 
+    | *brokerBaseName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Broker base name. Default value is &#39;broker&#39;.
+ 
+    | *functionsWorkerBaseName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Functions Worker base name. Default value is &#39;function&#39;.
+ 
+    | *proxyBaseName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Proxy base name. Default value is &#39;proxy&#39;.
+ 
+    | *zookeeperBaseName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Zookeeper base name. Default value is &#39;zookeeper&#39;.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== DnsConfig [[BookKeeper_spec_global_dnsConfig]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    dnsConfig: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalDnsConfig]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *nameservers* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *options* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_spec_bookkeeper_initContainers_lifecycle_postStart_httpGet_httpHeaders,Options>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *searches* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+string
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Racks [[BookKeeper_spec_global_racks]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    racks: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalRacks]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *host* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_racks_host,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Host
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *zone* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_racks_zone,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Zone
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Host [[BookKeeper_spec_global_racks_host]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    racks: 
+      host: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalRacksHost]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable the rack affinity rules.
+ 
+    | *requireRackAffinity* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+ 
+    | *requireRackAntiAffinity* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Zone [[BookKeeper_spec_global_racks_zone]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    racks: 
+      zone: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalRacksZone]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enableHostAntiAffinity* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable the rack affinity rules.
+ 
+    | *requireRackAffinity* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+ 
+    | *requireRackAntiAffinity* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+ 
+    | *requireRackHostAntiAffinity* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ResourceSets [[BookKeeper_spec_global_resourceSets]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    resourceSets: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalResourceSets]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *rack* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Place this resource set to a specific rack, defined at .global.racks.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Storage [[BookKeeper_spec_global_storage]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    storage: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalStorage]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *existingStorageClassName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Indicates if an already existing storage class should be used.
+ 
+    | *storageClass* +
+ 
+            
+ 
+            <<BookKeeper_spec_bookkeeper_sets_volumes_journal_storageClass,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+StorageClass
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Tls [[BookKeeper_spec_global_tls]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTls]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *autorecovery* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_autorecovery,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Autorecovery
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *bookkeeper* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_bookkeeper,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Bookkeeper
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *broker* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_broker,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Broker
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *brokerResourceSets* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+
+ 
+
+ 
+    | 
+ 
+    TLS configurations related to the Broker resource sets.
+ 
+    | *caPath* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
+ 
+    | *certProvisioner* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+CertProvisioner
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *defaultSecretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
+ 
+    | *functionsWorker* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_functionsWorker,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+FunctionsWorker
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *proxy* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_proxy,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Proxy
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *proxyResourceSets* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]
+ 
+
+ 
+
+ 
+    | 
+ 
+    TLS configurations related to the Proxy resource sets.
+ 
+    | *ssCa* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_ssCa,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SsCa
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *zookeeper* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_zookeeper,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Zookeeper
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Autorecovery [[BookKeeper_spec_global_tls_autorecovery]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      autorecovery: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsAutorecovery]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Bookkeeper [[BookKeeper_spec_global_tls_bookkeeper]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      bookkeeper: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsBookkeeper]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Broker [[BookKeeper_spec_global_tls_broker]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      broker: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsBroker]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== BrokerResourceSets [[BookKeeper_spec_global_tls_brokerResourceSets]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      brokerResourceSets: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsBrokerResourceSets]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== CertProvisioner [[BookKeeper_spec_global_tls_certProvisioner]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisioner]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *selfSigned* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+SelfSigned
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== SelfSigned [[BookKeeper_spec_global_tls_certProvisioner_selfSigned]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSigned]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *autorecovery* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Autorecovery
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *bookkeeper* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Bookkeeper
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *broker* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_broker,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Broker
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *caSecretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Secret where to store the root CA certificate.
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate self signed certificates for broker, proxy and functions worker.
+ 
+    | *functionsWorker* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+FunctionsWorker
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *includeDns* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Include dns name in the DNS names covered by the certificate.
+ 
+    | *perComponent* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate a different certificate for each component.
+ 
+    | *privateKey* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PrivateKey
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *proxy* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_proxy,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Proxy
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+    | *zookeeper* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_zookeeper,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Zookeeper
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Autorecovery [[BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: 
+          autorecovery: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSignedAutorecovery]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *generate* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate self signed certificates for the component.
+ 
+    | *privateKey* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PrivateKey
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== PrivateKey [[BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: 
+          autorecovery: 
+            privateKey: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSignedAutorecoveryPrivateKey]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *algorithm* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *encoding* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *rotationPolicy* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *size* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Bookkeeper [[BookKeeper_spec_global_tls_certProvisioner_selfSigned_bookkeeper]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: 
+          bookkeeper: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSignedBookkeeper]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *generate* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate self signed certificates for the component.
+ 
+    | *privateKey* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PrivateKey
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Broker [[BookKeeper_spec_global_tls_certProvisioner_selfSigned_broker]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: 
+          broker: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSignedBroker]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *generate* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate self signed certificates for the component.
+ 
+    | *privateKey* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PrivateKey
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== FunctionsWorker [[BookKeeper_spec_global_tls_certProvisioner_selfSigned_functionsWorker]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: 
+          functionsWorker: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSignedFunctionsWorker]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *generate* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate self signed certificates for the component.
+ 
+    | *privateKey* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PrivateKey
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Proxy [[BookKeeper_spec_global_tls_certProvisioner_selfSigned_proxy]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: 
+          proxy: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSignedProxy]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *generate* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate self signed certificates for the component.
+ 
+    | *privateKey* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PrivateKey
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Zookeeper [[BookKeeper_spec_global_tls_certProvisioner_selfSigned_zookeeper]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      certProvisioner: 
+        selfSigned: 
+          zookeeper: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsCertProvisionerSelfSignedZookeeper]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *generate* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Generate self signed certificates for the component.
+ 
+    | *privateKey* +
+ 
+            
+ 
+            <<BookKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+PrivateKey
+ 
+
+ 
+
+ 
+
+ 
+>>
+ 
+        
+ 
+    
+ 
+    | 
+ 
+    
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== FunctionsWorker [[BookKeeper_spec_global_tls_functionsWorker]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      functionsWorker: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsFunctionsWorker]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *enabledWithBroker* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS for the functions worker to broker connections.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Proxy [[BookKeeper_spec_global_tls_proxy]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      proxy: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsProxy]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *enabledWithBroker* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS for the proxy to broker connections.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== ProxyResourceSets [[BookKeeper_spec_global_tls_proxyResourceSets]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      proxyResourceSets: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsProxyResourceSets]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *enabledWithBroker* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS for the proxy to broker connections.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== SsCa [[BookKeeper_spec_global_tls_ssCa]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      ssCa: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsSsCa]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Zookeeper [[BookKeeper_spec_global_tls_zookeeper]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  global: 
+    tls: 
+      zookeeper: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperSpecGlobalTlsZookeeper]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *enabled* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+boolean
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Enable TLS.
+ 
+    | *secretName* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Override the default secret name from where to load the certificates.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Status [[BookKeeper_status]] 
+ 
+
+ 
+[.fields-BookKeeperStatus]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *conditions* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+[]<<BookKeeper_status_conditions,Conditions>>
+ 
+
+ 
+
+ 
+    | 
+ 
+    Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
+ 
+    | *lastApplied* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    Last spec applied.
+ 
+|===
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+=== Conditions [[BookKeeper_status_conditions]] 
+ 
+Example use: 
+ 
+[source,yaml] 
+---- 
+apiVersion: pulsar.oss.datastax.com/v1alpha1 
+kind: BookKeeper 
+metadata: 
+  name: example-pulsarcluster 
+spec: 
+  conditions: {} 
+ 
+---- 
+ 
+
+ 
+[.fields-BookKeeperStatusConditions]
+ 
+[cols="2,4"]
+ 
+|===
+ 
+| Field| Description
+ 
+
+ 
+    | *lastTransitionTime* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *message* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *observedGeneration* +
+ 
+    
+ 
+
+ 
+
+ 
+
+ 
+integer
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *reason* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *status* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+    | *type* +
+ 
+    
+ 
+
+ 
+
+ 
+string
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+    | 
+ 
+    
+ 
+|===
+ 

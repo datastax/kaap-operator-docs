@@ -1,0 +1,14 @@
+:crd-namespace: "PulsarCluster"
+
+This is an example talking about the PulsarCluster object.
+
+[source, yaml]
+--
+pulsar-operator:
+  cluster:
+    create: true
+    spec:
+      global:
+        name: pulsar
+        image: datastax/lunastreaming-all:2.10_3.4
+--
