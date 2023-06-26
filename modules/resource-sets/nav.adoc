@@ -1,0 +1,6 @@
+* Resource Sets
+** xref:resource-sets.adoc
+** xref:bookies.adoc[]
+** xref:pods.adoc[]
+** xref:proxies.adoc[]
+** xref:racks.adoc[]

@@ -51,7 +51,7 @@ global:
 
 With `enableHostAntiAffinity=true`, unless you're placing pods in different availability zones, a different node will be chosen for each pod. These requirements can be disabled (`enableHostAntiAffinity=false`), enforced (`requireRackHostAntiAffinity: true`) or done in best-effort (`requireRackHostAntiAffinity: false`)
 
-=== Resource sets pod placement anti-affinity
+== Resource sets pod placement anti-affinity
 
 Within a single resource set, you can specify anti-affinity behaviors in the relationships between pods and nodes.
 There are two types of anti-affinity, `zone` and `host`.

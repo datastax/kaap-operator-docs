@@ -40,7 +40,7 @@ See xref:authentication:auth-jwt.adoc[] for more information.
 
 === Affinity, antiaffinity and high availability
 
-See xref:features:resource-sets.adoc[Resource sets] for more information.
+See xref:resource-sets:resource-sets.adoc[Resource sets] for more information.
 
 == Common configuration for each components
 All the components are based on the same configuration structure.

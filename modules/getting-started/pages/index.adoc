@@ -8,5 +8,5 @@
 
 [TIP]
 ====
-If you have an existing Pulsar cluster, you can scan and generate an equivalent PulsarCluster CRD. For more, see xref:features:migrate-cluster.adoc[].
+If you have an existing Pulsar cluster, you can scan and generate an equivalent PulsarCluster CRD. For more, see xref:migration:migrate-cluster.adoc[].
 ====

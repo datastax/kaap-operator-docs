@@ -1,4 +1,4 @@
-= Resource Sets and Racks
+= Resource Sets
 
 The operator allows you to create multiple sets of Pulsar proxies, brokers, and bookies, called resource sets.
 Each set is a dedicated deployment/statefulset with its own service and configmap.

@@ -124,6 +124,6 @@ kubectl delete secret -l name=<old-release-name>,owner=helm
 
 Now that you've migrated your existing cluster to the operator, you can start using the operator's features to manage your cluster.
 
-* xref:features:autoscale-bookies.adoc[Auto-scale bookies]
-* xref:features:autoscale-brokers.adoc[Auto-scale brokers]
-* xref:features:resource-sets.adoc[Resource sets]
+* xref:scaling-components:autoscale-bookies.adoc[Auto-scale bookies]
+* xref:scaling-components:autoscale-brokers.adoc[Auto-scale brokers]
+* xref:resource-sets:resource-sets.adoc[Resource sets]
