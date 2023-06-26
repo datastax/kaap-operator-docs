@@ -5,7 +5,17 @@
 This guide offers a starting point for {pulsar-operator}.
 We will cover installation and deployment, configuration points, and further options for managing Pulsar components with the {pulsar-operator}.
 
-== How {pulsar-operator} supports Pulsar
+== Features
+
+After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
+The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a Pulsar cluster.
+
+* xref:scaling-components:autoscale-bookies.adoc[Bookkeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
+* xref:scaling-components:autoscale-brokers.adoc[Broker autoscaler] - Automatically scale the number of brokers based on CPU load.
+* xref:resource-sets:index.adoc[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
+* xref:scaling-components:kafka.adoc[Kafka API] - Use the Starlight for Kafka API to bring your Kafka message traffic to Pulsar.
+
+== How {pulsar-operator} makes Pulsar easier
 
 Operators are a common pattern for packaging, deploying, and managing Kubernetes applications.
 Operators extend Kubernetes functionality to automate common tasks in stateful applications.
@@ -29,37 +39,29 @@ A typical Pulsar cluster *requires* the following components:
 * https://pulsar.apache.org/docs/concepts-architecture-overview/#apache-bookkeeper[Bookkeeper (bookie)^]{external-link-icon} - This is Pulsar’s data store.
 Bookkeeper stores message data in a low-latency, resilient way.
 
-The Pulsar *component architecture* is shown below.
-
-image::pulsar-components.png[]
-
 In addition to the required components, you might want to include some *optional components*:
 
 * https://bookkeeper.apache.org/docs/admin/autorecovery[Bookkeeper AutoRecovery^]{external-link-icon} - This is a Pulsar component that recovers Bookkeeper data in the event of a bookie outage.
 * https://pulsar.apache.org/docs/concepts-architecture-overview/#pulsar-proxy[Pulsar proxy^]{external-link-icon} - The Pulsar proxy is just that - a proxy that runs at the edge of the cluster with public facing endpoints.
-Pulsar proxy also offers special options for cluster extensions, like our xref:starlight-for-kafka::index.adoc[Starlight Suite of APIs].
+Pulsar proxy also offers special options for cluster extensions, like our [Starlight Suite of APIs].
 * https://pulsar.apache.org/docs/functions-worker-run-separately/[Dedicated functions worker(s)^]{external-link-icon} - You can optionally run dedicated function workers in a Pulsar cluster.
 * xref:luna-streaming:components:admin-console-tutorial.adoc[Pulsar AdminConsole] - This is an optional web-based admin console for managing Pulsar clusters.
 * xref:luna-streaming:components:heartbeat-vm.adoc[Pulsar Heartbeat] - This is an optional component that monitors the health of Pulsar cluster and emits metrics about the cluster that are helpful for observing and debugging issues.
 * Prometheus/Grafana/Alert manager stack - This is the default observability stack for a cluster. The Luna Helm chart includes pre-made dashboards in Grafana and pre-wires all the metrics scraping.
 
-== The {pulsar-operator} deployment of Pulsar
+== How {pulsar-operator} installs Pulsar
 
-{pulsar-operator} is packaged in two distinct flavors.
+{pulsar-operator} can be installed in two ways.
 
 * xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator and PulsarCluster CRDs into an existing Pulsar cluster.
 
 * xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
 
-You can also scan an existing Pulsar cluster and generate an equivalent PulsarCluster CRD. For more, see xref:migrating:index.adoc[].
+[TIP]
+====
+You can also scan an existing Pulsar cluster and generate an equivalent PulsarCluster CRD. For more, see xref:migration:migrate-cluster.adoc[].
+====
 
-== Features
-After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
-The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a Pulsar cluster.
-
-* xref:configuration:features.adoc#bookkeeper-autoscaler[Bookkeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
-* xref:configuration:features.adoc#broker-autoscaler[Broker autoscaler] - Automatically scale the number of brokers based on CPU load.
-* xref:configuration:features.adoc#rackaware-bookie[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
-* xref:configuration:features.adoc#resource-sets[Resource sets] - Create multiple distinct sets of Pulsar components, each with a dedicated deployment/StatefulSet with its own service and configmap.
+To get started, see xref:getting-started:index.adoc[Getting Started].
 
 

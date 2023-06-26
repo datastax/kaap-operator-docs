@@ -1,0 +1,107 @@
+= Resource sets pod placement affinity
+A rack defines a fault domain. A resource set can be mapped to a rack.
+When a resource set is mapped to a rack, that set's replicas will be placed in the same failure domain.
+A failure domain can be a region's availability zone (`zone`), or a cluster node (`host`).
+
+When a rack is specified, the default configuration is:
+[source,helm]
+----
+global:
+    racks:
+        rack1:
+            host:
+                enabled: false
+                requireRackAffinity: false
+                requireRackAntiAffinity: true
+            zone:
+                enabled: false
+                requireRackAffinity: false
+                requireRackAntiAffinity: true
+                enableHostAntiAffinity: true
+                requireRackHostAntiAffinity: true
+----
+
+The default configuration disables placement policy.
+To place all pods in the same node, you must set:
++
+[source,helm]
+----
+global:
+    racks:
+        rack1:
+            host:
+                enabled: true
+----
+
+With `requireRackAffinity=false`, each pod of the same rack will be placed where a new pod of the same rack exists (if any exists), *if possible*.
+Set `requireRackAffinity=true` to strictly enforce this behavior. If the target node is full (it can’t accept the new pod with the stated requirements), the upgrade will be blocked and the pod will wait until the node is able to accept new pods.
+
+With `requireRackAntiAffinity=false`, each pod of the same rack will be placed in a node where any other pod of any other racks is already scheduled, if possible.
+Set `requireRackAntiAffinity=true`, to strictly enforce this behavior. If no node is free, the pod will wait until a new node is added.
+
+To place all pods in the same zone, you must set:
+[source,helm]
+----
+global:
+    racks:
+        rack1:
+	        zone:
+		        enabled: true
+----
+
+With `enableHostAntiAffinity=true`, unless you're placing pods in different availability zones, a different node will be chosen for each pod. These requirements can be disabled (`enableHostAntiAffinity=false`), enforced (`requireRackHostAntiAffinity: true`) or done in best-effort (`requireRackHostAntiAffinity: false`)
+
+== Resource sets pod placement anti-affinity
+
+Within a single resource set, you can specify anti-affinity behaviors in the relationships between pods and nodes.
+There are two types of anti-affinity, `zone` and `host`.
+`zone` will set the failure domain to the region’s availability zone.
+`host` will set the failure domain to the node.
+
+Soft or preferred constraints are acceptable - for example, you might prefer to place pods in different zones, but it's not a requirement.
+Pod placement anti-affinity rules leverage the K8s `requiredDuringSchedulingIgnoredDuringExecution` and `preferredDuringSchedulingIgnoredDuringExecution` properties.
+
+The default configuration is:
+[source,helm]
+----
+global:
+    antiAffinity:
+        host:
+            enabled: true
+            required: true
+        zone:
+            enabled: false
+            required: false
+----
+
+In this configuration, each replica of any deployment/statefulset will be forced to be placed on different host nodes. There is no requirement for the pods to be placed in different availability zones, therefore each pod could still be in the same zone.
+
+To achieve multi-zone availability, you must set:
+[source,helm]
+----
+global:
+    antiAffinity:
+        host:
+            enabled: true
+            required: true
+        zone:
+            enabled: true
+            required: false
+----
+
+In this way each pod will be placed to a different zone, if possible.
+
+To force zone anti-affinity, you must set:
+[source,helm]
+----
+global:
+    antiAffinity:
+        host:
+            enabled: true
+            required: true
+        zone:
+            enabled: true
+            required: true
+----
+
+If an availability zone is not available during upgrade, the pod won’t be scheduled and the upgrade will be blocked until a pod is manually deleted and the zone is free again.

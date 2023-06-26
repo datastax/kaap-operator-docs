@@ -11,7 +11,8 @@ asciidoc:
 
 nav:
   - modules/getting-started/nav.adoc
-  - modules/features/nav.adoc
-  - modules/crd-spec/nav.adoc
-  - modules/configuration/nav.adoc
-  - modules/crd-spec/nav.adoc
+  - modules/migration/nav.adoc
+  - modules/authentication/nav.adoc
+  - modules/scaling-components/nav.adoc
+  - modules/resource-sets/nav.adoc
+  - modules/api-reference/nav.adoc

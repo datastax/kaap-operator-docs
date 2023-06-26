@@ -36,11 +36,11 @@ functionsWorker:
 
 === Authentication
 
-See xref:auth.adoc[Authentication] for more information.
+See xref:authentication:auth-jwt.adoc[] for more information.
 
 === Affinity, antiaffinity and high availability
 
-See xref:features:resource-sets.adoc[Resource sets] for more information.
+See xref:resource-sets:index.adoc[Resource sets] for more information.
 
 == Common configuration for each components
 All the components are based on the same configuration structure.
@@ -59,7 +59,7 @@ broker:
         managedLedgerDefaultWriteQuorum: 1
 ----
 
-or if you want to enable debug logging: 
+or if you want to enable debug logging:
 [source,yaml]
 ----
 broker:

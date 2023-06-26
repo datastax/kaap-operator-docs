@@ -1,0 +1,6 @@
+= Authentication
+
+Authentication in {pulsar-operator} is controlled with https://jwt.io/[JWT tokens]{external-link-icon} for cluster access, and [TLS certificates]{external-link-icon} for communication between applications within the cluster.
+
+* See xref:auth-jwt.adoc[] for JWT authentication.
+* See xref:auth-tls.adoc[] for TLS authentication.

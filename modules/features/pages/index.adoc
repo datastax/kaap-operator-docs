@@ -1,8 +1,0 @@
-= Features
-
-After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
-The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a Pulsar cluster.
-
-* xref:features:autoscale-bookies.adoc[Bookkeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
-* xref:features:autoscale-brokers.adoc[Broker autoscaler] - Automatically scale the number of brokers based on CPU load.
-* xref:features:resource-sets.adoc[Resource sets] - Create multiple distinct sets of Pulsar components, each with a dedicated deployment/StatefulSet with its own service and configmap.
