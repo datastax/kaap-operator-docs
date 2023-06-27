@@ -1,6 +1,6 @@
 = JWT authentication
 
-To enable [JWT Authentication](https://pulsar.apache.org/docs/2.11.x/security-jwt/), set authentication to `true`.
+To enable https://pulsar.apache.org/docs/2.11.x/security-jwt/[[JWT Authentication], set authentication to `true`:
 [source,yaml]
 ----
 global:
@@ -9,10 +9,10 @@ global:
 ----
 
 Since the only supported authentication mechanism by the operator is JWT, it's not required to specify JWT related options.
-If you want to use a different authentication mechanism, you can disable authentication and manually configure the authentication options in the config section.
+If you want to use a different authentication mechanism, disable authentication and manually configure the authentication options in the config section.
 
-When setting up authentication, the operator will automatically generate the secret containing the private key and the public key.
-If you wish to use your own key pairs, you can disable the secret generation by setting `initialize` to false.
+When setting up authentication, the operator will automatically generate the secret containing a private and public key.
+If you wish to use your own key pairs, disable the secret generation by setting `initialize` to false:
 [source,yaml]
 ----
 global:
@@ -21,8 +21,12 @@ global:
         token:
             initialize: false
 ----
-Note that the operator will expect secrets with the same name to be already present in the namespace.
+[NOTE]
+====
+The operator expects secrets with the same name to be already present in the namespace.
+
 Secrets must be named `token-private-key` and `token-public-key`.
+====
 [source,yaml]
 ----
 apiVersion: v1
@@ -47,12 +51,12 @@ data:
 
 [NOTE]
 ====
-Symmetric secret key is not supported.
+Symmetric secret keys are not supported.
 ====
 
-The operator will also generate tokens for super user roles.
+The operator also generates tokens for super user roles.
 By default, the super users are `superuser`, `admin`, `websocket` and `proxy`.
-If you wish to use another set of super users, you can specify them in the `superUserRoles` option, along with the `proxyRoles`.
+If you wish to use another set of super users, specify them in the `superUserRoles` option, along with the `proxyRoles`:
 [source,yaml]
 ----
 global:
@@ -71,9 +75,7 @@ global:
                 - my-custom-proxy-user
 ----
 
-
-To generate a token for a given subject, login to the bastion pod and perform Pulsar Admin operations since the bastion pod already mounts the super user token:
-
+To generate a token for a given subject, login to the bastion pod (the bastion pod already mounts the super user token):
 [source,bash]
 ----
 PULSAR_TOKEN=$(kubectl exec deployment/pulsar-bastion -- bin/pulsar tokens create --private-key token-private-key/my-private.key --subject myuser)

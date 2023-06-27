@@ -1,6 +1,6 @@
-= TLS authentication
+= TLS communication
 
-You can enable TLS for each component in the Pulsar cluster, or you can enable it only for specific components.
+You can enable TLS communication for each component in the Pulsar cluster, or you can enable it only for specific components.
 Each component has its own dedicated configuration section, but they're all under the `global.tls` section.
 Once the TLS setup is done, the operator updates the components configuration to use TLS.
 
@@ -33,10 +33,15 @@ global:
         secretName: fnw-tls
 ----
 
-Note that each component has its own secret name.
-The secret name can be auto provisioned by the operator using `cert-manager`. You can share the same certificate across multiple components, although it's not a recommended practice for security reasons.
+[NOTE]
+====
+Each component has its own secret name.
+====
 
-The secret must follow the [cert-manager Certificate](https://cert-manager.io/docs/concepts/certificate/) structure:
+The secret name is auto-provisioned by the operator using `cert-manager`. You can share the same certificate across multiple components, although it's not a recommended practice for security reasons.
+
+The secret must follow the https://cert-manager.io/docs/concepts/certificate[cert-manager Certificate] structure:
+
 - `tls.crt`: the certificate
 - `tls.key`: the private key
 
@@ -51,11 +56,11 @@ data:
   tls.key: <base64 encoded key>
 ----
 
-The operator only needs to know the secret name and it will automatically use it as-is.
+The operator only needs to know the secret name. and it will automatically use it as-is.
 In some cases, like test clusters, you might wish to generate self-signed certificates.
-The operator integrates well with cert-manager to generate a self-signed CA and all the needed certificates.
+The operator integrates with cert-manager to generate a self-signed CA with all the needed certificates.
 
-In order to enable the certificate provisioning you have to configure it in the `global.tls` section.
+To enable certificate provisioning, configure it in the `global.tls` section.
 [source,yaml]
 ----
 global:
@@ -77,6 +82,10 @@ global:
               functionsWorker:
                 generate: true
 ----
-This will generate all the secrets needed by the components. The name of each secret is gathered from the `secretName` configured.
+This will generate all the secrets needed by the components. The name of each secret is gathered from the configured `secretName`.
 
-The repository contains examples for [real TLS example with acme](https://github.com/riptano/pulsar-operator/tree/main/helm/examples/cert-manager-acme) and [self-signed certificates](https://github.com/riptano/pulsar-operator/tree/main/helm/examples/cert-manager-self-signed).
+See the repository for examples:
+
+* https://github.com/datastax/k8saap/tree/main/helm/examples/cert-manager-acme[Real TLS example with acme](
+
+* https://github.com/datastax/k8saap/tree/main/helm/examples/cert-manager-self-signed[self-signed certificates]

@@ -1,4 +1,4 @@
-= Resource sets pod placement affinity
+= Pod placement affinity
 A rack defines a fault domain. A resource set can be mapped to a rack.
 When a resource set is mapped to a rack, that set's replicas will be placed in the same failure domain.
 A failure domain can be a region's availability zone (`zone`), or a cluster node (`host`).
@@ -23,7 +23,6 @@ global:
 
 The default configuration disables placement policy.
 To place all pods in the same node, you must set:
-+
 [source,helm]
 ----
 global:
