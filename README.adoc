@@ -39,9 +39,9 @@ helm repo update
 Learn more about installing the Luna Streaming Helm chart xref:luna-streaming:install-upgrade:quickstart-helm-installs.adoc[here].
 ====
 
-. The {pulsar-operator} Helm chart is currently only available privately.
+. The Pulsar operator Helm chart is currently only available privately.
 Download it here: https://github.com/riptano/pulsar-operator/releases/download/pulsar-operator-0.0.4/pulsar-operator-0.0.4.tgz
-. Install the {pulsar-operator} Helm chart:
+. Install the Pulsar operator Helm chart:
 +
 [source,helm]
 ----
@@ -147,10 +147,10 @@ Events:
 --
 ====
 
-. You've now installed {pulsar-operator}.
+. You've now installed Pulsar operator.
 +
-By default, when {pulsar-operator} is installed, the PulsarCluster CRDs are also created.
-This setting is defined in the {pulsar-operator} values.yaml file as `crd: create: true`.
+By default, when Pulsar operator is installed, the PulsarCluster CRDs are also created.
+This setting is defined in the Pulsar operator values.yaml file as `crd: create: true`.
 +
 . To see the available CRDs:
 +
@@ -207,21 +207,20 @@ Open file:///Users/mendon.kissling/Documents/GitHub/datastax-streaming-site/puls
 == Build operator locally
 
 === Requirements
-JDK17+
-Maven
-Docker
+
+* JDK17+
+* Maven
+* Docker
 
 To build operator locally:
-[source,maven]
-====
+```
 mvn package -DskipTests -pl pulsar-operator -am -Pskip-crds
-====
+```
 
 To use a public Kubernetes cluster, you must deploy the operator image to DockerHub or another public registry:
-[source,maven]
-====
+```
 $dockerhub_repo=<your dockerhub repo>
 docker tag datastax/lunastreaming-operator:latest-dev
 $dockerhub_repo/lunastreaming-operator:latest
 docker push $dockerhub_repo/lunastreaming-operator:latest
-====
+```
