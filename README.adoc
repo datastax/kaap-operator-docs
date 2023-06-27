@@ -1,16 +1,227 @@
-= pulsar-operator-docs
+= Introduction
+
+The DataStax Operator for Apache Pulsar is a powerful tool that simplifies the management and deployment of Apache Pulsar clusters on Kubernetes. Apache Pulsar is a highly scalable, durable, and flexible messaging system that offers pub-sub messaging, queuing, and streaming capabilities. By leveraging the Kubernetes Operator pattern, this project provides an intuitive and automated way to deploy, scale, and manage Apache Pulsar clusters within Kubernetes environments.
+
+Operating and maintaining Apache Pulsar clusters traditionally involves complex manual configurations, making it challenging for developers and operators to effectively manage the system's lifecycle. However, with the Apache Pulsar Kubernetes Operator, these complexities are abstracted away, enabling developers to focus on their applications rather than the underlying infrastructure.
+
+This operator acts as an extension to the Kubernetes API, introducing custom resource definitions (CRDs) specific to Apache Pulsar. With these CRDs, users can define Pulsar clusters, topics, subscriptions, and other resources as native Kubernetes objects. The operator then reconciles the desired state defined by these objects with the actual state of the Pulsar cluster, ensuring that the cluster is always in the desired configuration.
+
+Some of the key features and benefits of the Apache Pulsar Kubernetes Operator include:
+
+- **Easy Deployment**: Deploying an Apache Pulsar cluster on Kubernetes is simplified through declarative configurations and automation provided by the operator.
+
+- **Scalability**: The operator enables effortless scaling of Pulsar clusters by automatically handling the creation and configuration of new Pulsar brokers and bookies as per defined rules.
+
+- **High Availability**: The operator implements best practices for high availability, ensuring that Pulsar clusters are fault-tolerant and can sustain failures without service disruptions.
+
+- **Monitoring and Metrics**: Integrated monitoring and metrics collection allow users to gain insights into the health and performance of Pulsar clusters, making it easier to detect and resolve issues.
+
+- **Lifecycle Management**: The operator takes care of common Pulsar cluster lifecycle tasks, such as cluster creation, upgrade, configuration updates, and graceful shutdowns.
+
+- **Integration with Kubernetes Ecosystem**: The Apache Pulsar Kubernetes Operator seamlessly integrates with other Kubernetes-native tools and features, such as Kubernetes RBAC, Prometheus, and Grafana, enabling a cohesive and comprehensive ecosystem for managing Pulsar clusters.
+
+Whether you are a developer looking to leverage the power of Apache Pulsar in your Kubernetes environment or an operator seeking to streamline the management of Pulsar clusters, the Apache Pulsar Kubernetes Operator provides a robust and user-friendly solution. In this documentation, we will explore the installation, configuration, and usage of the operator, empowering you to harness the full potential of Apache Pulsar within your Kubernetes deployments.
+
+== Documentation
+
+Full documentation is available in the https://docs.datastax.com/en/streaming/pulsar-operator/index.html[DataStax Streaming Documentation].
+
+== Getting started
+
+Install the DataStax Helm repository:
+[source,helm]
+----
+helm repo add datastax-pulsar https://datastax.github.io/pulsar-helm-chart
+helm repo update
+----
+[TIP]
+====
+Learn more about installing the Luna Streaming Helm chart xref:luna-streaming:install-upgrade:quickstart-helm-installs.adoc[here].
+====
+
+. The {pulsar-operator} Helm chart is currently only available privately.
+Download it here: https://github.com/riptano/pulsar-operator/releases/download/pulsar-operator-0.0.4/pulsar-operator-0.0.4.tgz
+. Install the {pulsar-operator} Helm chart:
++
+[source,helm]
+----
+helm install pulsar-operator pulsar-operator-0.0.5.tgz
+...
+NAME: pulsar-operator
+LAST DEPLOYED: Wed Mar 15 12:22:29 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+----
+. Ensure pulsar-operator is up and running:
++
+[tabs]
+====
+Kubectl::
++
+--
+[source,kubectl]
+----
+kubectl get deployment
+----
+--
+
+Result::
++
+--
+[source,bash]
+----
+NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+pulsar-operator   1/1     1            1           13m
+----
+--
+====
+. Describe the deployment:
++
+[tabs]
+====
+Kubectl::
++
+--
+[source,kubectl]
+----
+kubectl describe deployment pulsar-operator
+----
+--
+
+Result::
++
+--
+[source,plain]
+----
+Name:                   pulsar-operator
+Namespace:              pulsar-operator
+CreationTimestamp:      Tue, 28 Mar 2023 22:14:35 -0400
+Labels:                 app.kubernetes.io/managed-by=Helm
+                        app.kubernetes.io/name=pulsar-operator
+                        app.kubernetes.io/version=
+Annotations:            deployment.kubernetes.io/revision: 1
+                        meta.helm.sh/release-name: pulsar-operator
+                        meta.helm.sh/release-namespace: pulsar-cluster
+                        prometheus.io/path: /q/metrics
+                        prometheus.io/port: 8080
+                        prometheus.io/scheme: http
+                        prometheus.io/scrape: true
+Selector:               app.kubernetes.io/name=pulsar-operator,app.kubernetes.io/version=
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:           app.kubernetes.io/name=pulsar-operator
+                    app.kubernetes.io/version=
+  Annotations:      prometheus.io/path: /q/metrics
+                    prometheus.io/port: 8080
+                    prometheus.io/scheme: http
+                    prometheus.io/scrape: true
+  Service Account:  pulsar-operator
+  Containers:
+   pulsar-operator:
+    Image:      datastax/lunastreaming-operator:latest
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Liveness:   http-get http://:8080/q/health/live delay=0s timeout=10s period=30s #success=1 #failure=3
+    Readiness:  http-get http://:8080/q/health/ready delay=0s timeout=10s period=30s #success=1 #failure=3
+    Environment:
+      KUBERNETES_NAMESPACE:   (v1:metadata.namespace)
+    Mounts:                  <none>
+  Volumes:                   <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   pulsar-operator-7975c847d4 (1/1 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  5m48s  deployment-controller  Scaled up replica set pulsar-operator-7975c847d4 to 1
+----
+--
+====
+
+. You've now installed {pulsar-operator}.
++
+By default, when {pulsar-operator} is installed, the PulsarCluster CRDs are also created.
+This setting is defined in the {pulsar-operator} values.yaml file as `crd: create: true`.
++
+. To see the available CRDs:
++
+[tabs]
+====
+Kubectl::
++
+--
+[source,kubectl]
+----
+kubectl get crds | grep datastax
+----
+--
+
+Result::
++
+--
+[source,console]
+----
+autorecoveries.pulsar.oss.datastax.com           2023-05-12T16:35:59Z
+bastions.pulsar.oss.datastax.com                 2023-05-12T16:36:00Z
+bookkeepers.pulsar.oss.datastax.com              2023-05-12T16:36:00Z
+brokers.pulsar.oss.datastax.com                  2023-05-12T16:36:01Z
+functionsworkers.pulsar.oss.datastax.com         2023-05-12T16:36:01Z
+proxies.pulsar.oss.datastax.com                  2023-05-12T16:36:02Z
+pulsarclusters.pulsar.oss.datastax.com           2023-05-12T16:36:04Z
+zookeepers.pulsar.oss.datastax.com               2023-05-12T16:36:06Z
+----
+--
+====
+
+For more, see the https://docs.datastax.com/en/streaming/pulsar-operator/index.html[DataStax Streaming Documentation].
+
+//== Contribute
+//TBD
+
+== Build documentation locally
 
 Documentation for Pulsar Operator project.
-To preview docs locally:  
+To preview docs locally:
 
 1. Install Antora[https://docs.antora.org/antora/latest/install-and-run-quickstart/]
 2. Build documentation with Antora:
 +
 ```
-cd pulsar-operator-docs                             
+cd pulsar-operator-docs
 antora --fetch --clean antora-playbooks/develop.yaml
 ...
 Site generation complete!
 Open file:///Users/mendon.kissling/Documents/GitHub/datastax-streaming-site/pulsar-operator-docs/build/site/index.html in a browser to view your site.
 ```
-3. A /Build folder with the site build is generated. 
+3. A /Build folder with the site build is generated.
+
+== Build operator locally
+
+=== Requirements
+JDK17+
+Maven
+Docker
+
+To build operator locally:
+[source,maven]
+====
+mvn package -DskipTests -pl pulsar-operator -am -Pskip-crds
+====
+
+To use a public Kubernetes cluster, you must deploy the operator image to DockerHub or another public registry:
+[source,maven]
+====
+$dockerhub_repo=<your dockerhub repo>
+docker tag datastax/lunastreaming-operator:latest-dev
+$dockerhub_repo/lunastreaming-operator:latest
+docker push $dockerhub_repo/lunastreaming-operator:latest
+====
