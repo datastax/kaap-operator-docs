@@ -3,16 +3,17 @@ name: Document Custom Resource Definitions
 on:
   workflow_dispatch:
     inputs:
-      operatorVersionTag:
-        description: 'Pulsar Operator Tag'
-        required: true
-        type: string
 
       operatorRepo:
-        description: 'Pulsar Operator Repo'
+        description: 'Kubernetes Autoscaler src Repo'
         required: true
         type: string
-        default: 'riptano/pulsar-operator'
+        default: 'datastax/k8saap'
+
+      operatorVersionTag:
+        description: 'Tagged src to use'
+        required: true
+        type: string
 
       saveGeneratedFiles:
         required: true
@@ -26,13 +27,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: pulsar-operator-docs
+          path: operator-docs
+          #ref: <using the selected branch from actions tab>
 
       - uses: actions/checkout@v2
         with:
           repository: ${{ github.event.inputs.operatorRepo }}
           ref: ${{ github.event.inputs.operatorVersionTag }}
-          path: pulsar-operator-src
+          path: operator-src
           token: ${{ secrets.DDIERUF_TOKEN }}
 
       - name: Setup Python
@@ -43,19 +45,19 @@ jobs:
       - name: Install deps
         continue-on-error: true
         run: |
-          pip install -r pulsar-operator-docs/.github/generator/requirements.txt
+          pip install -r operator-docs/.github/generator/requirements.txt
 
       - name: Clear existing docs
         continue-on-error: true
         run: |
-          rm -rf pulsar-operator-docs/modules/crd-spec/pages/*
-          rm -rf pulsar-operator-docs/modules/crd-spec/*.adoc
+          rm -rf operator-docs/modules/crd-spec/pages/*
+          rm -rf operator-docs/modules/crd-spec/*.adoc
 
       - name: Convert CRDs to OpenApi v3
-        continue-on-error: true
+        continue-on-error: false
         run: |
-          python pulsar-operator-docs/.github/generator/crds_to_openapi.py \
-            --crds_dir pulsar-operator-src/helm/k8saap/crds \
+          python operator-docs/.github/generator/crds_to_openapi.py \
+            --crds_dir operator-src/helm/k8saap/crds \
             --output_dir generated_specs
 
       - name: Upload generated CRD specs
@@ -67,9 +69,9 @@ jobs:
           if-no-files-found: error
 
       - name: Preprocess specs
-        continue-on-error: true
+        continue-on-error: false
         run: |
-          python pulsar-operator-docs/.github/generator/preprocess_specs.py \
+          python operator-docs/.github/generator/preprocess_specs.py \
             --specs_dir generated_specs \
             --output_dir preprocess_specs
 
@@ -85,20 +87,20 @@ jobs:
         env:
           OPENAPI_GENERATOR_VERSION: 6.6.0
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
+        continue-on-error: false
         run: |
-          chmod +x ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh
+          chmod +x ./operator-docs/.github/openapi/openapi-generator-cli.sh
           mkdir openapi_specs
           
           for spec in preprocess_specs/*.yaml;
           do
-            ./pulsar-operator-docs/.github/openapi/openapi-generator-cli.sh generate \
+            ./operator-docs/.github/openapi/openapi-generator-cli.sh generate \
               -g asciidoc \
               -o gen \
               -i $spec \
               --additional-properties=legacyDiscriminatorBehavior=false,disallowAdditionalPropertiesIfNotPresent=false,sortModelPropertiesByRequiredFlag=true,sortParamsByRequiredFlag=true \
               --remove-operation-id-prefix \
-              -t ./pulsar-operator-docs/.github/openapi/templates \
+              -t ./operator-docs/.github/openapi/templates \
               --inline-schema-name-defaults arrayItemSuffix=,mapItemSuffix=
           
             fileName=$(basename $spec .yaml)
@@ -115,24 +117,24 @@ jobs:
           if-no-files-found: error
 
       - name: Postprocess adoc
-        continue-on-error: true
+        continue-on-error: false
         run: |
-          python pulsar-operator-docs/.github/generator/postprocess_adoc.py \
+          python operator-docs/.github/generator/postprocess_adoc.py \
             --adoc_dir openapi_specs \
-            --output_dir pulsar-operator-docs/modules/crd-spec/pages
+            --output_dir operator-docs/modules/crd-spec/pages
 
       - name: Generate navigation adoc
-        continue-on-error: true
+        continue-on-error: false
         run: |
           for spec in openapi_specs/*.adoc;
           do
-            echo "** xref:$(basename $spec)[]" >> pulsar-operator-docs/modules/crd-spec/nav.adoc
+            echo "** xref:$(basename $spec)[]" >> operator-docs/modules/crd-spec/nav.adoc
           done
 
       - name: Add, Commit, and Push
         uses: EndBug/add-and-commit@v9
         with:
-          cwd: ./pulsar-operator-docs
+          cwd: ./operator-docs
           committer_name: GitHub Actions
           committer_email: actions@github.com
           new_branch: ${{ github.event.inputs.operatorVersionTag }}-generated-crd-docs
