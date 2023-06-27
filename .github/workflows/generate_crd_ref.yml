@@ -55,12 +55,12 @@ jobs:
         continue-on-error: true
         run: |
           python pulsar-operator-docs/.github/generator/crds_to_openapi.py \
-            --crds_dir pulsar-operator-src/helm/pulsar-operator/crds \
+            --crds_dir pulsar-operator-src/helm/k8sapp/crds \
             --output_dir generated_specs
 
       - name: Upload generated CRD specs
         uses: actions/upload-artifact@v3
-        if: ${{ github.event.inputs.saveGeneratedFiles }}
+        if: ${{ github.event.inputs.saveGeneratedFiles == 'true' }}
         with:
           name: generated_specs
           path: generated_specs
@@ -75,7 +75,7 @@ jobs:
 
       - name: Upload preprocessed specs
         uses: actions/upload-artifact@v3
-        if: ${{ github.event.inputs.saveGeneratedFiles }}
+        if: ${{ github.event.inputs.saveGeneratedFiles == 'true'  }}
         with:
           name: preprocess_specs
           path: preprocess_specs
@@ -100,7 +100,7 @@ jobs:
               --remove-operation-id-prefix \
               -t ./pulsar-operator-docs/.github/openapi/templates \
               --inline-schema-name-defaults arrayItemSuffix=,mapItemSuffix=
-            
+          
             fileName=$(basename $spec .yaml)
             definitionType=$(echo ${fileName%.*})
             cp "gen/index.adoc" "openapi_specs/${definitionType}.adoc"
@@ -108,7 +108,7 @@ jobs:
 
       - name: Upload generated ADOC
         uses: actions/upload-artifact@v3
-        if: ${{ github.event.inputs.saveGeneratedFiles }}
+        if: ${{ github.event.inputs.saveGeneratedFiles == 'true'  }}
         with:
           name: openapi_specs
           path: openapi_specs
