@@ -2,6 +2,8 @@
 
 KAAP simplifies running https://pulsar.apache.org[Apache Pulsar] on Kubernetes.
 
+Full documentation is available in the https://docs.datastax.com/en/streaming/pulsar-operator/index.html[DataStax Streaming Documentation].
+
 == Apache Pulsar
 
 Apache Pulsar is an open-source distributed pub-sub messaging platform designed to handle real-time data streams and event-driven architectures. It offers a highly scalable and durable messaging system that allows seamless communication and processing of data among diverse applications and services. Pulsar provides advanced features like multi-tenancy, geo-replication, message replay, and schema enforcement, enabling organizations to build robust, reliable, and flexible data streaming pipelines. With its horizontally scalable architecture and extensive ecosystem integrations, Apache Pulsar empowers businesses to efficiently manage and process massive amounts of data while ensuring low-latency and high-throughput messaging capabilities.
