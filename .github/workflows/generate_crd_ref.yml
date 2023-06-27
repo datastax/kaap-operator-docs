@@ -55,7 +55,7 @@ jobs:
         continue-on-error: true
         run: |
           python pulsar-operator-docs/.github/generator/crds_to_openapi.py \
-            --crds_dir pulsar-operator-src/helm/k8sapp/crds \
+            --crds_dir pulsar-operator-src/helm/k8saap/crds \
             --output_dir generated_specs
 
       - name: Upload generated CRD specs
