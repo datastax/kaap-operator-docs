@@ -287,7 +287,6 @@ release "pulsar-operator" uninstalled
 
 == What's next?
 
-With your new operator and PulsarCluster resources, you can automate some amazing things.
-* xref:
-* xref:
-* xref:
+* xref:authentication:index.adoc[]
+* xref:scaling-components:autoscale-bookies.adoc[]
+* xref:resource-sets:index.adoc[]

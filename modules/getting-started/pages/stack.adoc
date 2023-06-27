@@ -149,4 +149,6 @@ release "pulsar" uninstalled
 
 == What's next?
 
-With {pulsar-stack} installed, continue on to 
+* xref:authentication:index.adoc[]
+* xref:scaling-components:autoscale-bookies.adoc[]
+* xref:resource-sets:index.adoc[]

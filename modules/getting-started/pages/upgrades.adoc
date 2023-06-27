@@ -171,11 +171,11 @@ customresourcedefinition.apiextensions.k8s.io/zookeepers.pulsar.oss.datastax.com
 --
 ====
 
-== Upgrade {pulsar-operator}
-
-Coming soon.
-
 == What's next?
+
+* xref:authentication:index.adoc[]
+* xref:scaling-components:autoscale-bookies.adoc[]
+* xref:resource-sets:index.adoc[]
 
 
 
