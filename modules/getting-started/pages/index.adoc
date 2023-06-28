@@ -2,9 +2,9 @@
 
 {pulsar-operator} can be installed in two ways.
 
-* xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator pod and PulsarCluster CRDs.
+* xref:getting-started:operator.adoc[{pulsar-operator}] - Installs just the operator pod and PulsarCluster CRDs.
 
-* xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
+* xref:getting-started:stack.adoc[{pulsar-stack}] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
 
 [TIP]
 ====

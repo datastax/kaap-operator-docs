@@ -6,8 +6,9 @@ version: 0.0.5
 asciidoc:
   attributes:
     protocol_version: '2.10'
-    pulsar-operator: 'Pulsar Operator'
-    pulsar-stack: 'Pulsar Stack'
+    pulsar-operator: 'KAAP Operator'
+    pulsar-operator-full-name: 'Kubernetes Autoscaling for Apache Pulsar (KAAP)'
+    pulsar-stack: 'KAAP stack'
 
 nav:
   - modules/getting-started/nav.adoc

@@ -20,8 +20,7 @@ helm repo update
 Learn more about installing the Luna Streaming Helm chart xref:luna-streaming:install-upgrade:quickstart-helm-installs.adoc[here].
 ====
 
-. The {pulsar-operator} Helm chart is currently only available privately.
-Download it here: https://github.com/riptano/pulsar-operator/releases/download/pulsar-operator-0.0.4/pulsar-operator-0.0.4.tgz
+. The {pulsar-operator} Helm chart is available for download https://github.com/datastax/kaap/releases/tag/operator-0.1.0[here]{external-link-icon}.
 . Install the {pulsar-operator} Helm chart:
 +
 [source,helm]
@@ -35,7 +34,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
-. Ensure pulsar-operator is up and running:
+. Ensure {pulsar-operator} is up and running:
 +
 [tabs]
 ====
