@@ -8,7 +8,7 @@ on:
         description: 'Kubernetes Autoscaler src Repo'
         required: true
         type: string
-        default: 'datastax/k8saap'
+        default: 'datastax/kaap'
 
       operatorVersionTag:
         description: 'Tagged src to use'
@@ -20,6 +20,12 @@ on:
         type: boolean
         default: false
         description: "Save all generated files to the job and error if there are none"
+
+      crdsPath:
+        description: 'The path in the repo to the CRDs folder'
+        required: true
+        type: string
+        default: 'helm/kaap/crds'
 
 jobs:
   generate_crd_ref:
@@ -57,7 +63,7 @@ jobs:
         continue-on-error: false
         run: |
           python operator-docs/.github/generator/crds_to_openapi.py \
-            --crds_dir operator-src/helm/pulsar-operator/crds \
+            --crds_dir operator-src/${{ github.event.inputs.crdsPath }} \
             --output_dir generated_specs
 
       - name: Upload generated CRD specs
