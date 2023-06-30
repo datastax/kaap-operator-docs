@@ -8,33 +8,28 @@ You can install <<operator,(1)>> just the operator and the PulsarCluster CRDs, o
 
 [#operator]
 == Install {pulsar-operator}
-
 Install the DataStax Helm repository:
 [source,helm]
 ----
-helm repo add datastax-pulsar https://datastax.github.io/pulsar-helm-chart
+helm repo add kaap https://datastax.github.io/kaap
 helm repo update
 ----
-[TIP]
-====
-Learn more about installing the Luna Streaming Helm chart xref:luna-streaming:install-upgrade:quickstart-helm-installs.adoc[here].
-====
 
-. The {pulsar-operator} Helm chart is available for download https://github.com/datastax/kaap/releases/tag/operator-0.1.0[here]{external-link-icon}.
-. Install the {pulsar-operator} Helm chart:
+. The KAAP Operator Helm chart is available for download (https://github.com/datastax/kaap/releases/latest)[here].
+. Install the KAAP operator Helm chart:
 +
 [source,helm]
 ----
-helm install pulsar-operator pulsar-operator-0.0.5.tgz
+helm install kaap kaap/kaap
 ...
-NAME: pulsar-operator
-LAST DEPLOYED: Wed Mar 15 12:22:29 2023
-NAMESPACE: default
+NAME: kaap
+LAST DEPLOYED: Wed Jun 28 11:37:45 2023
+NAMESPACE: pulsar-cluster
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
-. Ensure {pulsar-operator} is up and running:
+. Ensure KAAP operator is up and running:
 +
 [tabs]
 ====
@@ -53,7 +48,7 @@ Result::
 [source,bash]
 ----
 NAME              READY   UP-TO-DATE   AVAILABLE   AGE
-pulsar-operator   1/1     1            1           13m
+kaap   1/1     1            1           13m
 ----
 --
 ====
@@ -66,7 +61,7 @@ Kubectl::
 --
 [source,kubectl]
 ----
-kubectl describe deployment pulsar-operator
+kubectl describe deployment kaap
 ----
 --
 
@@ -75,39 +70,41 @@ Result::
 --
 [source,plain]
 ----
-Name:                   pulsar-operator
-Namespace:              pulsar-operator
-CreationTimestamp:      Tue, 28 Mar 2023 22:14:35 -0400
+Name:                   kaap
+Namespace:              pulsar-cluster
+CreationTimestamp:      Wed, 28 Jun 2023 11:37:49 -0400
 Labels:                 app.kubernetes.io/managed-by=Helm
-                        app.kubernetes.io/name=pulsar-operator
-                        app.kubernetes.io/version=
+                        app.kubernetes.io/name=kaap
+                        helm.sh/chart=kaap-0.1.0
 Annotations:            deployment.kubernetes.io/revision: 1
-                        meta.helm.sh/release-name: pulsar-operator
+                        meta.helm.sh/release-name: kaap
                         meta.helm.sh/release-namespace: pulsar-cluster
                         prometheus.io/path: /q/metrics
                         prometheus.io/port: 8080
                         prometheus.io/scheme: http
                         prometheus.io/scrape: true
-Selector:               app.kubernetes.io/name=pulsar-operator,app.kubernetes.io/version=
+Selector:               app.kubernetes.io/name=kaap
 Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
 StrategyType:           RollingUpdate
 MinReadySeconds:        0
 RollingUpdateStrategy:  25% max unavailable, 25% max surge
 Pod Template:
-  Labels:           app.kubernetes.io/name=pulsar-operator
-                    app.kubernetes.io/version=
-  Annotations:      prometheus.io/path: /q/metrics
+  Labels:           app.kubernetes.io/name=kaap
+  Annotations:      checksum/config: bf2ad27453a7deeb74c2e0b177154649cb6cf292a31b80855c92d28f6a141134
+                    prometheus.io/path: /q/metrics
                     prometheus.io/port: 8080
                     prometheus.io/scheme: http
                     prometheus.io/scrape: true
-  Service Account:  pulsar-operator
+  Service Account:  kaap
   Containers:
-   pulsar-operator:
-    Image:      datastax/lunastreaming-operator:latest
+   kaap:
+    Image:      datastax/kaap:latest
     Port:       8080/TCP
     Host Port:  0/TCP
     Liveness:   http-get http://:8080/q/health/live delay=0s timeout=10s period=30s #success=1 #failure=3
     Readiness:  http-get http://:8080/q/health/ready delay=0s timeout=10s period=30s #success=1 #failure=3
+    Environment Variables from:
+      kaap  ConfigMap  Optional: false
     Environment:
       KUBERNETES_NAMESPACE:   (v1:metadata.namespace)
     Mounts:                  <none>
@@ -118,19 +115,19 @@ Conditions:
   Available      True    MinimumReplicasAvailable
   Progressing    True    NewReplicaSetAvailable
 OldReplicaSets:  <none>
-NewReplicaSet:   pulsar-operator-7975c847d4 (1/1 replicas created)
+NewReplicaSet:   kaap-76dfd8ddf9 (1/1 replicas created)
 Events:
-  Type    Reason             Age    From                   Message
-  ----    ------             ----   ----                   -------
-  Normal  ScalingReplicaSet  5m48s  deployment-controller  Scaled up replica set pulsar-operator-7975c847d4 to 1
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  2m5s  deployment-controller  Scaled up replica set kaap-76dfd8ddf9 to 1
 ----
 --
 ====
 
-. You've now installed {pulsar-operator}.
+. You've now installed KAAP.
 +
-By default, when {pulsar-operator} is installed, the PulsarCluster CRDs are also created.
-This setting is defined in the {pulsar-operator} values.yaml file as `crd: create: true`.
+By default, when KAAP is installed, the PulsarCluster CRDs are also created.
+This setting is defined in the Pulsar operator values.yaml file as `crd: create: true`.
 +
 . To see the available CRDs:
 +
@@ -141,8 +138,7 @@ Kubectl::
 --
 [source,kubectl]
 ----
-kubectl get crds | grep datastax
-----
+kubectl get crds | grep kaap
 --
 
 Result::
@@ -150,119 +146,21 @@ Result::
 --
 [source,console]
 ----
-autorecoveries.pulsar.oss.datastax.com           2023-05-12T16:35:59Z
-bastions.pulsar.oss.datastax.com                 2023-05-12T16:36:00Z
-bookkeepers.pulsar.oss.datastax.com              2023-05-12T16:36:00Z
-brokers.pulsar.oss.datastax.com                  2023-05-12T16:36:01Z
-functionsworkers.pulsar.oss.datastax.com         2023-05-12T16:36:01Z
-proxies.pulsar.oss.datastax.com                  2023-05-12T16:36:02Z
-pulsarclusters.pulsar.oss.datastax.com           2023-05-12T16:36:04Z
-zookeepers.pulsar.oss.datastax.com               2023-05-12T16:36:06Z
+autorecoveries.kaap.oss.datastax.com           2023-05-12T16:35:59Z
+bastions.kaap.oss.datastax.com                 2023-05-12T16:36:00Z
+bookkeepers.kaap.oss.datastax.com              2023-05-12T16:36:00Z
+brokers.kaap.oss.datastax.com                  2023-05-12T16:36:01Z
+functionsworkers.kaap.oss.datastax.com         2023-05-12T16:36:01Z
+proxies.kaap.oss.datastax.com                  2023-05-12T16:36:02Z
+pulsarclusters.kaap.oss.datastax.com           2023-05-12T16:36:04Z
+zookeepers.kaap.oss.datastax.com               2023-05-12T16:36:06Z
 ----
 --
 ====
-
-[#values]
-== Install {pulsar-operator} Helm chart and a values.yaml file
-
-You can install the {pulsar-operator} with a pre-configured values.yaml file.
-This values file configures additional components, such as Broker, Zookeeper, and Bookkeeper pods for your Pulsar cluster.
-This is a great way to get a cluster up and running quickly, while still having fine-grained control of each component.
-
-. For this example, we'll install the Pulsar Operator *and* a complete Pulsar cluster with auto-scaling capabilities.
-+
-[tabs]
-====
-Helm::
-+
---
-[source,helm]
-----
-helm install pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
-----
---
-
-Result::
-+
---
-[source,console]
-----
-NAME: pulsar
-LAST DEPLOYED: Fri May 12 12:36:13 2023
-NAMESPACE: pulsar-cluster
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-----
---
-====
-
-. To see the available CRDs:
-+
-[tabs]
-====
-Kubectl::
-+
---
-[source,kubectl]
-----
-kubectl get crds | grep datastax
-----
---
-
-Result::
-+
---
-[source,console]
-----
-autorecoveries.pulsar.oss.datastax.com           2023-05-12T16:35:59Z
-bastions.pulsar.oss.datastax.com                 2023-05-12T16:36:00Z
-bookkeepers.pulsar.oss.datastax.com              2023-05-12T16:36:00Z
-brokers.pulsar.oss.datastax.com                  2023-05-12T16:36:01Z
-functionsworkers.pulsar.oss.datastax.com         2023-05-12T16:36:01Z
-proxies.pulsar.oss.datastax.com                  2023-05-12T16:36:02Z
-pulsarclusters.pulsar.oss.datastax.com           2023-05-12T16:36:04Z
-zookeepers.pulsar.oss.datastax.com               2023-05-12T16:36:06Z
-----
---
-====
-
-. To see your new Pulsar cluster up and running:
-+
-[tabs]
-====
-Kubectl::
-+
---
-[source,kubectl]
-----
-kubectl get pods -A
-----
---
-
-Result::
-+
---
-[source,console]
-----
-pulsar-cluster   pulsar-autorecovery-57cfc8b84d-xvchb                       1/1     Running     0          53m
-pulsar-cluster   pulsar-bastion-74777cbbf9-pcq5x                            1/1     Running     0          53m
-pulsar-cluster   pulsar-bookkeeper-0                                        1/1     Running     0          55m
-pulsar-cluster   pulsar-broker-0                                            1/1     Running     0          53m
-pulsar-cluster   pulsar-operator-7d8cc69df5-ncs5j                           1/1     Running     0          66m
-pulsar-cluster   pulsar-proxy-5bd5cc4fb6-9pnl7                              1/1     Running     0          53m
-pulsar-cluster   pulsar-zookeeper-0                                         1/1     Running     0          58m
-pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1     Completed   0          56m
-----
---
-====
-
-You did it!
-You now have a Pulsar cluster up and running with auto-scaling capabilities managed by {pulsar-operator}.
 
 == Uninstall
 
-To uninstall the operator:
+To uninstall the {pulsar-operator}:
 [tabs]
 ====
 Helm::
@@ -270,7 +168,7 @@ Helm::
 --
 [source,helm]
 ----
-helm delete pulsar-operator
+helm delete kaap
 ----
 --
 
@@ -279,7 +177,7 @@ Result::
 --
 [source,console]
 ----
-release "pulsar-operator" uninstalled
+release "kaap" uninstalled
 ----
 --
 ====

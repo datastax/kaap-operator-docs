@@ -10,22 +10,37 @@ Check out the {pulsar-stack}.
 * Cert Manager
 * Keycloak
 
-To install a PulsarCluster with the Pulsar stack included:
+To install a PulsarCluster with the {pulsar-stack} included:
++
+[tabs]
+====
+Kubectl::
++
+--
+[source,helm]
+----
+helm repo add kaap https://datastax.github.io/kaap
+helm repo update
+helm install pulsar kaap/kaap-stack --values helm/examples/dev-cluster/values.yaml
+----
+--
+
+Result::
++
+--
 [source,bash]
 ----
-helm install pulsar pulsar-stack-0.0.5.tgz --set pulsar-operator.cluster.create=true
+NAME: kaap
+LAST DEPLOYED: Wed Jun 28 15:46:27 2023
+NAMESPACE: pulsar-cluster
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
 ----
+--
+====
 
-Wait for the cluster to be up and running:
-
-[source,kubectl]
-----
-kubectl wait pulsar pulsar --for condition=Ready=True --timeout=240s
-----
-
-To check the status of your deployments:
-
-. Ensure pulsar-stack is up and running:
+. Ensure kaap-stack is up and running:
 +
 [tabs]
 ====
@@ -43,11 +58,14 @@ Result::
 --
 [source,bash]
 ----
-NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
-pulsar-autorecovery   1/1     1            1           24m
-pulsar-bastion        1/1     1            1           24m
-pulsar-operator       1/1     1            1           27m
-pulsar-proxy          2/3     3            2           24m
+NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
+kaap                                  1/1     1            1           5m19s
+pulsar-autorecovery                   1/1     1            1           3m19s
+pulsar-bastion                        1/1     1            1           3m19s
+pulsar-grafana                        1/1     1            1           5m19s
+pulsar-kube-prometheus-sta-operator   1/1     1            1           5m19s
+pulsar-kube-state-metrics             1/1     1            1           5m19s
+pulsar-proxy                          1/1     1            1           3m19s
 ----
 --
 ====
@@ -61,7 +79,7 @@ Kubectl::
 --
 [source,kubectl]
 ----
-kubectl describe deployment pulsar-stack
+kubectl describe deployment kaap-stack
 ----
 --
 
@@ -70,39 +88,41 @@ Result::
 --
 [source,plain]
 ----
-Name:                   pulsar-stack
-Namespace:              pulsar-stack
-CreationTimestamp:      Tue, 28 Mar 2023 21:38:51 -0400
+Name:                   kaap
+Namespace:              pulsar-cluster
+CreationTimestamp:      Wed, 28 Jun 2023 16:03:51 -0400
 Labels:                 app.kubernetes.io/managed-by=Helm
-                        app.kubernetes.io/name=pulsar-operator
-                        app.kubernetes.io/version=
+                        app.kubernetes.io/name=kaap
+                        helm.sh/chart=kaap-0.1.0
 Annotations:            deployment.kubernetes.io/revision: 1
-                        meta.helm.sh/release-name: pulsar
-                        meta.helm.sh/release-namespace: pulsar-stack
+                        meta.helm.sh/release-name: kaap
+                        meta.helm.sh/release-namespace: pulsar-cluster
                         prometheus.io/path: /q/metrics
                         prometheus.io/port: 8080
                         prometheus.io/scheme: http
                         prometheus.io/scrape: true
-Selector:               app.kubernetes.io/name=pulsar-operator,app.kubernetes.io/version=
+Selector:               app.kubernetes.io/name=kaap
 Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
 StrategyType:           RollingUpdate
 MinReadySeconds:        0
 RollingUpdateStrategy:  25% max unavailable, 25% max surge
 Pod Template:
-  Labels:           app.kubernetes.io/name=pulsar-operator
-                    app.kubernetes.io/version=
-  Annotations:      prometheus.io/path: /q/metrics
+  Labels:           app.kubernetes.io/name=kaap
+  Annotations:      checksum/config: bf2ad27453a7deeb74c2e0b177154649cb6cf292a31b80855c92d28f6a141134
+                    prometheus.io/path: /q/metrics
                     prometheus.io/port: 8080
                     prometheus.io/scheme: http
                     prometheus.io/scrape: true
-  Service Account:  pulsar-operator
+  Service Account:  kaap
   Containers:
-   pulsar-operator:
-    Image:      datastax/lunastreaming-operator:latest
+   kaap:
+    Image:      datastax/kaap:latest
     Port:       8080/TCP
     Host Port:  0/TCP
     Liveness:   http-get http://:8080/q/health/live delay=0s timeout=10s period=30s #success=1 #failure=3
     Readiness:  http-get http://:8080/q/health/ready delay=0s timeout=10s period=30s #success=1 #failure=3
+    Environment Variables from:
+      kaap  ConfigMap  Optional: false
     Environment:
       KUBERNETES_NAMESPACE:   (v1:metadata.namespace)
     Mounts:                  <none>
@@ -113,11 +133,11 @@ Conditions:
   Available      True    MinimumReplicasAvailable
   Progressing    True    NewReplicaSetAvailable
 OldReplicaSets:  <none>
-NewReplicaSet:   pulsar-operator-7975c847d4 (1/1 replicas created)
+NewReplicaSet:   kaap-76dfd8ddf9 (1/1 replicas created)
 Events:
   Type    Reason             Age   From                   Message
   ----    ------             ----  ----                   -------
-  Normal  ScalingReplicaSet  27m   deployment-controller  Scaled up replica set pulsar-operator-7975c847d4 to 1
+  Normal  ScalingReplicaSet  12m   deployment-controller  Scaled up replica set kaap-76dfd8ddf9 to 1
 ----
 --
 ====
@@ -125,7 +145,7 @@ Events:
 You've now installed {pulsar-stack}.
 
 == Uninstall
-To uninstall the operator and the cluster:
+To uninstall the KAAP operator and the cluster:
 [tabs]
 ====
 Helm::
@@ -133,7 +153,7 @@ Helm::
 --
 [source,helm]
 ----
-helm delete pulsar
+helm delete kaap-stack
 ----
 --
 
@@ -142,7 +162,7 @@ Result::
 --
 [source,console]
 ----
-release "pulsar" uninstalled
+release "kaap-stack" uninstalled
 ----
 --
 ====

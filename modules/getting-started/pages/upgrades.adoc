@@ -3,7 +3,7 @@ The {pulsar-operator} performs cluster upgrades in a very conservative manner, w
 Components are updated and then restarted *only* if strictly needed. For example, if only the broker needs to be upgraded, then all other services will be left up and running.
 If there is an error or interruption during upgrade, the operator will apply the desired state defined in the PulsarCluster custom resource until the resource matches the actual state.
 
-The operator follows a fixed schema to upgrade the cluster:
+The {pulsar-operator} follows a fixed schema to upgrade the cluster:
 [source,plain]
 ----
 stateDiagram-v2
