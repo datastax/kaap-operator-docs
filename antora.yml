@@ -17,4 +17,3 @@ nav:
   - modules/scaling-components/nav.adoc
   - modules/resource-sets/nav.adoc
   - modules/crd-spec/nav.adoc
-  - modules/api-reference/nav.adoc

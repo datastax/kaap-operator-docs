@@ -4,7 +4,7 @@
 // The install will be updated when chart is available publicly
 
 {pulsar-operator} is installed using Helm.
-You can install <<operator,(1)>> just the operator and the PulsarCluster CRDs, or you can install <<values,(2)>> the operator, CRDs, and a Pulsar cluster defined with a values.yaml file.
+You can install just the operator and the PulsarCluster CRDs, or you can install xref:stack.adoc[Kaap Stack], which includes the operator, CRDs, and the Prometheus monitoring stack.
 
 [#operator]
 == Install {pulsar-operator}
@@ -139,6 +139,7 @@ Kubectl::
 [source,kubectl]
 ----
 kubectl get crds | grep kaap
+----
 --
 
 Result::
