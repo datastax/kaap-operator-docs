@@ -1,6 +1,28 @@
 = {pulsar-operator-full-name}
 
-{pulsar-operator-full-name} simplifies running https://pulsar.apache.org[Apache Pulsar] on Kubernetes by applying the familiar https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Operator pattern] to Pulsar's components.
+{pulsar-operator-full-name} simplifies running https://pulsar.apache.org[Apache Pulsar] on Kubernetes by applying the familiar https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Operator pattern] to Pulsar's components, and horizonally scaling resources up or down based on CPU and memory workloads.
+
+Operating and maintaining Apache Pulsar clusters traditionally involves complex manual configurations, making it challenging for developers and operators to effectively manage the system's lifecycle. However, with the KAAP operator, these complexities are abstracted away, enabling developers to focus on their applications rather than the underlying infrastructure.
+
+Some of the key features and benefits of the KAAP operator include:
+
+- **Easy Deployment**: Deploying an Apache Pulsar cluster on Kubernetes is simplified through declarative configurations and automation provided by the operator.
+
+- **Scalability**: The KAAP operator enables effortless scaling of Pulsar clusters by automatically handling the creation and configuration of new Pulsar brokers and bookies as per defined rules. The broker autoscaling is integrated with the Pulsar broker load balancer to make smart resource management decisions, and bookkeepers are scaled up and down based on storage usage in a safe, controlled manner.
+
+- **High Availability**: The operator implements best practices for high availability, ensuring that Pulsar clusters are fault-tolerant and can sustain failures without service disruptions.
+
+- **Lifecycle Management**: The operator takes care of common Pulsar cluster lifecycle tasks, such as cluster creation, upgrade, configuration updates, and graceful shutdowns.
+
+We also offer the xref:pulsar-stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your Pulsar cluster. Along with the PulsarCluster CRDs, KAAP stack also includes:
+
+* Pulsar Operator
+* Prometheus Stack (Grafana)
+* Pulsar Grafana dashboards
+* Cert Manager
+* Keycloak
+
+Whether you are a developer looking to leverage the power of Apache Pulsar in your Kubernetes environment or an operator seeking to streamline the management of Pulsar clusters, the {pulsar-operator} provides a robust and user-friendly solution.
 
 This guide offers a starting point for {pulsar-operator}.
 We will cover installation and deployment, configuration points, and further options for managing Pulsar components with the {pulsar-operator}.

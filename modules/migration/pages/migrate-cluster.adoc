@@ -1,4 +1,4 @@
-= Migrate existing cluster to the operator
+= Migrate existing cluster to KAAP operator
 
 Migrating an existing Apache Pulsar cluster to one controlled by the {pulsar-operator} is a manual process, but we've included a migration tool to help you along the way.
 
@@ -61,7 +61,7 @@ java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
 ----
 
 . You'll find a link to the generated report in the logs.
-Open the generated report in your browser and examine the differences between the existing cluster and the operator.
+Open the generated report in your browser and examine the differences between the existing cluster and the KAAP operator.
 If everything looks good, proceed to the migration procedure.
 If you find you need to change the generated CRD and simulate the migration again, run:
 +

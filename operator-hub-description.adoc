@@ -1,6 +1,6 @@
 = K8s Autoscaler for Apache Pulsar (KAAP)
 
-KAAP simplifies running https://pulsar.apache.org[Apache Pulsar] on Kubernetes.
+Kubernetes Autoscaling for Apache Pulsar (KAAP) simplifies running [Apache Pulsar](https://pulsar.apache.org) on Kubernetes by applying the familiar [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) to Pulsar's components, and horizonally scaling resources up or down based on CPU and memory workloads.
 
 Full documentation is available in the https://docs.datastax.com/en/streaming/pulsar-operator/index.html[DataStax Streaming Documentation].
 

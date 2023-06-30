@@ -1,6 +1,8 @@
 = Bookkeeper autoscaler
 
-The operator scales the number of bookies pods in a cluster up and down based on current disk usage.
+In a Pulsar cluster managed by KAAP, BookKeeper nodes are scaled up in response to running low on storage, and because of Bookkeeper's segment-based design, the new storage is available immediately for use by the cluster, with no log stream rebalancing required.
+
+When KAAP sees low storage usage on a Bookkeeper node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down bookies has been a consistent pain point in Pulsar, and KAAP automates this without sacrifing Pulsar's data guarantees.
 
 == Install Operator with Bookkeeper autoscaler enabled
 [source,bash]
