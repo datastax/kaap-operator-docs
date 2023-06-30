@@ -40,7 +40,6 @@ def main(params=None):
         adocLines = adocFile.readlines()
 
       Adoc.process_adoc(adocLines, args.partials_dir)
-      Adoc.ensure_line_endings(adocLines)
 
       with open(os.path.join(args.output_dir, docDirFile), "w") as processedAdocFile:
         processedAdocFile.writelines(adocLines)

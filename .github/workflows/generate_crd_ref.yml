@@ -127,7 +127,8 @@ jobs:
         run: |
           python operator-docs/.github/generator/postprocess_adoc.py \
             --adoc_dir openapi_specs \
-            --output_dir operator-docs/modules/crd-spec/pages
+            --output_dir operator-docs/modules/crd-spec/pages \
+            --partials_dir operator-docs/modules/crd-spec/partials
 
       - name: Generate navigation adoc
         continue-on-error: false
