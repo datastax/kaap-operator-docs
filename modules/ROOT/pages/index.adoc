@@ -14,7 +14,7 @@ Some of the key features and benefits of the KAAP operator include:
 
 - **Lifecycle Management**: The operator takes care of common Pulsar cluster lifecycle tasks, such as cluster creation, upgrade, configuration updates, and graceful shutdowns.
 
-We also offer the xref:pulsar-stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your Pulsar cluster. Along with the PulsarCluster CRDs, KAAP stack also includes:
+We also offer the xref:getting-started:stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your Pulsar cluster. Along with the PulsarCluster CRDs, KAAP stack also includes:
 
 * Pulsar Operator
 * Prometheus Stack (Grafana)
