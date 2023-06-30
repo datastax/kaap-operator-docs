@@ -1,12332 +1,5568 @@
 = Autorecovery
- 
 v1alpha1
- 
 :source-highlighter: highlightjs
- 
 :keywords: openapi, rest, Autorecovery
- 
 :specDir: 
- 
 :snippetDir: 
- 
 :generator-template: v1 2019-12-20
- 
 :info-url: https://openapi-generator.tech
- 
 :app-name: Autorecovery
- 
 
- 
 Auto generated from CRD spec
- 
 
- 
 
- 
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
- 
 
- 
 
- 
 Version: v1alpha1
- 
 
- 
 Namespace: pulsar.oss.datastax.com
- 
 
- 
-== Autorecovery [[Autorecovery]] 
- 
-
- 
+== Autorecovery [[Autorecovery]]
 [.fields-Autorecovery]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *spec* +
- 
             
- 
             <<Autorecovery_spec,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Spec
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *status* +
- 
             
- 
             <<Autorecovery_status,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Status
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Spec [[Autorecovery_spec]] 
- 
-
- 
+=== Spec [[Autorecovery_spec]]Complete namespace: Autorecovery.Spec
 [.fields-AutorecoverySpec]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *autorecovery* +
- 
             
- 
             <<Autorecovery_spec_autorecovery,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Autorecovery
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *global* +
- 
             
- 
             <<Autorecovery_spec_global,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Global
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Autorecovery [[Autorecovery_spec_autorecovery]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: {} 
- 
----- 
- 
-
- 
+==== Autorecovery [[Autorecovery_spec_autorecovery]]Complete namespace: Autorecovery.Spec.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery: {}----
 [.fields-AutorecoverySpecAutorecovery]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *annotations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Annotations to add to each resource (except pods).
- 
     | *antiAffinity* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_antiAffinity,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AntiAffinity
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *config* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 any
- 
 
- 
 
- 
     | 
- 
     Configuration.
- 
     | *env* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_env,Env>>
- 
 
- 
 
- 
     | 
- 
     Additional container env variables.
- 
     | *gracePeriod* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Termination grace period in seconds.
- 
     | *image* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override Pulsar image.
- 
     | *imagePullPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override image pull policy.
- 
     | *imagePullSecrets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_imagePullSecrets,ImagePullSecrets>>
- 
 
- 
 
- 
     | 
- 
     Image pull secrets.
- 
     | *initContainers* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers,InitContainers>>
- 
 
- 
 
- 
     | 
- 
     Init containers
- 
     | *labels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Labels to add to each resource (except pods).
- 
     | *matchLabels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Match labels selectors to add to each pod.
- 
     | *nodeAffinity* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_nodeAffinity,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 NodeAffinity
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *nodeSelectors* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Additional node selectors.
- 
     | *podAnnotations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Annotations to add to pod.
- 
     | *podLabels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Labels to add to each pod.
- 
     | *replicas* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Number of desired replicas.
- 
     | *resources* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_resources,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Resources
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *sidecars* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers,Sidecars>>
- 
 
- 
 
- 
     | 
- 
     Sidecar containers
- 
     | *tolerations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_tolerations,Tolerations>>
- 
 
- 
 
- 
     | 
- 
     Pod tolerations.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AntiAffinity [[Autorecovery_spec_autorecovery_antiAffinity]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    antiAffinity: {} 
- 
----- 
- 
-
- 
+==== Antiaffinity [[Autorecovery_spec_autorecovery_antiAffinity]]Complete namespace: Autorecovery.Spec.Autorecovery.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    antiaffinity: {}----
 [.fields-AutorecoverySpecAutorecoveryAntiAffinity]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_antiAffinity_host,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Host
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zone* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_antiAffinity_zone,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zone
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Host [[Autorecovery_spec_autorecovery_antiAffinity_host]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    antiAffinity: 
-      host: {} 
- 
----- 
- 
-
- 
+==== Host [[Autorecovery_spec_autorecovery_antiAffinity_host]]Complete namespace: Autorecovery.Spec.Autorecovery.Antiaffinity.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    antiaffinity:      host: {}----
 [.fields-AutorecoverySpecAutorecoveryAntiAffinityHost]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
     | *required* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zone [[Autorecovery_spec_autorecovery_antiAffinity_zone]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    antiAffinity: 
-      zone: {} 
- 
----- 
- 
-
- 
+==== Zone [[Autorecovery_spec_autorecovery_antiAffinity_zone]]Complete namespace: Autorecovery.Spec.Autorecovery.Antiaffinity.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    antiaffinity:      zone: {}----
 [.fields-AutorecoverySpecAutorecoveryAntiAffinityZone]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
     | *required* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Env [[Autorecovery_spec_autorecovery_env]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    env: {} 
- 
----- 
- 
-
- 
+==== Env [[Autorecovery_spec_autorecovery_env]]Complete namespace: Autorecovery.Spec.Autorecovery.EnvExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env: {}----
 [.fields-AutorecoverySpecAutorecoveryEnv]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *value* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *valueFrom* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_env_valueFrom,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ValueFrom
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ValueFrom [[Autorecovery_spec_autorecovery_env_valueFrom]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    env: 
-      valueFrom: {} 
- 
----- 
- 
-
- 
+==== Valuefrom [[Autorecovery_spec_autorecovery_env_valueFrom]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.ValuefromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom: {}----
 [.fields-AutorecoverySpecAutorecoveryEnvValueFrom]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *configMapKeyRef* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ConfigMapKeyRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *fieldRef* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_env_valueFrom_fieldRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FieldRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *resourceFieldRef* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_env_valueFrom_resourceFieldRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ResourceFieldRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *secretKeyRef* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretKeyRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ConfigMapKeyRef [[Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    env: 
-      valueFrom: 
-        configMapKeyRef: {} 
- 
----- 
- 
-
- 
+==== Configmapkeyref [[Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.ConfigmapkeyrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom:        configmapkeyref: {}----
 [.fields-AutorecoverySpecAutorecoveryEnvValueFromConfigMapKeyRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *key* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *optional* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== FieldRef [[Autorecovery_spec_autorecovery_env_valueFrom_fieldRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    env: 
-      valueFrom: 
-        fieldRef: {} 
- 
----- 
- 
-
- 
+==== Fieldref [[Autorecovery_spec_autorecovery_env_valueFrom_fieldRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.FieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom:        fieldref: {}----
 [.fields-AutorecoverySpecAutorecoveryEnvValueFromFieldRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *apiVersion* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fieldPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ResourceFieldRef [[Autorecovery_spec_autorecovery_env_valueFrom_resourceFieldRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    env: 
-      valueFrom: 
-        resourceFieldRef: {} 
- 
----- 
- 
-
- 
+==== Resourcefieldref [[Autorecovery_spec_autorecovery_env_valueFrom_resourceFieldRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.ResourcefieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom:        resourcefieldref: {}----
 [.fields-AutorecoverySpecAutorecoveryEnvValueFromResourceFieldRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *containerName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *divisor* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
     | *resource* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ImagePullSecrets [[Autorecovery_spec_autorecovery_imagePullSecrets]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    imagePullSecrets: {} 
- 
----- 
- 
-
- 
+==== Imagepullsecrets [[Autorecovery_spec_autorecovery_imagePullSecrets]]Complete namespace: Autorecovery.Spec.Autorecovery.ImagepullsecretsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    imagepullsecrets: {}----
 [.fields-AutorecoverySpecAutorecoveryImagePullSecrets]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== InitContainers [[Autorecovery_spec_autorecovery_initContainers]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: {} 
- 
----- 
- 
-
- 
+==== Initcontainers [[Autorecovery_spec_autorecovery_initContainers]]Complete namespace: Autorecovery.Spec.Autorecovery.InitcontainersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainers]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *args* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *command* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *env* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_env,Env>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *envFrom* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers_envFrom,EnvFrom>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *image* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *imagePullPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *lifecycle* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Lifecycle
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *livenessProbe* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 LivenessProbe
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *ports* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers_ports,Ports>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readinessProbe* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ReadinessProbe
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *resources* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_resources,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Resources
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *securityContext* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_securityContext,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecurityContext
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *startupProbe* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 StartupProbe
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *stdin* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *stdinOnce* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *terminationMessagePath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *terminationMessagePolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *tty* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeDevices* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers_volumeDevices,VolumeDevices>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeMounts* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers_volumeMounts,VolumeMounts>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *workingDir* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== EnvFrom [[Autorecovery_spec_autorecovery_initContainers_envFrom]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      envFrom: {} 
- 
----- 
- 
-
- 
+==== Envfrom [[Autorecovery_spec_autorecovery_initContainers_envFrom]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.EnvfromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      envfrom: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersEnvFrom]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *configMapRef* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ConfigMapRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *prefix* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ConfigMapRef [[Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      envFrom: 
-        configMapRef: {} 
- 
----- 
- 
-
- 
+==== Configmapref [[Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Envfrom.ConfigmaprefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      envfrom:        configmapref: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersEnvFromConfigMapRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *optional* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Lifecycle [[Autorecovery_spec_autorecovery_initContainers_lifecycle]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      lifecycle: {} 
- 
----- 
- 
-
- 
+==== Lifecycle [[Autorecovery_spec_autorecovery_initContainers_lifecycle]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.LifecycleExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecycle]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *postStart* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PostStart
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *preStop* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PreStop
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PostStart [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      lifecycle: 
-        postStart: {} 
- 
----- 
- 
-
- 
+==== Poststart [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.PoststartExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStart]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *exec* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Exec
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *httpGet* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 HttpGet
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *tcpSocket* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 TcpSocket
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Exec [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      lifecycle: 
-        postStart: 
-          exec: {} 
- 
----- 
- 
-
- 
+==== Exec [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.ExecExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          exec: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartExec]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *command* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== HttpGet [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      lifecycle: 
-        postStart: 
-          httpGet: {} 
- 
----- 
- 
-
- 
+==== Httpget [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.HttpgetExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          httpget: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartHttpGet]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *httpHeaders* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders,HttpHeaders>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *port* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
     | *scheme* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== HttpHeaders [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      lifecycle: 
-        postStart: 
-          httpGet: 
-            httpHeaders: {} 
- 
----- 
- 
-
- 
+==== Httpheaders [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.Httpget.HttpheadersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          httpget:            httpheaders: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartHttpGetHttpHeaders]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *value* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== TcpSocket [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      lifecycle: 
-        postStart: 
-          tcpSocket: {} 
- 
----- 
- 
-
- 
+==== Tcpsocket [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.TcpsocketExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          tcpsocket: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartTcpSocket]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *port* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== LivenessProbe [[Autorecovery_spec_autorecovery_initContainers_livenessProbe]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      livenessProbe: {} 
- 
----- 
- 
-
- 
+==== Livenessprobe [[Autorecovery_spec_autorecovery_initContainers_livenessProbe]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.LivenessprobeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      livenessprobe: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLivenessProbe]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *exec* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Exec
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *failureThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *grpc* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe_grpc,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Grpc
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *httpGet* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 HttpGet
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *initialDelaySeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *periodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *successThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *tcpSocket* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 TcpSocket
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *terminationGracePeriodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *timeoutSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Grpc [[Autorecovery_spec_autorecovery_initContainers_livenessProbe_grpc]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      livenessProbe: 
-        grpc: {} 
- 
----- 
- 
-
- 
+==== Grpc [[Autorecovery_spec_autorecovery_initContainers_livenessProbe_grpc]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Livenessprobe.GrpcExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      livenessprobe:        grpc: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersLivenessProbeGrpc]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *port* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *service* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Ports [[Autorecovery_spec_autorecovery_initContainers_ports]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      ports: {} 
- 
----- 
- 
-
- 
+==== Ports [[Autorecovery_spec_autorecovery_initContainers_ports]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.PortsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      ports: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersPorts]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *containerPort* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *hostIP* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *hostPort* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *protocol* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Resources [[Autorecovery_spec_autorecovery_initContainers_resources]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      resources: {} 
- 
----- 
- 
-
- 
+==== Resources [[Autorecovery_spec_autorecovery_initContainers_resources]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      resources: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersResources]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *limits* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
     | *requests* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SecurityContext [[Autorecovery_spec_autorecovery_initContainers_securityContext]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      securityContext: {} 
- 
----- 
- 
-
- 
+==== Securitycontext [[Autorecovery_spec_autorecovery_initContainers_securityContext]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.SecuritycontextExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContext]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *allowPrivilegeEscalation* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *capabilities* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_capabilities,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Capabilities
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *privileged* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *procMount* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnlyRootFilesystem* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsGroup* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsNonRoot* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsUser* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *seLinuxOptions* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_seLinuxOptions,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SeLinuxOptions
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *seccompProfile* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_seccompProfile,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SeccompProfile
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *windowsOptions* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_windowsOptions,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 WindowsOptions
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Capabilities [[Autorecovery_spec_autorecovery_initContainers_securityContext_capabilities]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      securityContext: 
-        capabilities: {} 
- 
----- 
- 
-
- 
+==== Capabilities [[Autorecovery_spec_autorecovery_initContainers_securityContext_capabilities]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.CapabilitiesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        capabilities: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextCapabilities]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *add* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *drop* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SeLinuxOptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_seLinuxOptions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      securityContext: 
-        seLinuxOptions: {} 
- 
----- 
- 
-
- 
+==== Selinuxoptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_seLinuxOptions]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.SelinuxoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        selinuxoptions: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextSeLinuxOptions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *level* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *role* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *user* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SeccompProfile [[Autorecovery_spec_autorecovery_initContainers_securityContext_seccompProfile]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      securityContext: 
-        seccompProfile: {} 
- 
----- 
- 
-
- 
+==== Seccompprofile [[Autorecovery_spec_autorecovery_initContainers_securityContext_seccompProfile]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.SeccompprofileExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        seccompprofile: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextSeccompProfile]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *localhostProfile* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== WindowsOptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_windowsOptions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      securityContext: 
-        windowsOptions: {} 
- 
----- 
- 
-
- 
+==== Windowsoptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_windowsOptions]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.WindowsoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        windowsoptions: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextWindowsOptions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *gmsaCredentialSpec* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *gmsaCredentialSpecName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *hostProcess* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsUserName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== VolumeDevices [[Autorecovery_spec_autorecovery_initContainers_volumeDevices]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      volumeDevices: {} 
- 
----- 
- 
-
- 
+==== Volumedevices [[Autorecovery_spec_autorecovery_initContainers_volumeDevices]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.VolumedevicesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      volumedevices: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersVolumeDevices]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *devicePath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== VolumeMounts [[Autorecovery_spec_autorecovery_initContainers_volumeMounts]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    initContainers: 
-      volumeMounts: {} 
- 
----- 
- 
-
- 
+==== Volumemounts [[Autorecovery_spec_autorecovery_initContainers_volumeMounts]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.VolumemountsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      volumemounts: {}----
 [.fields-AutorecoverySpecAutorecoveryInitContainersVolumeMounts]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *mountPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *mountPropagation* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *subPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *subPathExpr* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== NodeAffinity [[Autorecovery_spec_autorecovery_nodeAffinity]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    nodeAffinity: {} 
- 
----- 
- 
-
- 
+==== Nodeaffinity [[Autorecovery_spec_autorecovery_nodeAffinity]]Complete namespace: Autorecovery.Spec.Autorecovery.NodeaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity: {}----
 [.fields-AutorecoverySpecAutorecoveryNodeAffinity]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *preferredDuringSchedulingIgnoredDuringExecution* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution,PreferredDuringSchedulingIgnoredDuringExecution>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *requiredDuringSchedulingIgnoredDuringExecution* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 RequiredDuringSchedulingIgnoredDuringExecution
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PreferredDuringSchedulingIgnoredDuringExecution [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    nodeAffinity: 
-      preferredDuringSchedulingIgnoredDuringExecution: {} 
- 
----- 
- 
-
- 
+==== Preferredduringschedulingignoredduringexecution [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.PreferredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      preferredduringschedulingignoredduringexecution: {}----
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *preference* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Preference
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *weight* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Preference [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    nodeAffinity: 
-      preferredDuringSchedulingIgnoredDuringExecution: 
-        preference: {} 
- 
----- 
- 
-
- 
+==== Preference [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Preferredduringschedulingignoredduringexecution.PreferenceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference: {}----
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *matchExpressions* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions,MatchExpressions>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *matchFields* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions,MatchFields>>
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== MatchExpressions [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    nodeAffinity: 
-      preferredDuringSchedulingIgnoredDuringExecution: 
-        preference: 
-          matchExpressions: {} 
- 
----- 
- 
-
- 
+==== Matchexpressions [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference.MatchexpressionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference:          matchexpressions: {}----
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *key* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *operator* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *values* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== RequiredDuringSchedulingIgnoredDuringExecution [[Autorecovery_spec_autorecovery_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    nodeAffinity: 
-      requiredDuringSchedulingIgnoredDuringExecution: {} 
- 
----- 
- 
-
- 
+==== Requiredduringschedulingignoredduringexecution [[Autorecovery_spec_autorecovery_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.RequiredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      requiredduringschedulingignoredduringexecution: {}----
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *nodeSelectorTerms* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,NodeSelectorTerms>>
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Resources [[Autorecovery_spec_autorecovery_resources]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    resources: {} 
- 
----- 
- 
-
- 
+==== Resources [[Autorecovery_spec_autorecovery_resources]]Complete namespace: Autorecovery.Spec.Autorecovery.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    resources: {}----
 [.fields-AutorecoverySpecAutorecoveryResources]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *limits* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
     | *requests* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Tolerations [[Autorecovery_spec_autorecovery_tolerations]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  autorecovery: 
-    tolerations: {} 
- 
----- 
- 
-
- 
+==== Tolerations [[Autorecovery_spec_autorecovery_tolerations]]Complete namespace: Autorecovery.Spec.Autorecovery.TolerationsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    tolerations: {}----
 [.fields-AutorecoverySpecAutorecoveryTolerations]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *effect* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *key* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *operator* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *tolerationSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *value* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Global [[Autorecovery_spec_global]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: {} 
- 
----- 
- 
-
- 
+==== Global [[Autorecovery_spec_global]]Complete namespace: Autorecovery.Spec.GlobalExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global: {}----
 [.fields-AutorecoverySpecGlobal]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | _(Optional)_ + 
- 
     Pulsar cluster name.
- 
     | *antiAffinity* +
- 
             
- 
             <<Autorecovery_spec_global_antiAffinity,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AntiAffinity
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *auth* +
- 
             
- 
             <<Autorecovery_spec_global_auth,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Auth
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *components* +
- 
             
- 
             <<Autorecovery_spec_global_components,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Components
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *dnsConfig* +
- 
             
- 
             <<Autorecovery_spec_global_dnsConfig,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 DnsConfig
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *dnsName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Public dns name for the cluster&#39;s load balancer.
- 
     | *image* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Default Pulsar image to use. Any components can be configured to use a different image.
- 
     | *imagePullPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
- 
     | *kubernetesClusterDomain* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
- 
     | *nodeSelectors* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Global node selector. If set, this will apply to all the components.
- 
     | *persistence* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
- 
     | *priorityClassName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Priority class name to attach to each pod.
- 
     | *racks* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     Racks configuration.
- 
     | *resourceSets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     Resource sets.
- 
     | *restartOnConfigMapChange* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
- 
     | *storage* +
- 
             
- 
             <<Autorecovery_spec_global_storage,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Storage
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *tls* +
- 
             
- 
             <<Autorecovery_spec_global_tls,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Tls
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zookeeperPlainSslStorePassword* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AntiAffinity [[Autorecovery_spec_global_antiAffinity]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    antiAffinity: {} 
- 
----- 
- 
-
- 
+==== Antiaffinity [[Autorecovery_spec_global_antiAffinity]]Complete namespace: Autorecovery.Spec.Global.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    antiaffinity: {}----
 [.fields-AutorecoverySpecGlobalAntiAffinity]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_antiAffinity_host,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Host
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zone* +
- 
             
- 
             <<Autorecovery_spec_autorecovery_antiAffinity_zone,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zone
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Auth [[Autorecovery_spec_global_auth]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    auth: {} 
- 
----- 
- 
-
- 
+==== Auth [[Autorecovery_spec_global_auth]]Complete namespace: Autorecovery.Spec.Global.AuthExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    auth: {}----
 [.fields-AutorecoverySpecGlobalAuth]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable authentication in the cluster. Default is &#39;false&#39;.
- 
     | *token* +
- 
             
- 
             <<Autorecovery_spec_global_auth_token,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Token
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Token [[Autorecovery_spec_global_auth_token]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    auth: 
-      token: {} 
- 
----- 
- 
-
- 
+==== Token [[Autorecovery_spec_global_auth_token]]Complete namespace: Autorecovery.Spec.Global.Auth.TokenExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    auth:      token: {}----
 [.fields-AutorecoverySpecGlobalAuthToken]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *initialize* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
- 
     | *privateKeyFile* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
- 
     | *proxyRoles* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     Proxy roles.
- 
     | *publicKeyFile* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
- 
     | *superUserRoles* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     Super user roles.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Components [[Autorecovery_spec_global_components]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    components: {} 
- 
----- 
- 
-
- 
+==== Components [[Autorecovery_spec_global_components]]Complete namespace: Autorecovery.Spec.Global.ComponentsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    components: {}----
 [.fields-AutorecoverySpecGlobalComponents]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *autorecoveryBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
- 
     | *bastionBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Bastion base name. Default value is &#39;bastion&#39;.
- 
     | *bookkeeperBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
- 
     | *brokerBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Broker base name. Default value is &#39;broker&#39;.
- 
     | *functionsWorkerBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Functions Worker base name. Default value is &#39;function&#39;.
- 
     | *proxyBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Proxy base name. Default value is &#39;proxy&#39;.
- 
     | *zookeeperBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== DnsConfig [[Autorecovery_spec_global_dnsConfig]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    dnsConfig: {} 
- 
----- 
- 
-
- 
+==== Dnsconfig [[Autorecovery_spec_global_dnsConfig]]Complete namespace: Autorecovery.Spec.Global.DnsconfigExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    dnsconfig: {}----
 [.fields-AutorecoverySpecGlobalDnsConfig]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *nameservers* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *options* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders,Options>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *searches* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Racks [[Autorecovery_spec_global_racks]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    racks: {} 
- 
----- 
- 
-
- 
+==== Racks [[Autorecovery_spec_global_racks]]Complete namespace: Autorecovery.Spec.Global.RacksExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    racks: {}----
 [.fields-AutorecoverySpecGlobalRacks]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
             
- 
             <<Autorecovery_spec_global_racks_host,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Host
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zone* +
- 
             
- 
             <<Autorecovery_spec_global_racks_zone,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zone
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Host [[Autorecovery_spec_global_racks_host]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    racks: 
-      host: {} 
- 
----- 
- 
-
- 
+==== Host [[Autorecovery_spec_global_racks_host]]Complete namespace: Autorecovery.Spec.Global.Racks.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    racks:      host: {}----
 [.fields-AutorecoverySpecGlobalRacksHost]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable the rack affinity rules.
- 
     | *requireRackAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
     | *requireRackAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zone [[Autorecovery_spec_global_racks_zone]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    racks: 
-      zone: {} 
- 
----- 
- 
-
- 
+==== Zone [[Autorecovery_spec_global_racks_zone]]Complete namespace: Autorecovery.Spec.Global.Racks.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    racks:      zone: {}----
 [.fields-AutorecoverySpecGlobalRacksZone]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enableHostAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable the rack affinity rules.
- 
     | *requireRackAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
     | *requireRackAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
     | *requireRackHostAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ResourceSets [[Autorecovery_spec_global_resourceSets]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    resourceSets: {} 
- 
----- 
- 
-
- 
+==== Resourcesets [[Autorecovery_spec_global_resourceSets]]Complete namespace: Autorecovery.Spec.Global.ResourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    resourcesets: {}----
 [.fields-AutorecoverySpecGlobalResourceSets]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *rack* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Place this resource set to a specific rack, defined at .global.racks.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Storage [[Autorecovery_spec_global_storage]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    storage: {} 
- 
----- 
- 
-
- 
+==== Storage [[Autorecovery_spec_global_storage]]Complete namespace: Autorecovery.Spec.Global.StorageExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    storage: {}----
 [.fields-AutorecoverySpecGlobalStorage]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *existingStorageClassName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if an already existing storage class should be used.
- 
     | *storageClass* +
- 
             
- 
             <<Autorecovery_spec_global_storage_storageClass,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 StorageClass
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== StorageClass [[Autorecovery_spec_global_storage_storageClass]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    storage: 
-      storageClass: {} 
- 
----- 
- 
-
- 
+==== Storageclass [[Autorecovery_spec_global_storage_storageClass]]Complete namespace: Autorecovery.Spec.Global.Storage.StorageclassExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    storage:      storageclass: {}----
 [.fields-AutorecoverySpecGlobalStorageStorageClass]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *extraParams* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Adds extra parameters for the StorageClass.
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
- 
     | *provisioner* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the provisioner property for the StorageClass.
- 
     | *reclaimPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the &#39;type&#39; parameter for the StorageClass.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Tls [[Autorecovery_spec_global_tls]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: {} 
- 
----- 
- 
-
- 
+==== Tls [[Autorecovery_spec_global_tls]]Complete namespace: Autorecovery.Spec.Global.TlsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls: {}----
 [.fields-AutorecoverySpecGlobalTls]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *autorecovery* +
- 
             
- 
             <<Autorecovery_spec_global_tls_autorecovery,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Autorecovery
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *bookkeeper* +
- 
             
- 
             <<Autorecovery_spec_global_tls_bookkeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Bookkeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *broker* +
- 
             
- 
             <<Autorecovery_spec_global_tls_broker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Broker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *brokerResourceSets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     TLS configurations related to the Broker resource sets.
- 
     | *caPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
- 
     | *certProvisioner* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 CertProvisioner
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *defaultSecretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
- 
     | *functionsWorker* +
- 
             
- 
             <<Autorecovery_spec_global_tls_functionsWorker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FunctionsWorker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *proxy* +
- 
             
- 
             <<Autorecovery_spec_global_tls_proxy,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Proxy
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *proxyResourceSets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     TLS configurations related to the Proxy resource sets.
- 
     | *ssCa* +
- 
             
- 
             <<Autorecovery_spec_global_tls_ssCa,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SsCa
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zookeeper* +
- 
             
- 
             <<Autorecovery_spec_global_tls_zookeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zookeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Autorecovery [[Autorecovery_spec_global_tls_autorecovery]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      autorecovery: {} 
- 
----- 
- 
-
- 
+==== Autorecovery [[Autorecovery_spec_global_tls_autorecovery]]Complete namespace: Autorecovery.Spec.Global.Tls.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      autorecovery: {}----
 [.fields-AutorecoverySpecGlobalTlsAutorecovery]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Bookkeeper [[Autorecovery_spec_global_tls_bookkeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      bookkeeper: {} 
- 
----- 
- 
-
- 
+==== Bookkeeper [[Autorecovery_spec_global_tls_bookkeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      bookkeeper: {}----
 [.fields-AutorecoverySpecGlobalTlsBookkeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Broker [[Autorecovery_spec_global_tls_broker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      broker: {} 
- 
----- 
- 
-
- 
+==== Broker [[Autorecovery_spec_global_tls_broker]]Complete namespace: Autorecovery.Spec.Global.Tls.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      broker: {}----
 [.fields-AutorecoverySpecGlobalTlsBroker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== BrokerResourceSets [[Autorecovery_spec_global_tls_brokerResourceSets]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      brokerResourceSets: {} 
- 
----- 
- 
-
- 
+==== Brokerresourcesets [[Autorecovery_spec_global_tls_brokerResourceSets]]Complete namespace: Autorecovery.Spec.Global.Tls.BrokerresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      brokerresourcesets: {}----
 [.fields-AutorecoverySpecGlobalTlsBrokerResourceSets]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== CertProvisioner [[Autorecovery_spec_global_tls_certProvisioner]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: {} 
- 
----- 
- 
-
- 
+==== Certprovisioner [[Autorecovery_spec_global_tls_certProvisioner]]Complete namespace: Autorecovery.Spec.Global.Tls.CertprovisionerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisioner]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *selfSigned* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SelfSigned
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SelfSigned [[Autorecovery_spec_global_tls_certProvisioner_selfSigned]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: {} 
- 
----- 
- 
-
- 
+==== Selfsigned [[Autorecovery_spec_global_tls_certProvisioner_selfSigned]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.SelfsignedExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSigned]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *autorecovery* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Autorecovery
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *bookkeeper* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Bookkeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *broker* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_broker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Broker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *caSecretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Secret where to store the root CA certificate.
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for broker, proxy and functions worker.
- 
     | *functionsWorker* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FunctionsWorker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *includeDns* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Include dns name in the DNS names covered by the certificate.
- 
     | *perComponent* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate a different certificate for each component.
- 
     | *privateKey* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *proxy* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_proxy,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Proxy
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zookeeper* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_zookeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zookeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Autorecovery [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          autorecovery: {} 
- 
----- 
- 
-
- 
+==== Autorecovery [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedAutorecovery]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PrivateKey [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          autorecovery: 
-            privateKey: {} 
- 
----- 
- 
-
- 
+==== Privatekey [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.PrivatekeyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery:            privatekey: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedAutorecoveryPrivateKey]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *algorithm* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *encoding* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *rotationPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *size* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Bookkeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_bookkeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          bookkeeper: {} 
- 
----- 
- 
-
- 
+==== Bookkeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          bookkeeper: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedBookkeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Broker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_broker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          broker: {} 
- 
----- 
- 
-
- 
+==== Broker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_broker]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          broker: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedBroker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== FunctionsWorker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_functionsWorker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          functionsWorker: {} 
- 
----- 
- 
-
- 
+==== Functionsworker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          functionsworker: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedFunctionsWorker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Proxy [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_proxy]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          proxy: {} 
- 
----- 
- 
-
- 
+==== Proxy [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_proxy]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          proxy: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedProxy]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zookeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_zookeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          zookeeper: {} 
- 
----- 
- 
-
- 
+==== Zookeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_zookeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          zookeeper: {}----
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedZookeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== FunctionsWorker [[Autorecovery_spec_global_tls_functionsWorker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      functionsWorker: {} 
- 
----- 
- 
-
- 
+==== Functionsworker [[Autorecovery_spec_global_tls_functionsWorker]]Complete namespace: Autorecovery.Spec.Global.Tls.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      functionsworker: {}----
 [.fields-AutorecoverySpecGlobalTlsFunctionsWorker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *enabledWithBroker* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS for the functions worker to broker connections.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Proxy [[Autorecovery_spec_global_tls_proxy]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      proxy: {} 
- 
----- 
- 
-
- 
+==== Proxy [[Autorecovery_spec_global_tls_proxy]]Complete namespace: Autorecovery.Spec.Global.Tls.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      proxy: {}----
 [.fields-AutorecoverySpecGlobalTlsProxy]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *enabledWithBroker* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS for the proxy to broker connections.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ProxyResourceSets [[Autorecovery_spec_global_tls_proxyResourceSets]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      proxyResourceSets: {} 
- 
----- 
- 
-
- 
+==== Proxyresourcesets [[Autorecovery_spec_global_tls_proxyResourceSets]]Complete namespace: Autorecovery.Spec.Global.Tls.ProxyresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      proxyresourcesets: {}----
 [.fields-AutorecoverySpecGlobalTlsProxyResourceSets]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *enabledWithBroker* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS for the proxy to broker connections.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SsCa [[Autorecovery_spec_global_tls_ssCa]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      ssCa: {} 
- 
----- 
- 
-
- 
+==== Ssca [[Autorecovery_spec_global_tls_ssCa]]Complete namespace: Autorecovery.Spec.Global.Tls.SscaExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      ssca: {}----
 [.fields-AutorecoverySpecGlobalTlsSsCa]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zookeeper [[Autorecovery_spec_global_tls_zookeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      zookeeper: {} 
- 
----- 
- 
-
- 
+==== Zookeeper [[Autorecovery_spec_global_tls_zookeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      zookeeper: {}----
 [.fields-AutorecoverySpecGlobalTlsZookeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Status [[Autorecovery_status]] 
- 
-
- 
+=== Status [[Autorecovery_status]]Complete namespace: Autorecovery.Status
 [.fields-AutorecoveryStatus]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *conditions* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<Autorecovery_status_conditions,Conditions>>
- 
 
- 
 
- 
     | 
- 
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
- 
     | *lastApplied* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Last spec applied.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Conditions [[Autorecovery_status_conditions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: Autorecovery 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  conditions: {} 
- 
----- 
- 
-
- 
+==== Conditions [[Autorecovery_status_conditions]]Complete namespace: Autorecovery.Status.ConditionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  conditions: {}----
 [.fields-AutorecoveryStatusConditions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *lastTransitionTime* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *message* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *observedGeneration* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *reason* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *status* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 

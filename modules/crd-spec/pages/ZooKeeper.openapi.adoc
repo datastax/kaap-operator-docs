@@ -1,23287 +1,10550 @@
 = ZooKeeper
- 
 v1alpha1
- 
 :source-highlighter: highlightjs
- 
 :keywords: openapi, rest, ZooKeeper
- 
 :specDir: 
- 
 :snippetDir: 
- 
 :generator-template: v1 2019-12-20
- 
 :info-url: https://openapi-generator.tech
- 
 :app-name: ZooKeeper
- 
 
- 
 Auto generated from CRD spec
- 
 
- 
 
- 
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
- 
 
- 
 
- 
 Version: v1alpha1
- 
 
- 
 Namespace: pulsar.oss.datastax.com
- 
 
- 
-== ZooKeeper [[ZooKeeper]] 
- 
-
- 
+== Zookeeper [[ZooKeeper]]
 [.fields-ZooKeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *spec* +
- 
             
- 
             <<ZooKeeper_spec,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Spec
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *status* +
- 
             
- 
             <<ZooKeeper_status,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Status
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Spec [[ZooKeeper_spec]] 
- 
-
- 
+=== Spec [[ZooKeeper_spec]]Complete namespace: Zookeeper.Spec
 [.fields-ZooKeeperSpec]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *global* +
- 
             
- 
             <<ZooKeeper_spec_global,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Global
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zookeeper* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zookeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Global [[ZooKeeper_spec_global]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: {} 
- 
----- 
- 
-
- 
+==== Global [[ZooKeeper_spec_global]]Complete namespace: Zookeeper.Spec.GlobalExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global: {}----
 [.fields-ZooKeeperSpecGlobal]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | _(Optional)_ + 
- 
     Pulsar cluster name.
- 
     | *antiAffinity* +
- 
             
- 
             <<ZooKeeper_spec_global_antiAffinity,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AntiAffinity
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *auth* +
- 
             
- 
             <<ZooKeeper_spec_global_auth,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Auth
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *components* +
- 
             
- 
             <<ZooKeeper_spec_global_components,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Components
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *dnsConfig* +
- 
             
- 
             <<ZooKeeper_spec_global_dnsConfig,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 DnsConfig
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *dnsName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Public dns name for the cluster&#39;s load balancer.
- 
     | *image* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Default Pulsar image to use. Any components can be configured to use a different image.
- 
     | *imagePullPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
- 
     | *kubernetesClusterDomain* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
- 
     | *nodeSelectors* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Global node selector. If set, this will apply to all the components.
- 
     | *persistence* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
- 
     | *priorityClassName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Priority class name to attach to each pod.
- 
     | *racks* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     Racks configuration.
- 
     | *resourceSets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     Resource sets.
- 
     | *restartOnConfigMapChange* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
- 
     | *storage* +
- 
             
- 
             <<ZooKeeper_spec_global_storage,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Storage
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *tls* +
- 
             
- 
             <<ZooKeeper_spec_global_tls,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Tls
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zookeeperPlainSslStorePassword* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AntiAffinity [[ZooKeeper_spec_global_antiAffinity]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    antiAffinity: {} 
- 
----- 
- 
-
- 
+==== Antiaffinity [[ZooKeeper_spec_global_antiAffinity]]Complete namespace: Zookeeper.Spec.Global.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    antiaffinity: {}----
 [.fields-ZooKeeperSpecGlobalAntiAffinity]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
             
- 
             <<ZooKeeper_spec_global_antiAffinity_host,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Host
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zone* +
- 
             
- 
             <<ZooKeeper_spec_global_antiAffinity_zone,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zone
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Host [[ZooKeeper_spec_global_antiAffinity_host]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    antiAffinity: 
-      host: {} 
- 
----- 
- 
-
- 
+==== Host [[ZooKeeper_spec_global_antiAffinity_host]]Complete namespace: Zookeeper.Spec.Global.Antiaffinity.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    antiaffinity:      host: {}----
 [.fields-ZooKeeperSpecGlobalAntiAffinityHost]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
     | *required* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zone [[ZooKeeper_spec_global_antiAffinity_zone]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    antiAffinity: 
-      zone: {} 
- 
----- 
- 
-
- 
+==== Zone [[ZooKeeper_spec_global_antiAffinity_zone]]Complete namespace: Zookeeper.Spec.Global.Antiaffinity.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    antiaffinity:      zone: {}----
 [.fields-ZooKeeperSpecGlobalAntiAffinityZone]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
     | *required* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Auth [[ZooKeeper_spec_global_auth]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    auth: {} 
- 
----- 
- 
-
- 
+==== Auth [[ZooKeeper_spec_global_auth]]Complete namespace: Zookeeper.Spec.Global.AuthExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    auth: {}----
 [.fields-ZooKeeperSpecGlobalAuth]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable authentication in the cluster. Default is &#39;false&#39;.
- 
     | *token* +
- 
             
- 
             <<ZooKeeper_spec_global_auth_token,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Token
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Token [[ZooKeeper_spec_global_auth_token]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    auth: 
-      token: {} 
- 
----- 
- 
-
- 
+==== Token [[ZooKeeper_spec_global_auth_token]]Complete namespace: Zookeeper.Spec.Global.Auth.TokenExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    auth:      token: {}----
 [.fields-ZooKeeperSpecGlobalAuthToken]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *initialize* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
- 
     | *privateKeyFile* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
- 
     | *proxyRoles* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     Proxy roles.
- 
     | *publicKeyFile* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
- 
     | *superUserRoles* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     Super user roles.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Components [[ZooKeeper_spec_global_components]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    components: {} 
- 
----- 
- 
-
- 
+==== Components [[ZooKeeper_spec_global_components]]Complete namespace: Zookeeper.Spec.Global.ComponentsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    components: {}----
 [.fields-ZooKeeperSpecGlobalComponents]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *autorecoveryBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
- 
     | *bastionBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Bastion base name. Default value is &#39;bastion&#39;.
- 
     | *bookkeeperBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
- 
     | *brokerBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Broker base name. Default value is &#39;broker&#39;.
- 
     | *functionsWorkerBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Functions Worker base name. Default value is &#39;function&#39;.
- 
     | *proxyBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Proxy base name. Default value is &#39;proxy&#39;.
- 
     | *zookeeperBaseName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== DnsConfig [[ZooKeeper_spec_global_dnsConfig]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    dnsConfig: {} 
- 
----- 
- 
-
- 
+==== Dnsconfig [[ZooKeeper_spec_global_dnsConfig]]Complete namespace: Zookeeper.Spec.Global.DnsconfigExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    dnsconfig: {}----
 [.fields-ZooKeeperSpecGlobalDnsConfig]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *nameservers* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *options* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_global_dnsConfig_options,Options>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *searches* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Options [[ZooKeeper_spec_global_dnsConfig_options]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    dnsConfig: 
-      options: {} 
- 
----- 
- 
-
- 
+==== Options [[ZooKeeper_spec_global_dnsConfig_options]]Complete namespace: Zookeeper.Spec.Global.Dnsconfig.OptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    dnsconfig:      options: {}----
 [.fields-ZooKeeperSpecGlobalDnsConfigOptions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *value* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Racks [[ZooKeeper_spec_global_racks]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    racks: {} 
- 
----- 
- 
-
- 
+==== Racks [[ZooKeeper_spec_global_racks]]Complete namespace: Zookeeper.Spec.Global.RacksExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    racks: {}----
 [.fields-ZooKeeperSpecGlobalRacks]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
             
- 
             <<ZooKeeper_spec_global_racks_host,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Host
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zone* +
- 
             
- 
             <<ZooKeeper_spec_global_racks_zone,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zone
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Host [[ZooKeeper_spec_global_racks_host]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    racks: 
-      host: {} 
- 
----- 
- 
-
- 
+==== Host [[ZooKeeper_spec_global_racks_host]]Complete namespace: Zookeeper.Spec.Global.Racks.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    racks:      host: {}----
 [.fields-ZooKeeperSpecGlobalRacksHost]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable the rack affinity rules.
- 
     | *requireRackAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
     | *requireRackAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zone [[ZooKeeper_spec_global_racks_zone]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    racks: 
-      zone: {} 
- 
----- 
- 
-
- 
+==== Zone [[ZooKeeper_spec_global_racks_zone]]Complete namespace: Zookeeper.Spec.Global.Racks.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    racks:      zone: {}----
 [.fields-ZooKeeperSpecGlobalRacksZone]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enableHostAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable the rack affinity rules.
- 
     | *requireRackAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
     | *requireRackAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
     | *requireRackHostAntiAffinity* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ResourceSets [[ZooKeeper_spec_global_resourceSets]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    resourceSets: {} 
- 
----- 
- 
-
- 
+==== Resourcesets [[ZooKeeper_spec_global_resourceSets]]Complete namespace: Zookeeper.Spec.Global.ResourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    resourcesets: {}----
 [.fields-ZooKeeperSpecGlobalResourceSets]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *rack* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Place this resource set to a specific rack, defined at .global.racks.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Storage [[ZooKeeper_spec_global_storage]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    storage: {} 
- 
----- 
- 
-
- 
+==== Storage [[ZooKeeper_spec_global_storage]]Complete namespace: Zookeeper.Spec.Global.StorageExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    storage: {}----
 [.fields-ZooKeeperSpecGlobalStorage]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *existingStorageClassName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if an already existing storage class should be used.
- 
     | *storageClass* +
- 
             
- 
             <<ZooKeeper_spec_global_storage_storageClass,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 StorageClass
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== StorageClass [[ZooKeeper_spec_global_storage_storageClass]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    storage: 
-      storageClass: {} 
- 
----- 
- 
-
- 
+==== Storageclass [[ZooKeeper_spec_global_storage_storageClass]]Complete namespace: Zookeeper.Spec.Global.Storage.StorageclassExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    storage:      storageclass: {}----
 [.fields-ZooKeeperSpecGlobalStorageStorageClass]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *extraParams* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Adds extra parameters for the StorageClass.
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
- 
     | *provisioner* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the provisioner property for the StorageClass.
- 
     | *reclaimPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the reclaimPolicy property for the StorageClass.
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the &#39;type&#39; parameter for the StorageClass.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Tls [[ZooKeeper_spec_global_tls]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: {} 
- 
----- 
- 
-
- 
+==== Tls [[ZooKeeper_spec_global_tls]]Complete namespace: Zookeeper.Spec.Global.TlsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls: {}----
 [.fields-ZooKeeperSpecGlobalTls]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *autorecovery* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_autorecovery,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Autorecovery
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *bookkeeper* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_bookkeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Bookkeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *broker* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_broker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Broker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *brokerResourceSets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     TLS configurations related to the Broker resource sets.
- 
     | *caPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
- 
     | *certProvisioner* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 CertProvisioner
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *defaultSecretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
- 
     | *functionsWorker* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_functionsWorker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FunctionsWorker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *proxy* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_proxy,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Proxy
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *proxyResourceSets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 
- 
 
- 
     | 
- 
     TLS configurations related to the Proxy resource sets.
- 
     | *ssCa* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_ssCa,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SsCa
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zookeeper* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_zookeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zookeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Autorecovery [[ZooKeeper_spec_global_tls_autorecovery]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      autorecovery: {} 
- 
----- 
- 
-
- 
+==== Autorecovery [[ZooKeeper_spec_global_tls_autorecovery]]Complete namespace: Zookeeper.Spec.Global.Tls.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      autorecovery: {}----
 [.fields-ZooKeeperSpecGlobalTlsAutorecovery]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Bookkeeper [[ZooKeeper_spec_global_tls_bookkeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      bookkeeper: {} 
- 
----- 
- 
-
- 
+==== Bookkeeper [[ZooKeeper_spec_global_tls_bookkeeper]]Complete namespace: Zookeeper.Spec.Global.Tls.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      bookkeeper: {}----
 [.fields-ZooKeeperSpecGlobalTlsBookkeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Broker [[ZooKeeper_spec_global_tls_broker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      broker: {} 
- 
----- 
- 
-
- 
+==== Broker [[ZooKeeper_spec_global_tls_broker]]Complete namespace: Zookeeper.Spec.Global.Tls.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      broker: {}----
 [.fields-ZooKeeperSpecGlobalTlsBroker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== BrokerResourceSets [[ZooKeeper_spec_global_tls_brokerResourceSets]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      brokerResourceSets: {} 
- 
----- 
- 
-
- 
+==== Brokerresourcesets [[ZooKeeper_spec_global_tls_brokerResourceSets]]Complete namespace: Zookeeper.Spec.Global.Tls.BrokerresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      brokerresourcesets: {}----
 [.fields-ZooKeeperSpecGlobalTlsBrokerResourceSets]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== CertProvisioner [[ZooKeeper_spec_global_tls_certProvisioner]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: {} 
- 
----- 
- 
-
- 
+==== Certprovisioner [[ZooKeeper_spec_global_tls_certProvisioner]]Complete namespace: Zookeeper.Spec.Global.Tls.CertprovisionerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisioner]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *selfSigned* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SelfSigned
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SelfSigned [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: {} 
- 
----- 
- 
-
- 
+==== Selfsigned [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.SelfsignedExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSigned]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *autorecovery* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Autorecovery
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *bookkeeper* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Bookkeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *broker* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_broker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Broker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *caSecretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Secret where to store the root CA certificate.
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for broker, proxy and functions worker.
- 
     | *functionsWorker* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FunctionsWorker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *includeDns* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Include dns name in the DNS names covered by the certificate.
- 
     | *perComponent* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate a different certificate for each component.
- 
     | *privateKey* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *proxy* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_proxy,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Proxy
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zookeeper* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_zookeeper,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zookeeper
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Autorecovery [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          autorecovery: {} 
- 
----- 
- 
-
- 
+==== Autorecovery [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.Selfsigned.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSignedAutorecovery]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PrivateKey [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          autorecovery: 
-            privateKey: {} 
- 
----- 
- 
-
- 
+==== Privatekey [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.PrivatekeyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery:            privatekey: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSignedAutorecoveryPrivateKey]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *algorithm* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *encoding* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *rotationPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *size* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Bookkeeper [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_bookkeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          bookkeeper: {} 
- 
----- 
- 
-
- 
+==== Bookkeeper [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.Selfsigned.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          bookkeeper: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSignedBookkeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Broker [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_broker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          broker: {} 
- 
----- 
- 
-
- 
+==== Broker [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_broker]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.Selfsigned.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          broker: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSignedBroker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== FunctionsWorker [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_functionsWorker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          functionsWorker: {} 
- 
----- 
- 
-
- 
+==== Functionsworker [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.Selfsigned.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          functionsworker: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSignedFunctionsWorker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Proxy [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_proxy]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          proxy: {} 
- 
----- 
- 
-
- 
+==== Proxy [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_proxy]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.Selfsigned.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          proxy: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSignedProxy]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zookeeper [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_zookeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      certProvisioner: 
-        selfSigned: 
-          zookeeper: {} 
- 
----- 
- 
-
- 
+==== Zookeeper [[ZooKeeper_spec_global_tls_certProvisioner_selfSigned_zookeeper]]Complete namespace: Zookeeper.Spec.Global.Tls.Certprovisioner.Selfsigned.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          zookeeper: {}----
 [.fields-ZooKeeperSpecGlobalTlsCertProvisionerSelfSignedZookeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *generate* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Generate self signed certificates for the component.
- 
     | *privateKey* +
- 
             
- 
             <<ZooKeeper_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PrivateKey
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== FunctionsWorker [[ZooKeeper_spec_global_tls_functionsWorker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      functionsWorker: {} 
- 
----- 
- 
-
- 
+==== Functionsworker [[ZooKeeper_spec_global_tls_functionsWorker]]Complete namespace: Zookeeper.Spec.Global.Tls.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      functionsworker: {}----
 [.fields-ZooKeeperSpecGlobalTlsFunctionsWorker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *enabledWithBroker* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS for the functions worker to broker connections.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Proxy [[ZooKeeper_spec_global_tls_proxy]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      proxy: {} 
- 
----- 
- 
-
- 
+==== Proxy [[ZooKeeper_spec_global_tls_proxy]]Complete namespace: Zookeeper.Spec.Global.Tls.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      proxy: {}----
 [.fields-ZooKeeperSpecGlobalTlsProxy]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *enabledWithBroker* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS for the proxy to broker connections.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ProxyResourceSets [[ZooKeeper_spec_global_tls_proxyResourceSets]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      proxyResourceSets: {} 
- 
----- 
- 
-
- 
+==== Proxyresourcesets [[ZooKeeper_spec_global_tls_proxyResourceSets]]Complete namespace: Zookeeper.Spec.Global.Tls.ProxyresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      proxyresourcesets: {}----
 [.fields-ZooKeeperSpecGlobalTlsProxyResourceSets]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *enabledWithBroker* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS for the proxy to broker connections.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SsCa [[ZooKeeper_spec_global_tls_ssCa]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      ssCa: {} 
- 
----- 
- 
-
- 
+==== Ssca [[ZooKeeper_spec_global_tls_ssCa]]Complete namespace: Zookeeper.Spec.Global.Tls.SscaExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      ssca: {}----
 [.fields-ZooKeeperSpecGlobalTlsSsCa]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zookeeper [[ZooKeeper_spec_global_tls_zookeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  global: 
-    tls: 
-      zookeeper: {} 
- 
----- 
- 
-
- 
+==== Zookeeper [[ZooKeeper_spec_global_tls_zookeeper]]Complete namespace: Zookeeper.Spec.Global.Tls.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  global:    tls:      zookeeper: {}----
 [.fields-ZooKeeperSpecGlobalTlsZookeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable TLS.
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override the default secret name from where to load the certificates.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Zookeeper [[ZooKeeper_spec_zookeeper]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: {} 
- 
----- 
- 
-
- 
+==== Zookeeper [[ZooKeeper_spec_zookeeper]]Complete namespace: Zookeeper.Spec.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper: {}----
 [.fields-ZooKeeperSpecZookeeper]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *additionalVolumes* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AdditionalVolumes
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *annotations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Annotations to add to each resource (except pods).
- 
     | *antiAffinity* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_antiAffinity,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AntiAffinity
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *config* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 any
- 
 
- 
 
- 
     | 
- 
     Configuration.
- 
     | *dataVolume* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_dataVolume,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 DataVolume
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *env* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_env,Env>>
- 
 
- 
 
- 
     | 
- 
     Additional container env variables.
- 
     | *gracePeriod* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Termination grace period in seconds.
- 
     | *image* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override Pulsar image.
- 
     | *imagePullPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Override image pull policy.
- 
     | *imagePullSecrets* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,ImagePullSecrets>>
- 
 
- 
 
- 
     | 
- 
     Image pull secrets.
- 
     | *initContainers* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_initContainers,InitContainers>>
- 
 
- 
 
- 
     | 
- 
     Init containers
- 
     | *labels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Labels to add to each resource (except pods).
- 
     | *matchLabels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Match labels selectors to add to each pod.
- 
     | *metadataInitializationJob* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_metadataInitializationJob,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 MetadataInitializationJob
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *nodeAffinity* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_nodeAffinity,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 NodeAffinity
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *nodeSelectors* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Additional node selectors.
- 
     | *pdb* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_pdb,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Pdb
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *podAnnotations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Annotations to add to pod.
- 
     | *podLabels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Labels to add to each pod.
- 
     | *podManagementPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Pod management policy. Default value is &#39;Parallel&#39;.
- 
     | *probes* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_probes,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Probes
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *replicas* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Number of desired replicas.
- 
     | *resources* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_metadataInitializationJob_resources,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Resources
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *service* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_service,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Service
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *sidecars* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_initContainers,Sidecars>>
- 
 
- 
 
- 
     | 
- 
     Sidecar containers
- 
     | *tolerations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_tolerations,Tolerations>>
- 
 
- 
 
- 
     | 
- 
     Pod tolerations.
- 
     | *updateStrategy* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_updateStrategy,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 UpdateStrategy
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AdditionalVolumes [[ZooKeeper_spec_zookeeper_additionalVolumes]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: {} 
- 
----- 
- 
-
- 
+==== Additionalvolumes [[ZooKeeper_spec_zookeeper_additionalVolumes]]Complete namespace: Zookeeper.Spec.Zookeeper.AdditionalvolumesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumes]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *mounts* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_mounts,Mounts>>
- 
 
- 
 
- 
     | 
- 
     Mount points for the additional volumes
- 
     | *volumes* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes,Volumes>>
- 
 
- 
 
- 
     | 
- 
     Additional volumes to be mounted to the pod
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Mounts [[ZooKeeper_spec_zookeeper_additionalVolumes_mounts]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      mounts: {} 
- 
----- 
- 
-
- 
+==== Mounts [[ZooKeeper_spec_zookeeper_additionalVolumes_mounts]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.MountsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      mounts: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesMounts]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *mountPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *mountPropagation* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *subPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *subPathExpr* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Volumes [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: {} 
- 
----- 
- 
-
- 
+==== Volumes [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.VolumesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumes]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *awsElasticBlockStore* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_awsElasticBlockStore,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AwsElasticBlockStore
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *azureDisk* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_azureDisk,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AzureDisk
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *azureFile* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_azureFile,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 AzureFile
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *cephfs* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Cephfs
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *cinder* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cinder,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Cinder
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *configMap* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ConfigMap
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *csi* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_csi,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Csi
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *downwardAPI* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 DownwardAPI
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *emptyDir* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_emptyDir,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 EmptyDir
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *ephemeral* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Ephemeral
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *fc* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_fc,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Fc
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *flexVolume* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_flexVolume,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FlexVolume
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *flocker* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_flocker,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Flocker
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *gcePersistentDisk* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_gcePersistentDisk,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 GcePersistentDisk
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *gitRepo* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_gitRepo,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 GitRepo
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *glusterfs* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_glusterfs,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Glusterfs
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *hostPath* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_hostPath,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 HostPath
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *iscsi* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_iscsi,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Iscsi
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *nfs* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_nfs,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Nfs
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *persistentVolumeClaim* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_persistentVolumeClaim,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PersistentVolumeClaim
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *photonPersistentDisk* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_photonPersistentDisk,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PhotonPersistentDisk
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *portworxVolume* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_portworxVolume,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PortworxVolume
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *projected* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Projected
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *quobyte* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_quobyte,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Quobyte
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *rbd* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_rbd,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Rbd
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *scaleIO* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_scaleIO,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ScaleIO
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *secret* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_secret,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Secret
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *storageos* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_storageos,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Storageos
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *vsphereVolume* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_vsphereVolume,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 VsphereVolume
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AwsElasticBlockStore [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_awsElasticBlockStore]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        awsElasticBlockStore: {} 
- 
----- 
- 
-
- 
+==== Awselasticblockstore [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_awsElasticBlockStore]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.AwselasticblockstoreExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        awselasticblockstore: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesAwsElasticBlockStore]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *partition* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeID* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AzureDisk [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_azureDisk]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        azureDisk: {} 
- 
----- 
- 
-
- 
+==== Azuredisk [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_azureDisk]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.AzurediskExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        azuredisk: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesAzureDisk]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *cachingMode* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *diskName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *diskURI* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *kind* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AzureFile [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_azureFile]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        azureFile: {} 
- 
----- 
- 
-
- 
+==== Azurefile [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_azureFile]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.AzurefileExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        azurefile: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesAzureFile]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *shareName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Cephfs [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        cephfs: {} 
- 
----- 
- 
-
- 
+==== Cephfs [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.CephfsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        cephfs: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesCephfs]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *monitors* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretFile* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *user* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SecretRef [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        cephfs: 
-          secretRef: {} 
- 
----- 
- 
-
- 
+==== Secretref [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Cephfs.SecretrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        cephfs:          secretref: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesCephfsSecretRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Cinder [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cinder]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        cinder: {} 
- 
----- 
- 
-
- 
+==== Cinder [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cinder]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.CinderExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        cinder: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesCinder]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *volumeID* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ConfigMap [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        configMap: {} 
- 
----- 
- 
-
- 
+==== Configmap [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.ConfigmapExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        configmap: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesConfigMap]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *defaultMode* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *items* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap_items,Items>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *optional* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Items [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap_items]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        configMap: 
-          items: {} 
- 
----- 
- 
-
- 
+==== Items [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap_items]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Configmap.ItemsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        configmap:          items: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesConfigMapItems]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *key* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *mode* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Csi [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_csi]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        csi: {} 
- 
----- 
- 
-
- 
+==== Csi [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_csi]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.CsiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        csi: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesCsi]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *driver* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *nodePublishSecretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 NodePublishSecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeAttributes* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== DownwardAPI [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        downwardAPI: {} 
- 
----- 
- 
-
- 
+==== Downwardapi [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.DownwardapiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        downwardapi: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesDownwardAPI]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *defaultMode* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *items* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items,Items>>
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Items [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        downwardAPI: 
-          items: {} 
- 
----- 
- 
-
- 
+==== Items [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Downwardapi.ItemsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        downwardapi:          items: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesDownwardAPIItems]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fieldRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_fieldRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FieldRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *mode* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *resourceFieldRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ResourceFieldRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== FieldRef [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_fieldRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        downwardAPI: 
-          items: 
-            fieldRef: {} 
- 
----- 
- 
-
- 
+==== Fieldref [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_fieldRef]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Downwardapi.Items.FieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        downwardapi:          items:            fieldref: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesDownwardAPIItemsFieldRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *apiVersion* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fieldPath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ResourceFieldRef [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        downwardAPI: 
-          items: 
-            resourceFieldRef: {} 
- 
----- 
- 
-
- 
+==== Resourcefieldref [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Downwardapi.Items.ResourcefieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        downwardapi:          items:            resourcefieldref: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesDownwardAPIItemsResourceFieldRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *containerName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *divisor* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
     | *resource* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== EmptyDir [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_emptyDir]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        emptyDir: {} 
- 
----- 
- 
-
- 
+==== Emptydir [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_emptyDir]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.EmptydirExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        emptydir: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEmptyDir]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *medium* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *sizeLimit* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Ephemeral [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: {} 
- 
----- 
- 
-
- 
+==== Ephemeral [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.EphemeralExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeral]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *volumeClaimTemplate* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 VolumeClaimTemplate
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== VolumeClaimTemplate [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: {} 
- 
----- 
- 
-
- 
+==== Volumeclaimtemplate [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.VolumeclaimtemplateExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplate]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *metadata* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Metadata
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *spec* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Spec
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Metadata [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            metadata: {} 
- 
----- 
- 
-
- 
+==== Metadata [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.MetadataExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            metadata: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadata]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *annotations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     
- 
     | *creationTimestamp* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *deletionGracePeriodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *deletionTimestamp* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *finalizers* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *generateName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *generation* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *labels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     
- 
     | *managedFields* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields,ManagedFields>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *namespace* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *ownerReferences* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences,OwnerReferences>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *resourceVersion* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *selfLink* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *uid* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ManagedFields [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            metadata: 
-              managedFields: {} 
- 
----- 
- 
-
- 
+==== Managedfields [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Metadata.ManagedfieldsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            metadata:              managedfields: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadataManagedFields]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *apiVersion* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fieldsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fieldsV1* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *manager* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *operation* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *subresource* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *time* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== OwnerReferences [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            metadata: 
-              ownerReferences: {} 
- 
----- 
- 
-
- 
+==== Ownerreferences [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Metadata.OwnerreferencesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            metadata:              ownerreferences: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadataOwnerReferences]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *apiVersion* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *blockOwnerDeletion* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *controller* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *kind* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *uid* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Spec [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            spec: {} 
- 
----- 
- 
-
- 
+==== Spec [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.SpecExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpec]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *accessModes* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *dataSource* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 DataSource
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *dataSourceRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 DataSourceRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *resources* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Resources
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *selector* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Selector
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *storageClassName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeMode* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== DataSource [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            spec: 
-              dataSource: {} 
- 
----- 
- 
-
- 
+==== Datasource [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.DatasourceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              datasource: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecDataSource]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *apiGroup* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *kind* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Resources [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            spec: 
-              resources: {} 
- 
----- 
- 
-
- 
+==== Resources [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              resources: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecResources]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *limits* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
     | *requests* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Selector [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            spec: 
-              selector: {} 
- 
----- 
- 
-
- 
+==== Selector [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.SelectorExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              selector: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecSelector]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *matchExpressions* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchExpressions>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *matchLabels* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== MatchExpressions [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        ephemeral: 
-          volumeClaimTemplate: 
-            spec: 
-              selector: 
-                matchExpressions: {} 
- 
----- 
- 
-
- 
+==== Matchexpressions [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.Selector.MatchexpressionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              selector:                matchexpressions: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecSelectorMatchExpressions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *key* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *operator* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *values* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Fc [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_fc]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        fc: {} 
- 
----- 
- 
-
- 
+==== Fc [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_fc]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.FcExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        fc: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesFc]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *lun* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *targetWWNs* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *wwids* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== FlexVolume [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_flexVolume]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        flexVolume: {} 
- 
----- 
- 
-
- 
+==== Flexvolume [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_flexVolume]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.FlexvolumeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        flexvolume: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesFlexVolume]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *driver* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *options* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Flocker [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_flocker]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        flocker: {} 
- 
----- 
- 
-
- 
+==== Flocker [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_flocker]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.FlockerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        flocker: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesFlocker]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *datasetName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *datasetUUID* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== GcePersistentDisk [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_gcePersistentDisk]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        gcePersistentDisk: {} 
- 
----- 
- 
-
- 
+==== Gcepersistentdisk [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_gcePersistentDisk]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.GcepersistentdiskExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        gcepersistentdisk: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesGcePersistentDisk]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *partition* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *pdName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== GitRepo [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_gitRepo]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        gitRepo: {} 
- 
----- 
- 
-
- 
+==== Gitrepo [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_gitRepo]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.GitrepoExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        gitrepo: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesGitRepo]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *directory* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *repository* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *revision* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Glusterfs [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_glusterfs]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        glusterfs: {} 
- 
----- 
- 
-
- 
+==== Glusterfs [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_glusterfs]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.GlusterfsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        glusterfs: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesGlusterfs]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *endpoints* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== HostPath [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_hostPath]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        hostPath: {} 
- 
----- 
- 
-
- 
+==== Hostpath [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_hostPath]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.HostpathExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        hostpath: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesHostPath]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Iscsi [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_iscsi]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        iscsi: {} 
- 
----- 
- 
-
- 
+==== Iscsi [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_iscsi]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.IscsiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        iscsi: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesIscsi]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *chapAuthDiscovery* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *chapAuthSession* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *initiatorName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *iqn* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *iscsiInterface* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *lun* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *portals* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *targetPortal* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Nfs [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_nfs]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        nfs: {} 
- 
----- 
- 
-
- 
+==== Nfs [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_nfs]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.NfsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        nfs: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesNfs]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *server* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PersistentVolumeClaim [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_persistentVolumeClaim]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        persistentVolumeClaim: {} 
- 
----- 
- 
-
- 
+==== Persistentvolumeclaim [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_persistentVolumeClaim]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.PersistentvolumeclaimExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        persistentvolumeclaim: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesPersistentVolumeClaim]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *claimName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PhotonPersistentDisk [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_photonPersistentDisk]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        photonPersistentDisk: {} 
- 
----- 
- 
-
- 
+==== Photonpersistentdisk [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_photonPersistentDisk]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.PhotonpersistentdiskExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        photonpersistentdisk: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesPhotonPersistentDisk]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *pdID* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PortworxVolume [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_portworxVolume]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        portworxVolume: {} 
- 
----- 
- 
-
- 
+==== Portworxvolume [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_portworxVolume]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.PortworxvolumeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        portworxvolume: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesPortworxVolume]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeID* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Projected [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        projected: {} 
- 
----- 
- 
-
- 
+==== Projected [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.ProjectedExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        projected: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesProjected]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *defaultMode* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *sources* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources,Sources>>
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Sources [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        projected: 
-          sources: {} 
- 
----- 
- 
-
- 
+==== Sources [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Projected.SourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        projected:          sources: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesProjectedSources]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *configMap* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_configMap,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ConfigMap
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *downwardAPI* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_downwardAPI,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 DownwardAPI
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *secret* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_configMap,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Secret
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *serviceAccountToken* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_serviceAccountToken,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ServiceAccountToken
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ConfigMap [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_configMap]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        projected: 
-          sources: 
-            configMap: {} 
- 
----- 
- 
-
- 
+==== Configmap [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_configMap]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Projected.Sources.ConfigmapExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        projected:          sources:            configmap: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesProjectedSourcesConfigMap]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *items* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap_items,Items>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *optional* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== DownwardAPI [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_downwardAPI]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        projected: 
-          sources: 
-            downwardAPI: {} 
- 
----- 
- 
-
- 
+==== Downwardapi [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_downwardAPI]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Projected.Sources.DownwardapiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        projected:          sources:            downwardapi: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesProjectedSourcesDownwardAPI]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *items* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items,Items>>
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ServiceAccountToken [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_serviceAccountToken]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        projected: 
-          sources: 
-            serviceAccountToken: {} 
- 
----- 
- 
-
- 
+==== Serviceaccounttoken [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_projected_sources_serviceAccountToken]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.Projected.Sources.ServiceaccounttokenExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        projected:          sources:            serviceaccounttoken: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesProjectedSourcesServiceAccountToken]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *audience* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *expirationSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Quobyte [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_quobyte]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        quobyte: {} 
- 
----- 
- 
-
- 
+==== Quobyte [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_quobyte]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.QuobyteExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        quobyte: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesQuobyte]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *group* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *registry* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *tenant* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *user* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volume* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Rbd [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_rbd]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        rbd: {} 
- 
----- 
- 
-
- 
+==== Rbd [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_rbd]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.RbdExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        rbd: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesRbd]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *image* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *keyring* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *monitors* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *pool* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *user* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ScaleIO [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_scaleIO]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        scaleIO: {} 
- 
----- 
- 
-
- 
+==== Scaleio [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_scaleIO]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.ScaleioExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        scaleio: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesScaleIO]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *gateway* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *protectionDomain* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *sslEnabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *storageMode* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *storagePool* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *system* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Secret [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_secret]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        secret: {} 
- 
----- 
- 
-
- 
+==== Secret [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_secret]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.SecretExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        secret: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesSecret]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *defaultMode* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *items* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_configMap_items,Items>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *optional* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Storageos [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_storageos]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        storageos: {} 
- 
----- 
- 
-
- 
+==== Storageos [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_storageos]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.StorageosExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        storageos: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesStorageos]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnly* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_cephfs_secretRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *volumeName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeNamespace* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== VsphereVolume [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_vsphereVolume]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    additionalVolumes: 
-      volumes: 
-        vsphereVolume: {} 
- 
----- 
- 
-
- 
+==== Vspherevolume [[ZooKeeper_spec_zookeeper_additionalVolumes_volumes_vsphereVolume]]Complete namespace: Zookeeper.Spec.Zookeeper.Additionalvolumes.Volumes.VspherevolumeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    additionalvolumes:      volumes:        vspherevolume: {}----
 [.fields-ZooKeeperSpecZookeeperAdditionalVolumesVolumesVsphereVolume]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *fsType* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *storagePolicyID* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *storagePolicyName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumePath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AntiAffinity [[ZooKeeper_spec_zookeeper_antiAffinity]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    antiAffinity: {} 
- 
----- 
- 
-
- 
+==== Antiaffinity [[ZooKeeper_spec_zookeeper_antiAffinity]]Complete namespace: Zookeeper.Spec.Zookeeper.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    antiaffinity: {}----
 [.fields-ZooKeeperSpecZookeeperAntiAffinity]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
             
- 
             <<ZooKeeper_spec_global_antiAffinity_host,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Host
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *zone* +
- 
             
- 
             <<ZooKeeper_spec_global_antiAffinity_zone,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Zone
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== DataVolume [[ZooKeeper_spec_zookeeper_dataVolume]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    dataVolume: {} 
- 
----- 
- 
-
- 
+==== Datavolume [[ZooKeeper_spec_zookeeper_dataVolume]]Complete namespace: Zookeeper.Spec.Zookeeper.DatavolumeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    datavolume: {}----
 [.fields-ZooKeeperSpecZookeeperDataVolume]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *existingStorageClassName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates if an already existing storage class should be used.
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the suffix for the volume. Default value is &#39;data&#39;.
- 
     | *size* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
- 
     | *storageClass* +
- 
             
- 
             <<ZooKeeper_spec_global_storage_storageClass,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 StorageClass
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Env [[ZooKeeper_spec_zookeeper_env]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    env: {} 
- 
----- 
- 
-
- 
+==== Env [[ZooKeeper_spec_zookeeper_env]]Complete namespace: Zookeeper.Spec.Zookeeper.EnvExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    env: {}----
 [.fields-ZooKeeperSpecZookeeperEnv]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *value* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *valueFrom* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_env_valueFrom,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ValueFrom
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ValueFrom [[ZooKeeper_spec_zookeeper_env_valueFrom]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    env: 
-      valueFrom: {} 
- 
----- 
- 
-
- 
+==== Valuefrom [[ZooKeeper_spec_zookeeper_env_valueFrom]]Complete namespace: Zookeeper.Spec.Zookeeper.Env.ValuefromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    env:      valuefrom: {}----
 [.fields-ZooKeeperSpecZookeeperEnvValueFrom]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *configMapKeyRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_env_valueFrom_configMapKeyRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ConfigMapKeyRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *fieldRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_fieldRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 FieldRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *resourceFieldRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ResourceFieldRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *secretKeyRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_env_valueFrom_configMapKeyRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretKeyRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ConfigMapKeyRef [[ZooKeeper_spec_zookeeper_env_valueFrom_configMapKeyRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    env: 
-      valueFrom: 
-        configMapKeyRef: {} 
- 
----- 
- 
-
- 
+==== Configmapkeyref [[ZooKeeper_spec_zookeeper_env_valueFrom_configMapKeyRef]]Complete namespace: Zookeeper.Spec.Zookeeper.Env.Valuefrom.ConfigmapkeyrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    env:      valuefrom:        configmapkeyref: {}----
 [.fields-ZooKeeperSpecZookeeperEnvValueFromConfigMapKeyRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *key* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *optional* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== InitContainers [[ZooKeeper_spec_zookeeper_initContainers]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: {} 
- 
----- 
- 
-
- 
+==== Initcontainers [[ZooKeeper_spec_zookeeper_initContainers]]Complete namespace: Zookeeper.Spec.Zookeeper.InitcontainersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainers]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *args* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *command* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *env* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_env,Env>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *envFrom* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_initContainers_envFrom,EnvFrom>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *image* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *imagePullPolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *lifecycle* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Lifecycle
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *livenessProbe* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_livenessProbe,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 LivenessProbe
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *ports* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_initContainers_ports,Ports>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readinessProbe* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_livenessProbe,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ReadinessProbe
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *resources* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Resources
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *securityContext* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_securityContext,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecurityContext
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *startupProbe* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_livenessProbe,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 StartupProbe
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *stdin* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *stdinOnce* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *terminationMessagePath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *terminationMessagePolicy* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *tty* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeDevices* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_initContainers_volumeDevices,VolumeDevices>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *volumeMounts* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_mounts,VolumeMounts>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *workingDir* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== EnvFrom [[ZooKeeper_spec_zookeeper_initContainers_envFrom]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      envFrom: {} 
- 
----- 
- 
-
- 
+==== Envfrom [[ZooKeeper_spec_zookeeper_initContainers_envFrom]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.EnvfromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      envfrom: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersEnvFrom]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *configMapRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_envFrom_configMapRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 ConfigMapRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *prefix* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *secretRef* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_envFrom_configMapRef,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SecretRef
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== ConfigMapRef [[ZooKeeper_spec_zookeeper_initContainers_envFrom_configMapRef]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      envFrom: 
-        configMapRef: {} 
- 
----- 
- 
-
- 
+==== Configmapref [[ZooKeeper_spec_zookeeper_initContainers_envFrom_configMapRef]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Envfrom.ConfigmaprefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      envfrom:        configmapref: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersEnvFromConfigMapRef]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *optional* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Lifecycle [[ZooKeeper_spec_zookeeper_initContainers_lifecycle]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      lifecycle: {} 
- 
----- 
- 
-
- 
+==== Lifecycle [[ZooKeeper_spec_zookeeper_initContainers_lifecycle]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.LifecycleExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      lifecycle: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersLifecycle]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *postStart* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PostStart
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *preStop* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 PreStop
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PostStart [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      lifecycle: 
-        postStart: {} 
- 
----- 
- 
-
- 
+==== Poststart [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Lifecycle.PoststartExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      lifecycle:        poststart: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersLifecyclePostStart]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *exec* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_exec,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Exec
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *httpGet* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_httpGet,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 HttpGet
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *tcpSocket* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_tcpSocket,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 TcpSocket
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Exec [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_exec]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      lifecycle: 
-        postStart: 
-          exec: {} 
- 
----- 
- 
-
- 
+==== Exec [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_exec]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Lifecycle.Poststart.ExecExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      lifecycle:        poststart:          exec: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersLifecyclePostStartExec]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *command* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== HttpGet [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_httpGet]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      lifecycle: 
-        postStart: 
-          httpGet: {} 
- 
----- 
- 
-
- 
+==== Httpget [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_httpGet]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Lifecycle.Poststart.HttpgetExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      lifecycle:        poststart:          httpget: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersLifecyclePostStartHttpGet]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *httpHeaders* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_global_dnsConfig_options,HttpHeaders>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *path* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *port* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
     | *scheme* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== TcpSocket [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_tcpSocket]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      lifecycle: 
-        postStart: 
-          tcpSocket: {} 
- 
----- 
- 
-
- 
+==== Tcpsocket [[ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_tcpSocket]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Lifecycle.Poststart.TcpsocketExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      lifecycle:        poststart:          tcpsocket: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersLifecyclePostStartTcpSocket]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *host* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *port* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== LivenessProbe [[ZooKeeper_spec_zookeeper_initContainers_livenessProbe]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      livenessProbe: {} 
- 
----- 
- 
-
- 
+==== Livenessprobe [[ZooKeeper_spec_zookeeper_initContainers_livenessProbe]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.LivenessprobeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      livenessprobe: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersLivenessProbe]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *exec* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_exec,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Exec
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *failureThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *grpc* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_livenessProbe_grpc,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Grpc
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *httpGet* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_httpGet,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 HttpGet
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *initialDelaySeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *periodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *successThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *tcpSocket* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_lifecycle_postStart_tcpSocket,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 TcpSocket
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *terminationGracePeriodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *timeoutSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Grpc [[ZooKeeper_spec_zookeeper_initContainers_livenessProbe_grpc]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      livenessProbe: 
-        grpc: {} 
- 
----- 
- 
-
- 
+==== Grpc [[ZooKeeper_spec_zookeeper_initContainers_livenessProbe_grpc]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Livenessprobe.GrpcExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      livenessprobe:        grpc: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersLivenessProbeGrpc]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *port* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *service* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Ports [[ZooKeeper_spec_zookeeper_initContainers_ports]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      ports: {} 
- 
----- 
- 
-
- 
+==== Ports [[ZooKeeper_spec_zookeeper_initContainers_ports]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.PortsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      ports: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersPorts]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *containerPort* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *hostIP* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *hostPort* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *protocol* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SecurityContext [[ZooKeeper_spec_zookeeper_initContainers_securityContext]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      securityContext: {} 
- 
----- 
- 
-
- 
+==== Securitycontext [[ZooKeeper_spec_zookeeper_initContainers_securityContext]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.SecuritycontextExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      securitycontext: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersSecurityContext]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *allowPrivilegeEscalation* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *capabilities* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_securityContext_capabilities,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Capabilities
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *privileged* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *procMount* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *readOnlyRootFilesystem* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsGroup* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsNonRoot* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsUser* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *seLinuxOptions* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_securityContext_seLinuxOptions,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SeLinuxOptions
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *seccompProfile* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_securityContext_seccompProfile,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 SeccompProfile
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *windowsOptions* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_initContainers_securityContext_windowsOptions,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 WindowsOptions
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Capabilities [[ZooKeeper_spec_zookeeper_initContainers_securityContext_capabilities]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      securityContext: 
-        capabilities: {} 
- 
----- 
- 
-
- 
+==== Capabilities [[ZooKeeper_spec_zookeeper_initContainers_securityContext_capabilities]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Securitycontext.CapabilitiesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      securitycontext:        capabilities: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersSecurityContextCapabilities]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *add* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
     | *drop* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SeLinuxOptions [[ZooKeeper_spec_zookeeper_initContainers_securityContext_seLinuxOptions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      securityContext: 
-        seLinuxOptions: {} 
- 
----- 
- 
-
- 
+==== Selinuxoptions [[ZooKeeper_spec_zookeeper_initContainers_securityContext_seLinuxOptions]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Securitycontext.SelinuxoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      securitycontext:        selinuxoptions: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersSecurityContextSeLinuxOptions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *level* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *role* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *user* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== SeccompProfile [[ZooKeeper_spec_zookeeper_initContainers_securityContext_seccompProfile]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      securityContext: 
-        seccompProfile: {} 
- 
----- 
- 
-
- 
+==== Seccompprofile [[ZooKeeper_spec_zookeeper_initContainers_securityContext_seccompProfile]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Securitycontext.SeccompprofileExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      securitycontext:        seccompprofile: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersSecurityContextSeccompProfile]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *localhostProfile* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== WindowsOptions [[ZooKeeper_spec_zookeeper_initContainers_securityContext_windowsOptions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      securityContext: 
-        windowsOptions: {} 
- 
----- 
- 
-
- 
+==== Windowsoptions [[ZooKeeper_spec_zookeeper_initContainers_securityContext_windowsOptions]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.Securitycontext.WindowsoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      securitycontext:        windowsoptions: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersSecurityContextWindowsOptions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *gmsaCredentialSpec* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *gmsaCredentialSpecName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *hostProcess* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *runAsUserName* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== VolumeDevices [[ZooKeeper_spec_zookeeper_initContainers_volumeDevices]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    initContainers: 
-      volumeDevices: {} 
- 
----- 
- 
-
- 
+==== Volumedevices [[ZooKeeper_spec_zookeeper_initContainers_volumeDevices]]Complete namespace: Zookeeper.Spec.Zookeeper.Initcontainers.VolumedevicesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    initcontainers:      volumedevices: {}----
 [.fields-ZooKeeperSpecZookeeperInitContainersVolumeDevices]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *devicePath* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== MetadataInitializationJob [[ZooKeeper_spec_zookeeper_metadataInitializationJob]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    metadataInitializationJob: {} 
- 
----- 
- 
-
- 
+==== Metadatainitializationjob [[ZooKeeper_spec_zookeeper_metadataInitializationJob]]Complete namespace: Zookeeper.Spec.Zookeeper.MetadatainitializationjobExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    metadatainitializationjob: {}----
 [.fields-ZooKeeperSpecZookeeperMetadataInitializationJob]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *resources* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_metadataInitializationJob_resources,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Resources
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *timeout* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Timeout (in seconds) for the metadata initialization execution. Default value is 60.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Resources [[ZooKeeper_spec_zookeeper_metadataInitializationJob_resources]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    metadataInitializationJob: 
-      resources: {} 
- 
----- 
- 
-
- 
+==== Resources [[ZooKeeper_spec_zookeeper_metadataInitializationJob_resources]]Complete namespace: Zookeeper.Spec.Zookeeper.Metadatainitializationjob.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    metadatainitializationjob:      resources: {}----
 [.fields-ZooKeeperSpecZookeeperMetadataInitializationJobResources]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *limits* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
     | *requests* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []
- 
 integer or string
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== NodeAffinity [[ZooKeeper_spec_zookeeper_nodeAffinity]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    nodeAffinity: {} 
- 
----- 
- 
-
- 
+==== Nodeaffinity [[ZooKeeper_spec_zookeeper_nodeAffinity]]Complete namespace: Zookeeper.Spec.Zookeeper.NodeaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    nodeaffinity: {}----
 [.fields-ZooKeeperSpecZookeeperNodeAffinity]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *preferredDuringSchedulingIgnoredDuringExecution* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution,PreferredDuringSchedulingIgnoredDuringExecution>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *requiredDuringSchedulingIgnoredDuringExecution* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 RequiredDuringSchedulingIgnoredDuringExecution
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== PreferredDuringSchedulingIgnoredDuringExecution [[ZooKeeper_spec_zookeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    nodeAffinity: 
-      preferredDuringSchedulingIgnoredDuringExecution: {} 
- 
----- 
- 
-
- 
+==== Preferredduringschedulingignoredduringexecution [[ZooKeeper_spec_zookeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Zookeeper.Spec.Zookeeper.Nodeaffinity.PreferredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    nodeaffinity:      preferredduringschedulingignoredduringexecution: {}----
 [.fields-ZooKeeperSpecZookeeperNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *preference* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Preference
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *weight* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Preference [[ZooKeeper_spec_zookeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    nodeAffinity: 
-      preferredDuringSchedulingIgnoredDuringExecution: 
-        preference: {} 
- 
----- 
- 
-
- 
+==== Preference [[ZooKeeper_spec_zookeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]Complete namespace: Zookeeper.Spec.Zookeeper.Nodeaffinity.Preferredduringschedulingignoredduringexecution.PreferenceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference: {}----
 [.fields-ZooKeeperSpecZookeeperNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *matchExpressions* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchExpressions>>
- 
 
- 
 
- 
     | 
- 
     
- 
     | *matchFields* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchFields>>
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== RequiredDuringSchedulingIgnoredDuringExecution [[ZooKeeper_spec_zookeeper_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    nodeAffinity: 
-      requiredDuringSchedulingIgnoredDuringExecution: {} 
- 
----- 
- 
-
- 
+==== Requiredduringschedulingignoredduringexecution [[ZooKeeper_spec_zookeeper_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Zookeeper.Spec.Zookeeper.Nodeaffinity.RequiredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    nodeaffinity:      requiredduringschedulingignoredduringexecution: {}----
 [.fields-ZooKeeperSpecZookeeperNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *nodeSelectorTerms* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,NodeSelectorTerms>>
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Pdb [[ZooKeeper_spec_zookeeper_pdb]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    pdb: {} 
- 
----- 
- 
-
- 
+==== Pdb [[ZooKeeper_spec_zookeeper_pdb]]Complete namespace: Zookeeper.Spec.Zookeeper.PdbExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    pdb: {}----
 [.fields-ZooKeeperSpecZookeeperPdb]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enable Pdb policy.
- 
     | *maxUnavailable* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Number of maxUnavailable pods.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Probes [[ZooKeeper_spec_zookeeper_probes]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    probes: {} 
- 
----- 
- 
-
- 
+==== Probes [[ZooKeeper_spec_zookeeper_probes]]Complete namespace: Zookeeper.Spec.Zookeeper.ProbesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    probes: {}----
 [.fields-ZooKeeperSpecZookeeperProbes]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *liveness* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_probes_liveness,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Liveness
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *readiness* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_probes_readiness,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 Readiness
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Liveness [[ZooKeeper_spec_zookeeper_probes_liveness]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    probes: 
-      liveness: {} 
- 
----- 
- 
-
- 
+==== Liveness [[ZooKeeper_spec_zookeeper_probes_liveness]]Complete namespace: Zookeeper.Spec.Zookeeper.Probes.LivenessExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    probes:      liveness: {}----
 [.fields-ZooKeeperSpecZookeeperProbesLiveness]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enables the probe.
- 
     | *failureThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Failure threshold.
- 
     | *initialDelaySeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the initial delay (in seconds) for the probe.
- 
     | *periodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the period (in seconds) for the probe.
- 
     | *successThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Success threshold.
- 
     | *terminationGracePeriodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the termination grace period (in seconds) for the probe.
- 
     | *timeoutSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the timeout (in seconds) for the probe.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Readiness [[ZooKeeper_spec_zookeeper_probes_readiness]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    probes: 
-      readiness: {} 
- 
----- 
- 
-
- 
+==== Readiness [[ZooKeeper_spec_zookeeper_probes_readiness]]Complete namespace: Zookeeper.Spec.Zookeeper.Probes.ReadinessExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    probes:      readiness: {}----
 [.fields-ZooKeeperSpecZookeeperProbesReadiness]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *enabled* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 boolean
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Enables the probe.
- 
     | *failureThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Failure threshold.
- 
     | *initialDelaySeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the initial delay (in seconds) for the probe.
- 
     | *periodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the period (in seconds) for the probe.
- 
     | *successThreshold* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Success threshold.
- 
     | *terminationGracePeriodSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the termination grace period (in seconds) for the probe.
- 
     | *timeoutSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Indicates the timeout (in seconds) for the probe.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Service [[ZooKeeper_spec_zookeeper_service]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    service: {} 
- 
----- 
- 
-
- 
+==== Service [[ZooKeeper_spec_zookeeper_service]]Complete namespace: Zookeeper.Spec.Zookeeper.ServiceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    service: {}----
 [.fields-ZooKeeperSpecZookeeperService]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *additionalPorts* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_spec_zookeeper_service_additionalPorts,AdditionalPorts>>
- 
 
- 
 
- 
     | 
- 
     Additional ports to add to the Service.
- 
     | *annotations* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []key/value
- 
 
- 
 
- 
     | 
- 
     Additional annotations to add to the Service.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== AdditionalPorts [[ZooKeeper_spec_zookeeper_service_additionalPorts]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    service: 
-      additionalPorts: {} 
- 
----- 
- 
-
- 
+==== Additionalports [[ZooKeeper_spec_zookeeper_service_additionalPorts]]Complete namespace: Zookeeper.Spec.Zookeeper.Service.AdditionalportsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    service:      additionalports: {}----
 [.fields-ZooKeeperSpecZookeeperServiceAdditionalPorts]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *appProtocol* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *name* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *nodePort* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *port* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *protocol* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *targetPort* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Tolerations [[ZooKeeper_spec_zookeeper_tolerations]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    tolerations: {} 
- 
----- 
- 
-
- 
+==== Tolerations [[ZooKeeper_spec_zookeeper_tolerations]]Complete namespace: Zookeeper.Spec.Zookeeper.TolerationsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    tolerations: {}----
 [.fields-ZooKeeperSpecZookeeperTolerations]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *effect* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *key* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *operator* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *tolerationSeconds* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *value* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== UpdateStrategy [[ZooKeeper_spec_zookeeper_updateStrategy]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    updateStrategy: {} 
- 
----- 
- 
-
- 
+==== Updatestrategy [[ZooKeeper_spec_zookeeper_updateStrategy]]Complete namespace: Zookeeper.Spec.Zookeeper.UpdatestrategyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    updatestrategy: {}----
 [.fields-ZooKeeperSpecZookeeperUpdateStrategy]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *rollingUpdate* +
- 
             
- 
             <<ZooKeeper_spec_zookeeper_updateStrategy_rollingUpdate,
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 RollingUpdate
- 
 
- 
 
- 
 
- 
 >>
- 
         
- 
     
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== RollingUpdate [[ZooKeeper_spec_zookeeper_updateStrategy_rollingUpdate]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  zookeeper: 
-    updateStrategy: 
-      rollingUpdate: {} 
- 
----- 
- 
-
- 
+==== Rollingupdate [[ZooKeeper_spec_zookeeper_updateStrategy_rollingUpdate]]Complete namespace: Zookeeper.Spec.Zookeeper.Updatestrategy.RollingupdateExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  zookeeper:    updatestrategy:      rollingupdate: {}----
 [.fields-ZooKeeperSpecZookeeperUpdateStrategyRollingUpdate]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *maxUnavailable* +
- 
             
- 
 integer or string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
             
- 
         
- 
     
- 
     | 
- 
     
- 
     | *partition* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Status [[ZooKeeper_status]] 
- 
-
- 
+=== Status [[ZooKeeper_status]]Complete namespace: Zookeeper.Status
 [.fields-ZooKeeperStatus]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *conditions* +
- 
     
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 []<<ZooKeeper_status_conditions,Conditions>>
- 
 
- 
 
- 
     | 
- 
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
- 
     | *lastApplied* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     Last spec applied.
- 
 |===
- 
 
- 
 
- 
 
- 
 
- 
-=== Conditions [[ZooKeeper_status_conditions]] 
- 
-Example use: 
- 
-[source,yaml] 
----- 
-apiVersion: pulsar.oss.datastax.com/v1alpha1 
-kind: ZooKeeper 
-metadata: 
-  name: example-pulsarcluster 
-spec: 
-  conditions: {} 
- 
----- 
- 
-
- 
+==== Conditions [[ZooKeeper_status_conditions]]Complete namespace: Zookeeper.Status.ConditionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Zookeepermetadata:  name: example-pulsarclusterspec:  conditions: {}----
 [.fields-ZooKeeperStatusConditions]
- 
 [cols="2,4"]
- 
 |===
- 
 | Field| Description
- 
 
- 
     | *lastTransitionTime* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *message* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *observedGeneration* +
- 
     
- 
 
- 
 
- 
 
- 
 integer
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *reason* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *status* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
     | *type* +
- 
     
- 
 
- 
 
- 
 string
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
 
- 
     | 
- 
     
- 
 |===
- 
