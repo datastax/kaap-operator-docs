@@ -1,5 +1,5 @@
 = Introduction
 
-{pulsar-operator-full-name} simplifies running https://pulsar.apache.org[Apache Pulsar] on Kubernetes by applying the familiar https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Operator pattern] to Pulsar's components, and horizonally scaling resources up or down based on CPU and memory workloads.
+Kubernetes Autoscaler for Apache Pulsar (KAAP) simplifies running https://pulsar.apache.org[Apache Pulsar] on Kubernetes by applying the familiar https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Operator pattern] to Pulsar's components, and horizonally scaling resources up or down based on CPU and memory workloads.
 
 The KAAP project is hosted on a https://github.com/datastax/kaap[public GitHub repo] and the documentation is available at https://docs.datastax.com/en/streaming/kaap-operator/latest/index.html[DataStax Streaming Documentation].
