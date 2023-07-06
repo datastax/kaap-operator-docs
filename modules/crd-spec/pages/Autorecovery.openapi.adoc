@@ -1,32 +1,71 @@
 = Autorecovery
+
 v1alpha1
+
 :source-highlighter: highlightjs
+
 :keywords: openapi, rest, Autorecovery
+
 :specDir: 
+
 :snippetDir: 
+
 :generator-template: v1 2019-12-20
+
 :info-url: https://openapi-generator.tech
+
 :app-name: Autorecovery
 
+
+
 Auto generated from CRD spec
+
+
+
 
 
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
 
 
+
+
+
 Version: v1alpha1
+
+
 
 Namespace: pulsar.oss.datastax.com
 
+
+
 == Autorecovery [[Autorecovery]]
+
+
+
 [.fields-Autorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *spec* +
+
             
+
             <<Autorecovery_spec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -39,14 +78,34 @@ Spec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *status* +
+
             
+
             <<Autorecovery_status,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,25 +118,60 @@ Status
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-=== Spec [[Autorecovery_spec]]Complete namespace: Autorecovery.Spec
+
+
+
+
+
+=== Spec [[Autorecovery_spec]]
+
+Complete namespace: Autorecovery.Spec
+
+
+
 [.fields-AutorecoverySpec]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *autorecovery* +
+
             
+
             <<Autorecovery_spec_autorecovery,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -90,14 +184,34 @@ Autorecovery
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *global* +
+
             
+
             <<Autorecovery_spec_global,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,24 +224,71 @@ Global
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Autorecovery [[Autorecovery_spec_autorecovery]]Complete namespace: Autorecovery.Spec.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery: {}----
+
+
+
+
+
+==== Autorecovery [[Autorecovery_spec_autorecovery]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *annotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -140,11 +301,27 @@ Global
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to each resource (except pods).
+
     | *antiAffinity* +
+
             
+
             <<Autorecovery_spec_autorecovery_antiAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,13 +334,33 @@ AntiAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *config* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -176,10 +373,26 @@ AntiAffinity
 any
 
 
+
+
+
     | 
+
     Configuration.
+
     | *env* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -192,10 +405,20 @@ any
 []<<Autorecovery_spec_autorecovery_env,Env>>
 
 
+
+
+
     | 
+
     Additional container env variables.
+
     | *gracePeriod* +
+
     
+
+
+
+
 
 
 
@@ -208,10 +431,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Termination grace period in seconds.
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -224,10 +462,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override Pulsar image.
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -240,10 +494,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override image pull policy.
+
     | *imagePullSecrets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,10 +533,26 @@ string
 []<<Autorecovery_spec_autorecovery_imagePullSecrets,ImagePullSecrets>>
 
 
+
+
+
     | 
+
     Image pull secrets.
+
     | *initContainers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -272,10 +565,26 @@ string
 []<<Autorecovery_spec_autorecovery_initContainers,InitContainers>>
 
 
+
+
+
     | 
+
     Init containers
+
     | *labels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -288,10 +597,26 @@ string
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each resource (except pods).
+
     | *matchLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -304,11 +629,27 @@ string
 []key/value
 
 
+
+
+
     | 
+
     Match labels selectors to add to each pod.
+
     | *nodeAffinity* +
+
             
+
             <<Autorecovery_spec_autorecovery_nodeAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -321,13 +662,33 @@ NodeAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *nodeSelectors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -340,10 +701,26 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Additional node selectors.
+
     | *podAnnotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -356,10 +733,26 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to pod.
+
     | *podLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -372,10 +765,20 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each pod.
+
     | *replicas* +
+
     
+
+
+
+
 
 
 
@@ -388,11 +791,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Number of desired replicas.
+
     | *resources* +
+
             
+
             <<Autorecovery_spec_autorecovery_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -405,13 +830,33 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *sidecars* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -424,10 +869,26 @@ Resources
 []<<Autorecovery_spec_autorecovery_initContainers,Sidecars>>
 
 
+
+
+
     | 
+
     Sidecar containers
+
     | *tolerations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -440,22 +901,66 @@ Resources
 []<<Autorecovery_spec_autorecovery_tolerations,Tolerations>>
 
 
+
+
+
     | 
+
     Pod tolerations.
+
 |===
 
 
 
 
-==== Antiaffinity [[Autorecovery_spec_autorecovery_antiAffinity]]Complete namespace: Autorecovery.Spec.Autorecovery.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    antiaffinity: {}----
+
+
+
+
+
+==== Antiaffinity [[Autorecovery_spec_autorecovery_antiAffinity]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Antiaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    antiaffinity: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryAntiAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Autorecovery_spec_autorecovery_antiAffinity_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -468,14 +973,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Autorecovery_spec_autorecovery_antiAffinity_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -488,24 +1013,69 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Host [[Autorecovery_spec_autorecovery_antiAffinity_host]]Complete namespace: Autorecovery.Spec.Autorecovery.Antiaffinity.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    antiaffinity:      host: {}----
+
+
+
+
+
+==== Host [[Autorecovery_spec_autorecovery_antiAffinity_host]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Antiaffinity.Host
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    antiaffinity:
+      host: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryAntiAffinityHost]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -518,10 +1088,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *required* +
+
     
+
+
+
+
+
+
 
 
 
@@ -534,21 +1120,66 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
 |===
 
 
 
 
-==== Zone [[Autorecovery_spec_autorecovery_antiAffinity_zone]]Complete namespace: Autorecovery.Spec.Autorecovery.Antiaffinity.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    antiaffinity:      zone: {}----
+
+
+
+
+
+==== Zone [[Autorecovery_spec_autorecovery_antiAffinity_zone]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Antiaffinity.Zone
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    antiaffinity:
+      zone: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryAntiAffinityZone]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -561,10 +1192,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *required* +
+
     
+
+
+
+
+
+
 
 
 
@@ -577,21 +1224,62 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
 |===
 
 
 
 
-==== Env [[Autorecovery_spec_autorecovery_env]]Complete namespace: Autorecovery.Spec.Autorecovery.EnvExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env: {}----
+
+
+
+
+
+==== Env [[Autorecovery_spec_autorecovery_env]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Env
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    env: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryEnv]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -604,10 +1292,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -620,11 +1324,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *valueFrom* +
+
             
+
             <<Autorecovery_spec_autorecovery_env_valueFrom,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -637,25 +1364,74 @@ ValueFrom
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Valuefrom [[Autorecovery_spec_autorecovery_env_valueFrom]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.ValuefromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom: {}----
+
+
+
+
+
+==== Valuefrom [[Autorecovery_spec_autorecovery_env_valueFrom]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    env:
+      valuefrom: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryEnvValueFrom]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *configMapKeyRef* +
+
             
+
             <<Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -668,14 +1444,34 @@ ConfigMapKeyRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *fieldRef* +
+
             
+
             <<Autorecovery_spec_autorecovery_env_valueFrom_fieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -688,14 +1484,34 @@ FieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resourceFieldRef* +
+
             
+
             <<Autorecovery_spec_autorecovery_env_valueFrom_resourceFieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -708,14 +1524,34 @@ ResourceFieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *secretKeyRef* +
+
             
+
             <<Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -728,24 +1564,67 @@ SecretKeyRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmapkeyref [[Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.ConfigmapkeyrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom:        configmapkeyref: {}----
+
+
+
+
+
+==== Configmapkeyref [[Autorecovery_spec_autorecovery_env_valueFrom_configMapKeyRef]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.Configmapkeyref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    env:
+      valuefrom:
+        configmapkeyref: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryEnvValueFromConfigMapKeyRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -758,10 +1637,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -774,10 +1669,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -790,21 +1704,64 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Fieldref [[Autorecovery_spec_autorecovery_env_valueFrom_fieldRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.FieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom:        fieldref: {}----
+
+
+
+
+
+==== Fieldref [[Autorecovery_spec_autorecovery_env_valueFrom_fieldRef]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.Fieldref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    env:
+      valuefrom:
+        fieldref: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryEnvValueFromFieldRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *apiVersion* +
+
     
+
+
+
 
 
 string
@@ -817,10 +1774,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fieldPath* +
+
     
+
+
+
 
 
 string
@@ -833,21 +1806,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resourcefieldref [[Autorecovery_spec_autorecovery_env_valueFrom_resourceFieldRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.ResourcefieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    env:      valuefrom:        resourcefieldref: {}----
+
+
+
+
+
+==== Resourcefieldref [[Autorecovery_spec_autorecovery_env_valueFrom_resourceFieldRef]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Env.Valuefrom.Resourcefieldref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    env:
+      valuefrom:
+        resourcefieldref: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryEnvValueFromResourceFieldRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *containerName* +
+
     
+
+
+
 
 
 string
@@ -860,10 +1879,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *divisor* +
+
             
+
 integer or string
 
 
@@ -877,13 +1910,35 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
     | *resource* +
+
     
+
+
+
 
 
 string
@@ -896,21 +1951,65 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Imagepullsecrets [[Autorecovery_spec_autorecovery_imagePullSecrets]]Complete namespace: Autorecovery.Spec.Autorecovery.ImagepullsecretsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    imagepullsecrets: {}----
+
+
+
+
+
+==== Imagepullsecrets [[Autorecovery_spec_autorecovery_imagePullSecrets]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Imagepullsecrets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    imagepullsecrets: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryImagePullSecrets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -923,21 +2022,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Initcontainers [[Autorecovery_spec_autorecovery_initContainers]]Complete namespace: Autorecovery.Spec.Autorecovery.InitcontainersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers: {}----
+
+
+
+
+
+==== Initcontainers [[Autorecovery_spec_autorecovery_initContainers]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainers]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *args* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -948,12 +2098,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *command* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -964,12 +2130,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *env* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -982,10 +2164,26 @@ string
 []<<Autorecovery_spec_autorecovery_env,Env>>
 
 
+
+
+
     | 
+
     
+
     | *envFrom* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -998,10 +2196,19 @@ string
 []<<Autorecovery_spec_autorecovery_initContainers_envFrom,EnvFrom>>
 
 
+
+
+
     | 
+
     
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -1014,10 +2221,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -1030,11 +2253,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *lifecycle* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1047,14 +2293,34 @@ Lifecycle
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *livenessProbe* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1067,13 +2333,26 @@ LivenessProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -1086,10 +2365,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *ports* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1102,11 +2404,27 @@ string
 []<<Autorecovery_spec_autorecovery_initContainers_ports,Ports>>
 
 
+
+
+
     | 
+
     
+
     | *readinessProbe* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1119,14 +2437,34 @@ ReadinessProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resources* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1139,14 +2477,34 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *securityContext* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_securityContext,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1159,14 +2517,34 @@ SecurityContext
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *startupProbe* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1179,13 +2557,29 @@ StartupProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *stdin* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1198,10 +2592,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *stdinOnce* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1214,10 +2624,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *terminationMessagePath* +
+
     
+
+
+
 
 
 string
@@ -1230,10 +2653,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *terminationMessagePolicy* +
+
     
+
+
+
 
 
 string
@@ -1246,10 +2685,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tty* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1262,10 +2720,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeDevices* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1278,10 +2756,26 @@ boolean
 []<<Autorecovery_spec_autorecovery_initContainers_volumeDevices,VolumeDevices>>
 
 
+
+
+
     | 
+
     
+
     | *volumeMounts* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1294,10 +2788,19 @@ boolean
 []<<Autorecovery_spec_autorecovery_initContainers_volumeMounts,VolumeMounts>>
 
 
+
+
+
     | 
+
     
+
     | *workingDir* +
+
     
+
+
+
 
 
 string
@@ -1310,22 +2813,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Envfrom [[Autorecovery_spec_autorecovery_initContainers_envFrom]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.EnvfromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      envfrom: {}----
+
+
+
+
+
+==== Envfrom [[Autorecovery_spec_autorecovery_initContainers_envFrom]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Envfrom
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      envfrom: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersEnvFrom]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *configMapRef* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1338,13 +2893,26 @@ ConfigMapRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *prefix* +
+
     
+
+
+
 
 
 string
@@ -1357,11 +2925,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1374,24 +2965,67 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmapref [[Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Envfrom.ConfigmaprefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      envfrom:        configmapref: {}----
+
+
+
+
+
+==== Configmapref [[Autorecovery_spec_autorecovery_initContainers_envFrom_configMapRef]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Envfrom.Configmapref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      envfrom:
+        configmapref: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersEnvFromConfigMapRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -1404,10 +3038,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1420,22 +3073,71 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Lifecycle [[Autorecovery_spec_autorecovery_initContainers_lifecycle]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.LifecycleExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle: {}----
+
+
+
+
+
+==== Lifecycle [[Autorecovery_spec_autorecovery_initContainers_lifecycle]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      lifecycle: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecycle]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *postStart* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1448,14 +3150,34 @@ PostStart
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *preStop* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1468,25 +3190,75 @@ PreStop
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Poststart [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.PoststartExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart: {}----
+
+
+
+
+
+==== Poststart [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      lifecycle:
+        poststart: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStart]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *exec* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1499,14 +3271,34 @@ Exec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *httpGet* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1519,14 +3311,34 @@ HttpGet
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *tcpSocket* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1539,24 +3351,75 @@ TcpSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Exec [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.ExecExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          exec: {}----
+
+
+
+
+
+==== Exec [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.Exec
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      lifecycle:
+        poststart:
+          exec: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartExec]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *command* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1567,23 +3430,63 @@ TcpSocket
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Httpget [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.HttpgetExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          httpget: {}----
+
+
+
+
+
+==== Httpget [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.Httpget
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      lifecycle:
+        poststart:
+          httpget: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartHttpGet]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
     
+
+
+
 
 
 string
@@ -1596,10 +3499,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *httpHeaders* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1612,10 +3538,19 @@ string
 []<<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders,HttpHeaders>>
 
 
+
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -1628,10 +3563,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *port* +
+
             
+
 integer or string
 
 
@@ -1645,13 +3594,35 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
     | *scheme* +
+
     
+
+
+
 
 
 string
@@ -1664,21 +3635,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Httpheaders [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.Httpget.HttpheadersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          httpget:            httpheaders: {}----
+
+
+
+
+
+==== Httpheaders [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.Httpget.Httpheaders
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      lifecycle:
+        poststart:
+          httpget:
+            httpheaders: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartHttpGetHttpHeaders]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -1691,10 +3710,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -1707,21 +3742,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Tcpsocket [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.TcpsocketExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      lifecycle:        poststart:          tcpsocket: {}----
+
+
+
+
+
+==== Tcpsocket [[Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Lifecycle.Poststart.Tcpsocket
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      lifecycle:
+        poststart:
+          tcpsocket: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLifecyclePostStartTcpSocket]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
     
+
+
+
 
 
 string
@@ -1734,10 +3816,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *port* +
+
             
+
 integer or string
 
 
@@ -1751,25 +3847,83 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Livenessprobe [[Autorecovery_spec_autorecovery_initContainers_livenessProbe]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.LivenessprobeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      livenessprobe: {}----
+
+
+
+
+
+==== Livenessprobe [[Autorecovery_spec_autorecovery_initContainers_livenessProbe]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Livenessprobe
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      livenessprobe: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLivenessProbe]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *exec* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_exec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1782,13 +3936,27 @@ Exec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *failureThreshold* +
+
     
+
+
+
+
 
 
 
@@ -1801,11 +3969,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *grpc* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_livenessProbe_grpc,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1818,14 +4008,34 @@ Grpc
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *httpGet* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1838,13 +4048,27 @@ HttpGet
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *initialDelaySeconds* +
+
     
+
+
+
+
 
 
 
@@ -1857,10 +4081,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *periodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -1873,10 +4113,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *successThreshold* +
+
     
+
+
+
+
 
 
 
@@ -1889,11 +4145,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tcpSocket* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1906,13 +4184,27 @@ TcpSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *terminationGracePeriodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -1925,10 +4217,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *timeoutSeconds* +
+
     
+
+
+
+
 
 
 
@@ -1941,21 +4249,67 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Grpc [[Autorecovery_spec_autorecovery_initContainers_livenessProbe_grpc]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Livenessprobe.GrpcExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      livenessprobe:        grpc: {}----
+
+
+
+
+
+==== Grpc [[Autorecovery_spec_autorecovery_initContainers_livenessProbe_grpc]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Livenessprobe.Grpc
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      livenessprobe:
+        grpc: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersLivenessProbeGrpc]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *port* +
+
     
+
+
+
+
 
 
 
@@ -1968,10 +4322,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *service* +
+
     
+
+
+
 
 
 string
@@ -1984,21 +4353,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Ports [[Autorecovery_spec_autorecovery_initContainers_ports]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.PortsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      ports: {}----
+
+
+
+
+
+==== Ports [[Autorecovery_spec_autorecovery_initContainers_ports]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Ports
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      ports: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersPorts]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *containerPort* +
+
     
+
+
+
+
 
 
 
@@ -2011,10 +4426,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostIP* +
+
     
+
+
+
 
 
 string
@@ -2027,10 +4457,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostPort* +
+
     
+
+
+
+
 
 
 
@@ -2043,10 +4490,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -2059,10 +4521,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *protocol* +
+
     
+
+
+
 
 
 string
@@ -2075,21 +4553,73 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resources [[Autorecovery_spec_autorecovery_initContainers_resources]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      resources: {}----
+
+
+
+
+
+==== Resources [[Autorecovery_spec_autorecovery_initContainers_resources]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Resources
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      resources: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersResources]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *limits* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2100,12 +4630,28 @@ string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
     | *requests* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2116,23 +4662,64 @@ integer or string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Securitycontext [[Autorecovery_spec_autorecovery_initContainers_securityContext]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.SecuritycontextExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext: {}----
+
+
+
+
+
+==== Securitycontext [[Autorecovery_spec_autorecovery_initContainers_securityContext]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      securitycontext: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContext]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *allowPrivilegeEscalation* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2145,11 +4732,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *capabilities* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_capabilities,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2162,13 +4769,29 @@ Capabilities
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *privileged* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2181,10 +4804,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *procMount* +
+
     
+
+
+
 
 
 string
@@ -2197,10 +4833,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnlyRootFilesystem* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2213,10 +4868,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsGroup* +
+
     
+
+
+
+
 
 
 
@@ -2229,10 +4898,28 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsNonRoot* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2245,10 +4932,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsUser* +
+
     
+
+
+
+
 
 
 
@@ -2261,11 +4962,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *seLinuxOptions* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_seLinuxOptions,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2278,14 +5001,34 @@ SeLinuxOptions
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *seccompProfile* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_seccompProfile,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2298,14 +5041,34 @@ SeccompProfile
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *windowsOptions* +
+
             
+
             <<Autorecovery_spec_autorecovery_initContainers_securityContext_windowsOptions,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2318,24 +5081,74 @@ WindowsOptions
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Capabilities [[Autorecovery_spec_autorecovery_initContainers_securityContext_capabilities]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.CapabilitiesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        capabilities: {}----
+
+
+
+
+
+==== Capabilities [[Autorecovery_spec_autorecovery_initContainers_securityContext_capabilities]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.Capabilities
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      securitycontext:
+        capabilities: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextCapabilities]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *add* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2346,12 +5159,28 @@ WindowsOptions
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *drop* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2362,23 +5191,62 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Selinuxoptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_seLinuxOptions]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.SelinuxoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        selinuxoptions: {}----
+
+
+
+
+
+==== Selinuxoptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_seLinuxOptions]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.Selinuxoptions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      securitycontext:
+        selinuxoptions: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextSeLinuxOptions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *level* +
+
     
+
+
+
 
 
 string
@@ -2391,10 +5259,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *role* +
+
     
+
+
+
 
 
 string
@@ -2407,10 +5291,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -2423,10 +5323,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *user* +
+
     
+
+
+
 
 
 string
@@ -2439,21 +5355,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Seccompprofile [[Autorecovery_spec_autorecovery_initContainers_securityContext_seccompProfile]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.SeccompprofileExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        seccompprofile: {}----
+
+
+
+
+
+==== Seccompprofile [[Autorecovery_spec_autorecovery_initContainers_securityContext_seccompProfile]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.Seccompprofile
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      securitycontext:
+        seccompprofile: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextSeccompProfile]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *localhostProfile* +
+
     
+
+
+
 
 
 string
@@ -2466,10 +5428,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -2482,21 +5460,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Windowsoptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_windowsOptions]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.WindowsoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      securitycontext:        windowsoptions: {}----
+
+
+
+
+
+==== Windowsoptions [[Autorecovery_spec_autorecovery_initContainers_securityContext_windowsOptions]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Securitycontext.Windowsoptions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      securitycontext:
+        windowsoptions: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersSecurityContextWindowsOptions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *gmsaCredentialSpec* +
+
     
+
+
+
 
 
 string
@@ -2509,10 +5533,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *gmsaCredentialSpecName* +
+
     
+
+
+
 
 
 string
@@ -2525,10 +5565,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostProcess* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2541,10 +5600,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsUserName* +
+
     
+
+
+
 
 
 string
@@ -2557,21 +5629,66 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Volumedevices [[Autorecovery_spec_autorecovery_initContainers_volumeDevices]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.VolumedevicesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      volumedevices: {}----
+
+
+
+
+
+==== Volumedevices [[Autorecovery_spec_autorecovery_initContainers_volumeDevices]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Volumedevices
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      volumedevices: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersVolumeDevices]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *devicePath* +
+
     
+
+
+
 
 
 string
@@ -2584,10 +5701,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -2600,21 +5733,66 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Volumemounts [[Autorecovery_spec_autorecovery_initContainers_volumeMounts]]Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.VolumemountsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    initcontainers:      volumemounts: {}----
+
+
+
+
+
+==== Volumemounts [[Autorecovery_spec_autorecovery_initContainers_volumeMounts]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Initcontainers.Volumemounts
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    initcontainers:
+      volumemounts: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryInitContainersVolumeMounts]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *mountPath* +
+
     
+
+
+
 
 
 string
@@ -2627,10 +5805,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *mountPropagation* +
+
     
+
+
+
 
 
 string
@@ -2643,10 +5837,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -2659,10 +5869,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2675,10 +5904,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *subPath* +
+
     
+
+
+
 
 
 string
@@ -2691,10 +5933,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *subPathExpr* +
+
     
+
+
+
 
 
 string
@@ -2707,21 +5965,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Nodeaffinity [[Autorecovery_spec_autorecovery_nodeAffinity]]Complete namespace: Autorecovery.Spec.Autorecovery.NodeaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity: {}----
+
+
+
+
+
+==== Nodeaffinity [[Autorecovery_spec_autorecovery_nodeAffinity]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    nodeaffinity: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryNodeAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *preferredDuringSchedulingIgnoredDuringExecution* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2734,11 +6043,27 @@ string
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution,PreferredDuringSchedulingIgnoredDuringExecution>>
 
 
+
+
+
     | 
+
     
+
     | *requiredDuringSchedulingIgnoredDuringExecution* +
+
             
+
             <<Autorecovery_spec_autorecovery_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2751,25 +6076,74 @@ RequiredDuringSchedulingIgnoredDuringExecution
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Preferredduringschedulingignoredduringexecution [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.PreferredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      preferredduringschedulingignoredduringexecution: {}----
+
+
+
+
+
+==== Preferredduringschedulingignoredduringexecution [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Preferredduringschedulingignoredduringexecution
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *preference* +
+
             
+
             <<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2782,13 +6156,27 @@ Preference
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *weight* +
+
     
+
+
+
+
 
 
 
@@ -2801,21 +6189,73 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Preference [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Preferredduringschedulingignoredduringexecution.PreferenceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference: {}----
+
+
+
+
+
+==== Preference [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution:
+        preference: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *matchExpressions* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2828,10 +6268,26 @@ integer
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions,MatchExpressions>>
 
 
+
+
+
     | 
+
     
+
     | *matchFields* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2844,21 +6300,61 @@ integer
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions,MatchFields>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Matchexpressions [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference.MatchexpressionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference:          matchexpressions: {}----
+
+
+
+
+
+==== Matchexpressions [[Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference.Matchexpressions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution:
+        preference:
+          matchexpressions: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -2871,10 +6367,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *operator* +
+
     
+
+
+
 
 
 string
@@ -2887,10 +6399,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *values* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2901,23 +6436,68 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Requiredduringschedulingignoredduringexecution [[Autorecovery_spec_autorecovery_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.RequiredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    nodeaffinity:      requiredduringschedulingignoredduringexecution: {}----
+
+
+
+
+
+==== Requiredduringschedulingignoredduringexecution [[Autorecovery_spec_autorecovery_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Nodeaffinity.Requiredduringschedulingignoredduringexecution
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    nodeaffinity:
+      requiredduringschedulingignoredduringexecution: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *nodeSelectorTerms* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2930,21 +6510,65 @@ string
 []<<Autorecovery_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,NodeSelectorTerms>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resources [[Autorecovery_spec_autorecovery_resources]]Complete namespace: Autorecovery.Spec.Autorecovery.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    resources: {}----
+
+
+
+
+
+==== Resources [[Autorecovery_spec_autorecovery_resources]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Resources
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    resources: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryResources]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *limits* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2955,12 +6579,28 @@ string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
     | *requests* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2971,23 +6611,60 @@ integer or string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Tolerations [[Autorecovery_spec_autorecovery_tolerations]]Complete namespace: Autorecovery.Spec.Autorecovery.TolerationsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  autorecovery:    tolerations: {}----
+
+
+
+
+
+==== Tolerations [[Autorecovery_spec_autorecovery_tolerations]]
+
+Complete namespace: Autorecovery.Spec.Autorecovery.Tolerations
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  autorecovery:
+    tolerations: {}
+
+----
+
+
 [.fields-AutorecoverySpecAutorecoveryTolerations]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *effect* +
+
     
+
+
+
 
 
 string
@@ -3000,10 +6677,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -3016,10 +6709,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *operator* +
+
     
+
+
+
 
 
 string
@@ -3032,10 +6741,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tolerationSeconds* +
+
     
+
+
+
+
 
 
 
@@ -3048,10 +6774,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -3064,24 +6805,77 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Global [[Autorecovery_spec_global]]Complete namespace: Autorecovery.Spec.GlobalExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global: {}----
+
+
+
+
+
+==== Global [[Autorecovery_spec_global]]
+
+Complete namespace: Autorecovery.Spec.Global
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobal]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *name* +
+
     
 
 
+
+
+
 string
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3092,10 +6886,23 @@ string
 
 
     | _(Optional)_ + 
+
     Pulsar cluster name.
+
     | *antiAffinity* +
+
             
+
             <<Autorecovery_spec_global_antiAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3108,14 +6915,34 @@ AntiAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *auth* +
+
             
+
             <<Autorecovery_spec_global_auth,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3128,14 +6955,34 @@ Auth
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *components* +
+
             
+
             <<Autorecovery_spec_global_components,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3148,14 +6995,34 @@ Components
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *dnsConfig* +
+
             
+
             <<Autorecovery_spec_global_dnsConfig,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3168,13 +7035,26 @@ DnsConfig
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *dnsName* +
+
     
+
+
+
 
 
 string
@@ -3187,10 +7067,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Public dns name for the cluster&#39;s load balancer.
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -3203,10 +7099,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Default Pulsar image to use. Any components can be configured to use a different image.
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -3219,10 +7131,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
+
     | *kubernetesClusterDomain* +
+
     
+
+
+
 
 
 string
@@ -3235,10 +7163,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
+
     | *nodeSelectors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3251,10 +7202,22 @@ string
 []key/value
 
 
+
+
+
     | 
+
     Global node selector. If set, this will apply to all the components.
+
     | *persistence* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3267,10 +7230,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
+
     | *priorityClassName* +
+
     
+
+
+
 
 
 string
@@ -3283,10 +7259,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Priority class name to attach to each pod.
+
     | *racks* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3299,10 +7298,26 @@ string
 []
 
 
+
+
+
     | 
+
     Racks configuration.
+
     | *resourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3315,10 +7330,22 @@ string
 []
 
 
+
+
+
     | 
+
     Resource sets.
+
     | *restartOnConfigMapChange* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3331,11 +7358,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
+
     | *storage* +
+
             
+
             <<Autorecovery_spec_global_storage,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3348,14 +7395,34 @@ Storage
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *tls* +
+
             
+
             <<Autorecovery_spec_global_tls,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3368,13 +7435,29 @@ Tls
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeperPlainSslStorePassword* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3387,22 +7470,70 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
+
 |===
 
 
 
 
-==== Antiaffinity [[Autorecovery_spec_global_antiAffinity]]Complete namespace: Autorecovery.Spec.Global.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    antiaffinity: {}----
+
+
+
+
+
+==== Antiaffinity [[Autorecovery_spec_global_antiAffinity]]
+
+Complete namespace: Autorecovery.Spec.Global.Antiaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    antiaffinity: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalAntiAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Autorecovery_spec_autorecovery_antiAffinity_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3415,14 +7546,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Autorecovery_spec_autorecovery_antiAffinity_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3435,24 +7586,68 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Auth [[Autorecovery_spec_global_auth]]Complete namespace: Autorecovery.Spec.Global.AuthExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    auth: {}----
+
+
+
+
+
+==== Auth [[Autorecovery_spec_global_auth]]
+
+Complete namespace: Autorecovery.Spec.Global.Auth
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    auth: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalAuth]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3465,11 +7660,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable authentication in the cluster. Default is &#39;false&#39;.
+
     | *token* +
+
             
+
             <<Autorecovery_spec_global_auth_token,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3482,24 +7697,69 @@ Token
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Token [[Autorecovery_spec_global_auth_token]]Complete namespace: Autorecovery.Spec.Global.Auth.TokenExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    auth:      token: {}----
+
+
+
+
+
+==== Token [[Autorecovery_spec_global_auth_token]]
+
+Complete namespace: Autorecovery.Spec.Global.Auth.Token
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    auth:
+      token: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalAuthToken]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *initialize* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3512,10 +7772,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
+
     | *privateKeyFile* +
+
     
+
+
+
 
 
 string
@@ -3528,9 +7801,22 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
+
     | *proxyRoles* +
+
     
 
 
@@ -3541,13 +7827,32 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
 []
+
 string
 
+
+
     | 
+
     Proxy roles.
+
     | *publicKeyFile* +
+
     
+
+
+
 
 
 string
@@ -3560,10 +7865,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
+
     | *superUserRoles* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3574,23 +7902,60 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     Super user roles.
+
 |===
 
 
 
 
-==== Components [[Autorecovery_spec_global_components]]Complete namespace: Autorecovery.Spec.Global.ComponentsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    components: {}----
+
+
+
+
+
+==== Components [[Autorecovery_spec_global_components]]
+
+Complete namespace: Autorecovery.Spec.Global.Components
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    components: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalComponents]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *autorecoveryBaseName* +
+
     
+
+
+
 
 
 string
@@ -3603,10 +7968,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
+
     | *bastionBaseName* +
+
     
+
+
+
 
 
 string
@@ -3619,10 +8000,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Bastion base name. Default value is &#39;bastion&#39;.
+
     | *bookkeeperBaseName* +
+
     
+
+
+
 
 
 string
@@ -3635,10 +8032,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
+
     | *brokerBaseName* +
+
     
+
+
+
 
 
 string
@@ -3651,10 +8064,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Broker base name. Default value is &#39;broker&#39;.
+
     | *functionsWorkerBaseName* +
+
     
+
+
+
 
 
 string
@@ -3667,10 +8096,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Functions Worker base name. Default value is &#39;function&#39;.
+
     | *proxyBaseName* +
+
     
+
+
+
 
 
 string
@@ -3683,10 +8128,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Proxy base name. Default value is &#39;proxy&#39;.
+
     | *zookeeperBaseName* +
+
     
+
+
+
 
 
 string
@@ -3699,21 +8160,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
+
 |===
 
 
 
 
-==== Dnsconfig [[Autorecovery_spec_global_dnsConfig]]Complete namespace: Autorecovery.Spec.Global.DnsconfigExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    dnsconfig: {}----
+
+
+
+
+
+==== Dnsconfig [[Autorecovery_spec_global_dnsConfig]]
+
+Complete namespace: Autorecovery.Spec.Global.Dnsconfig
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    dnsconfig: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalDnsConfig]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *nameservers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3724,12 +8236,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *options* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3742,10 +8270,26 @@ string
 []<<Autorecovery_spec_autorecovery_initContainers_lifecycle_postStart_httpGet_httpHeaders,Options>>
 
 
+
+
+
     | 
+
     
+
     | *searches* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3756,24 +8300,68 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Racks [[Autorecovery_spec_global_racks]]Complete namespace: Autorecovery.Spec.Global.RacksExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    racks: {}----
+
+
+
+
+
+==== Racks [[Autorecovery_spec_global_racks]]
+
+Complete namespace: Autorecovery.Spec.Global.Racks
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalRacks]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Autorecovery_spec_global_racks_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3786,14 +8374,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Autorecovery_spec_global_racks_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3806,24 +8414,69 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Host [[Autorecovery_spec_global_racks_host]]Complete namespace: Autorecovery.Spec.Global.Racks.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    racks:      host: {}----
+
+
+
+
+
+==== Host [[Autorecovery_spec_global_racks_host]]
+
+Complete namespace: Autorecovery.Spec.Global.Racks.Host
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks:
+      host: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalRacksHost]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3836,10 +8489,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the rack affinity rules.
+
     | *requireRackAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3852,10 +8521,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3868,21 +8553,66 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
 |===
 
 
 
 
-==== Zone [[Autorecovery_spec_global_racks_zone]]Complete namespace: Autorecovery.Spec.Global.Racks.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    racks:      zone: {}----
+
+
+
+
+
+==== Zone [[Autorecovery_spec_global_racks_zone]]
+
+Complete namespace: Autorecovery.Spec.Global.Racks.Zone
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks:
+      zone: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalRacksZone]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enableHostAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3895,10 +8625,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3911,10 +8657,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the rack affinity rules.
+
     | *requireRackAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3927,10 +8689,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3943,10 +8721,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackHostAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3959,21 +8753,62 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
 |===
 
 
 
 
-==== Resourcesets [[Autorecovery_spec_global_resourceSets]]Complete namespace: Autorecovery.Spec.Global.ResourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    resourcesets: {}----
+
+
+
+
+
+==== Resourcesets [[Autorecovery_spec_global_resourceSets]]
+
+Complete namespace: Autorecovery.Spec.Global.Resourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    resourcesets: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *rack* +
+
     
+
+
+
 
 
 string
@@ -3986,21 +8821,65 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Place this resource set to a specific rack, defined at .global.racks.
+
 |===
 
 
 
 
-==== Storage [[Autorecovery_spec_global_storage]]Complete namespace: Autorecovery.Spec.Global.StorageExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    storage: {}----
+
+
+
+
+
+==== Storage [[Autorecovery_spec_global_storage]]
+
+Complete namespace: Autorecovery.Spec.Global.Storage
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    storage: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalStorage]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *existingStorageClassName* +
+
     
+
+
+
 
 
 string
@@ -4013,11 +8892,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates if an already existing storage class should be used.
+
     | *storageClass* +
+
             
+
             <<Autorecovery_spec_global_storage_storageClass,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4030,24 +8932,73 @@ StorageClass
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Storageclass [[Autorecovery_spec_global_storage_storageClass]]Complete namespace: Autorecovery.Spec.Global.Storage.StorageclassExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    storage:      storageclass: {}----
+
+
+
+
+
+==== Storageclass [[Autorecovery_spec_global_storage_storageClass]]
+
+Complete namespace: Autorecovery.Spec.Global.Storage.Storageclass
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    storage:
+      storageclass: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalStorageStorageClass]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *extraParams* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4060,10 +9011,19 @@ StorageClass
 []key/value
 
 
+
+
+
     | 
+
     Adds extra parameters for the StorageClass.
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -4076,10 +9036,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
+
     | *provisioner* +
+
     
+
+
+
 
 
 string
@@ -4092,10 +9068,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the provisioner property for the StorageClass.
+
     | *reclaimPolicy* +
+
     
+
+
+
 
 
 string
@@ -4108,10 +9100,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -4124,22 +9132,73 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the &#39;type&#39; parameter for the StorageClass.
+
 |===
 
 
 
 
-==== Tls [[Autorecovery_spec_global_tls]]Complete namespace: Autorecovery.Spec.Global.TlsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls: {}----
+
+
+
+
+
+==== Tls [[Autorecovery_spec_global_tls]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTls]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *autorecovery* +
+
             
+
             <<Autorecovery_spec_global_tls_autorecovery,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4152,14 +9211,34 @@ Autorecovery
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *bookkeeper* +
+
             
+
             <<Autorecovery_spec_global_tls_bookkeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4172,14 +9251,34 @@ Bookkeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *broker* +
+
             
+
             <<Autorecovery_spec_global_tls_broker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4192,13 +9291,33 @@ Broker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *brokerResourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4211,10 +9330,19 @@ Broker
 []
 
 
+
+
+
     | 
+
     TLS configurations related to the Broker resource sets.
+
     | *caPath* +
+
     
+
+
+
 
 
 string
@@ -4227,11 +9355,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
+
     | *certProvisioner* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4244,13 +9395,26 @@ CertProvisioner
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *defaultSecretName* +
+
     
+
+
+
 
 
 string
@@ -4263,10 +9427,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4279,11 +9462,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
+
     | *functionsWorker* +
+
             
+
             <<Autorecovery_spec_global_tls_functionsWorker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4296,14 +9499,34 @@ FunctionsWorker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxy* +
+
             
+
             <<Autorecovery_spec_global_tls_proxy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4316,13 +9539,33 @@ Proxy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxyResourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4335,11 +9578,27 @@ Proxy
 []
 
 
+
+
+
     | 
+
     TLS configurations related to the Proxy resource sets.
+
     | *ssCa* +
+
             
+
             <<Autorecovery_spec_global_tls_ssCa,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4352,14 +9611,34 @@ SsCa
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeper* +
+
             
+
             <<Autorecovery_spec_global_tls_zookeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4372,24 +9651,69 @@ Zookeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Autorecovery [[Autorecovery_spec_global_tls_autorecovery]]Complete namespace: Autorecovery.Spec.Global.Tls.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      autorecovery: {}----
+
+
+
+
+
+==== Autorecovery [[Autorecovery_spec_global_tls_autorecovery]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Autorecovery
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      autorecovery: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsAutorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4402,10 +9726,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4418,21 +9755,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Bookkeeper [[Autorecovery_spec_global_tls_bookkeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      bookkeeper: {}----
+
+
+
+
+
+==== Bookkeeper [[Autorecovery_spec_global_tls_bookkeeper]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Bookkeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      bookkeeper: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsBookkeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4445,10 +9830,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4461,21 +9859,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Broker [[Autorecovery_spec_global_tls_broker]]Complete namespace: Autorecovery.Spec.Global.Tls.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      broker: {}----
+
+
+
+
+
+==== Broker [[Autorecovery_spec_global_tls_broker]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Broker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      broker: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsBroker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4488,10 +9934,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4504,21 +9963,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Brokerresourcesets [[Autorecovery_spec_global_tls_brokerResourceSets]]Complete namespace: Autorecovery.Spec.Global.Tls.BrokerresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      brokerresourcesets: {}----
+
+
+
+
+
+==== Brokerresourcesets [[Autorecovery_spec_global_tls_brokerResourceSets]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Brokerresourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      brokerresourcesets: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsBrokerResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4531,10 +10038,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4547,22 +10067,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Certprovisioner [[Autorecovery_spec_global_tls_certProvisioner]]Complete namespace: Autorecovery.Spec.Global.Tls.CertprovisionerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner: {}----
+
+
+
+
+
+==== Certprovisioner [[Autorecovery_spec_global_tls_certProvisioner]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisioner]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *selfSigned* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4575,25 +10147,75 @@ SelfSigned
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Selfsigned [[Autorecovery_spec_global_tls_certProvisioner_selfSigned]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.SelfsignedExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned: {}----
+
+
+
+
+
+==== Selfsigned [[Autorecovery_spec_global_tls_certProvisioner_selfSigned]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSigned]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *autorecovery* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4606,14 +10228,34 @@ Autorecovery
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *bookkeeper* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4626,14 +10268,34 @@ Bookkeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *broker* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_broker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4646,13 +10308,26 @@ Broker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *caSecretName* +
+
     
+
+
+
 
 
 string
@@ -4665,10 +10340,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Secret where to store the root CA certificate.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4681,11 +10375,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for broker, proxy and functions worker.
+
     | *functionsWorker* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4698,13 +10412,29 @@ FunctionsWorker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *includeDns* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4717,10 +10447,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Include dns name in the DNS names covered by the certificate.
+
     | *perComponent* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4733,11 +10479,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate a different certificate for each component.
+
     | *privateKey* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4750,14 +10516,34 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxy* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_proxy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4770,14 +10556,34 @@ Proxy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeper* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_zookeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4790,24 +10596,71 @@ Zookeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Autorecovery [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery: {}----
+
+
+
+
+
+==== Autorecovery [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          autorecovery: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedAutorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4820,11 +10673,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4837,24 +10710,69 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Privatekey [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.PrivatekeyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery:            privatekey: {}----
+
+
+
+
+
+==== Privatekey [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.Privatekey
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          autorecovery:
+            privatekey: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedAutorecoveryPrivateKey]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *algorithm* +
+
     
+
+
+
 
 
 string
@@ -4867,10 +10785,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *encoding* +
+
     
+
+
+
 
 
 string
@@ -4883,10 +10817,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *rotationPolicy* +
+
     
+
+
+
 
 
 string
@@ -4899,10 +10849,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *size* +
+
     
+
+
+
+
 
 
 
@@ -4915,21 +10882,70 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Bookkeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          bookkeeper: {}----
+
+
+
+
+
+==== Bookkeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Bookkeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          bookkeeper: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedBookkeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4942,11 +10958,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4959,24 +10995,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Broker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_broker]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          broker: {}----
+
+
+
+
+
+==== Broker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_broker]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Broker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          broker: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedBroker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4989,11 +11072,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5006,24 +11109,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Functionsworker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          functionsworker: {}----
+
+
+
+
+
+==== Functionsworker [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Functionsworker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          functionsworker: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedFunctionsWorker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5036,11 +11186,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5053,24 +11223,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Proxy [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_proxy]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          proxy: {}----
+
+
+
+
+
+==== Proxy [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_proxy]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Proxy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          proxy: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedProxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5083,11 +11300,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5100,24 +11337,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Zookeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_zookeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          zookeeper: {}----
+
+
+
+
+
+==== Zookeeper [[Autorecovery_spec_global_tls_certProvisioner_selfSigned_zookeeper]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Certprovisioner.Selfsigned.Zookeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          zookeeper: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsCertProvisionerSelfSignedZookeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5130,11 +11414,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Autorecovery_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5147,24 +11451,69 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Functionsworker [[Autorecovery_spec_global_tls_functionsWorker]]Complete namespace: Autorecovery.Spec.Global.Tls.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      functionsworker: {}----
+
+
+
+
+
+==== Functionsworker [[Autorecovery_spec_global_tls_functionsWorker]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Functionsworker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      functionsworker: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsFunctionsWorker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5177,10 +11526,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5193,10 +11558,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the functions worker to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5209,21 +11587,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Proxy [[Autorecovery_spec_global_tls_proxy]]Complete namespace: Autorecovery.Spec.Global.Tls.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      proxy: {}----
+
+
+
+
+
+==== Proxy [[Autorecovery_spec_global_tls_proxy]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Proxy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      proxy: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsProxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5236,10 +11662,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5252,10 +11694,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the proxy to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5268,21 +11723,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Proxyresourcesets [[Autorecovery_spec_global_tls_proxyResourceSets]]Complete namespace: Autorecovery.Spec.Global.Tls.ProxyresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      proxyresourcesets: {}----
+
+
+
+
+
+==== Proxyresourcesets [[Autorecovery_spec_global_tls_proxyResourceSets]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Proxyresourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      proxyresourcesets: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsProxyResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5295,10 +11798,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5311,10 +11830,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the proxy to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5327,21 +11859,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Ssca [[Autorecovery_spec_global_tls_ssCa]]Complete namespace: Autorecovery.Spec.Global.Tls.SscaExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      ssca: {}----
+
+
+
+
+
+==== Ssca [[Autorecovery_spec_global_tls_ssCa]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Ssca
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      ssca: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsSsCa]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5354,10 +11934,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5370,21 +11963,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Zookeeper [[Autorecovery_spec_global_tls_zookeeper]]Complete namespace: Autorecovery.Spec.Global.Tls.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  global:    tls:      zookeeper: {}----
+
+
+
+
+
+==== Zookeeper [[Autorecovery_spec_global_tls_zookeeper]]
+
+Complete namespace: Autorecovery.Spec.Global.Tls.Zookeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      zookeeper: {}
+
+----
+
+
 [.fields-AutorecoverySpecGlobalTlsZookeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5397,10 +12038,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5413,21 +12067,59 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-=== Status [[Autorecovery_status]]Complete namespace: Autorecovery.Status
+
+
+
+
+
+=== Status [[Autorecovery_status]]
+
+Complete namespace: Autorecovery.Status
+
+
+
 [.fields-AutorecoveryStatus]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *conditions* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5440,10 +12132,19 @@ string
 []<<Autorecovery_status_conditions,Conditions>>
 
 
+
+
+
     | 
+
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
+
     | *lastApplied* +
+
     
+
+
+
 
 
 string
@@ -5456,21 +12157,64 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Last spec applied.
+
 |===
 
 
 
 
-==== Conditions [[Autorecovery_status_conditions]]Complete namespace: Autorecovery.Status.ConditionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Autorecoverymetadata:  name: example-pulsarclusterspec:  conditions: {}----
+
+
+
+
+
+==== Conditions [[Autorecovery_status_conditions]]
+
+Complete namespace: Autorecovery.Status.Conditions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Autorecovery
+metadata:
+  name: example-pulsarcluster
+spec:
+  conditions: {}
+
+----
+
+
 [.fields-AutorecoveryStatusConditions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *lastTransitionTime* +
+
     
+
+
+
 
 
 string
@@ -5483,10 +12227,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *message* +
+
     
+
+
+
 
 
 string
@@ -5499,10 +12259,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *observedGeneration* +
+
     
+
+
+
+
 
 
 
@@ -5515,10 +12292,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *reason* +
+
     
+
+
+
 
 
 string
@@ -5531,10 +12323,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *status* +
+
     
+
+
+
 
 
 string
@@ -5547,10 +12355,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -5563,6 +12387,19 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
+

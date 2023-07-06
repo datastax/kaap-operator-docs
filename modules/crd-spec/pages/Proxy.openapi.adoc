@@ -1,32 +1,71 @@
 = Proxy
+
 v1alpha1
+
 :source-highlighter: highlightjs
+
 :keywords: openapi, rest, Proxy
+
 :specDir: 
+
 :snippetDir: 
+
 :generator-template: v1 2019-12-20
+
 :info-url: https://openapi-generator.tech
+
 :app-name: Proxy
 
+
+
 Auto generated from CRD spec
+
+
+
 
 
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
 
 
+
+
+
 Version: v1alpha1
+
+
 
 Namespace: pulsar.oss.datastax.com
 
+
+
 == Proxy [[Proxy]]
+
+
+
 [.fields-Proxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *spec* +
+
             
+
             <<Proxy_spec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -39,14 +78,34 @@ Spec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *status* +
+
             
+
             <<Proxy_status,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,25 +118,60 @@ Status
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-=== Spec [[Proxy_spec]]Complete namespace: Proxy.Spec
+
+
+
+
+
+=== Spec [[Proxy_spec]]
+
+Complete namespace: Proxy.Spec
+
+
+
 [.fields-ProxySpec]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *global* +
+
             
+
             <<Proxy_spec_global,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -90,14 +184,34 @@ Global
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxy* +
+
             
+
             <<Proxy_spec_proxy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,24 +224,64 @@ Proxy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Global [[Proxy_spec_global]]Complete namespace: Proxy.Spec.GlobalExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global: {}----
+
+
+
+
+
+==== Global [[Proxy_spec_global]]
+
+Complete namespace: Proxy.Spec.Global
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global: {}
+
+----
+
+
 [.fields-ProxySpecGlobal]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -140,11 +294,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | _(Optional)_ + 
+
     Pulsar cluster name.
+
     | *antiAffinity* +
+
             
+
             <<Proxy_spec_global_antiAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,14 +334,34 @@ AntiAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *auth* +
+
             
+
             <<Proxy_spec_global_auth,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -177,14 +374,34 @@ Auth
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *components* +
+
             
+
             <<Proxy_spec_global_components,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -197,14 +414,34 @@ Components
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *dnsConfig* +
+
             
+
             <<Proxy_spec_global_dnsConfig,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -217,13 +454,26 @@ DnsConfig
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *dnsName* +
+
     
+
+
+
 
 
 string
@@ -236,10 +486,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Public dns name for the cluster&#39;s load balancer.
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -252,10 +518,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Default Pulsar image to use. Any components can be configured to use a different image.
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -268,10 +550,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
+
     | *kubernetesClusterDomain* +
+
     
+
+
+
 
 
 string
@@ -284,10 +582,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
+
     | *nodeSelectors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -300,10 +621,22 @@ string
 []key/value
 
 
+
+
+
     | 
+
     Global node selector. If set, this will apply to all the components.
+
     | *persistence* +
+
     
+
+
+
+
+
+
 
 
 
@@ -316,10 +649,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
+
     | *priorityClassName* +
+
     
+
+
+
 
 
 string
@@ -332,10 +678,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Priority class name to attach to each pod.
+
     | *racks* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -348,10 +717,26 @@ string
 []
 
 
+
+
+
     | 
+
     Racks configuration.
+
     | *resourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -364,10 +749,22 @@ string
 []
 
 
+
+
+
     | 
+
     Resource sets.
+
     | *restartOnConfigMapChange* +
+
     
+
+
+
+
+
+
 
 
 
@@ -380,11 +777,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
+
     | *storage* +
+
             
+
             <<Proxy_spec_global_storage,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -397,14 +814,34 @@ Storage
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *tls* +
+
             
+
             <<Proxy_spec_global_tls,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -417,13 +854,29 @@ Tls
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeperPlainSslStorePassword* +
+
     
+
+
+
+
+
+
 
 
 
@@ -436,22 +889,70 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
+
 |===
 
 
 
 
-==== Antiaffinity [[Proxy_spec_global_antiAffinity]]Complete namespace: Proxy.Spec.Global.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    antiaffinity: {}----
+
+
+
+
+
+==== Antiaffinity [[Proxy_spec_global_antiAffinity]]
+
+Complete namespace: Proxy.Spec.Global.Antiaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    antiaffinity: {}
+
+----
+
+
 [.fields-ProxySpecGlobalAntiAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Proxy_spec_global_antiAffinity_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -464,14 +965,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Proxy_spec_global_antiAffinity_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -484,24 +1005,69 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Host [[Proxy_spec_global_antiAffinity_host]]Complete namespace: Proxy.Spec.Global.Antiaffinity.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    antiaffinity:      host: {}----
+
+
+
+
+
+==== Host [[Proxy_spec_global_antiAffinity_host]]
+
+Complete namespace: Proxy.Spec.Global.Antiaffinity.Host
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    antiaffinity:
+      host: {}
+
+----
+
+
 [.fields-ProxySpecGlobalAntiAffinityHost]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -514,10 +1080,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *required* +
+
     
+
+
+
+
+
+
 
 
 
@@ -530,21 +1112,66 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
 |===
 
 
 
 
-==== Zone [[Proxy_spec_global_antiAffinity_zone]]Complete namespace: Proxy.Spec.Global.Antiaffinity.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    antiaffinity:      zone: {}----
+
+
+
+
+
+==== Zone [[Proxy_spec_global_antiAffinity_zone]]
+
+Complete namespace: Proxy.Spec.Global.Antiaffinity.Zone
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    antiaffinity:
+      zone: {}
+
+----
+
+
 [.fields-ProxySpecGlobalAntiAffinityZone]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -557,10 +1184,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *required* +
+
     
+
+
+
+
+
+
 
 
 
@@ -573,21 +1216,65 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
 |===
 
 
 
 
-==== Auth [[Proxy_spec_global_auth]]Complete namespace: Proxy.Spec.Global.AuthExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    auth: {}----
+
+
+
+
+
+==== Auth [[Proxy_spec_global_auth]]
+
+Complete namespace: Proxy.Spec.Global.Auth
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    auth: {}
+
+----
+
+
 [.fields-ProxySpecGlobalAuth]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -600,11 +1287,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable authentication in the cluster. Default is &#39;false&#39;.
+
     | *token* +
+
             
+
             <<Proxy_spec_global_auth_token,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -617,24 +1324,69 @@ Token
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Token [[Proxy_spec_global_auth_token]]Complete namespace: Proxy.Spec.Global.Auth.TokenExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    auth:      token: {}----
+
+
+
+
+
+==== Token [[Proxy_spec_global_auth_token]]
+
+Complete namespace: Proxy.Spec.Global.Auth.Token
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    auth:
+      token: {}
+
+----
+
+
 [.fields-ProxySpecGlobalAuthToken]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *initialize* +
+
     
+
+
+
+
+
+
 
 
 
@@ -647,10 +1399,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
+
     | *privateKeyFile* +
+
     
+
+
+
 
 
 string
@@ -663,9 +1428,22 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
+
     | *proxyRoles* +
+
     
 
 
@@ -676,13 +1454,32 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
 []
+
 string
 
+
+
     | 
+
     Proxy roles.
+
     | *publicKeyFile* +
+
     
+
+
+
 
 
 string
@@ -695,10 +1492,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
+
     | *superUserRoles* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -709,23 +1529,60 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     Super user roles.
+
 |===
 
 
 
 
-==== Components [[Proxy_spec_global_components]]Complete namespace: Proxy.Spec.Global.ComponentsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    components: {}----
+
+
+
+
+
+==== Components [[Proxy_spec_global_components]]
+
+Complete namespace: Proxy.Spec.Global.Components
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    components: {}
+
+----
+
+
 [.fields-ProxySpecGlobalComponents]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *autorecoveryBaseName* +
+
     
+
+
+
 
 
 string
@@ -738,10 +1595,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
+
     | *bastionBaseName* +
+
     
+
+
+
 
 
 string
@@ -754,10 +1627,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Bastion base name. Default value is &#39;bastion&#39;.
+
     | *bookkeeperBaseName* +
+
     
+
+
+
 
 
 string
@@ -770,10 +1659,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
+
     | *brokerBaseName* +
+
     
+
+
+
 
 
 string
@@ -786,10 +1691,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Broker base name. Default value is &#39;broker&#39;.
+
     | *functionsWorkerBaseName* +
+
     
+
+
+
 
 
 string
@@ -802,10 +1723,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Functions Worker base name. Default value is &#39;function&#39;.
+
     | *proxyBaseName* +
+
     
+
+
+
 
 
 string
@@ -818,10 +1755,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Proxy base name. Default value is &#39;proxy&#39;.
+
     | *zookeeperBaseName* +
+
     
+
+
+
 
 
 string
@@ -834,21 +1787,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
+
 |===
 
 
 
 
-==== Dnsconfig [[Proxy_spec_global_dnsConfig]]Complete namespace: Proxy.Spec.Global.DnsconfigExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    dnsconfig: {}----
+
+
+
+
+
+==== Dnsconfig [[Proxy_spec_global_dnsConfig]]
+
+Complete namespace: Proxy.Spec.Global.Dnsconfig
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    dnsconfig: {}
+
+----
+
+
 [.fields-ProxySpecGlobalDnsConfig]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *nameservers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -859,12 +1863,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *options* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -877,10 +1897,26 @@ string
 []<<Proxy_spec_global_dnsConfig_options,Options>>
 
 
+
+
+
     | 
+
     
+
     | *searches* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -891,23 +1927,61 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Options [[Proxy_spec_global_dnsConfig_options]]Complete namespace: Proxy.Spec.Global.Dnsconfig.OptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    dnsconfig:      options: {}----
+
+
+
+
+
+==== Options [[Proxy_spec_global_dnsConfig_options]]
+
+Complete namespace: Proxy.Spec.Global.Dnsconfig.Options
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    dnsconfig:
+      options: {}
+
+----
+
+
 [.fields-ProxySpecGlobalDnsConfigOptions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -920,10 +1994,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -936,22 +2026,73 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Racks [[Proxy_spec_global_racks]]Complete namespace: Proxy.Spec.Global.RacksExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    racks: {}----
+
+
+
+
+
+==== Racks [[Proxy_spec_global_racks]]
+
+Complete namespace: Proxy.Spec.Global.Racks
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks: {}
+
+----
+
+
 [.fields-ProxySpecGlobalRacks]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Proxy_spec_global_racks_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -964,14 +2105,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Proxy_spec_global_racks_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -984,24 +2145,69 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Host [[Proxy_spec_global_racks_host]]Complete namespace: Proxy.Spec.Global.Racks.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    racks:      host: {}----
+
+
+
+
+
+==== Host [[Proxy_spec_global_racks_host]]
+
+Complete namespace: Proxy.Spec.Global.Racks.Host
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks:
+      host: {}
+
+----
+
+
 [.fields-ProxySpecGlobalRacksHost]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1014,10 +2220,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the rack affinity rules.
+
     | *requireRackAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1030,10 +2252,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1046,21 +2284,66 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
 |===
 
 
 
 
-==== Zone [[Proxy_spec_global_racks_zone]]Complete namespace: Proxy.Spec.Global.Racks.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    racks:      zone: {}----
+
+
+
+
+
+==== Zone [[Proxy_spec_global_racks_zone]]
+
+Complete namespace: Proxy.Spec.Global.Racks.Zone
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks:
+      zone: {}
+
+----
+
+
 [.fields-ProxySpecGlobalRacksZone]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enableHostAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1073,10 +2356,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1089,10 +2388,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the rack affinity rules.
+
     | *requireRackAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1105,10 +2420,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1121,10 +2452,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackHostAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1137,21 +2484,62 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
 |===
 
 
 
 
-==== Resourcesets [[Proxy_spec_global_resourceSets]]Complete namespace: Proxy.Spec.Global.ResourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    resourcesets: {}----
+
+
+
+
+
+==== Resourcesets [[Proxy_spec_global_resourceSets]]
+
+Complete namespace: Proxy.Spec.Global.Resourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    resourcesets: {}
+
+----
+
+
 [.fields-ProxySpecGlobalResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *rack* +
+
     
+
+
+
 
 
 string
@@ -1164,21 +2552,65 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Place this resource set to a specific rack, defined at .global.racks.
+
 |===
 
 
 
 
-==== Storage [[Proxy_spec_global_storage]]Complete namespace: Proxy.Spec.Global.StorageExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    storage: {}----
+
+
+
+
+
+==== Storage [[Proxy_spec_global_storage]]
+
+Complete namespace: Proxy.Spec.Global.Storage
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    storage: {}
+
+----
+
+
 [.fields-ProxySpecGlobalStorage]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *existingStorageClassName* +
+
     
+
+
+
 
 
 string
@@ -1191,11 +2623,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates if an already existing storage class should be used.
+
     | *storageClass* +
+
             
+
             <<Proxy_spec_global_storage_storageClass,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1208,24 +2663,73 @@ StorageClass
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Storageclass [[Proxy_spec_global_storage_storageClass]]Complete namespace: Proxy.Spec.Global.Storage.StorageclassExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    storage:      storageclass: {}----
+
+
+
+
+
+==== Storageclass [[Proxy_spec_global_storage_storageClass]]
+
+Complete namespace: Proxy.Spec.Global.Storage.Storageclass
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    storage:
+      storageclass: {}
+
+----
+
+
 [.fields-ProxySpecGlobalStorageStorageClass]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *extraParams* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1238,10 +2742,19 @@ StorageClass
 []key/value
 
 
+
+
+
     | 
+
     Adds extra parameters for the StorageClass.
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -1254,10 +2767,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
+
     | *provisioner* +
+
     
+
+
+
 
 
 string
@@ -1270,10 +2799,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the provisioner property for the StorageClass.
+
     | *reclaimPolicy* +
+
     
+
+
+
 
 
 string
@@ -1286,10 +2831,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -1302,22 +2863,73 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the &#39;type&#39; parameter for the StorageClass.
+
 |===
 
 
 
 
-==== Tls [[Proxy_spec_global_tls]]Complete namespace: Proxy.Spec.Global.TlsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls: {}----
+
+
+
+
+
+==== Tls [[Proxy_spec_global_tls]]
+
+Complete namespace: Proxy.Spec.Global.Tls
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTls]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *autorecovery* +
+
             
+
             <<Proxy_spec_global_tls_autorecovery,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1330,14 +2942,34 @@ Autorecovery
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *bookkeeper* +
+
             
+
             <<Proxy_spec_global_tls_bookkeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1350,14 +2982,34 @@ Bookkeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *broker* +
+
             
+
             <<Proxy_spec_global_tls_broker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1370,13 +3022,33 @@ Broker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *brokerResourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1389,10 +3061,19 @@ Broker
 []
 
 
+
+
+
     | 
+
     TLS configurations related to the Broker resource sets.
+
     | *caPath* +
+
     
+
+
+
 
 
 string
@@ -1405,11 +3086,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
+
     | *certProvisioner* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1422,13 +3126,26 @@ CertProvisioner
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *defaultSecretName* +
+
     
+
+
+
 
 
 string
@@ -1441,10 +3158,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1457,11 +3193,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
+
     | *functionsWorker* +
+
             
+
             <<Proxy_spec_global_tls_functionsWorker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1474,14 +3230,34 @@ FunctionsWorker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxy* +
+
             
+
             <<Proxy_spec_global_tls_proxy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1494,13 +3270,33 @@ Proxy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxyResourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1513,11 +3309,27 @@ Proxy
 []
 
 
+
+
+
     | 
+
     TLS configurations related to the Proxy resource sets.
+
     | *ssCa* +
+
             
+
             <<Proxy_spec_global_tls_ssCa,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1530,14 +3342,34 @@ SsCa
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeper* +
+
             
+
             <<Proxy_spec_global_tls_zookeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1550,24 +3382,69 @@ Zookeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Autorecovery [[Proxy_spec_global_tls_autorecovery]]Complete namespace: Proxy.Spec.Global.Tls.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      autorecovery: {}----
+
+
+
+
+
+==== Autorecovery [[Proxy_spec_global_tls_autorecovery]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Autorecovery
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      autorecovery: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsAutorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1580,10 +3457,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -1596,21 +3486,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Bookkeeper [[Proxy_spec_global_tls_bookkeeper]]Complete namespace: Proxy.Spec.Global.Tls.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      bookkeeper: {}----
+
+
+
+
+
+==== Bookkeeper [[Proxy_spec_global_tls_bookkeeper]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Bookkeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      bookkeeper: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsBookkeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1623,10 +3561,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -1639,21 +3590,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Broker [[Proxy_spec_global_tls_broker]]Complete namespace: Proxy.Spec.Global.Tls.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      broker: {}----
+
+
+
+
+
+==== Broker [[Proxy_spec_global_tls_broker]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Broker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      broker: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsBroker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1666,10 +3665,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -1682,21 +3694,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Brokerresourcesets [[Proxy_spec_global_tls_brokerResourceSets]]Complete namespace: Proxy.Spec.Global.Tls.BrokerresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      brokerresourcesets: {}----
+
+
+
+
+
+==== Brokerresourcesets [[Proxy_spec_global_tls_brokerResourceSets]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Brokerresourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      brokerresourcesets: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsBrokerResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1709,10 +3769,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -1725,22 +3798,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Certprovisioner [[Proxy_spec_global_tls_certProvisioner]]Complete namespace: Proxy.Spec.Global.Tls.CertprovisionerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner: {}----
+
+
+
+
+
+==== Certprovisioner [[Proxy_spec_global_tls_certProvisioner]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisioner]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *selfSigned* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1753,25 +3878,75 @@ SelfSigned
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Selfsigned [[Proxy_spec_global_tls_certProvisioner_selfSigned]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.SelfsignedExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned: {}----
+
+
+
+
+
+==== Selfsigned [[Proxy_spec_global_tls_certProvisioner_selfSigned]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSigned]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *autorecovery* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1784,14 +3959,34 @@ Autorecovery
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *bookkeeper* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1804,14 +3999,34 @@ Bookkeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *broker* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_broker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1824,13 +4039,26 @@ Broker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *caSecretName* +
+
     
+
+
+
 
 
 string
@@ -1843,10 +4071,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Secret where to store the root CA certificate.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1859,11 +4106,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for broker, proxy and functions worker.
+
     | *functionsWorker* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1876,13 +4143,29 @@ FunctionsWorker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *includeDns* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1895,10 +4178,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Include dns name in the DNS names covered by the certificate.
+
     | *perComponent* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1911,11 +4210,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate a different certificate for each component.
+
     | *privateKey* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1928,14 +4247,34 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxy* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_proxy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1948,14 +4287,34 @@ Proxy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeper* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_zookeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1968,24 +4327,71 @@ Zookeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Autorecovery [[Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery: {}----
+
+
+
+
+
+==== Autorecovery [[Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          autorecovery: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSignedAutorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1998,11 +4404,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2015,24 +4441,69 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Privatekey [[Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.PrivatekeyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery:            privatekey: {}----
+
+
+
+
+
+==== Privatekey [[Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.Privatekey
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          autorecovery:
+            privatekey: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSignedAutorecoveryPrivateKey]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *algorithm* +
+
     
+
+
+
 
 
 string
@@ -2045,10 +4516,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *encoding* +
+
     
+
+
+
 
 
 string
@@ -2061,10 +4548,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *rotationPolicy* +
+
     
+
+
+
 
 
 string
@@ -2077,10 +4580,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *size* +
+
     
+
+
+
+
 
 
 
@@ -2093,21 +4613,70 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Bookkeeper [[Proxy_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          bookkeeper: {}----
+
+
+
+
+
+==== Bookkeeper [[Proxy_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Bookkeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          bookkeeper: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSignedBookkeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2120,11 +4689,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2137,24 +4726,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Broker [[Proxy_spec_global_tls_certProvisioner_selfSigned_broker]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          broker: {}----
+
+
+
+
+
+==== Broker [[Proxy_spec_global_tls_certProvisioner_selfSigned_broker]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Broker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          broker: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSignedBroker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2167,11 +4803,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2184,24 +4840,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Functionsworker [[Proxy_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          functionsworker: {}----
+
+
+
+
+
+==== Functionsworker [[Proxy_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Functionsworker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          functionsworker: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSignedFunctionsWorker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2214,11 +4917,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2231,24 +4954,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Proxy [[Proxy_spec_global_tls_certProvisioner_selfSigned_proxy]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          proxy: {}----
+
+
+
+
+
+==== Proxy [[Proxy_spec_global_tls_certProvisioner_selfSigned_proxy]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Proxy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          proxy: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSignedProxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2261,11 +5031,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2278,24 +5068,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Zookeeper [[Proxy_spec_global_tls_certProvisioner_selfSigned_zookeeper]]Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          zookeeper: {}----
+
+
+
+
+
+==== Zookeeper [[Proxy_spec_global_tls_certProvisioner_selfSigned_zookeeper]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Certprovisioner.Selfsigned.Zookeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          zookeeper: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsCertProvisionerSelfSignedZookeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2308,11 +5145,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Proxy_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2325,24 +5182,69 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Functionsworker [[Proxy_spec_global_tls_functionsWorker]]Complete namespace: Proxy.Spec.Global.Tls.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      functionsworker: {}----
+
+
+
+
+
+==== Functionsworker [[Proxy_spec_global_tls_functionsWorker]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Functionsworker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      functionsworker: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsFunctionsWorker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2355,10 +5257,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2371,10 +5289,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the functions worker to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -2387,21 +5318,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Proxy [[Proxy_spec_global_tls_proxy]]Complete namespace: Proxy.Spec.Global.Tls.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      proxy: {}----
+
+
+
+
+
+==== Proxy [[Proxy_spec_global_tls_proxy]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Proxy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      proxy: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsProxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2414,10 +5393,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2430,10 +5425,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the proxy to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -2446,21 +5454,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Proxyresourcesets [[Proxy_spec_global_tls_proxyResourceSets]]Complete namespace: Proxy.Spec.Global.Tls.ProxyresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      proxyresourcesets: {}----
+
+
+
+
+
+==== Proxyresourcesets [[Proxy_spec_global_tls_proxyResourceSets]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Proxyresourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      proxyresourcesets: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsProxyResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2473,10 +5529,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2489,10 +5561,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the proxy to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -2505,21 +5590,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Ssca [[Proxy_spec_global_tls_ssCa]]Complete namespace: Proxy.Spec.Global.Tls.SscaExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      ssca: {}----
+
+
+
+
+
+==== Ssca [[Proxy_spec_global_tls_ssCa]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Ssca
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      ssca: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsSsCa]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2532,10 +5665,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -2548,21 +5694,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Zookeeper [[Proxy_spec_global_tls_zookeeper]]Complete namespace: Proxy.Spec.Global.Tls.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  global:    tls:      zookeeper: {}----
+
+
+
+
+
+==== Zookeeper [[Proxy_spec_global_tls_zookeeper]]
+
+Complete namespace: Proxy.Spec.Global.Tls.Zookeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      zookeeper: {}
+
+----
+
+
 [.fields-ProxySpecGlobalTlsZookeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2575,10 +5769,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -2591,22 +5798,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Proxy [[Proxy_spec_proxy]]Complete namespace: Proxy.Spec.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy: {}----
+
+
+
+
+
+==== Proxy [[Proxy_spec_proxy]]
+
+Complete namespace: Proxy.Spec.Proxy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy: {}
+
+----
+
+
 [.fields-ProxySpecProxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *additionalVolumes* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2619,13 +5876,33 @@ AdditionalVolumes
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *annotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2638,11 +5915,27 @@ AdditionalVolumes
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to each resource (except pods).
+
     | *antiAffinity* +
+
             
+
             <<Proxy_spec_proxy_antiAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2655,13 +5948,33 @@ AntiAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *config* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2674,10 +5987,26 @@ AntiAffinity
 any
 
 
+
+
+
     | 
+
     Configuration.
+
     | *env* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2690,10 +6019,20 @@ any
 []<<Proxy_spec_proxy_env,Env>>
 
 
+
+
+
     | 
+
     Additional container env variables.
+
     | *gracePeriod* +
+
     
+
+
+
+
 
 
 
@@ -2706,10 +6045,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Termination grace period in seconds.
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -2722,10 +6076,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override Pulsar image.
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -2738,10 +6108,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override image pull policy.
+
     | *imagePullSecrets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2754,10 +6147,26 @@ string
 []<<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,ImagePullSecrets>>
 
 
+
+
+
     | 
+
     Image pull secrets.
+
     | *initContainers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2770,11 +6179,27 @@ string
 []<<Proxy_spec_proxy_initContainers,InitContainers>>
 
 
+
+
+
     | 
+
     Init containers
+
     | *kafka* +
+
             
+
             <<Proxy_spec_proxy_kafka,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2787,13 +6212,33 @@ Kafka
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *labels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2806,10 +6251,26 @@ Kafka
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each resource (except pods).
+
     | *matchLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2822,11 +6283,27 @@ Kafka
 []key/value
 
 
+
+
+
     | 
+
     Match labels selectors to add to each pod.
+
     | *nodeAffinity* +
+
             
+
             <<Proxy_spec_proxy_nodeAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2839,13 +6316,33 @@ NodeAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *nodeSelectors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2858,10 +6355,19 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Additional node selectors.
+
     | *overrideResourceName* +
+
     
+
+
+
 
 
 string
@@ -2874,11 +6380,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the resource names generated by the operator.
+
     | *pdb* +
+
             
+
             <<Proxy_spec_proxy_pdb,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2891,13 +6420,33 @@ Pdb
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *podAnnotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2910,10 +6459,26 @@ Pdb
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to pod.
+
     | *podLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2926,11 +6491,27 @@ Pdb
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each pod.
+
     | *probes* +
+
             
+
             <<Proxy_spec_proxy_probes,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2943,13 +6524,27 @@ Probes
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *replicas* +
+
     
+
+
+
+
 
 
 
@@ -2962,11 +6557,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Number of desired replicas.
+
     | *resources* +
+
             
+
             <<Proxy_spec_proxy_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2979,14 +6596,34 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *service* +
+
             
+
             <<Proxy_spec_proxy_service,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2999,13 +6636,33 @@ Service
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *sets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3018,10 +6675,19 @@ Service
 []
 
 
+
+
+
     | 
+
     Proxy sets.
+
     | *setsUpdateStrategy* +
+
     
+
+
+
 
 
 string
@@ -3034,10 +6700,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Sets update strategy. &#39;RollingUpdate&#39; or &#39;Parallel&#39;. Default is &#39;RollingUpdate&#39;.
+
     | *sidecars* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3050,10 +6739,22 @@ string
 []<<Proxy_spec_proxy_initContainers,Sidecars>>
 
 
+
+
+
     | 
+
     Sidecar containers
+
     | *standaloneFunctionsWorker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3066,10 +6767,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Whether or not the functions worker is in standalone mode.
+
     | *tolerations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3082,11 +6803,27 @@ boolean
 []<<Proxy_spec_proxy_sets_tolerations,Tolerations>>
 
 
+
+
+
     | 
+
     Pod tolerations.
+
     | *updateStrategy* +
+
             
+
             <<Proxy_spec_proxy_sets_updateStrategy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3099,14 +6836,34 @@ UpdateStrategy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *webSocket* +
+
             
+
             <<Proxy_spec_proxy_sets_webSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3119,24 +6876,72 @@ WebSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Additionalvolumes [[Proxy_spec_proxy_additionalVolumes]]Complete namespace: Proxy.Spec.Proxy.AdditionalvolumesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes: {}----
+
+
+
+
+
+==== Additionalvolumes [[Proxy_spec_proxy_additionalVolumes]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumes]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *mounts* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3149,10 +6954,26 @@ WebSocket
 []<<Proxy_spec_proxy_additionalVolumes_mounts,Mounts>>
 
 
+
+
+
     | 
+
     Mount points for the additional volumes
+
     | *volumes* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3165,21 +6986,59 @@ WebSocket
 []<<Proxy_spec_proxy_additionalVolumes_volumes,Volumes>>
 
 
+
+
+
     | 
+
     Additional volumes to be mounted to the pod
+
 |===
 
 
 
 
-==== Mounts [[Proxy_spec_proxy_additionalVolumes_mounts]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.MountsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      mounts: {}----
+
+
+
+
+
+==== Mounts [[Proxy_spec_proxy_additionalVolumes_mounts]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Mounts
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      mounts: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesMounts]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *mountPath* +
+
     
+
+
+
 
 
 string
@@ -3192,10 +7051,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *mountPropagation* +
+
     
+
+
+
 
 
 string
@@ -3208,10 +7083,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -3224,10 +7115,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3240,10 +7150,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *subPath* +
+
     
+
+
+
 
 
 string
@@ -3256,10 +7179,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *subPathExpr* +
+
     
+
+
+
 
 
 string
@@ -3272,22 +7211,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Volumes [[Proxy_spec_proxy_additionalVolumes_volumes]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.VolumesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes: {}----
+
+
+
+
+
+==== Volumes [[Proxy_spec_proxy_additionalVolumes_volumes]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumes]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *awsElasticBlockStore* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_awsElasticBlockStore,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3300,14 +7291,34 @@ AwsElasticBlockStore
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *azureDisk* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_azureDisk,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3320,14 +7331,34 @@ AzureDisk
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *azureFile* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_azureFile,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3340,14 +7371,34 @@ AzureFile
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *cephfs* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3360,14 +7411,34 @@ Cephfs
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *cinder* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cinder,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3380,14 +7451,34 @@ Cinder
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *configMap* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_configMap,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3400,14 +7491,34 @@ ConfigMap
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *csi* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_csi,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3420,14 +7531,34 @@ Csi
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *downwardAPI* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3440,14 +7571,34 @@ DownwardAPI
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *emptyDir* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_emptyDir,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3460,14 +7611,34 @@ EmptyDir
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *ephemeral* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3480,14 +7651,34 @@ Ephemeral
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *fc* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_fc,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3500,14 +7691,34 @@ Fc
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *flexVolume* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_flexVolume,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3520,14 +7731,34 @@ FlexVolume
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *flocker* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_flocker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3540,14 +7771,34 @@ Flocker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *gcePersistentDisk* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_gcePersistentDisk,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3560,14 +7811,34 @@ GcePersistentDisk
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *gitRepo* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_gitRepo,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3580,14 +7851,34 @@ GitRepo
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *glusterfs* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_glusterfs,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3600,14 +7891,34 @@ Glusterfs
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *hostPath* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_hostPath,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3620,14 +7931,34 @@ HostPath
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *iscsi* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_iscsi,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3640,13 +7971,26 @@ Iscsi
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -3659,11 +8003,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *nfs* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_nfs,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3676,14 +8043,34 @@ Nfs
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *persistentVolumeClaim* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_persistentVolumeClaim,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3696,14 +8083,34 @@ PersistentVolumeClaim
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *photonPersistentDisk* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_photonPersistentDisk,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3716,14 +8123,34 @@ PhotonPersistentDisk
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *portworxVolume* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_portworxVolume,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3736,14 +8163,34 @@ PortworxVolume
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *projected* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_projected,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3756,14 +8203,34 @@ Projected
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *quobyte* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_quobyte,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3776,14 +8243,34 @@ Quobyte
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *rbd* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_rbd,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3796,14 +8283,34 @@ Rbd
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *scaleIO* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_scaleIO,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3816,14 +8323,34 @@ ScaleIO
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *secret* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_secret,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3836,14 +8363,34 @@ Secret
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *storageos* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_storageos,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3856,14 +8403,34 @@ Storageos
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *vsphereVolume* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_vsphereVolume,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3876,24 +8443,67 @@ VsphereVolume
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Awselasticblockstore [[Proxy_spec_proxy_additionalVolumes_volumes_awsElasticBlockStore]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.AwselasticblockstoreExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        awselasticblockstore: {}----
+
+
+
+
+
+==== Awselasticblockstore [[Proxy_spec_proxy_additionalVolumes_volumes_awsElasticBlockStore]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Awselasticblockstore
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        awselasticblockstore: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesAwsElasticBlockStore]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -3906,10 +8516,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *partition* +
+
     
+
+
+
+
 
 
 
@@ -3922,10 +8549,28 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3938,10 +8583,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeID* +
+
     
+
+
+
 
 
 string
@@ -3954,21 +8612,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Azuredisk [[Proxy_spec_proxy_additionalVolumes_volumes_azureDisk]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.AzurediskExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        azuredisk: {}----
+
+
+
+
+
+==== Azuredisk [[Proxy_spec_proxy_additionalVolumes_volumes_azureDisk]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Azuredisk
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        azuredisk: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesAzureDisk]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *cachingMode* +
+
     
+
+
+
 
 
 string
@@ -3981,10 +8685,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *diskName* +
+
     
+
+
+
 
 
 string
@@ -3997,10 +8717,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *diskURI* +
+
     
+
+
+
 
 
 string
@@ -4013,10 +8749,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -4029,10 +8781,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *kind* +
+
     
+
+
+
 
 
 string
@@ -4045,10 +8813,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4061,21 +8848,67 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Azurefile [[Proxy_spec_proxy_additionalVolumes_volumes_azureFile]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.AzurefileExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        azurefile: {}----
+
+
+
+
+
+==== Azurefile [[Proxy_spec_proxy_additionalVolumes_volumes_azureFile]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Azurefile
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        azurefile: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesAzureFile]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4088,10 +8921,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4104,10 +8950,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *shareName* +
+
     
+
+
+
 
 
 string
@@ -4120,21 +8982,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Cephfs [[Proxy_spec_proxy_additionalVolumes_volumes_cephfs]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.CephfsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        cephfs: {}----
+
+
+
+
+
+==== Cephfs [[Proxy_spec_proxy_additionalVolumes_volumes_cephfs]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Cephfs
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        cephfs: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesCephfs]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *monitors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4145,12 +9060,21 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -4163,10 +9087,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4179,10 +9122,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretFile* +
+
     
+
+
+
 
 
 string
@@ -4195,11 +9151,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4212,13 +9191,26 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *user* +
+
     
+
+
+
 
 
 string
@@ -4231,21 +9223,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Secretref [[Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Cephfs.SecretrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        cephfs:          secretref: {}----
+
+
+
+
+
+==== Secretref [[Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Cephfs.Secretref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        cephfs:
+          secretref: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesCephfsSecretRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -4258,21 +9297,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Cinder [[Proxy_spec_proxy_additionalVolumes_volumes_cinder]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.CinderExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        cinder: {}----
+
+
+
+
+
+==== Cinder [[Proxy_spec_proxy_additionalVolumes_volumes_cinder]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Cinder
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        cinder: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesCinder]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -4285,10 +9370,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4301,11 +9405,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4318,13 +9442,26 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *volumeID* +
+
     
+
+
+
 
 
 string
@@ -4337,21 +9474,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmap [[Proxy_spec_proxy_additionalVolumes_volumes_configMap]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.ConfigmapExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        configmap: {}----
+
+
+
+
+
+==== Configmap [[Proxy_spec_proxy_additionalVolumes_volumes_configMap]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Configmap
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        configmap: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesConfigMap]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *defaultMode* +
+
     
+
+
+
+
 
 
 
@@ -4364,10 +9548,32 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *items* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4380,10 +9586,19 @@ integer
 []<<Proxy_spec_proxy_additionalVolumes_volumes_configMap_items,Items>>
 
 
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -4396,10 +9611,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4412,21 +9646,65 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Items [[Proxy_spec_proxy_additionalVolumes_volumes_configMap_items]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Configmap.ItemsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        configmap:          items: {}----
+
+
+
+
+
+==== Items [[Proxy_spec_proxy_additionalVolumes_volumes_configMap_items]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Configmap.Items
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        configmap:
+          items: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesConfigMapItems]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -4439,10 +9717,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *mode* +
+
     
+
+
+
+
 
 
 
@@ -4455,10 +9750,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -4471,21 +9781,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Csi [[Proxy_spec_proxy_additionalVolumes_volumes_csi]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.CsiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        csi: {}----
+
+
+
+
+
+==== Csi [[Proxy_spec_proxy_additionalVolumes_volumes_csi]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Csi
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        csi: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesCsi]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *driver* +
+
     
+
+
+
 
 
 string
@@ -4498,10 +9854,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -4514,11 +9886,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *nodePublishSecretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4531,13 +9926,29 @@ NodePublishSecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4550,10 +9961,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeAttributes* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4566,21 +9997,61 @@ boolean
 []key/value
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Downwardapi [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.DownwardapiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        downwardapi: {}----
+
+
+
+
+
+==== Downwardapi [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Downwardapi
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        downwardapi: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesDownwardAPI]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *defaultMode* +
+
     
+
+
+
+
 
 
 
@@ -4593,10 +10064,32 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *items* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4609,22 +10102,69 @@ integer
 []<<Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items,Items>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Items [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Downwardapi.ItemsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        downwardapi:          items: {}----
+
+
+
+
+
+==== Items [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Downwardapi.Items
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        downwardapi:
+          items: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesDownwardAPIItems]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fieldRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_fieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4637,13 +10177,27 @@ FieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *mode* +
+
     
+
+
+
+
 
 
 
@@ -4656,10 +10210,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -4672,11 +10241,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *resourceFieldRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4689,24 +10281,69 @@ ResourceFieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Fieldref [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_fieldRef]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Downwardapi.Items.FieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        downwardapi:          items:            fieldref: {}----
+
+
+
+
+
+==== Fieldref [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_fieldRef]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Downwardapi.Items.Fieldref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        downwardapi:
+          items:
+            fieldref: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesDownwardAPIItemsFieldRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *apiVersion* +
+
     
+
+
+
 
 
 string
@@ -4719,10 +10356,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fieldPath* +
+
     
+
+
+
 
 
 string
@@ -4735,21 +10388,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resourcefieldref [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Downwardapi.Items.ResourcefieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        downwardapi:          items:            resourcefieldref: {}----
+
+
+
+
+
+==== Resourcefieldref [[Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Downwardapi.Items.Resourcefieldref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        downwardapi:
+          items:
+            resourcefieldref: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesDownwardAPIItemsResourceFieldRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *containerName* +
+
     
+
+
+
 
 
 string
@@ -4762,10 +10463,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *divisor* +
+
             
+
 integer or string
 
 
@@ -4779,13 +10494,35 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
     | *resource* +
+
     
+
+
+
 
 
 string
@@ -4798,21 +10535,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Emptydir [[Proxy_spec_proxy_additionalVolumes_volumes_emptyDir]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.EmptydirExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        emptydir: {}----
+
+
+
+
+
+==== Emptydir [[Proxy_spec_proxy_additionalVolumes_volumes_emptyDir]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Emptydir
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        emptydir: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEmptyDir]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *medium* +
+
     
+
+
+
 
 
 string
@@ -4825,10 +10608,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *sizeLimit* +
+
             
+
 integer or string
 
 
@@ -4842,25 +10639,84 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Ephemeral [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.EphemeralExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral: {}----
+
+
+
+
+
+==== Ephemeral [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeral]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *volumeClaimTemplate* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4873,25 +10729,76 @@ VolumeClaimTemplate
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Volumeclaimtemplate [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.VolumeclaimtemplateExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate: {}----
+
+
+
+
+
+==== Volumeclaimtemplate [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplate]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *metadata* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4904,14 +10811,34 @@ Metadata
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *spec* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4924,24 +10851,76 @@ Spec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Metadata [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.MetadataExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            metadata: {}----
+
+
+
+
+
+==== Metadata [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Metadata
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            metadata: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadata]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *annotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4954,10 +10933,19 @@ Spec
 []key/value
 
 
+
+
+
     | 
+
     
+
     | *creationTimestamp* +
+
     
+
+
+
 
 
 string
@@ -4970,10 +10958,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *deletionGracePeriodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -4986,10 +10991,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *deletionTimestamp* +
+
     
+
+
+
 
 
 string
@@ -5002,10 +11022,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *finalizers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5016,12 +11059,21 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *generateName* +
+
     
+
+
+
 
 
 string
@@ -5034,10 +11086,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *generation* +
+
     
+
+
+
+
 
 
 
@@ -5050,10 +11119,32 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *labels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5066,10 +11157,26 @@ integer
 []key/value
 
 
+
+
+
     | 
+
     
+
     | *managedFields* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5082,10 +11189,19 @@ integer
 []<<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields,ManagedFields>>
 
 
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -5098,10 +11214,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *namespace* +
+
     
+
+
+
 
 
 string
@@ -5114,10 +11246,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *ownerReferences* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5130,10 +11285,19 @@ string
 []<<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences,OwnerReferences>>
 
 
+
+
+
     | 
+
     
+
     | *resourceVersion* +
+
     
+
+
+
 
 
 string
@@ -5146,10 +11310,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *selfLink* +
+
     
+
+
+
 
 
 string
@@ -5162,10 +11342,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *uid* +
+
     
+
+
+
 
 
 string
@@ -5178,21 +11374,70 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Managedfields [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Metadata.ManagedfieldsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            metadata:              managedfields: {}----
+
+
+
+
+
+==== Managedfields [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_managedFields]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Metadata.Managedfields
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            metadata:
+              managedfields: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadataManagedFields]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *apiVersion* +
+
     
+
+
+
 
 
 string
@@ -5205,10 +11450,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fieldsType* +
+
     
+
+
+
 
 
 string
@@ -5221,10 +11482,36 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fieldsV1* +
+
     
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5238,9 +11525,15 @@ string
 
 
     | 
+
     
+
     | *manager* +
+
     
+
+
+
 
 
 string
@@ -5253,10 +11546,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *operation* +
+
     
+
+
+
 
 
 string
@@ -5269,10 +11578,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *subresource* +
+
     
+
+
+
 
 
 string
@@ -5285,10 +11610,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *time* +
+
     
+
+
+
 
 
 string
@@ -5301,21 +11642,70 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Ownerreferences [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Metadata.OwnerreferencesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            metadata:              ownerreferences: {}----
+
+
+
+
+
+==== Ownerreferences [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata_ownerReferences]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Metadata.Ownerreferences
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            metadata:
+              ownerreferences: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateMetadataOwnerReferences]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *apiVersion* +
+
     
+
+
+
 
 
 string
@@ -5328,10 +11718,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *blockOwnerDeletion* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5344,10 +11753,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *controller* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5360,10 +11785,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *kind* +
+
     
+
+
+
 
 
 string
@@ -5376,10 +11814,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -5392,10 +11846,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *uid* +
+
     
+
+
+
 
 
 string
@@ -5408,21 +11878,76 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Spec [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.SpecExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec: {}----
+
+
+
+
+
+==== Spec [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            spec: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpec]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *accessModes* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5433,13 +11958,29 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *dataSource* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5452,14 +11993,34 @@ DataSource
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *dataSourceRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5472,14 +12033,34 @@ DataSourceRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resources* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5492,14 +12073,34 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *selector* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5512,13 +12113,26 @@ Selector
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *storageClassName* +
+
     
+
+
+
 
 
 string
@@ -5531,10 +12145,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeMode* +
+
     
+
+
+
 
 
 string
@@ -5547,10 +12177,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeName* +
+
     
+
+
+
 
 
 string
@@ -5563,21 +12209,70 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Datasource [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.DatasourceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              datasource: {}----
+
+
+
+
+
+==== Datasource [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.Datasource
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            spec:
+              datasource: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecDataSource]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *apiGroup* +
+
     
+
+
+
 
 
 string
@@ -5590,10 +12285,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *kind* +
+
     
+
+
+
 
 
 string
@@ -5606,10 +12317,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -5622,21 +12349,77 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resources [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              resources: {}----
+
+
+
+
+
+==== Resources [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.Resources
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            spec:
+              resources: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecResources]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *limits* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5647,12 +12430,28 @@ string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
     | *requests* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5663,23 +12462,72 @@ integer or string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Selector [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.SelectorExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              selector: {}----
+
+
+
+
+
+==== Selector [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.Selector
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            spec:
+              selector: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecSelector]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *matchExpressions* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5692,10 +12540,26 @@ integer or string
 []<<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchExpressions>>
 
 
+
+
+
     | 
+
     
+
     | *matchLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5708,21 +12572,64 @@ integer or string
 []key/value
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Matchexpressions [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.Selector.MatchexpressionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        ephemeral:          volumeclaimtemplate:            spec:              selector:                matchexpressions: {}----
+
+
+
+
+
+==== Matchexpressions [[Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Ephemeral.Volumeclaimtemplate.Spec.Selector.Matchexpressions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        ephemeral:
+          volumeclaimtemplate:
+            spec:
+              selector:
+                matchexpressions: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesEphemeralVolumeClaimTemplateSpecSelectorMatchExpressions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *key* +
+
     
+
+
+
 
 
 string
@@ -5735,10 +12642,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *operator* +
+
     
+
+
+
 
 
 string
@@ -5751,10 +12674,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *values* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5765,23 +12711,62 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Fc [[Proxy_spec_proxy_additionalVolumes_volumes_fc]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.FcExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        fc: {}----
+
+
+
+
+
+==== Fc [[Proxy_spec_proxy_additionalVolumes_volumes_fc]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Fc
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        fc: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesFc]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -5794,10 +12779,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *lun* +
+
     
+
+
+
+
 
 
 
@@ -5810,10 +12812,28 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5826,10 +12846,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *targetWWNs* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5840,12 +12880,28 @@ boolean
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *wwids* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5856,23 +12912,62 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Flexvolume [[Proxy_spec_proxy_additionalVolumes_volumes_flexVolume]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.FlexvolumeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        flexvolume: {}----
+
+
+
+
+
+==== Flexvolume [[Proxy_spec_proxy_additionalVolumes_volumes_flexVolume]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Flexvolume
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        flexvolume: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesFlexVolume]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *driver* +
+
     
+
+
+
 
 
 string
@@ -5885,10 +12980,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -5901,10 +13012,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *options* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5917,10 +13051,22 @@ string
 []key/value
 
 
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5933,11 +13079,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5950,24 +13116,67 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Flocker [[Proxy_spec_proxy_additionalVolumes_volumes_flocker]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.FlockerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        flocker: {}----
+
+
+
+
+
+==== Flocker [[Proxy_spec_proxy_additionalVolumes_volumes_flocker]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Flocker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        flocker: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesFlocker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *datasetName* +
+
     
+
+
+
 
 
 string
@@ -5980,10 +13189,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *datasetUUID* +
+
     
+
+
+
 
 
 string
@@ -5996,21 +13221,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Gcepersistentdisk [[Proxy_spec_proxy_additionalVolumes_volumes_gcePersistentDisk]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.GcepersistentdiskExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        gcepersistentdisk: {}----
+
+
+
+
+
+==== Gcepersistentdisk [[Proxy_spec_proxy_additionalVolumes_volumes_gcePersistentDisk]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Gcepersistentdisk
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        gcepersistentdisk: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesGcePersistentDisk]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -6023,10 +13294,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *partition* +
+
     
+
+
+
+
 
 
 
@@ -6039,10 +13327,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *pdName* +
+
     
+
+
+
 
 
 string
@@ -6055,10 +13358,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6071,21 +13393,64 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Gitrepo [[Proxy_spec_proxy_additionalVolumes_volumes_gitRepo]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.GitrepoExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        gitrepo: {}----
+
+
+
+
+
+==== Gitrepo [[Proxy_spec_proxy_additionalVolumes_volumes_gitRepo]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Gitrepo
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        gitrepo: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesGitRepo]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *directory* +
+
     
+
+
+
 
 
 string
@@ -6098,10 +13463,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *repository* +
+
     
+
+
+
 
 
 string
@@ -6114,10 +13495,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *revision* +
+
     
+
+
+
 
 
 string
@@ -6130,21 +13527,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Glusterfs [[Proxy_spec_proxy_additionalVolumes_volumes_glusterfs]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.GlusterfsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        glusterfs: {}----
+
+
+
+
+
+==== Glusterfs [[Proxy_spec_proxy_additionalVolumes_volumes_glusterfs]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Glusterfs
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        glusterfs: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesGlusterfs]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *endpoints* +
+
     
+
+
+
 
 
 string
@@ -6157,10 +13600,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -6173,10 +13632,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6189,21 +13667,64 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Hostpath [[Proxy_spec_proxy_additionalVolumes_volumes_hostPath]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.HostpathExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        hostpath: {}----
+
+
+
+
+
+==== Hostpath [[Proxy_spec_proxy_additionalVolumes_volumes_hostPath]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Hostpath
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        hostpath: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesHostPath]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *path* +
+
     
+
+
+
 
 
 string
@@ -6216,10 +13737,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -6232,21 +13769,70 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Iscsi [[Proxy_spec_proxy_additionalVolumes_volumes_iscsi]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.IscsiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        iscsi: {}----
+
+
+
+
+
+==== Iscsi [[Proxy_spec_proxy_additionalVolumes_volumes_iscsi]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Iscsi
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        iscsi: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesIscsi]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *chapAuthDiscovery* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6259,10 +13845,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *chapAuthSession* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6275,10 +13877,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -6291,10 +13906,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *initiatorName* +
+
     
+
+
+
 
 
 string
@@ -6307,10 +13938,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *iqn* +
+
     
+
+
+
 
 
 string
@@ -6323,10 +13970,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *iscsiInterface* +
+
     
+
+
+
 
 
 string
@@ -6339,10 +14002,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *lun* +
+
     
+
+
+
+
 
 
 
@@ -6355,10 +14035,32 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *portals* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6369,12 +14071,24 @@ integer
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6387,11 +14101,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6404,13 +14138,26 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *targetPortal* +
+
     
+
+
+
 
 
 string
@@ -6423,21 +14170,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Nfs [[Proxy_spec_proxy_additionalVolumes_volumes_nfs]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.NfsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        nfs: {}----
+
+
+
+
+
+==== Nfs [[Proxy_spec_proxy_additionalVolumes_volumes_nfs]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Nfs
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        nfs: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesNfs]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *path* +
+
     
+
+
+
 
 
 string
@@ -6450,10 +14243,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6466,10 +14278,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *server* +
+
     
+
+
+
 
 
 string
@@ -6482,21 +14307,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Persistentvolumeclaim [[Proxy_spec_proxy_additionalVolumes_volumes_persistentVolumeClaim]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.PersistentvolumeclaimExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        persistentvolumeclaim: {}----
+
+
+
+
+
+==== Persistentvolumeclaim [[Proxy_spec_proxy_additionalVolumes_volumes_persistentVolumeClaim]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Persistentvolumeclaim
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        persistentvolumeclaim: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesPersistentVolumeClaim]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *claimName* +
+
     
+
+
+
 
 
 string
@@ -6509,10 +14380,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6525,21 +14415,64 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Photonpersistentdisk [[Proxy_spec_proxy_additionalVolumes_volumes_photonPersistentDisk]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.PhotonpersistentdiskExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        photonpersistentdisk: {}----
+
+
+
+
+
+==== Photonpersistentdisk [[Proxy_spec_proxy_additionalVolumes_volumes_photonPersistentDisk]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Photonpersistentdisk
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        photonpersistentdisk: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesPhotonPersistentDisk]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -6552,10 +14485,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *pdID* +
+
     
+
+
+
 
 
 string
@@ -6568,21 +14517,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Portworxvolume [[Proxy_spec_proxy_additionalVolumes_volumes_portworxVolume]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.PortworxvolumeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        portworxvolume: {}----
+
+
+
+
+
+==== Portworxvolume [[Proxy_spec_proxy_additionalVolumes_volumes_portworxVolume]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Portworxvolume
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        portworxvolume: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesPortworxVolume]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -6595,10 +14590,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6611,10 +14625,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeID* +
+
     
+
+
+
 
 
 string
@@ -6627,21 +14654,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Projected [[Proxy_spec_proxy_additionalVolumes_volumes_projected]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.ProjectedExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        projected: {}----
+
+
+
+
+
+==== Projected [[Proxy_spec_proxy_additionalVolumes_volumes_projected]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        projected: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesProjected]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *defaultMode* +
+
     
+
+
+
+
 
 
 
@@ -6654,10 +14728,32 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *sources* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6670,22 +14766,69 @@ integer
 []<<Proxy_spec_proxy_additionalVolumes_volumes_projected_sources,Sources>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Sources [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.SourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        projected:          sources: {}----
+
+
+
+
+
+==== Sources [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.Sources
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        projected:
+          sources: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesProjectedSources]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *configMap* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_configMap,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6698,14 +14841,34 @@ ConfigMap
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *downwardAPI* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_downwardAPI,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6718,14 +14881,34 @@ DownwardAPI
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *secret* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_configMap,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6738,14 +14921,34 @@ Secret
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *serviceAccountToken* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_serviceAccountToken,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6758,24 +14961,76 @@ ServiceAccountToken
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmap [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_configMap]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.Sources.ConfigmapExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        projected:          sources:            configmap: {}----
+
+
+
+
+
+==== Configmap [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_configMap]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.Sources.Configmap
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        projected:
+          sources:
+            configmap: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesProjectedSourcesConfigMap]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *items* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6788,10 +15043,19 @@ ServiceAccountToken
 []<<Proxy_spec_proxy_additionalVolumes_volumes_configMap_items,Items>>
 
 
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -6804,10 +15068,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6820,21 +15103,73 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Downwardapi [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_downwardAPI]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.Sources.DownwardapiExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        projected:          sources:            downwardapi: {}----
+
+
+
+
+
+==== Downwardapi [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_downwardAPI]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.Sources.Downwardapi
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        projected:
+          sources:
+            downwardapi: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesProjectedSourcesDownwardAPI]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *items* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6847,21 +15182,62 @@ boolean
 []<<Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items,Items>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Serviceaccounttoken [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_serviceAccountToken]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.Sources.ServiceaccounttokenExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        projected:          sources:            serviceaccounttoken: {}----
+
+
+
+
+
+==== Serviceaccounttoken [[Proxy_spec_proxy_additionalVolumes_volumes_projected_sources_serviceAccountToken]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Projected.Sources.Serviceaccounttoken
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        projected:
+          sources:
+            serviceaccounttoken: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesProjectedSourcesServiceAccountToken]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *audience* +
+
     
+
+
+
 
 
 string
@@ -6874,10 +15250,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *expirationSeconds* +
+
     
+
+
+
+
 
 
 
@@ -6890,10 +15283,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -6906,21 +15314,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Quobyte [[Proxy_spec_proxy_additionalVolumes_volumes_quobyte]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.QuobyteExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        quobyte: {}----
+
+
+
+
+
+==== Quobyte [[Proxy_spec_proxy_additionalVolumes_volumes_quobyte]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Quobyte
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        quobyte: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesQuobyte]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *group* +
+
     
+
+
+
 
 
 string
@@ -6933,10 +15387,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -6949,10 +15422,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *registry* +
+
     
+
+
+
 
 
 string
@@ -6965,10 +15451,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tenant* +
+
     
+
+
+
 
 
 string
@@ -6981,10 +15483,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *user* +
+
     
+
+
+
 
 
 string
@@ -6997,10 +15515,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *volume* +
+
     
+
+
+
 
 
 string
@@ -7013,21 +15547,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Rbd [[Proxy_spec_proxy_additionalVolumes_volumes_rbd]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.RbdExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        rbd: {}----
+
+
+
+
+
+==== Rbd [[Proxy_spec_proxy_additionalVolumes_volumes_rbd]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Rbd
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        rbd: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesRbd]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -7040,10 +15620,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -7056,10 +15652,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *keyring* +
+
     
+
+
+
 
 
 string
@@ -7072,10 +15684,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *monitors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7086,12 +15721,21 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *pool* +
+
     
+
+
+
 
 
 string
@@ -7104,10 +15748,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -7120,11 +15783,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7137,13 +15820,26 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *user* +
+
     
+
+
+
 
 
 string
@@ -7156,21 +15852,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Scaleio [[Proxy_spec_proxy_additionalVolumes_volumes_scaleIO]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.ScaleioExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        scaleio: {}----
+
+
+
+
+
+==== Scaleio [[Proxy_spec_proxy_additionalVolumes_volumes_scaleIO]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Scaleio
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        scaleio: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesScaleIO]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -7183,10 +15925,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *gateway* +
+
     
+
+
+
 
 
 string
@@ -7199,10 +15957,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *protectionDomain* +
+
     
+
+
+
 
 
 string
@@ -7215,10 +15989,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -7231,11 +16024,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7248,13 +16061,29 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *sslEnabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -7267,10 +16096,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *storageMode* +
+
     
+
+
+
 
 
 string
@@ -7283,10 +16125,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *storagePool* +
+
     
+
+
+
 
 
 string
@@ -7299,10 +16157,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *system* +
+
     
+
+
+
 
 
 string
@@ -7315,10 +16189,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeName* +
+
     
+
+
+
 
 
 string
@@ -7331,21 +16221,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Secret [[Proxy_spec_proxy_additionalVolumes_volumes_secret]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.SecretExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        secret: {}----
+
+
+
+
+
+==== Secret [[Proxy_spec_proxy_additionalVolumes_volumes_secret]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Secret
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        secret: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesSecret]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *defaultMode* +
+
     
+
+
+
+
 
 
 
@@ -7358,10 +16295,32 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *items* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7374,10 +16333,22 @@ integer
 []<<Proxy_spec_proxy_additionalVolumes_volumes_configMap_items,Items>>
 
 
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -7390,10 +16361,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -7406,21 +16390,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Storageos [[Proxy_spec_proxy_additionalVolumes_volumes_storageos]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.StorageosExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        storageos: {}----
+
+
+
+
+
+==== Storageos [[Proxy_spec_proxy_additionalVolumes_volumes_storageos]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Storageos
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        storageos: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesStorageos]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -7433,10 +16463,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -7449,11 +16498,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7466,13 +16535,26 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *volumeName* +
+
     
+
+
+
 
 
 string
@@ -7485,10 +16567,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeNamespace* +
+
     
+
+
+
 
 
 string
@@ -7501,21 +16599,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Vspherevolume [[Proxy_spec_proxy_additionalVolumes_volumes_vsphereVolume]]Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.VspherevolumeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    additionalvolumes:      volumes:        vspherevolume: {}----
+
+
+
+
+
+==== Vspherevolume [[Proxy_spec_proxy_additionalVolumes_volumes_vsphereVolume]]
+
+Complete namespace: Proxy.Spec.Proxy.Additionalvolumes.Volumes.Vspherevolume
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    additionalvolumes:
+      volumes:
+        vspherevolume: {}
+
+----
+
+
 [.fields-ProxySpecProxyAdditionalVolumesVolumesVsphereVolume]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -7528,10 +16672,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *storagePolicyID* +
+
     
+
+
+
 
 
 string
@@ -7544,10 +16704,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *storagePolicyName* +
+
     
+
+
+
 
 
 string
@@ -7560,10 +16736,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumePath* +
+
     
+
+
+
 
 
 string
@@ -7576,22 +16768,73 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Antiaffinity [[Proxy_spec_proxy_antiAffinity]]Complete namespace: Proxy.Spec.Proxy.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    antiaffinity: {}----
+
+
+
+
+
+==== Antiaffinity [[Proxy_spec_proxy_antiAffinity]]
+
+Complete namespace: Proxy.Spec.Proxy.Antiaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    antiaffinity: {}
+
+----
+
+
 [.fields-ProxySpecProxyAntiAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Proxy_spec_global_antiAffinity_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7604,14 +16847,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Proxy_spec_global_antiAffinity_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7624,24 +16887,65 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Env [[Proxy_spec_proxy_env]]Complete namespace: Proxy.Spec.Proxy.EnvExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    env: {}----
+
+
+
+
+
+==== Env [[Proxy_spec_proxy_env]]
+
+Complete namespace: Proxy.Spec.Proxy.Env
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    env: {}
+
+----
+
+
 [.fields-ProxySpecProxyEnv]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -7654,10 +16958,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -7670,11 +16990,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *valueFrom* +
+
             
+
             <<Proxy_spec_proxy_env_valueFrom,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7687,25 +17030,74 @@ ValueFrom
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Valuefrom [[Proxy_spec_proxy_env_valueFrom]]Complete namespace: Proxy.Spec.Proxy.Env.ValuefromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    env:      valuefrom: {}----
+
+
+
+
+
+==== Valuefrom [[Proxy_spec_proxy_env_valueFrom]]
+
+Complete namespace: Proxy.Spec.Proxy.Env.Valuefrom
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    env:
+      valuefrom: {}
+
+----
+
+
 [.fields-ProxySpecProxyEnvValueFrom]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *configMapKeyRef* +
+
             
+
             <<Proxy_spec_proxy_env_valueFrom_configMapKeyRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7718,14 +17110,34 @@ ConfigMapKeyRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *fieldRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_fieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7738,14 +17150,34 @@ FieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resourceFieldRef* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7758,14 +17190,34 @@ ResourceFieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *secretKeyRef* +
+
             
+
             <<Proxy_spec_proxy_env_valueFrom_configMapKeyRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7778,24 +17230,67 @@ SecretKeyRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmapkeyref [[Proxy_spec_proxy_env_valueFrom_configMapKeyRef]]Complete namespace: Proxy.Spec.Proxy.Env.Valuefrom.ConfigmapkeyrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    env:      valuefrom:        configmapkeyref: {}----
+
+
+
+
+
+==== Configmapkeyref [[Proxy_spec_proxy_env_valueFrom_configMapKeyRef]]
+
+Complete namespace: Proxy.Spec.Proxy.Env.Valuefrom.Configmapkeyref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    env:
+      valuefrom:
+        configmapkeyref: {}
+
+----
+
+
 [.fields-ProxySpecProxyEnvValueFromConfigMapKeyRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -7808,10 +17303,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -7824,10 +17335,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -7840,21 +17370,69 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Initcontainers [[Proxy_spec_proxy_initContainers]]Complete namespace: Proxy.Spec.Proxy.InitcontainersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers: {}----
+
+
+
+
+
+==== Initcontainers [[Proxy_spec_proxy_initContainers]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainers]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *args* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7865,12 +17443,28 @@ boolean
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *command* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7881,12 +17475,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *env* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7899,10 +17509,26 @@ string
 []<<Proxy_spec_proxy_env,Env>>
 
 
+
+
+
     | 
+
     
+
     | *envFrom* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7915,10 +17541,19 @@ string
 []<<Proxy_spec_proxy_initContainers_envFrom,EnvFrom>>
 
 
+
+
+
     | 
+
     
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -7931,10 +17566,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -7947,11 +17598,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *lifecycle* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7964,14 +17638,34 @@ Lifecycle
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *livenessProbe* +
+
             
+
             <<Proxy_spec_proxy_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7984,13 +17678,26 @@ LivenessProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -8003,10 +17710,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *ports* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8019,11 +17749,27 @@ string
 []<<Proxy_spec_proxy_initContainers_ports,Ports>>
 
 
+
+
+
     | 
+
     
+
     | *readinessProbe* +
+
             
+
             <<Proxy_spec_proxy_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8036,14 +17782,34 @@ ReadinessProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resources* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8056,14 +17822,34 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *securityContext* +
+
             
+
             <<Proxy_spec_proxy_initContainers_securityContext,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8076,14 +17862,34 @@ SecurityContext
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *startupProbe* +
+
             
+
             <<Proxy_spec_proxy_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8096,13 +17902,29 @@ StartupProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *stdin* +
+
     
+
+
+
+
+
+
 
 
 
@@ -8115,10 +17937,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *stdinOnce* +
+
     
+
+
+
+
+
+
 
 
 
@@ -8131,10 +17969,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *terminationMessagePath* +
+
     
+
+
+
 
 
 string
@@ -8147,10 +17998,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *terminationMessagePolicy* +
+
     
+
+
+
 
 
 string
@@ -8163,10 +18030,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tty* +
+
     
+
+
+
+
+
+
 
 
 
@@ -8179,10 +18065,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeDevices* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8195,10 +18101,26 @@ boolean
 []<<Proxy_spec_proxy_initContainers_volumeDevices,VolumeDevices>>
 
 
+
+
+
     | 
+
     
+
     | *volumeMounts* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8211,10 +18133,19 @@ boolean
 []<<Proxy_spec_proxy_additionalVolumes_mounts,VolumeMounts>>
 
 
+
+
+
     | 
+
     
+
     | *workingDir* +
+
     
+
+
+
 
 
 string
@@ -8227,22 +18158,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Envfrom [[Proxy_spec_proxy_initContainers_envFrom]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.EnvfromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      envfrom: {}----
+
+
+
+
+
+==== Envfrom [[Proxy_spec_proxy_initContainers_envFrom]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Envfrom
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      envfrom: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersEnvFrom]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *configMapRef* +
+
             
+
             <<Proxy_spec_proxy_initContainers_envFrom_configMapRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8255,13 +18238,26 @@ ConfigMapRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *prefix* +
+
     
+
+
+
 
 
 string
@@ -8274,11 +18270,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Proxy_spec_proxy_initContainers_envFrom_configMapRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8291,24 +18310,67 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmapref [[Proxy_spec_proxy_initContainers_envFrom_configMapRef]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Envfrom.ConfigmaprefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      envfrom:        configmapref: {}----
+
+
+
+
+
+==== Configmapref [[Proxy_spec_proxy_initContainers_envFrom_configMapRef]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Envfrom.Configmapref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      envfrom:
+        configmapref: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersEnvFromConfigMapRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -8321,10 +18383,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -8337,22 +18418,71 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Lifecycle [[Proxy_spec_proxy_initContainers_lifecycle]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.LifecycleExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      lifecycle: {}----
+
+
+
+
+
+==== Lifecycle [[Proxy_spec_proxy_initContainers_lifecycle]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      lifecycle: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersLifecycle]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *postStart* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8365,14 +18495,34 @@ PostStart
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *preStop* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8385,25 +18535,75 @@ PreStop
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Poststart [[Proxy_spec_proxy_initContainers_lifecycle_postStart]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.PoststartExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      lifecycle:        poststart: {}----
+
+
+
+
+
+==== Poststart [[Proxy_spec_proxy_initContainers_lifecycle_postStart]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.Poststart
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      lifecycle:
+        poststart: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersLifecyclePostStart]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *exec* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart_exec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8416,14 +18616,34 @@ Exec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *httpGet* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart_httpGet,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8436,14 +18656,34 @@ HttpGet
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *tcpSocket* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart_tcpSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8456,24 +18696,75 @@ TcpSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Exec [[Proxy_spec_proxy_initContainers_lifecycle_postStart_exec]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.Poststart.ExecExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      lifecycle:        poststart:          exec: {}----
+
+
+
+
+
+==== Exec [[Proxy_spec_proxy_initContainers_lifecycle_postStart_exec]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.Poststart.Exec
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      lifecycle:
+        poststart:
+          exec: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersLifecyclePostStartExec]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *command* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8484,23 +18775,63 @@ TcpSocket
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Httpget [[Proxy_spec_proxy_initContainers_lifecycle_postStart_httpGet]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.Poststart.HttpgetExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      lifecycle:        poststart:          httpget: {}----
+
+
+
+
+
+==== Httpget [[Proxy_spec_proxy_initContainers_lifecycle_postStart_httpGet]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.Poststart.Httpget
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      lifecycle:
+        poststart:
+          httpget: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersLifecyclePostStartHttpGet]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
     
+
+
+
 
 
 string
@@ -8513,10 +18844,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *httpHeaders* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8529,10 +18883,19 @@ string
 []<<Proxy_spec_global_dnsConfig_options,HttpHeaders>>
 
 
+
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -8545,10 +18908,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *port* +
+
             
+
 integer or string
 
 
@@ -8562,13 +18939,35 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
     | *scheme* +
+
     
+
+
+
 
 
 string
@@ -8581,21 +18980,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Tcpsocket [[Proxy_spec_proxy_initContainers_lifecycle_postStart_tcpSocket]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.Poststart.TcpsocketExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      lifecycle:        poststart:          tcpsocket: {}----
+
+
+
+
+
+==== Tcpsocket [[Proxy_spec_proxy_initContainers_lifecycle_postStart_tcpSocket]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Lifecycle.Poststart.Tcpsocket
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      lifecycle:
+        poststart:
+          tcpsocket: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersLifecyclePostStartTcpSocket]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *host* +
+
     
+
+
+
 
 
 string
@@ -8608,10 +19054,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *port* +
+
             
+
 integer or string
 
 
@@ -8625,25 +19085,83 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Livenessprobe [[Proxy_spec_proxy_initContainers_livenessProbe]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.LivenessprobeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      livenessprobe: {}----
+
+
+
+
+
+==== Livenessprobe [[Proxy_spec_proxy_initContainers_livenessProbe]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Livenessprobe
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      livenessprobe: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersLivenessProbe]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *exec* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart_exec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8656,13 +19174,27 @@ Exec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *failureThreshold* +
+
     
+
+
+
+
 
 
 
@@ -8675,11 +19207,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *grpc* +
+
             
+
             <<Proxy_spec_proxy_initContainers_livenessProbe_grpc,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8692,14 +19246,34 @@ Grpc
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *httpGet* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart_httpGet,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8712,13 +19286,27 @@ HttpGet
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *initialDelaySeconds* +
+
     
+
+
+
+
 
 
 
@@ -8731,10 +19319,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *periodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -8747,10 +19351,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *successThreshold* +
+
     
+
+
+
+
 
 
 
@@ -8763,11 +19383,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tcpSocket* +
+
             
+
             <<Proxy_spec_proxy_initContainers_lifecycle_postStart_tcpSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8780,13 +19422,27 @@ TcpSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *terminationGracePeriodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -8799,10 +19455,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *timeoutSeconds* +
+
     
+
+
+
+
 
 
 
@@ -8815,21 +19487,67 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Grpc [[Proxy_spec_proxy_initContainers_livenessProbe_grpc]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Livenessprobe.GrpcExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      livenessprobe:        grpc: {}----
+
+
+
+
+
+==== Grpc [[Proxy_spec_proxy_initContainers_livenessProbe_grpc]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Livenessprobe.Grpc
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      livenessprobe:
+        grpc: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersLivenessProbeGrpc]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *port* +
+
     
+
+
+
+
 
 
 
@@ -8842,10 +19560,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *service* +
+
     
+
+
+
 
 
 string
@@ -8858,21 +19591,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Ports [[Proxy_spec_proxy_initContainers_ports]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.PortsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      ports: {}----
+
+
+
+
+
+==== Ports [[Proxy_spec_proxy_initContainers_ports]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Ports
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      ports: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersPorts]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *containerPort* +
+
     
+
+
+
+
 
 
 
@@ -8885,10 +19664,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostIP* +
+
     
+
+
+
 
 
 string
@@ -8901,10 +19695,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostPort* +
+
     
+
+
+
+
 
 
 
@@ -8917,10 +19728,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -8933,10 +19759,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *protocol* +
+
     
+
+
+
 
 
 string
@@ -8949,21 +19791,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Securitycontext [[Proxy_spec_proxy_initContainers_securityContext]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.SecuritycontextExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      securitycontext: {}----
+
+
+
+
+
+==== Securitycontext [[Proxy_spec_proxy_initContainers_securityContext]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      securitycontext: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersSecurityContext]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *allowPrivilegeEscalation* +
+
     
+
+
+
+
+
+
 
 
 
@@ -8976,11 +19866,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *capabilities* +
+
             
+
             <<Proxy_spec_proxy_initContainers_securityContext_capabilities,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8993,13 +19903,29 @@ Capabilities
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *privileged* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9012,10 +19938,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *procMount* +
+
     
+
+
+
 
 
 string
@@ -9028,10 +19967,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnlyRootFilesystem* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9044,10 +20002,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsGroup* +
+
     
+
+
+
+
 
 
 
@@ -9060,10 +20032,28 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsNonRoot* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9076,10 +20066,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsUser* +
+
     
+
+
+
+
 
 
 
@@ -9092,11 +20096,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *seLinuxOptions* +
+
             
+
             <<Proxy_spec_proxy_initContainers_securityContext_seLinuxOptions,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9109,14 +20135,34 @@ SeLinuxOptions
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *seccompProfile* +
+
             
+
             <<Proxy_spec_proxy_initContainers_securityContext_seccompProfile,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9129,14 +20175,34 @@ SeccompProfile
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *windowsOptions* +
+
             
+
             <<Proxy_spec_proxy_initContainers_securityContext_windowsOptions,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9149,24 +20215,74 @@ WindowsOptions
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Capabilities [[Proxy_spec_proxy_initContainers_securityContext_capabilities]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.CapabilitiesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      securitycontext:        capabilities: {}----
+
+
+
+
+
+==== Capabilities [[Proxy_spec_proxy_initContainers_securityContext_capabilities]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.Capabilities
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      securitycontext:
+        capabilities: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersSecurityContextCapabilities]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *add* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9177,12 +20293,28 @@ WindowsOptions
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *drop* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9193,23 +20325,62 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Selinuxoptions [[Proxy_spec_proxy_initContainers_securityContext_seLinuxOptions]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.SelinuxoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      securitycontext:        selinuxoptions: {}----
+
+
+
+
+
+==== Selinuxoptions [[Proxy_spec_proxy_initContainers_securityContext_seLinuxOptions]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.Selinuxoptions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      securitycontext:
+        selinuxoptions: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersSecurityContextSeLinuxOptions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *level* +
+
     
+
+
+
 
 
 string
@@ -9222,10 +20393,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *role* +
+
     
+
+
+
 
 
 string
@@ -9238,10 +20425,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -9254,10 +20457,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *user* +
+
     
+
+
+
 
 
 string
@@ -9270,21 +20489,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Seccompprofile [[Proxy_spec_proxy_initContainers_securityContext_seccompProfile]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.SeccompprofileExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      securitycontext:        seccompprofile: {}----
+
+
+
+
+
+==== Seccompprofile [[Proxy_spec_proxy_initContainers_securityContext_seccompProfile]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.Seccompprofile
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      securitycontext:
+        seccompprofile: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersSecurityContextSeccompProfile]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *localhostProfile* +
+
     
+
+
+
 
 
 string
@@ -9297,10 +20562,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -9313,21 +20594,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Windowsoptions [[Proxy_spec_proxy_initContainers_securityContext_windowsOptions]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.WindowsoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      securitycontext:        windowsoptions: {}----
+
+
+
+
+
+==== Windowsoptions [[Proxy_spec_proxy_initContainers_securityContext_windowsOptions]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Securitycontext.Windowsoptions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      securitycontext:
+        windowsoptions: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersSecurityContextWindowsOptions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *gmsaCredentialSpec* +
+
     
+
+
+
 
 
 string
@@ -9340,10 +20667,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *gmsaCredentialSpecName* +
+
     
+
+
+
 
 
 string
@@ -9356,10 +20699,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostProcess* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9372,10 +20734,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsUserName* +
+
     
+
+
+
 
 
 string
@@ -9388,21 +20763,66 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Volumedevices [[Proxy_spec_proxy_initContainers_volumeDevices]]Complete namespace: Proxy.Spec.Proxy.Initcontainers.VolumedevicesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    initcontainers:      volumedevices: {}----
+
+
+
+
+
+==== Volumedevices [[Proxy_spec_proxy_initContainers_volumeDevices]]
+
+Complete namespace: Proxy.Spec.Proxy.Initcontainers.Volumedevices
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    initcontainers:
+      volumedevices: {}
+
+----
+
+
 [.fields-ProxySpecProxyInitContainersVolumeDevices]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *devicePath* +
+
     
+
+
+
 
 
 string
@@ -9415,10 +20835,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -9431,21 +20867,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Kafka [[Proxy_spec_proxy_kafka]]Complete namespace: Proxy.Spec.Proxy.KafkaExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    kafka: {}----
+
+
+
+
+
+==== Kafka [[Proxy_spec_proxy_kafka]]
+
+Complete namespace: Proxy.Spec.Proxy.Kafka
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    kafka: {}
+
+----
+
+
 [.fields-ProxySpecProxyKafka]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9458,10 +20941,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Allow the cluster to accept Kafka protocol. Default is &#39;false&#39;.
+
     | *exposePorts* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9474,21 +20973,69 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Expose the kafka protocol port.
+
 |===
 
 
 
 
-==== Nodeaffinity [[Proxy_spec_proxy_nodeAffinity]]Complete namespace: Proxy.Spec.Proxy.NodeaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    nodeaffinity: {}----
+
+
+
+
+
+==== Nodeaffinity [[Proxy_spec_proxy_nodeAffinity]]
+
+Complete namespace: Proxy.Spec.Proxy.Nodeaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    nodeaffinity: {}
+
+----
+
+
 [.fields-ProxySpecProxyNodeAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *preferredDuringSchedulingIgnoredDuringExecution* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9501,11 +21048,27 @@ boolean
 []<<Proxy_spec_proxy_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution,PreferredDuringSchedulingIgnoredDuringExecution>>
 
 
+
+
+
     | 
+
     
+
     | *requiredDuringSchedulingIgnoredDuringExecution* +
+
             
+
             <<Proxy_spec_proxy_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9518,25 +21081,74 @@ RequiredDuringSchedulingIgnoredDuringExecution
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Preferredduringschedulingignoredduringexecution [[Proxy_spec_proxy_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Proxy.Spec.Proxy.Nodeaffinity.PreferredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    nodeaffinity:      preferredduringschedulingignoredduringexecution: {}----
+
+
+
+
+
+==== Preferredduringschedulingignoredduringexecution [[Proxy_spec_proxy_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]
+
+Complete namespace: Proxy.Spec.Proxy.Nodeaffinity.Preferredduringschedulingignoredduringexecution
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution: {}
+
+----
+
+
 [.fields-ProxySpecProxyNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *preference* +
+
             
+
             <<Proxy_spec_proxy_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9549,13 +21161,27 @@ Preference
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *weight* +
+
     
+
+
+
+
 
 
 
@@ -9568,21 +21194,73 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Preference [[Proxy_spec_proxy_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]Complete namespace: Proxy.Spec.Proxy.Nodeaffinity.Preferredduringschedulingignoredduringexecution.PreferenceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference: {}----
+
+
+
+
+
+==== Preference [[Proxy_spec_proxy_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]
+
+Complete namespace: Proxy.Spec.Proxy.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution:
+        preference: {}
+
+----
+
+
 [.fields-ProxySpecProxyNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *matchExpressions* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9595,10 +21273,26 @@ integer
 []<<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchExpressions>>
 
 
+
+
+
     | 
+
     
+
     | *matchFields* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9611,21 +21305,66 @@ integer
 []<<Proxy_spec_proxy_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector_matchExpressions,MatchFields>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Requiredduringschedulingignoredduringexecution [[Proxy_spec_proxy_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Proxy.Spec.Proxy.Nodeaffinity.RequiredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    nodeaffinity:      requiredduringschedulingignoredduringexecution: {}----
+
+
+
+
+
+==== Requiredduringschedulingignoredduringexecution [[Proxy_spec_proxy_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]
+
+Complete namespace: Proxy.Spec.Proxy.Nodeaffinity.Requiredduringschedulingignoredduringexecution
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    nodeaffinity:
+      requiredduringschedulingignoredduringexecution: {}
+
+----
+
+
 [.fields-ProxySpecProxyNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *nodeSelectorTerms* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9638,21 +21377,61 @@ integer
 []<<Proxy_spec_proxy_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,NodeSelectorTerms>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Pdb [[Proxy_spec_proxy_pdb]]Complete namespace: Proxy.Spec.Proxy.PdbExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    pdb: {}----
+
+
+
+
+
+==== Pdb [[Proxy_spec_proxy_pdb]]
+
+Complete namespace: Proxy.Spec.Proxy.Pdb
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    pdb: {}
+
+----
+
+
 [.fields-ProxySpecProxyPdb]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9665,10 +21444,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable Pdb policy.
+
     | *maxUnavailable* +
+
     
+
+
+
+
 
 
 
@@ -9681,22 +21474,72 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Number of maxUnavailable pods.
+
 |===
 
 
 
 
-==== Probes [[Proxy_spec_proxy_probes]]Complete namespace: Proxy.Spec.Proxy.ProbesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    probes: {}----
+
+
+
+
+
+==== Probes [[Proxy_spec_proxy_probes]]
+
+Complete namespace: Proxy.Spec.Proxy.Probes
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    probes: {}
+
+----
+
+
 [.fields-ProxySpecProxyProbes]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *liveness* +
+
             
+
             <<Proxy_spec_proxy_probes_liveness,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9709,14 +21552,34 @@ Liveness
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *readiness* +
+
             
+
             <<Proxy_spec_proxy_probes_readiness,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9729,24 +21592,69 @@ Readiness
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Liveness [[Proxy_spec_proxy_probes_liveness]]Complete namespace: Proxy.Spec.Proxy.Probes.LivenessExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    probes:      liveness: {}----
+
+
+
+
+
+==== Liveness [[Proxy_spec_proxy_probes_liveness]]
+
+Complete namespace: Proxy.Spec.Proxy.Probes.Liveness
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    probes:
+      liveness: {}
+
+----
+
+
 [.fields-ProxySpecProxyProbesLiveness]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9759,10 +21667,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enables the probe.
+
     | *failureThreshold* +
+
     
+
+
+
+
 
 
 
@@ -9775,10 +21697,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Failure threshold.
+
     | *initialDelaySeconds* +
+
     
+
+
+
+
 
 
 
@@ -9791,10 +21729,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the initial delay (in seconds) for the probe.
+
     | *periodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -9807,10 +21761,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the period (in seconds) for the probe.
+
     | *successThreshold* +
+
     
+
+
+
+
 
 
 
@@ -9823,10 +21793,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Success threshold.
+
     | *terminationGracePeriodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -9839,10 +21825,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the termination grace period (in seconds) for the probe.
+
     | *timeoutSeconds* +
+
     
+
+
+
+
 
 
 
@@ -9855,21 +21857,68 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the timeout (in seconds) for the probe.
+
 |===
 
 
 
 
-==== Readiness [[Proxy_spec_proxy_probes_readiness]]Complete namespace: Proxy.Spec.Proxy.Probes.ReadinessExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    probes:      readiness: {}----
+
+
+
+
+
+==== Readiness [[Proxy_spec_proxy_probes_readiness]]
+
+Complete namespace: Proxy.Spec.Proxy.Probes.Readiness
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    probes:
+      readiness: {}
+
+----
+
+
 [.fields-ProxySpecProxyProbesReadiness]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -9882,10 +21931,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enables the probe.
+
     | *failureThreshold* +
+
     
+
+
+
+
 
 
 
@@ -9898,10 +21961,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Failure threshold.
+
     | *initialDelaySeconds* +
+
     
+
+
+
+
 
 
 
@@ -9914,10 +21993,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the initial delay (in seconds) for the probe.
+
     | *periodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -9930,10 +22025,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the period (in seconds) for the probe.
+
     | *successThreshold* +
+
     
+
+
+
+
 
 
 
@@ -9946,10 +22057,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Success threshold.
+
     | *terminationGracePeriodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -9962,10 +22089,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the termination grace period (in seconds) for the probe.
+
     | *timeoutSeconds* +
+
     
+
+
+
+
 
 
 
@@ -9978,21 +22121,71 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the timeout (in seconds) for the probe.
+
 |===
 
 
 
 
-==== Resources [[Proxy_spec_proxy_resources]]Complete namespace: Proxy.Spec.Proxy.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    resources: {}----
+
+
+
+
+
+==== Resources [[Proxy_spec_proxy_resources]]
+
+Complete namespace: Proxy.Spec.Proxy.Resources
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    resources: {}
+
+----
+
+
 [.fields-ProxySpecProxyResources]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *limits* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10003,12 +22196,28 @@ integer
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
     | *requests* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10019,23 +22228,67 @@ integer or string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Service [[Proxy_spec_proxy_service]]Complete namespace: Proxy.Spec.Proxy.ServiceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    service: {}----
+
+
+
+
+
+==== Service [[Proxy_spec_proxy_service]]
+
+Complete namespace: Proxy.Spec.Proxy.Service
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    service: {}
+
+----
+
+
 [.fields-ProxySpecProxyService]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *additionalPorts* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10048,10 +22301,26 @@ integer or string
 []<<Proxy_spec_proxy_service_additionalPorts,AdditionalPorts>>
 
 
+
+
+
     | 
+
     Additional ports to add to the Service.
+
     | *annotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10064,10 +22333,22 @@ integer or string
 []key/value
 
 
+
+
+
     | 
+
     Additional annotations to add to the Service.
+
     | *enablePlainTextWithTLS* +
+
     
+
+
+
+
+
+
 
 
 
@@ -10080,10 +22361,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable plain text connections even if TLS is enabled.
+
     | *loadBalancerIP* +
+
     
+
+
+
 
 
 string
@@ -10096,10 +22390,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Assign a load balancer IP.
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -10112,21 +22422,66 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Service type. Default value is &#39;ClusterIP&#39;
+
 |===
 
 
 
 
-==== Additionalports [[Proxy_spec_proxy_service_additionalPorts]]Complete namespace: Proxy.Spec.Proxy.Service.AdditionalportsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    service:      additionalports: {}----
+
+
+
+
+
+==== Additionalports [[Proxy_spec_proxy_service_additionalPorts]]
+
+Complete namespace: Proxy.Spec.Proxy.Service.Additionalports
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    service:
+      additionalports: {}
+
+----
+
+
 [.fields-ProxySpecProxyServiceAdditionalPorts]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *appProtocol* +
+
     
+
+
+
 
 
 string
@@ -10139,10 +22494,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -10155,10 +22526,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *nodePort* +
+
     
+
+
+
+
 
 
 
@@ -10171,10 +22559,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *port* +
+
     
+
+
+
+
 
 
 
@@ -10187,10 +22591,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *protocol* +
+
     
+
+
+
 
 
 string
@@ -10203,10 +22622,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *targetPort* +
+
             
+
 integer or string
 
 
@@ -10220,25 +22653,82 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Sets [[Proxy_spec_proxy_sets]]Complete namespace: Proxy.Spec.Proxy.SetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    sets: {}----
+
+
+
+
+
+==== Sets [[Proxy_spec_proxy_sets]]
+
+Complete namespace: Proxy.Spec.Proxy.Sets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    sets: {}
+
+----
+
+
 [.fields-ProxySpecProxySets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *additionalVolumes* +
+
             
+
             <<Proxy_spec_proxy_additionalVolumes,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10251,13 +22741,33 @@ AdditionalVolumes
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *annotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10270,11 +22780,27 @@ AdditionalVolumes
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to each resource (except pods).
+
     | *antiAffinity* +
+
             
+
             <<Proxy_spec_proxy_antiAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10287,13 +22813,33 @@ AntiAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *config* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10306,10 +22852,26 @@ AntiAffinity
 any
 
 
+
+
+
     | 
+
     Configuration.
+
     | *env* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10322,10 +22884,20 @@ any
 []<<Proxy_spec_proxy_env,Env>>
 
 
+
+
+
     | 
+
     Additional container env variables.
+
     | *gracePeriod* +
+
     
+
+
+
+
 
 
 
@@ -10338,10 +22910,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Termination grace period in seconds.
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -10354,10 +22941,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override Pulsar image.
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -10370,10 +22973,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override image pull policy.
+
     | *imagePullSecrets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10386,10 +23012,26 @@ string
 []<<Proxy_spec_proxy_additionalVolumes_volumes_cephfs_secretRef,ImagePullSecrets>>
 
 
+
+
+
     | 
+
     Image pull secrets.
+
     | *initContainers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10402,11 +23044,27 @@ string
 []<<Proxy_spec_proxy_initContainers,InitContainers>>
 
 
+
+
+
     | 
+
     Init containers
+
     | *kafka* +
+
             
+
             <<Proxy_spec_proxy_kafka,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10419,13 +23077,33 @@ Kafka
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *labels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10438,10 +23116,26 @@ Kafka
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each resource (except pods).
+
     | *matchLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10454,11 +23148,27 @@ Kafka
 []key/value
 
 
+
+
+
     | 
+
     Match labels selectors to add to each pod.
+
     | *nodeAffinity* +
+
             
+
             <<Proxy_spec_proxy_nodeAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10471,13 +23181,33 @@ NodeAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *nodeSelectors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10490,10 +23220,19 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Additional node selectors.
+
     | *overrideResourceName* +
+
     
+
+
+
 
 
 string
@@ -10506,11 +23245,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the resource names generated by the operator.
+
     | *pdb* +
+
             
+
             <<Proxy_spec_proxy_pdb,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10523,13 +23285,33 @@ Pdb
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *podAnnotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10542,10 +23324,26 @@ Pdb
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to pod.
+
     | *podLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10558,11 +23356,27 @@ Pdb
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each pod.
+
     | *probes* +
+
             
+
             <<Proxy_spec_proxy_probes,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10575,13 +23389,27 @@ Probes
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *replicas* +
+
     
+
+
+
+
 
 
 
@@ -10594,11 +23422,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Number of desired replicas.
+
     | *resources* +
+
             
+
             <<Proxy_spec_proxy_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10611,14 +23461,34 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *service* +
+
             
+
             <<Proxy_spec_proxy_service,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10631,13 +23501,33 @@ Service
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *sidecars* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10650,10 +23540,22 @@ Service
 []<<Proxy_spec_proxy_initContainers,Sidecars>>
 
 
+
+
+
     | 
+
     Sidecar containers
+
     | *standaloneFunctionsWorker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -10666,10 +23568,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Whether or not the functions worker is in standalone mode.
+
     | *tolerations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10682,11 +23604,27 @@ boolean
 []<<Proxy_spec_proxy_sets_tolerations,Tolerations>>
 
 
+
+
+
     | 
+
     Pod tolerations.
+
     | *updateStrategy* +
+
             
+
             <<Proxy_spec_proxy_sets_updateStrategy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10699,14 +23637,34 @@ UpdateStrategy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *webSocket* +
+
             
+
             <<Proxy_spec_proxy_sets_webSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10719,24 +23677,66 @@ WebSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Tolerations [[Proxy_spec_proxy_sets_tolerations]]Complete namespace: Proxy.Spec.Proxy.Sets.TolerationsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    sets:      tolerations: {}----
+
+
+
+
+
+==== Tolerations [[Proxy_spec_proxy_sets_tolerations]]
+
+Complete namespace: Proxy.Spec.Proxy.Sets.Tolerations
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    sets:
+      tolerations: {}
+
+----
+
+
 [.fields-ProxySpecProxySetsTolerations]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *effect* +
+
     
+
+
+
 
 
 string
@@ -10749,10 +23749,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -10765,10 +23781,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *operator* +
+
     
+
+
+
 
 
 string
@@ -10781,10 +23813,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tolerationSeconds* +
+
     
+
+
+
+
 
 
 
@@ -10797,10 +23846,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -10813,22 +23877,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Updatestrategy [[Proxy_spec_proxy_sets_updateStrategy]]Complete namespace: Proxy.Spec.Proxy.Sets.UpdatestrategyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    sets:      updatestrategy: {}----
+
+
+
+
+
+==== Updatestrategy [[Proxy_spec_proxy_sets_updateStrategy]]
+
+Complete namespace: Proxy.Spec.Proxy.Sets.Updatestrategy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    sets:
+      updatestrategy: {}
+
+----
+
+
 [.fields-ProxySpecProxySetsUpdateStrategy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *rollingUpdate* +
+
             
+
             <<Proxy_spec_proxy_sets_updateStrategy_rollingUpdate,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10841,13 +23957,26 @@ RollingUpdate
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -10860,21 +23989,65 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Rollingupdate [[Proxy_spec_proxy_sets_updateStrategy_rollingUpdate]]Complete namespace: Proxy.Spec.Proxy.Sets.Updatestrategy.RollingupdateExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    sets:      updatestrategy:        rollingupdate: {}----
+
+
+
+
+
+==== Rollingupdate [[Proxy_spec_proxy_sets_updateStrategy_rollingUpdate]]
+
+Complete namespace: Proxy.Spec.Proxy.Sets.Updatestrategy.Rollingupdate
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    sets:
+      updatestrategy:
+        rollingupdate: {}
+
+----
+
+
 [.fields-ProxySpecProxySetsUpdateStrategyRollingUpdate]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *maxSurge* +
+
             
+
 integer or string
 
 
@@ -10888,13 +24061,33 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
     | *maxUnavailable* +
+
             
+
 integer or string
 
 
@@ -10908,24 +24101,82 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Websocket [[Proxy_spec_proxy_sets_webSocket]]Complete namespace: Proxy.Spec.Proxy.Sets.WebsocketExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  proxy:    sets:      websocket: {}----
+
+
+
+
+
+==== Websocket [[Proxy_spec_proxy_sets_webSocket]]
+
+Complete namespace: Proxy.Spec.Proxy.Sets.Websocket
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  proxy:
+    sets:
+      websocket: {}
+
+----
+
+
 [.fields-ProxySpecProxySetsWebSocket]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *config* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10938,10 +24189,22 @@ integer or string
 any
 
 
+
+
+
     | 
+
     Configuration.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -10954,11 +24217,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable WebSocket standalone as container in the proxy pod.
+
     | *probes* +
+
             
+
             <<Proxy_spec_proxy_probes,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10971,14 +24254,34 @@ Probes
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resources* +
+
             
+
             <<Proxy_spec_proxy_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10991,24 +24294,59 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-=== Status [[Proxy_status]]Complete namespace: Proxy.Status
+
+
+
+
+
+=== Status [[Proxy_status]]
+
+Complete namespace: Proxy.Status
+
+
+
 [.fields-ProxyStatus]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *conditions* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11021,10 +24359,19 @@ Resources
 []<<Proxy_status_conditions,Conditions>>
 
 
+
+
+
     | 
+
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
+
     | *lastApplied* +
+
     
+
+
+
 
 
 string
@@ -11037,21 +24384,64 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Last spec applied.
+
 |===
 
 
 
 
-==== Conditions [[Proxy_status_conditions]]Complete namespace: Proxy.Status.ConditionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Proxymetadata:  name: example-pulsarclusterspec:  conditions: {}----
+
+
+
+
+
+==== Conditions [[Proxy_status_conditions]]
+
+Complete namespace: Proxy.Status.Conditions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Proxy
+metadata:
+  name: example-pulsarcluster
+spec:
+  conditions: {}
+
+----
+
+
 [.fields-ProxyStatusConditions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *lastTransitionTime* +
+
     
+
+
+
 
 
 string
@@ -11064,10 +24454,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *message* +
+
     
+
+
+
 
 
 string
@@ -11080,10 +24486,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *observedGeneration* +
+
     
+
+
+
+
 
 
 
@@ -11096,10 +24519,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *reason* +
+
     
+
+
+
 
 
 string
@@ -11112,10 +24550,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *status* +
+
     
+
+
+
 
 
 string
@@ -11128,10 +24582,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -11144,6 +24614,19 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
+

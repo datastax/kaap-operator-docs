@@ -1,32 +1,71 @@
 = Bastion
+
 v1alpha1
+
 :source-highlighter: highlightjs
+
 :keywords: openapi, rest, Bastion
+
 :specDir: 
+
 :snippetDir: 
+
 :generator-template: v1 2019-12-20
+
 :info-url: https://openapi-generator.tech
+
 :app-name: Bastion
 
+
+
 Auto generated from CRD spec
+
+
+
 
 
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
 
 
+
+
+
 Version: v1alpha1
+
+
 
 Namespace: pulsar.oss.datastax.com
 
+
+
 == Bastion [[Bastion]]
+
+
+
 [.fields-Bastion]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *spec* +
+
             
+
             <<Bastion_spec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -39,14 +78,34 @@ Spec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *status* +
+
             
+
             <<Bastion_status,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,25 +118,60 @@ Status
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-=== Spec [[Bastion_spec]]Complete namespace: Bastion.Spec
+
+
+
+
+
+=== Spec [[Bastion_spec]]
+
+Complete namespace: Bastion.Spec
+
+
+
 [.fields-BastionSpec]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *bastion* +
+
             
+
             <<Bastion_spec_bastion,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -90,14 +184,34 @@ Bastion
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *global* +
+
             
+
             <<Bastion_spec_global,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,24 +224,71 @@ Global
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Bastion [[Bastion_spec_bastion]]Complete namespace: Bastion.Spec.BastionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion: {}----
+
+
+
+
+
+==== Bastion [[Bastion_spec_bastion]]
+
+Complete namespace: Bastion.Spec.Bastion
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion: {}
+
+----
+
+
 [.fields-BastionSpecBastion]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *annotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -140,11 +301,27 @@ Global
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to each resource (except pods).
+
     | *antiAffinity* +
+
             
+
             <<Bastion_spec_bastion_antiAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,13 +334,33 @@ AntiAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *config* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -176,10 +373,26 @@ AntiAffinity
 any
 
 
+
+
+
     | 
+
     Configuration.
+
     | *env* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -192,10 +405,20 @@ any
 []<<Bastion_spec_bastion_env,Env>>
 
 
+
+
+
     | 
+
     Additional container env variables.
+
     | *gracePeriod* +
+
     
+
+
+
+
 
 
 
@@ -208,10 +431,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Termination grace period in seconds.
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -224,10 +462,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override Pulsar image.
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -240,10 +494,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override image pull policy.
+
     | *imagePullSecrets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,10 +533,26 @@ string
 []<<Bastion_spec_bastion_imagePullSecrets,ImagePullSecrets>>
 
 
+
+
+
     | 
+
     Image pull secrets.
+
     | *initContainers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -272,10 +565,26 @@ string
 []<<Bastion_spec_bastion_initContainers,InitContainers>>
 
 
+
+
+
     | 
+
     Init containers
+
     | *labels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -288,10 +597,26 @@ string
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each resource (except pods).
+
     | *matchLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -304,11 +629,27 @@ string
 []key/value
 
 
+
+
+
     | 
+
     Match labels selectors to add to each pod.
+
     | *nodeAffinity* +
+
             
+
             <<Bastion_spec_bastion_nodeAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -321,13 +662,33 @@ NodeAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *nodeSelectors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -340,10 +701,26 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Additional node selectors.
+
     | *podAnnotations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -356,10 +733,26 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Annotations to add to pod.
+
     | *podLabels* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -372,10 +765,20 @@ NodeAffinity
 []key/value
 
 
+
+
+
     | 
+
     Labels to add to each pod.
+
     | *replicas* +
+
     
+
+
+
+
 
 
 
@@ -388,11 +791,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     Number of desired replicas.
+
     | *resources* +
+
             
+
             <<Bastion_spec_bastion_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -405,13 +830,33 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *sidecars* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -424,10 +869,22 @@ Resources
 []<<Bastion_spec_bastion_initContainers,Sidecars>>
 
 
+
+
+
     | 
+
     Sidecar containers
+
     | *targetProxy* +
+
     
+
+
+
+
+
+
 
 
 
@@ -440,10 +897,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates to connect to proxy or the broker. The default value depends whether Proxy is deployed or not.
+
     | *tolerations* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -456,22 +933,66 @@ boolean
 []<<Bastion_spec_bastion_tolerations,Tolerations>>
 
 
+
+
+
     | 
+
     Pod tolerations.
+
 |===
 
 
 
 
-==== Antiaffinity [[Bastion_spec_bastion_antiAffinity]]Complete namespace: Bastion.Spec.Bastion.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    antiaffinity: {}----
+
+
+
+
+
+==== Antiaffinity [[Bastion_spec_bastion_antiAffinity]]
+
+Complete namespace: Bastion.Spec.Bastion.Antiaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    antiaffinity: {}
+
+----
+
+
 [.fields-BastionSpecBastionAntiAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Bastion_spec_bastion_antiAffinity_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -484,14 +1005,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Bastion_spec_bastion_antiAffinity_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -504,24 +1045,69 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Host [[Bastion_spec_bastion_antiAffinity_host]]Complete namespace: Bastion.Spec.Bastion.Antiaffinity.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    antiaffinity:      host: {}----
+
+
+
+
+
+==== Host [[Bastion_spec_bastion_antiAffinity_host]]
+
+Complete namespace: Bastion.Spec.Bastion.Antiaffinity.Host
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    antiaffinity:
+      host: {}
+
+----
+
+
 [.fields-BastionSpecBastionAntiAffinityHost]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -534,10 +1120,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *required* +
+
     
+
+
+
+
+
+
 
 
 
@@ -550,21 +1152,66 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
 |===
 
 
 
 
-==== Zone [[Bastion_spec_bastion_antiAffinity_zone]]Complete namespace: Bastion.Spec.Bastion.Antiaffinity.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    antiaffinity:      zone: {}----
+
+
+
+
+
+==== Zone [[Bastion_spec_bastion_antiAffinity_zone]]
+
+Complete namespace: Bastion.Spec.Bastion.Antiaffinity.Zone
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    antiaffinity:
+      zone: {}
+
+----
+
+
 [.fields-BastionSpecBastionAntiAffinityZone]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -577,10 +1224,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *required* +
+
     
+
+
+
+
+
+
 
 
 
@@ -593,21 +1256,62 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
 |===
 
 
 
 
-==== Env [[Bastion_spec_bastion_env]]Complete namespace: Bastion.Spec.Bastion.EnvExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    env: {}----
+
+
+
+
+
+==== Env [[Bastion_spec_bastion_env]]
+
+Complete namespace: Bastion.Spec.Bastion.Env
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    env: {}
+
+----
+
+
 [.fields-BastionSpecBastionEnv]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -620,10 +1324,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -636,11 +1356,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *valueFrom* +
+
             
+
             <<Bastion_spec_bastion_env_valueFrom,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -653,25 +1396,74 @@ ValueFrom
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Valuefrom [[Bastion_spec_bastion_env_valueFrom]]Complete namespace: Bastion.Spec.Bastion.Env.ValuefromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    env:      valuefrom: {}----
+
+
+
+
+
+==== Valuefrom [[Bastion_spec_bastion_env_valueFrom]]
+
+Complete namespace: Bastion.Spec.Bastion.Env.Valuefrom
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    env:
+      valuefrom: {}
+
+----
+
+
 [.fields-BastionSpecBastionEnvValueFrom]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *configMapKeyRef* +
+
             
+
             <<Bastion_spec_bastion_env_valueFrom_configMapKeyRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -684,14 +1476,34 @@ ConfigMapKeyRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *fieldRef* +
+
             
+
             <<Bastion_spec_bastion_env_valueFrom_fieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -704,14 +1516,34 @@ FieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resourceFieldRef* +
+
             
+
             <<Bastion_spec_bastion_env_valueFrom_resourceFieldRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -724,14 +1556,34 @@ ResourceFieldRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *secretKeyRef* +
+
             
+
             <<Bastion_spec_bastion_env_valueFrom_configMapKeyRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -744,24 +1596,67 @@ SecretKeyRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmapkeyref [[Bastion_spec_bastion_env_valueFrom_configMapKeyRef]]Complete namespace: Bastion.Spec.Bastion.Env.Valuefrom.ConfigmapkeyrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    env:      valuefrom:        configmapkeyref: {}----
+
+
+
+
+
+==== Configmapkeyref [[Bastion_spec_bastion_env_valueFrom_configMapKeyRef]]
+
+Complete namespace: Bastion.Spec.Bastion.Env.Valuefrom.Configmapkeyref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    env:
+      valuefrom:
+        configmapkeyref: {}
+
+----
+
+
 [.fields-BastionSpecBastionEnvValueFromConfigMapKeyRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -774,10 +1669,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -790,10 +1701,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -806,21 +1736,64 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Fieldref [[Bastion_spec_bastion_env_valueFrom_fieldRef]]Complete namespace: Bastion.Spec.Bastion.Env.Valuefrom.FieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    env:      valuefrom:        fieldref: {}----
+
+
+
+
+
+==== Fieldref [[Bastion_spec_bastion_env_valueFrom_fieldRef]]
+
+Complete namespace: Bastion.Spec.Bastion.Env.Valuefrom.Fieldref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    env:
+      valuefrom:
+        fieldref: {}
+
+----
+
+
 [.fields-BastionSpecBastionEnvValueFromFieldRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *apiVersion* +
+
     
+
+
+
 
 
 string
@@ -833,10 +1806,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *fieldPath* +
+
     
+
+
+
 
 
 string
@@ -849,21 +1838,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resourcefieldref [[Bastion_spec_bastion_env_valueFrom_resourceFieldRef]]Complete namespace: Bastion.Spec.Bastion.Env.Valuefrom.ResourcefieldrefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    env:      valuefrom:        resourcefieldref: {}----
+
+
+
+
+
+==== Resourcefieldref [[Bastion_spec_bastion_env_valueFrom_resourceFieldRef]]
+
+Complete namespace: Bastion.Spec.Bastion.Env.Valuefrom.Resourcefieldref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    env:
+      valuefrom:
+        resourcefieldref: {}
+
+----
+
+
 [.fields-BastionSpecBastionEnvValueFromResourceFieldRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *containerName* +
+
     
+
+
+
 
 
 string
@@ -876,10 +1911,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *divisor* +
+
             
+
 integer or string
 
 
@@ -893,13 +1942,35 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
     | *resource* +
+
     
+
+
+
 
 
 string
@@ -912,21 +1983,65 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Imagepullsecrets [[Bastion_spec_bastion_imagePullSecrets]]Complete namespace: Bastion.Spec.Bastion.ImagepullsecretsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    imagepullsecrets: {}----
+
+
+
+
+
+==== Imagepullsecrets [[Bastion_spec_bastion_imagePullSecrets]]
+
+Complete namespace: Bastion.Spec.Bastion.Imagepullsecrets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    imagepullsecrets: {}
+
+----
+
+
 [.fields-BastionSpecBastionImagePullSecrets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -939,21 +2054,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Initcontainers [[Bastion_spec_bastion_initContainers]]Complete namespace: Bastion.Spec.Bastion.InitcontainersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers: {}----
+
+
+
+
+
+==== Initcontainers [[Bastion_spec_bastion_initContainers]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainers]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *args* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -964,12 +2130,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *command* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -980,12 +2162,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *env* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -998,10 +2196,26 @@ string
 []<<Bastion_spec_bastion_env,Env>>
 
 
+
+
+
     | 
+
     
+
     | *envFrom* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1014,10 +2228,19 @@ string
 []<<Bastion_spec_bastion_initContainers_envFrom,EnvFrom>>
 
 
+
+
+
     | 
+
     
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -1030,10 +2253,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -1046,11 +2285,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *lifecycle* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1063,14 +2325,34 @@ Lifecycle
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *livenessProbe* +
+
             
+
             <<Bastion_spec_bastion_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1083,13 +2365,26 @@ LivenessProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -1102,10 +2397,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *ports* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1118,11 +2436,27 @@ string
 []<<Bastion_spec_bastion_initContainers_ports,Ports>>
 
 
+
+
+
     | 
+
     
+
     | *readinessProbe* +
+
             
+
             <<Bastion_spec_bastion_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1135,14 +2469,34 @@ ReadinessProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *resources* +
+
             
+
             <<Bastion_spec_bastion_initContainers_resources,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1155,14 +2509,34 @@ Resources
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *securityContext* +
+
             
+
             <<Bastion_spec_bastion_initContainers_securityContext,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1175,14 +2549,34 @@ SecurityContext
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *startupProbe* +
+
             
+
             <<Bastion_spec_bastion_initContainers_livenessProbe,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1195,13 +2589,29 @@ StartupProbe
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *stdin* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1214,10 +2624,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *stdinOnce* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1230,10 +2656,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *terminationMessagePath* +
+
     
+
+
+
 
 
 string
@@ -1246,10 +2685,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *terminationMessagePolicy* +
+
     
+
+
+
 
 
 string
@@ -1262,10 +2717,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tty* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1278,10 +2752,30 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *volumeDevices* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1294,10 +2788,26 @@ boolean
 []<<Bastion_spec_bastion_initContainers_volumeDevices,VolumeDevices>>
 
 
+
+
+
     | 
+
     
+
     | *volumeMounts* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1310,10 +2820,19 @@ boolean
 []<<Bastion_spec_bastion_initContainers_volumeMounts,VolumeMounts>>
 
 
+
+
+
     | 
+
     
+
     | *workingDir* +
+
     
+
+
+
 
 
 string
@@ -1326,22 +2845,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Envfrom [[Bastion_spec_bastion_initContainers_envFrom]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.EnvfromExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      envfrom: {}----
+
+
+
+
+
+==== Envfrom [[Bastion_spec_bastion_initContainers_envFrom]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Envfrom
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      envfrom: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersEnvFrom]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *configMapRef* +
+
             
+
             <<Bastion_spec_bastion_initContainers_envFrom_configMapRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1354,13 +2925,26 @@ ConfigMapRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *prefix* +
+
     
+
+
+
 
 
 string
@@ -1373,11 +2957,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *secretRef* +
+
             
+
             <<Bastion_spec_bastion_initContainers_envFrom_configMapRef,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1390,24 +2997,67 @@ SecretRef
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Configmapref [[Bastion_spec_bastion_initContainers_envFrom_configMapRef]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Envfrom.ConfigmaprefExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      envfrom:        configmapref: {}----
+
+
+
+
+
+==== Configmapref [[Bastion_spec_bastion_initContainers_envFrom_configMapRef]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Envfrom.Configmapref
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      envfrom:
+        configmapref: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersEnvFromConfigMapRef]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -1420,10 +3070,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *optional* +
+
     
+
+
+
+
+
+
 
 
 
@@ -1436,22 +3105,71 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Lifecycle [[Bastion_spec_bastion_initContainers_lifecycle]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.LifecycleExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      lifecycle: {}----
+
+
+
+
+
+==== Lifecycle [[Bastion_spec_bastion_initContainers_lifecycle]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      lifecycle: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLifecycle]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *postStart* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1464,14 +3182,34 @@ PostStart
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *preStop* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1484,25 +3222,75 @@ PreStop
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Poststart [[Bastion_spec_bastion_initContainers_lifecycle_postStart]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.PoststartExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      lifecycle:        poststart: {}----
+
+
+
+
+
+==== Poststart [[Bastion_spec_bastion_initContainers_lifecycle_postStart]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      lifecycle:
+        poststart: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLifecyclePostStart]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *exec* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_exec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1515,14 +3303,34 @@ Exec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *httpGet* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1535,14 +3343,34 @@ HttpGet
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *tcpSocket* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_tcpSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1555,24 +3383,75 @@ TcpSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Exec [[Bastion_spec_bastion_initContainers_lifecycle_postStart_exec]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.ExecExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      lifecycle:        poststart:          exec: {}----
+
+
+
+
+
+==== Exec [[Bastion_spec_bastion_initContainers_lifecycle_postStart_exec]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.Exec
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      lifecycle:
+        poststart:
+          exec: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLifecyclePostStartExec]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *command* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1583,23 +3462,63 @@ TcpSocket
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Httpget [[Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.HttpgetExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      lifecycle:        poststart:          httpget: {}----
+
+
+
+
+
+==== Httpget [[Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.Httpget
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      lifecycle:
+        poststart:
+          httpget: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLifecyclePostStartHttpGet]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
     
+
+
+
 
 
 string
@@ -1612,10 +3531,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *httpHeaders* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1628,10 +3570,19 @@ string
 []<<Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet_httpHeaders,HttpHeaders>>
 
 
+
+
+
     | 
+
     
+
     | *path* +
+
     
+
+
+
 
 
 string
@@ -1644,10 +3595,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *port* +
+
             
+
 integer or string
 
 
@@ -1661,13 +3626,35 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
     | *scheme* +
+
     
+
+
+
 
 
 string
@@ -1680,21 +3667,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Httpheaders [[Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet_httpHeaders]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.Httpget.HttpheadersExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      lifecycle:        poststart:          httpget:            httpheaders: {}----
+
+
+
+
+
+==== Httpheaders [[Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet_httpHeaders]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.Httpget.Httpheaders
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      lifecycle:
+        poststart:
+          httpget:
+            httpheaders: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLifecyclePostStartHttpGetHttpHeaders]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *name* +
+
     
+
+
+
 
 
 string
@@ -1707,10 +3742,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -1723,21 +3774,68 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Tcpsocket [[Bastion_spec_bastion_initContainers_lifecycle_postStart_tcpSocket]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.TcpsocketExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      lifecycle:        poststart:          tcpsocket: {}----
+
+
+
+
+
+==== Tcpsocket [[Bastion_spec_bastion_initContainers_lifecycle_postStart_tcpSocket]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Lifecycle.Poststart.Tcpsocket
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      lifecycle:
+        poststart:
+          tcpsocket: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLifecyclePostStartTcpSocket]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
     
+
+
+
 
 
 string
@@ -1750,10 +3848,24 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *port* +
+
             
+
 integer or string
 
 
@@ -1767,25 +3879,83 @@ integer or string
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
             
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Livenessprobe [[Bastion_spec_bastion_initContainers_livenessProbe]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.LivenessprobeExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      livenessprobe: {}----
+
+
+
+
+
+==== Livenessprobe [[Bastion_spec_bastion_initContainers_livenessProbe]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Livenessprobe
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      livenessprobe: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLivenessProbe]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *exec* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_exec,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1798,13 +3968,27 @@ Exec
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *failureThreshold* +
+
     
+
+
+
+
 
 
 
@@ -1817,11 +4001,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *grpc* +
+
             
+
             <<Bastion_spec_bastion_initContainers_livenessProbe_grpc,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1834,14 +4040,34 @@ Grpc
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *httpGet* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1854,13 +4080,27 @@ HttpGet
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *initialDelaySeconds* +
+
     
+
+
+
+
 
 
 
@@ -1873,10 +4113,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *periodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -1889,10 +4145,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *successThreshold* +
+
     
+
+
+
+
 
 
 
@@ -1905,11 +4177,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tcpSocket* +
+
             
+
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_tcpSocket,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1922,13 +4216,27 @@ TcpSocket
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *terminationGracePeriodSeconds* +
+
     
+
+
+
+
 
 
 
@@ -1941,10 +4249,26 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *timeoutSeconds* +
+
     
+
+
+
+
 
 
 
@@ -1957,21 +4281,67 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Grpc [[Bastion_spec_bastion_initContainers_livenessProbe_grpc]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Livenessprobe.GrpcExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      livenessprobe:        grpc: {}----
+
+
+
+
+
+==== Grpc [[Bastion_spec_bastion_initContainers_livenessProbe_grpc]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Livenessprobe.Grpc
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      livenessprobe:
+        grpc: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersLivenessProbeGrpc]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *port* +
+
     
+
+
+
+
 
 
 
@@ -1984,10 +4354,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *service* +
+
     
+
+
+
 
 
 string
@@ -2000,21 +4385,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Ports [[Bastion_spec_bastion_initContainers_ports]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.PortsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      ports: {}----
+
+
+
+
+
+==== Ports [[Bastion_spec_bastion_initContainers_ports]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Ports
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      ports: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersPorts]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *containerPort* +
+
     
+
+
+
+
 
 
 
@@ -2027,10 +4458,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostIP* +
+
     
+
+
+
 
 
 string
@@ -2043,10 +4489,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostPort* +
+
     
+
+
+
+
 
 
 
@@ -2059,10 +4522,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -2075,10 +4553,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *protocol* +
+
     
+
+
+
 
 
 string
@@ -2091,21 +4585,73 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resources [[Bastion_spec_bastion_initContainers_resources]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      resources: {}----
+
+
+
+
+
+==== Resources [[Bastion_spec_bastion_initContainers_resources]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Resources
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      resources: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersResources]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *limits* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2116,12 +4662,28 @@ string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
     | *requests* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2132,23 +4694,64 @@ integer or string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Securitycontext [[Bastion_spec_bastion_initContainers_securityContext]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.SecuritycontextExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      securitycontext: {}----
+
+
+
+
+
+==== Securitycontext [[Bastion_spec_bastion_initContainers_securityContext]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      securitycontext: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersSecurityContext]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *allowPrivilegeEscalation* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2161,11 +4764,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *capabilities* +
+
             
+
             <<Bastion_spec_bastion_initContainers_securityContext_capabilities,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2178,13 +4801,29 @@ Capabilities
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *privileged* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2197,10 +4836,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *procMount* +
+
     
+
+
+
 
 
 string
@@ -2213,10 +4865,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnlyRootFilesystem* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2229,10 +4900,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsGroup* +
+
     
+
+
+
+
 
 
 
@@ -2245,10 +4930,28 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsNonRoot* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2261,10 +4964,24 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsUser* +
+
     
+
+
+
+
 
 
 
@@ -2277,11 +4994,33 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *seLinuxOptions* +
+
             
+
             <<Bastion_spec_bastion_initContainers_securityContext_seLinuxOptions,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2294,14 +5033,34 @@ SeLinuxOptions
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *seccompProfile* +
+
             
+
             <<Bastion_spec_bastion_initContainers_securityContext_seccompProfile,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2314,14 +5073,34 @@ SeccompProfile
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *windowsOptions* +
+
             
+
             <<Bastion_spec_bastion_initContainers_securityContext_windowsOptions,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2334,24 +5113,74 @@ WindowsOptions
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Capabilities [[Bastion_spec_bastion_initContainers_securityContext_capabilities]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.CapabilitiesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      securitycontext:        capabilities: {}----
+
+
+
+
+
+==== Capabilities [[Bastion_spec_bastion_initContainers_securityContext_capabilities]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.Capabilities
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      securitycontext:
+        capabilities: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersSecurityContextCapabilities]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *add* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2362,12 +5191,28 @@ WindowsOptions
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *drop* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2378,23 +5223,62 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Selinuxoptions [[Bastion_spec_bastion_initContainers_securityContext_seLinuxOptions]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.SelinuxoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      securitycontext:        selinuxoptions: {}----
+
+
+
+
+
+==== Selinuxoptions [[Bastion_spec_bastion_initContainers_securityContext_seLinuxOptions]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.Selinuxoptions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      securitycontext:
+        selinuxoptions: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersSecurityContextSeLinuxOptions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *level* +
+
     
+
+
+
 
 
 string
@@ -2407,10 +5291,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *role* +
+
     
+
+
+
 
 
 string
@@ -2423,10 +5323,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -2439,10 +5355,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *user* +
+
     
+
+
+
 
 
 string
@@ -2455,21 +5387,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Seccompprofile [[Bastion_spec_bastion_initContainers_securityContext_seccompProfile]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.SeccompprofileExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      securitycontext:        seccompprofile: {}----
+
+
+
+
+
+==== Seccompprofile [[Bastion_spec_bastion_initContainers_securityContext_seccompProfile]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.Seccompprofile
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      securitycontext:
+        seccompprofile: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersSecurityContextSeccompProfile]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *localhostProfile* +
+
     
+
+
+
 
 
 string
@@ -2482,10 +5460,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -2498,21 +5492,67 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Windowsoptions [[Bastion_spec_bastion_initContainers_securityContext_windowsOptions]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.WindowsoptionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      securitycontext:        windowsoptions: {}----
+
+
+
+
+
+==== Windowsoptions [[Bastion_spec_bastion_initContainers_securityContext_windowsOptions]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Securitycontext.Windowsoptions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      securitycontext:
+        windowsoptions: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersSecurityContextWindowsOptions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *gmsaCredentialSpec* +
+
     
+
+
+
 
 
 string
@@ -2525,10 +5565,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *gmsaCredentialSpecName* +
+
     
+
+
+
 
 
 string
@@ -2541,10 +5597,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *hostProcess* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2557,10 +5632,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *runAsUserName* +
+
     
+
+
+
 
 
 string
@@ -2573,21 +5661,66 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Volumedevices [[Bastion_spec_bastion_initContainers_volumeDevices]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.VolumedevicesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      volumedevices: {}----
+
+
+
+
+
+==== Volumedevices [[Bastion_spec_bastion_initContainers_volumeDevices]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Volumedevices
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      volumedevices: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersVolumeDevices]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *devicePath* +
+
     
+
+
+
 
 
 string
@@ -2600,10 +5733,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -2616,21 +5765,66 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Volumemounts [[Bastion_spec_bastion_initContainers_volumeMounts]]Complete namespace: Bastion.Spec.Bastion.Initcontainers.VolumemountsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    initcontainers:      volumemounts: {}----
+
+
+
+
+
+==== Volumemounts [[Bastion_spec_bastion_initContainers_volumeMounts]]
+
+Complete namespace: Bastion.Spec.Bastion.Initcontainers.Volumemounts
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    initcontainers:
+      volumemounts: {}
+
+----
+
+
 [.fields-BastionSpecBastionInitContainersVolumeMounts]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *mountPath* +
+
     
+
+
+
 
 
 string
@@ -2643,10 +5837,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *mountPropagation* +
+
     
+
+
+
 
 
 string
@@ -2659,10 +5869,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *name* +
+
     
+
+
+
 
 
 string
@@ -2675,10 +5901,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *readOnly* +
+
     
+
+
+
+
+
+
 
 
 
@@ -2691,10 +5936,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     
+
     | *subPath* +
+
     
+
+
+
 
 
 string
@@ -2707,10 +5965,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *subPathExpr* +
+
     
+
+
+
 
 
 string
@@ -2723,21 +5997,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Nodeaffinity [[Bastion_spec_bastion_nodeAffinity]]Complete namespace: Bastion.Spec.Bastion.NodeaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    nodeaffinity: {}----
+
+
+
+
+
+==== Nodeaffinity [[Bastion_spec_bastion_nodeAffinity]]
+
+Complete namespace: Bastion.Spec.Bastion.Nodeaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    nodeaffinity: {}
+
+----
+
+
 [.fields-BastionSpecBastionNodeAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *preferredDuringSchedulingIgnoredDuringExecution* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2750,11 +6075,27 @@ string
 []<<Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution,PreferredDuringSchedulingIgnoredDuringExecution>>
 
 
+
+
+
     | 
+
     
+
     | *requiredDuringSchedulingIgnoredDuringExecution* +
+
             
+
             <<Bastion_spec_bastion_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2767,25 +6108,74 @@ RequiredDuringSchedulingIgnoredDuringExecution
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Preferredduringschedulingignoredduringexecution [[Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.PreferredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    nodeaffinity:      preferredduringschedulingignoredduringexecution: {}----
+
+
+
+
+
+==== Preferredduringschedulingignoredduringexecution [[Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution]]
+
+Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.Preferredduringschedulingignoredduringexecution
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution: {}
+
+----
+
+
 [.fields-BastionSpecBastionNodeAffinityPreferredDuringSchedulingIgnoredDuringExecution]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *preference* +
+
             
+
             <<Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2798,13 +6188,27 @@ Preference
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *weight* +
+
     
+
+
+
+
 
 
 
@@ -2817,21 +6221,73 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Preference [[Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.Preferredduringschedulingignoredduringexecution.PreferenceExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference: {}----
+
+
+
+
+
+==== Preference [[Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference]]
+
+Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution:
+        preference: {}
+
+----
+
+
 [.fields-BastionSpecBastionNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreference]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *matchExpressions* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2844,10 +6300,26 @@ integer
 []<<Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions,MatchExpressions>>
 
 
+
+
+
     | 
+
     
+
     | *matchFields* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2860,21 +6332,61 @@ integer
 []<<Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions,MatchFields>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Matchexpressions [[Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions]]Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference.MatchexpressionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    nodeaffinity:      preferredduringschedulingignoredduringexecution:        preference:          matchexpressions: {}----
+
+
+
+
+
+==== Matchexpressions [[Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference_matchExpressions]]
+
+Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.Preferredduringschedulingignoredduringexecution.Preference.Matchexpressions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    nodeaffinity:
+      preferredduringschedulingignoredduringexecution:
+        preference:
+          matchexpressions: {}
+
+----
+
+
 [.fields-BastionSpecBastionNodeAffinityPreferredDuringSchedulingIgnoredDuringExecutionPreferenceMatchExpressions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -2887,10 +6399,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *operator* +
+
     
+
+
+
 
 
 string
@@ -2903,10 +6431,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *values* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2917,23 +6468,68 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Requiredduringschedulingignoredduringexecution [[Bastion_spec_bastion_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.RequiredduringschedulingignoredduringexecutionExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    nodeaffinity:      requiredduringschedulingignoredduringexecution: {}----
+
+
+
+
+
+==== Requiredduringschedulingignoredduringexecution [[Bastion_spec_bastion_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution]]
+
+Complete namespace: Bastion.Spec.Bastion.Nodeaffinity.Requiredduringschedulingignoredduringexecution
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    nodeaffinity:
+      requiredduringschedulingignoredduringexecution: {}
+
+----
+
+
 [.fields-BastionSpecBastionNodeAffinityRequiredDuringSchedulingIgnoredDuringExecution]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *nodeSelectorTerms* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2946,21 +6542,65 @@ string
 []<<Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,NodeSelectorTerms>>
 
 
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Resources [[Bastion_spec_bastion_resources]]Complete namespace: Bastion.Spec.Bastion.ResourcesExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    resources: {}----
+
+
+
+
+
+==== Resources [[Bastion_spec_bastion_resources]]
+
+Complete namespace: Bastion.Spec.Bastion.Resources
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    resources: {}
+
+----
+
+
 [.fields-BastionSpecBastionResources]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *limits* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2971,12 +6611,28 @@ string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
     | *requests* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2987,23 +6643,60 @@ integer or string
 
 
 []
+
 integer or string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Tolerations [[Bastion_spec_bastion_tolerations]]Complete namespace: Bastion.Spec.Bastion.TolerationsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  bastion:    tolerations: {}----
+
+
+
+
+
+==== Tolerations [[Bastion_spec_bastion_tolerations]]
+
+Complete namespace: Bastion.Spec.Bastion.Tolerations
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  bastion:
+    tolerations: {}
+
+----
+
+
 [.fields-BastionSpecBastionTolerations]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *effect* +
+
     
+
+
+
 
 
 string
@@ -3016,10 +6709,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *key* +
+
     
+
+
+
 
 
 string
@@ -3032,10 +6741,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *operator* +
+
     
+
+
+
 
 
 string
@@ -3048,10 +6773,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *tolerationSeconds* +
+
     
+
+
+
+
 
 
 
@@ -3064,10 +6806,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *value* +
+
     
+
+
+
 
 
 string
@@ -3080,24 +6837,77 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Global [[Bastion_spec_global]]Complete namespace: Bastion.Spec.GlobalExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global: {}----
+
+
+
+
+
+==== Global [[Bastion_spec_global]]
+
+Complete namespace: Bastion.Spec.Global
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global: {}
+
+----
+
+
 [.fields-BastionSpecGlobal]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *name* +
+
     
 
 
+
+
+
 string
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3108,10 +6918,23 @@ string
 
 
     | _(Optional)_ + 
+
     Pulsar cluster name.
+
     | *antiAffinity* +
+
             
+
             <<Bastion_spec_global_antiAffinity,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3124,14 +6947,34 @@ AntiAffinity
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *auth* +
+
             
+
             <<Bastion_spec_global_auth,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3144,14 +6987,34 @@ Auth
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *components* +
+
             
+
             <<Bastion_spec_global_components,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3164,14 +7027,34 @@ Components
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *dnsConfig* +
+
             
+
             <<Bastion_spec_global_dnsConfig,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3184,13 +7067,26 @@ DnsConfig
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *dnsName* +
+
     
+
+
+
 
 
 string
@@ -3203,10 +7099,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Public dns name for the cluster&#39;s load balancer.
+
     | *image* +
+
     
+
+
+
 
 
 string
@@ -3219,10 +7131,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Default Pulsar image to use. Any components can be configured to use a different image.
+
     | *imagePullPolicy* +
+
     
+
+
+
 
 
 string
@@ -3235,10 +7163,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
+
     | *kubernetesClusterDomain* +
+
     
+
+
+
 
 
 string
@@ -3251,10 +7195,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
+
     | *nodeSelectors* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3267,10 +7234,22 @@ string
 []key/value
 
 
+
+
+
     | 
+
     Global node selector. If set, this will apply to all the components.
+
     | *persistence* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3283,10 +7262,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
+
     | *priorityClassName* +
+
     
+
+
+
 
 
 string
@@ -3299,10 +7291,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Priority class name to attach to each pod.
+
     | *racks* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3315,10 +7330,26 @@ string
 []
 
 
+
+
+
     | 
+
     Racks configuration.
+
     | *resourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3331,10 +7362,22 @@ string
 []
 
 
+
+
+
     | 
+
     Resource sets.
+
     | *restartOnConfigMapChange* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3347,11 +7390,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
+
     | *storage* +
+
             
+
             <<Bastion_spec_global_storage,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3364,14 +7427,34 @@ Storage
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *tls* +
+
             
+
             <<Bastion_spec_global_tls,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3384,13 +7467,29 @@ Tls
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeperPlainSslStorePassword* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3403,22 +7502,70 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
+
 |===
 
 
 
 
-==== Antiaffinity [[Bastion_spec_global_antiAffinity]]Complete namespace: Bastion.Spec.Global.AntiaffinityExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    antiaffinity: {}----
+
+
+
+
+
+==== Antiaffinity [[Bastion_spec_global_antiAffinity]]
+
+Complete namespace: Bastion.Spec.Global.Antiaffinity
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    antiaffinity: {}
+
+----
+
+
 [.fields-BastionSpecGlobalAntiAffinity]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Bastion_spec_bastion_antiAffinity_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3431,14 +7578,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Bastion_spec_bastion_antiAffinity_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3451,24 +7618,68 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Auth [[Bastion_spec_global_auth]]Complete namespace: Bastion.Spec.Global.AuthExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    auth: {}----
+
+
+
+
+
+==== Auth [[Bastion_spec_global_auth]]
+
+Complete namespace: Bastion.Spec.Global.Auth
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    auth: {}
+
+----
+
+
 [.fields-BastionSpecGlobalAuth]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3481,11 +7692,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable authentication in the cluster. Default is &#39;false&#39;.
+
     | *token* +
+
             
+
             <<Bastion_spec_global_auth_token,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3498,24 +7729,69 @@ Token
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Token [[Bastion_spec_global_auth_token]]Complete namespace: Bastion.Spec.Global.Auth.TokenExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    auth:      token: {}----
+
+
+
+
+
+==== Token [[Bastion_spec_global_auth_token]]
+
+Complete namespace: Bastion.Spec.Global.Auth.Token
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    auth:
+      token: {}
+
+----
+
+
 [.fields-BastionSpecGlobalAuthToken]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *initialize* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3528,10 +7804,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
+
     | *privateKeyFile* +
+
     
+
+
+
 
 
 string
@@ -3544,9 +7833,22 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
+
     | *proxyRoles* +
+
     
 
 
@@ -3557,13 +7859,32 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
 []
+
 string
 
+
+
     | 
+
     Proxy roles.
+
     | *publicKeyFile* +
+
     
+
+
+
 
 
 string
@@ -3576,10 +7897,33 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
+
     | *superUserRoles* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3590,23 +7934,60 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     Super user roles.
+
 |===
 
 
 
 
-==== Components [[Bastion_spec_global_components]]Complete namespace: Bastion.Spec.Global.ComponentsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    components: {}----
+
+
+
+
+
+==== Components [[Bastion_spec_global_components]]
+
+Complete namespace: Bastion.Spec.Global.Components
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    components: {}
+
+----
+
+
 [.fields-BastionSpecGlobalComponents]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *autorecoveryBaseName* +
+
     
+
+
+
 
 
 string
@@ -3619,10 +8000,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
+
     | *bastionBaseName* +
+
     
+
+
+
 
 
 string
@@ -3635,10 +8032,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Bastion base name. Default value is &#39;bastion&#39;.
+
     | *bookkeeperBaseName* +
+
     
+
+
+
 
 
 string
@@ -3651,10 +8064,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
+
     | *brokerBaseName* +
+
     
+
+
+
 
 
 string
@@ -3667,10 +8096,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Broker base name. Default value is &#39;broker&#39;.
+
     | *functionsWorkerBaseName* +
+
     
+
+
+
 
 
 string
@@ -3683,10 +8128,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Functions Worker base name. Default value is &#39;function&#39;.
+
     | *proxyBaseName* +
+
     
+
+
+
 
 
 string
@@ -3699,10 +8160,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Proxy base name. Default value is &#39;proxy&#39;.
+
     | *zookeeperBaseName* +
+
     
+
+
+
 
 
 string
@@ -3715,21 +8192,72 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
+
 |===
 
 
 
 
-==== Dnsconfig [[Bastion_spec_global_dnsConfig]]Complete namespace: Bastion.Spec.Global.DnsconfigExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    dnsconfig: {}----
+
+
+
+
+
+==== Dnsconfig [[Bastion_spec_global_dnsConfig]]
+
+Complete namespace: Bastion.Spec.Global.Dnsconfig
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    dnsconfig: {}
+
+----
+
+
 [.fields-BastionSpecGlobalDnsConfig]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *nameservers* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3740,12 +8268,28 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
     | *options* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3758,10 +8302,26 @@ string
 []<<Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet_httpHeaders,Options>>
 
 
+
+
+
     | 
+
     
+
     | *searches* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3772,24 +8332,68 @@ string
 
 
 []
+
 string
 
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Racks [[Bastion_spec_global_racks]]Complete namespace: Bastion.Spec.Global.RacksExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    racks: {}----
+
+
+
+
+
+==== Racks [[Bastion_spec_global_racks]]
+
+Complete namespace: Bastion.Spec.Global.Racks
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks: {}
+
+----
+
+
 [.fields-BastionSpecGlobalRacks]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *host* +
+
             
+
             <<Bastion_spec_global_racks_host,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3802,14 +8406,34 @@ Host
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zone* +
+
             
+
             <<Bastion_spec_global_racks_zone,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3822,24 +8446,69 @@ Zone
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Host [[Bastion_spec_global_racks_host]]Complete namespace: Bastion.Spec.Global.Racks.HostExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    racks:      host: {}----
+
+
+
+
+
+==== Host [[Bastion_spec_global_racks_host]]
+
+Complete namespace: Bastion.Spec.Global.Racks.Host
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks:
+      host: {}
+
+----
+
+
 [.fields-BastionSpecGlobalRacksHost]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3852,10 +8521,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the rack affinity rules.
+
     | *requireRackAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3868,10 +8553,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3884,21 +8585,66 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
 |===
 
 
 
 
-==== Zone [[Bastion_spec_global_racks_zone]]Complete namespace: Bastion.Spec.Global.Racks.ZoneExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    racks:      zone: {}----
+
+
+
+
+
+==== Zone [[Bastion_spec_global_racks_zone]]
+
+Complete namespace: Bastion.Spec.Global.Racks.Zone
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    racks:
+      zone: {}
+
+----
+
+
 [.fields-BastionSpecGlobalRacksZone]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *enableHostAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3911,10 +8657,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3927,10 +8689,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable the rack affinity rules.
+
     | *requireRackAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3943,10 +8721,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3959,10 +8753,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
     | *requireRackHostAntiAffinity* +
+
     
+
+
+
+
+
+
 
 
 
@@ -3975,21 +8785,62 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
+
 |===
 
 
 
 
-==== Resourcesets [[Bastion_spec_global_resourceSets]]Complete namespace: Bastion.Spec.Global.ResourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    resourcesets: {}----
+
+
+
+
+
+==== Resourcesets [[Bastion_spec_global_resourceSets]]
+
+Complete namespace: Bastion.Spec.Global.Resourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    resourcesets: {}
+
+----
+
+
 [.fields-BastionSpecGlobalResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *rack* +
+
     
+
+
+
 
 
 string
@@ -4002,21 +8853,65 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Place this resource set to a specific rack, defined at .global.racks.
+
 |===
 
 
 
 
-==== Storage [[Bastion_spec_global_storage]]Complete namespace: Bastion.Spec.Global.StorageExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    storage: {}----
+
+
+
+
+
+==== Storage [[Bastion_spec_global_storage]]
+
+Complete namespace: Bastion.Spec.Global.Storage
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    storage: {}
+
+----
+
+
 [.fields-BastionSpecGlobalStorage]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *existingStorageClassName* +
+
     
+
+
+
 
 
 string
@@ -4029,11 +8924,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates if an already existing storage class should be used.
+
     | *storageClass* +
+
             
+
             <<Bastion_spec_global_storage_storageClass,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4046,24 +8964,73 @@ StorageClass
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Storageclass [[Bastion_spec_global_storage_storageClass]]Complete namespace: Bastion.Spec.Global.Storage.StorageclassExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    storage:      storageclass: {}----
+
+
+
+
+
+==== Storageclass [[Bastion_spec_global_storage_storageClass]]
+
+Complete namespace: Bastion.Spec.Global.Storage.Storageclass
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    storage:
+      storageclass: {}
+
+----
+
+
 [.fields-BastionSpecGlobalStorageStorageClass]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *extraParams* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4076,10 +9043,19 @@ StorageClass
 []key/value
 
 
+
+
+
     | 
+
     Adds extra parameters for the StorageClass.
+
     | *fsType* +
+
     
+
+
+
 
 
 string
@@ -4092,10 +9068,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
+
     | *provisioner* +
+
     
+
+
+
 
 
 string
@@ -4108,10 +9100,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the provisioner property for the StorageClass.
+
     | *reclaimPolicy* +
+
     
+
+
+
 
 
 string
@@ -4124,10 +9132,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the reclaimPolicy property for the StorageClass.
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -4140,22 +9164,73 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Indicates the &#39;type&#39; parameter for the StorageClass.
+
 |===
 
 
 
 
-==== Tls [[Bastion_spec_global_tls]]Complete namespace: Bastion.Spec.Global.TlsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls: {}----
+
+
+
+
+
+==== Tls [[Bastion_spec_global_tls]]
+
+Complete namespace: Bastion.Spec.Global.Tls
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTls]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *autorecovery* +
+
             
+
             <<Bastion_spec_global_tls_autorecovery,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4168,14 +9243,34 @@ Autorecovery
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *bookkeeper* +
+
             
+
             <<Bastion_spec_global_tls_bookkeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4188,14 +9283,34 @@ Bookkeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *broker* +
+
             
+
             <<Bastion_spec_global_tls_broker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4208,13 +9323,33 @@ Broker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *brokerResourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4227,10 +9362,19 @@ Broker
 []
 
 
+
+
+
     | 
+
     TLS configurations related to the Broker resource sets.
+
     | *caPath* +
+
     
+
+
+
 
 
 string
@@ -4243,11 +9387,34 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
+
     | *certProvisioner* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4260,13 +9427,26 @@ CertProvisioner
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *defaultSecretName* +
+
     
+
+
+
 
 
 string
@@ -4279,10 +9459,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4295,11 +9494,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
+
     | *functionsWorker* +
+
             
+
             <<Bastion_spec_global_tls_functionsWorker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4312,14 +9531,34 @@ FunctionsWorker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxy* +
+
             
+
             <<Bastion_spec_global_tls_proxy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4332,13 +9571,33 @@ Proxy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxyResourceSets* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4351,11 +9610,27 @@ Proxy
 []
 
 
+
+
+
     | 
+
     TLS configurations related to the Proxy resource sets.
+
     | *ssCa* +
+
             
+
             <<Bastion_spec_global_tls_ssCa,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4368,14 +9643,34 @@ SsCa
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeper* +
+
             
+
             <<Bastion_spec_global_tls_zookeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4388,24 +9683,69 @@ Zookeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Autorecovery [[Bastion_spec_global_tls_autorecovery]]Complete namespace: Bastion.Spec.Global.Tls.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      autorecovery: {}----
+
+
+
+
+
+==== Autorecovery [[Bastion_spec_global_tls_autorecovery]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Autorecovery
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      autorecovery: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsAutorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4418,10 +9758,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4434,21 +9787,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Bookkeeper [[Bastion_spec_global_tls_bookkeeper]]Complete namespace: Bastion.Spec.Global.Tls.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      bookkeeper: {}----
+
+
+
+
+
+==== Bookkeeper [[Bastion_spec_global_tls_bookkeeper]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Bookkeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      bookkeeper: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsBookkeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4461,10 +9862,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4477,21 +9891,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Broker [[Bastion_spec_global_tls_broker]]Complete namespace: Bastion.Spec.Global.Tls.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      broker: {}----
+
+
+
+
+
+==== Broker [[Bastion_spec_global_tls_broker]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Broker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      broker: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsBroker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4504,10 +9966,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4520,21 +9995,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Brokerresourcesets [[Bastion_spec_global_tls_brokerResourceSets]]Complete namespace: Bastion.Spec.Global.Tls.BrokerresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      brokerresourcesets: {}----
+
+
+
+
+
+==== Brokerresourcesets [[Bastion_spec_global_tls_brokerResourceSets]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Brokerresourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      brokerresourcesets: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsBrokerResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4547,10 +10070,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -4563,22 +10099,74 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Certprovisioner [[Bastion_spec_global_tls_certProvisioner]]Complete namespace: Bastion.Spec.Global.Tls.CertprovisionerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner: {}----
+
+
+
+
+
+==== Certprovisioner [[Bastion_spec_global_tls_certProvisioner]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisioner]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *selfSigned* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4591,25 +10179,75 @@ SelfSigned
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Selfsigned [[Bastion_spec_global_tls_certProvisioner_selfSigned]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.SelfsignedExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned: {}----
+
+
+
+
+
+==== Selfsigned [[Bastion_spec_global_tls_certProvisioner_selfSigned]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSigned]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *autorecovery* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4622,14 +10260,34 @@ Autorecovery
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *bookkeeper* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4642,14 +10300,34 @@ Bookkeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *broker* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_broker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4662,13 +10340,26 @@ Broker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *caSecretName* +
+
     
+
+
+
 
 
 string
@@ -4681,10 +10372,29 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Secret where to store the root CA certificate.
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4697,11 +10407,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for broker, proxy and functions worker.
+
     | *functionsWorker* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4714,13 +10444,29 @@ FunctionsWorker
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *includeDns* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4733,10 +10479,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Include dns name in the DNS names covered by the certificate.
+
     | *perComponent* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4749,11 +10511,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate a different certificate for each component.
+
     | *privateKey* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4766,14 +10548,34 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *proxy* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_proxy,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4786,14 +10588,34 @@ Proxy
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
     | *zookeeper* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_zookeeper,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4806,24 +10628,71 @@ Zookeeper
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Autorecovery [[Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.AutorecoveryExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery: {}----
+
+
+
+
+
+==== Autorecovery [[Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          autorecovery: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSignedAutorecovery]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4836,11 +10705,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4853,24 +10742,69 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Privatekey [[Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.PrivatekeyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          autorecovery:            privatekey: {}----
+
+
+
+
+
+==== Privatekey [[Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Autorecovery.Privatekey
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          autorecovery:
+            privatekey: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSignedAutorecoveryPrivateKey]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *algorithm* +
+
     
+
+
+
 
 
 string
@@ -4883,10 +10817,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *encoding* +
+
     
+
+
+
 
 
 string
@@ -4899,10 +10849,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *rotationPolicy* +
+
     
+
+
+
 
 
 string
@@ -4915,10 +10881,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *size* +
+
     
+
+
+
+
 
 
 
@@ -4931,21 +10914,70 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
 
 
 
 
-==== Bookkeeper [[Bastion_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.BookkeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          bookkeeper: {}----
+
+
+
+
+
+==== Bookkeeper [[Bastion_spec_global_tls_certProvisioner_selfSigned_bookkeeper]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Bookkeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          bookkeeper: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSignedBookkeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -4958,11 +10990,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4975,24 +11027,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Broker [[Bastion_spec_global_tls_certProvisioner_selfSigned_broker]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.BrokerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          broker: {}----
+
+
+
+
+
+==== Broker [[Bastion_spec_global_tls_certProvisioner_selfSigned_broker]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Broker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          broker: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSignedBroker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5005,11 +11104,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5022,24 +11141,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Functionsworker [[Bastion_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          functionsworker: {}----
+
+
+
+
+
+==== Functionsworker [[Bastion_spec_global_tls_certProvisioner_selfSigned_functionsWorker]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Functionsworker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          functionsworker: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSignedFunctionsWorker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5052,11 +11218,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5069,24 +11255,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Proxy [[Bastion_spec_global_tls_certProvisioner_selfSigned_proxy]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          proxy: {}----
+
+
+
+
+
+==== Proxy [[Bastion_spec_global_tls_certProvisioner_selfSigned_proxy]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Proxy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          proxy: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSignedProxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5099,11 +11332,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5116,24 +11369,71 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Zookeeper [[Bastion_spec_global_tls_certProvisioner_selfSigned_zookeeper]]Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      certprovisioner:        selfsigned:          zookeeper: {}----
+
+
+
+
+
+==== Zookeeper [[Bastion_spec_global_tls_certProvisioner_selfSigned_zookeeper]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Certprovisioner.Selfsigned.Zookeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      certprovisioner:
+        selfsigned:
+          zookeeper: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsCertProvisionerSelfSignedZookeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *generate* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5146,11 +11446,31 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Generate self signed certificates for the component.
+
     | *privateKey* +
+
             
+
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5163,24 +11483,69 @@ PrivateKey
 
 
 
+
+
+
+
 >>
+
         
+
     
+
     | 
+
     
+
 |===
 
 
 
 
-==== Functionsworker [[Bastion_spec_global_tls_functionsWorker]]Complete namespace: Bastion.Spec.Global.Tls.FunctionsworkerExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      functionsworker: {}----
+
+
+
+
+
+==== Functionsworker [[Bastion_spec_global_tls_functionsWorker]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Functionsworker
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      functionsworker: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsFunctionsWorker]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5193,10 +11558,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5209,10 +11590,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the functions worker to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5225,21 +11619,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Proxy [[Bastion_spec_global_tls_proxy]]Complete namespace: Bastion.Spec.Global.Tls.ProxyExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      proxy: {}----
+
+
+
+
+
+==== Proxy [[Bastion_spec_global_tls_proxy]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Proxy
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      proxy: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsProxy]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5252,10 +11694,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5268,10 +11726,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the proxy to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5284,21 +11755,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Proxyresourcesets [[Bastion_spec_global_tls_proxyResourceSets]]Complete namespace: Bastion.Spec.Global.Tls.ProxyresourcesetsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      proxyresourcesets: {}----
+
+
+
+
+
+==== Proxyresourcesets [[Bastion_spec_global_tls_proxyResourceSets]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Proxyresourcesets
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      proxyresourcesets: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsProxyResourceSets]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5311,10 +11830,26 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *enabledWithBroker* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5327,10 +11862,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS for the proxy to broker connections.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5343,21 +11891,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Ssca [[Bastion_spec_global_tls_ssCa]]Complete namespace: Bastion.Spec.Global.Tls.SscaExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      ssca: {}----
+
+
+
+
+
+==== Ssca [[Bastion_spec_global_tls_ssCa]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Ssca
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      ssca: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsSsCa]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5370,10 +11966,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5386,21 +11995,69 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-==== Zookeeper [[Bastion_spec_global_tls_zookeeper]]Complete namespace: Bastion.Spec.Global.Tls.ZookeeperExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  global:    tls:      zookeeper: {}----
+
+
+
+
+
+==== Zookeeper [[Bastion_spec_global_tls_zookeeper]]
+
+Complete namespace: Bastion.Spec.Global.Tls.Zookeeper
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  global:
+    tls:
+      zookeeper: {}
+
+----
+
+
 [.fields-BastionSpecGlobalTlsZookeeper]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *enabled* +
+
     
+
+
+
+
+
+
 
 
 
@@ -5413,10 +12070,23 @@ boolean
 
 
 
+
+
+
+
+
+
+
     | 
+
     Enable TLS.
+
     | *secretName* +
+
     
+
+
+
 
 
 string
@@ -5429,21 +12099,59 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Override the default secret name from where to load the certificates.
+
 |===
 
 
 
 
-=== Status [[Bastion_status]]Complete namespace: Bastion.Status
+
+
+
+
+
+=== Status [[Bastion_status]]
+
+Complete namespace: Bastion.Status
+
+
+
 [.fields-BastionStatus]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
+
+
 
     | *conditions* +
+
     
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5456,10 +12164,19 @@ string
 []<<Bastion_status_conditions,Conditions>>
 
 
+
+
+
     | 
+
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
+
     | *lastApplied* +
+
     
+
+
+
 
 
 string
@@ -5472,21 +12189,64 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     Last spec applied.
+
 |===
 
 
 
 
-==== Conditions [[Bastion_status_conditions]]Complete namespace: Bastion.Status.ConditionsExample use:[source,yaml]----apiVersion: pulsar.oss.datastax.com/v1alpha1kind: Bastionmetadata:  name: example-pulsarclusterspec:  conditions: {}----
+
+
+
+
+
+==== Conditions [[Bastion_status_conditions]]
+
+Complete namespace: Bastion.Status.Conditions
+
+Example use:
+
+[source,yaml]
+----
+apiVersion: pulsar.oss.datastax.com/v1alpha1
+kind: Bastion
+metadata:
+  name: example-pulsarcluster
+spec:
+  conditions: {}
+
+----
+
+
 [.fields-BastionStatusConditions]
+
 [cols="2,4"]
+
 |===
+
 | Field| Description
 
+
+
     | *lastTransitionTime* +
+
     
+
+
+
 
 
 string
@@ -5499,10 +12259,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *message* +
+
     
+
+
+
 
 
 string
@@ -5515,10 +12291,27 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *observedGeneration* +
+
     
+
+
+
+
 
 
 
@@ -5531,10 +12324,25 @@ integer
 
 
 
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *reason* +
+
     
+
+
+
 
 
 string
@@ -5547,10 +12355,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *status* +
+
     
+
+
+
 
 
 string
@@ -5563,10 +12387,26 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
     | *type* +
+
     
+
+
+
 
 
 string
@@ -5579,6 +12419,19 @@ string
 
 
 
+
+
+
+
+
+
+
+
+
+
     | 
+
     
+
 |===
+
