@@ -1,4 +1,4 @@
-= Introduction
+= Kubernetes Autoscaler for Apache Pulsar (KAAP)
 
 Kubernetes Autoscaler for Apache Pulsar (KAAP) simplifies running https://pulsar.apache.org[Apache Pulsar] on Kubernetes by applying the familiar https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Operator pattern] to Pulsar's components, and horizonally scaling resources up or down based on CPU and memory workloads.
 
