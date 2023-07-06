@@ -22,22 +22,20 @@ class Adoc:
     return partials
 
   @staticmethod
-  def __add_yaml_model_example(lines: list, kind: str, splitModelNames: list):
+  def __add_yaml_model_example(lines: list, kind: str, modelNames: list):
 
-    example = """
-apiVersion: pulsar.oss.datastax.com/v1alpha1
-kind:
-metadata:
-  name: example-pulsarcluster
-spec: {}
-"""
+    baseYaml = {
+      "apiVersion": "pulsar.oss.datastax.com/v1alpha1",
+      "kind": kind.title(),
+      "metadata": {
+        "name": "example-pulsarcluster"
+      },
+      "spec": {}
+    }
 
-    yamlExample = yaml.load(example, Loader=yaml.FullLoader)
-    yamlExample["kind"] = kind.title()
+    current_dict = baseYaml["spec"]
 
-    current_dict = yamlExample["spec"]
-
-    for i, modelName in enumerate(splitModelNames[2:]):
+    for modelName in modelNames[2:]:  # The first two are the kind and "spec"
       current_dict[modelName] = {}
       current_dict = current_dict[modelName]
 
@@ -45,7 +43,7 @@ spec: {}
     lines.append("")
     lines.append("[source,yaml]")
     lines.append("----")
-    lines.extend(yaml.dump(yamlExample).split("\n"))
+    lines.extend(yaml.dump(baseYaml).split("\n"))
     lines.append("----")
 
   @staticmethod
