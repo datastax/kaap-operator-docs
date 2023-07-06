@@ -42,7 +42,7 @@ def main(params=None):
       Adoc.process_adoc(adocLines, args.partials_dir)
 
       with open(os.path.join(args.output_dir, docDirFile), "w") as processedAdocFile:
-        processedAdocFile.writelines(adocLines)
+        processedAdocFile.writelines(line + '\n' for line in adocLines)
 
   return 0
 
