@@ -8,7 +8,7 @@ Thanks to Starlight for Kafka, you can run your Kafka workload on a Pulsar clust
 This folder contains a sample configuration and demo about how to run a workload
 on an Apache Pulsar® cluster with the Broker Auto Scaling feature.
 
-Support for the Kafka wire protocol is provided by [Starlight for Kafka](https://github.com/datastax/starlight-for-kafka).
+Support for the Kafka wire protocol is provided by xref:starlight-for-kafka:ROOT:index.adoc[Starlight for Kafka].
 
 The client work load is generated using the basic Kafka Performance tools.
 
