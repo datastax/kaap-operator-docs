@@ -35,4 +35,4 @@ class TestAdocPostProcessing(unittest.TestCase):
     self.assertGreater(adocLines.index("==== Autoscaler [[PulsarCluster_spec_broker_autoscaler]]"), -1)
 
     with open('test.adoc', "w") as processedAdocFile:
-      processedAdocFile.writelines(adocLines)
+      processedAdocFile.writelines(line + '\n' for line in adocLines)
