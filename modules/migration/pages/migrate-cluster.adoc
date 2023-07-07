@@ -9,7 +9,7 @@ You can then examine the report and decide if you want to proceed with the clust
 == Prerequisites
 * Java 17
 * An existing Apache Pulsar cluster
-* Migration-tool JAR downloaded from the https://github.com/riptano/pulsar-operator/releases[latest release].
+* Migration-tool JAR downloaded from the https://github.com/datastax/kaap/releases[latest release].
 
 == Scan and generate cluster CRDs
 . Create an input file called `input-cluster-specs.yaml` with the following content:
@@ -87,7 +87,7 @@ pulsar-operator:
 +
 [source,helm]
 ----
-helm install pulsar-operator datastax/pulsar-stack --values <values.yaml>
+helm install pulsar kaap/kaap-stack --values <values.yaml>
 ----
 
 . Wait for the PulsarCluster status to be in a Ready state, indicating the operator has assumed control of the cluster.
