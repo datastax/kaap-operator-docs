@@ -169,7 +169,7 @@ Helm::
 --
 [source,helm]
 ----
-helm delete kaap
+helm uninstall kaap
 ----
 --
 
