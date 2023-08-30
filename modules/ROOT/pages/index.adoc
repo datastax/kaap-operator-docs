@@ -27,6 +27,11 @@ Whether you are a developer looking to leverage the power of Apache Pulsar in yo
 This guide offers a starting point for {pulsar-operator}.
 We will cover installation and deployment, configuration points, and further options for managing Pulsar components with the {pulsar-operator}.
 
+[NOTE]
+====
+If you're upgrading from KAAP v0.1.0 to v0.2.0, you must upgrade the CRDs to v1beta1. See xref:getting-started:upgrade-0-2-0.adoc[Upgrading to v0.2.0].
+====
+
 == Features
 
 After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
