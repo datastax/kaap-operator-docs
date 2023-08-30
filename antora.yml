@@ -1,7 +1,7 @@
 name: kaap-operator
 title: KAAP Operator Documentation
 start_page: index.adoc
-version: 0.1.0
+version: 0.2.0
 
 asciidoc:
   attributes:
