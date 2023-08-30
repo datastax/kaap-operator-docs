@@ -2,3 +2,4 @@
 ** xref:operator.adoc[]
 ** xref:stack.adoc[]
 ** xref:upgrades.adoc[]
+** xref:upgrade-0-2-0.adoc[Upgrading to v0.2.0]
