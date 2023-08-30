@@ -1,4 +1,4 @@
-= Upgrade to Kaap v0.2.0
+= Upgrade to KAAP v0.2.0
 
 KAAP 0.2.0 is a major release that includes a new version of the CRDs, which means you must migrate your existing v0.1.0 CRDs to v0.2.0 CRDs.
 
