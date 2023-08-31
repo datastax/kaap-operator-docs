@@ -52,7 +52,7 @@ customresourcedefinition.apiextensions.k8s.io/zookeepers.kaap.oss.datastax.com s
 --
 ====
 
-. Copy the KAAP custom resources and move them to `v1beta1``.
+. Copy the KAAP custom resources and move them to `v1beta1`.
 +
 [tabs]
 ====
@@ -100,8 +100,6 @@ Kubectl::
 --
 [source,kubectl]
 ----
-namespace=default # change this according to your kaap namespace
-name=pulsar # change this according to your pulsar cluster name
 kubectl get -n $namespace pulsarclusters.v1beta1.kaap.oss.datastax.com $name
 ----
 --
@@ -165,4 +163,4 @@ kubectl get -n $namespace all -o yaml | grep kaap.oss.datastax.com/v1alpha1
 
 The one match should be the ZooKeeper job, unless the broker has transactions enabled, in which case you'll see two matches.
 
-You've upgraded to Kaap v0.2.0!
+You've upgraded to KAAP v0.2.0!
