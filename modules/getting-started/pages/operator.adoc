@@ -15,7 +15,7 @@ helm repo add kaap https://datastax.github.io/kaap
 helm repo update
 ----
 
-. The KAAP Operator Helm chart is available for download (https://github.com/datastax/kaap/releases/latest)[here].
+. The KAAP Operator Helm chart is available for download https://github.com/datastax/kaap/releases/latest[here].
 . Install the KAAP operator Helm chart:
 +
 [source,helm]
