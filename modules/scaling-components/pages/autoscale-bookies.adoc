@@ -16,7 +16,7 @@ helm install pulsar-operator helm/pulsar-operator \
 The operator will scale the number of bookies pods in a cluster up and down based on current disk usage.
 The operator checks the disk usage percentage of all bookies at a regular interval. If all of the bookies' memory is over a percentage threshold, the operator will add bookies, and if under the low threshold, will decommission a bookie to save resources.
 When a bookie's memory is underutilized, you want to decommission it to save resources.
-The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/[Kubernetes Horizontal Pod Autoscaler^]{external-link-icon}.
+The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/[Kubernetes Horizontal Pod Autoscaler^].
 The operator's thresholds are set in the values.yaml file. +
 [source,helm]
 ----
