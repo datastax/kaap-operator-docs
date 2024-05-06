@@ -1,7 +1,7 @@
 name: kaap-operator
 title: Kubernetes Autoscaling for Apache Pulsar
 start_page: index.adoc
-version: 0.1.0
+version: '0.1.0'
 
 asciidoc:
   attributes:
