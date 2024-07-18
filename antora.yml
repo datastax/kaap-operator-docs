@@ -1,14 +1,7 @@
-name: kaap-operator
-title: Kubernetes Autoscaling for Apache Pulsar
-start_page: index.adoc
+name: 'kaap-operator'
+title: 'Kubernetes Autoscaling for Apache Pulsar'
+start_page: 'index.adoc'
 version: '0.2.0'
-
-asciidoc:
-  attributes:
-    protocol_version: '2.10'
-    pulsar-operator: 'KAAP Operator'
-    pulsar-operator-full-name: 'Kubernetes Autoscaling for Apache Pulsar (KAAP)'
-    pulsar-stack: 'KAAP stack'
 
 nav:
   - modules/getting-started/nav.adoc
@@ -17,3 +10,10 @@ nav:
   - modules/scaling-components/nav.adoc
   - modules/resource-sets/nav.adoc
   - modules/crd-spec/nav.adoc
+
+asciidoc:
+  attributes:
+    protocol_version: '2.10'
+    pulsar-operator: 'KAAP Operator'
+    pulsar-operator-full-name: 'Kubernetes Autoscaling for Apache Pulsar (KAAP)'
+    pulsar-stack: 'KAAP stack'
