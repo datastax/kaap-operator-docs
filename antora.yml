@@ -1,7 +1,7 @@
 name: 'kaap-operator'
+version: '0.2.0'
 title: 'Kubernetes Autoscaling for Apache Pulsar'
 start_page: 'index.adoc'
-version: '0.2.0'
 
 nav:
   - modules/getting-started/nav.adoc
