@@ -1,4 +1,5 @@
 = Racks
+
 A rack defines a failure domain.
 A failure domain can be a region's availability zone (`zone`), or a cluster node (`host`).
 A resource set can be mapped to a rack. For example, to guarantee high availability over different availability zones, multiple resource sets are created in different racks. You can also enforce affinity and anti-affinity rules to minimize cross-AZ traffic.

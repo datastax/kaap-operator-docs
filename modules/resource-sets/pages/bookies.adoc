@@ -1,4 +1,5 @@
 = Bookkeeper Sets
+
 With a https://pulsar.apache.org/docs/administration-isolation-bookie/#rack-aware-placement-policy[rack-aware deployment], {pulsar-operator} can set the data placement policy automatically.
 Every entry will be stored as much as possible in different failure domains to guarantee rack-level fault tolerance.
 
