@@ -4,12 +4,12 @@ title: 'Kubernetes Autoscaling for Apache Pulsar'
 start_page: 'index.adoc'
 
 nav:
-  - modules/getting-started/nav.adoc
-  - modules/migration/nav.adoc
-  - modules/authentication/nav.adoc
-  - modules/scaling-components/nav.adoc
-  - modules/resource-sets/nav.adoc
-  - modules/crd-spec/nav.adoc
+- modules/getting-started/nav.adoc
+- modules/migration/nav.adoc
+- modules/authentication/nav.adoc
+- modules/scaling-components/nav.adoc
+- modules/resource-sets/nav.adoc
+- modules/crd-spec/nav.adoc
 
 asciidoc:
   attributes:
