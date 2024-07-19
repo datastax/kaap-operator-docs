@@ -1,42 +1,14 @@
 = Bastion
-
-v1alpha1
-
-:source-highlighter: highlightjs
-
 :keywords: openapi, rest, Bastion
-
 :specDir: 
-
 :snippetDir: 
-
 :generator-template: v1 2019-12-20
-
 :info-url: https://openapi-generator.tech
-
 :app-name: Bastion
-
-
-
-Auto generated from CRD spec
-
-
-
-
-
+// Auto generated from CRD spec
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
-
-
-
-
-
-Version: v1alpha1
-
-
-
-Namespace: pulsar.oss.datastax.com
-
-
+// Version: v1alpha1
+// Namespace: pulsar.oss.datastax.com
 
 == Bastion [[Bastion]]
 
@@ -54,7 +26,7 @@ Namespace: pulsar.oss.datastax.com
 
     | *spec* +
 
-            
+
 
             <<Bastion_spec,
 
@@ -84,17 +56,17 @@ Spec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *status* +
 
-            
+
 
             <<Bastion_status,
 
@@ -124,13 +96,13 @@ Status
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -160,7 +132,7 @@ Complete namespace: Bastion.Spec
 
     | *bastion* +
 
-            
+
 
             <<Bastion_spec_bastion,
 
@@ -190,17 +162,17 @@ Bastion
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *global* +
 
-            
+
 
             <<Bastion_spec_global,
 
@@ -230,13 +202,13 @@ Global
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -278,7 +250,7 @@ spec:
 
     | *annotations* +
 
-    
+
 
 
 
@@ -304,13 +276,13 @@ spec:
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<Bastion_spec_bastion_antiAffinity,
 
@@ -340,17 +312,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -376,13 +348,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -408,13 +380,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -440,13 +412,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -472,13 +444,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -504,13 +476,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -536,13 +508,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -568,13 +540,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -600,13 +572,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -632,13 +604,13 @@ string
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<Bastion_spec_bastion_nodeAffinity,
 
@@ -668,17 +640,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -704,13 +676,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -736,13 +708,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -768,13 +740,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *replicas* +
 
-    
+
 
 
 
@@ -800,13 +772,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<Bastion_spec_bastion_resources,
 
@@ -836,17 +808,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -872,13 +844,13 @@ Resources
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *targetProxy* +
 
-    
+
 
 
 
@@ -904,13 +876,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates to connect to proxy or the broker. The default value depends whether Proxy is deployed or not.
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -936,7 +908,7 @@ boolean
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
@@ -981,7 +953,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<Bastion_spec_bastion_antiAffinity_host,
 
@@ -1011,17 +983,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<Bastion_spec_bastion_antiAffinity_zone,
 
@@ -1051,13 +1023,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -1101,7 +1073,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -1127,13 +1099,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *required* +
 
-    
+
 
 
 
@@ -1159,7 +1131,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
@@ -1205,7 +1177,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -1231,13 +1203,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *required* +
 
-    
+
 
 
 
@@ -1263,7 +1235,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
@@ -1308,7 +1280,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -1334,13 +1306,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -1366,13 +1338,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *valueFrom* +
 
-            
+
 
             <<Bastion_spec_bastion_env_valueFrom,
 
@@ -1402,13 +1374,13 @@ ValueFrom
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -1452,7 +1424,7 @@ spec:
 
     | *configMapKeyRef* +
 
-            
+
 
             <<Bastion_spec_bastion_env_valueFrom_configMapKeyRef,
 
@@ -1482,17 +1454,17 @@ ConfigMapKeyRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *fieldRef* +
 
-            
+
 
             <<Bastion_spec_bastion_env_valueFrom_fieldRef,
 
@@ -1522,17 +1494,17 @@ FieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resourceFieldRef* +
 
-            
+
 
             <<Bastion_spec_bastion_env_valueFrom_resourceFieldRef,
 
@@ -1562,17 +1534,17 @@ ResourceFieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *secretKeyRef* +
 
-            
+
 
             <<Bastion_spec_bastion_env_valueFrom_configMapKeyRef,
 
@@ -1602,13 +1574,13 @@ SecretKeyRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -1653,7 +1625,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -1679,13 +1651,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -1711,13 +1683,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -1743,9 +1715,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -1790,7 +1762,7 @@ spec:
 
     | *apiVersion* +
 
-    
+
 
 
 
@@ -1816,13 +1788,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fieldPath* +
 
-    
+
 
 
 
@@ -1848,9 +1820,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -1895,7 +1867,7 @@ spec:
 
     | *containerName* +
 
-    
+
 
 
 
@@ -1921,13 +1893,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *divisor* +
 
-            
+
 
 integer or string
 
@@ -1955,19 +1927,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *resource* +
 
-    
+
 
 
 
@@ -1993,9 +1965,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -2038,7 +2010,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -2064,9 +2036,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -2109,7 +2081,7 @@ spec:
 
     | *args* +
 
-    
+
 
 
 
@@ -2135,13 +2107,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *command* +
 
-    
+
 
 
 
@@ -2167,13 +2139,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *env* +
 
-    
+
 
 
 
@@ -2199,13 +2171,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *envFrom* +
 
-    
+
 
 
 
@@ -2231,13 +2203,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *image* +
 
-    
+
 
 
 
@@ -2263,13 +2235,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -2295,13 +2267,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *lifecycle* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle,
 
@@ -2331,17 +2303,17 @@ Lifecycle
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *livenessProbe* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_livenessProbe,
 
@@ -2371,17 +2343,17 @@ LivenessProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *name* +
 
-    
+
 
 
 
@@ -2407,13 +2379,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *ports* +
 
-    
+
 
 
 
@@ -2439,13 +2411,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readinessProbe* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_livenessProbe,
 
@@ -2475,17 +2447,17 @@ ReadinessProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resources* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_resources,
 
@@ -2515,17 +2487,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *securityContext* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_securityContext,
 
@@ -2555,17 +2527,17 @@ SecurityContext
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *startupProbe* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_livenessProbe,
 
@@ -2595,17 +2567,17 @@ StartupProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *stdin* +
 
-    
+
 
 
 
@@ -2631,13 +2603,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *stdinOnce* +
 
-    
+
 
 
 
@@ -2663,13 +2635,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *terminationMessagePath* +
 
-    
+
 
 
 
@@ -2695,13 +2667,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *terminationMessagePolicy* +
 
-    
+
 
 
 
@@ -2727,13 +2699,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tty* +
 
-    
+
 
 
 
@@ -2759,13 +2731,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeDevices* +
 
-    
+
 
 
 
@@ -2791,13 +2763,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeMounts* +
 
-    
+
 
 
 
@@ -2823,13 +2795,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *workingDir* +
 
-    
+
 
 
 
@@ -2855,9 +2827,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -2901,7 +2873,7 @@ spec:
 
     | *configMapRef* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_envFrom_configMapRef,
 
@@ -2931,17 +2903,17 @@ ConfigMapRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *prefix* +
 
-    
+
 
 
 
@@ -2967,13 +2939,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_envFrom_configMapRef,
 
@@ -3003,13 +2975,13 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -3054,7 +3026,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -3080,13 +3052,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -3112,9 +3084,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3158,7 +3130,7 @@ spec:
 
     | *postStart* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart,
 
@@ -3188,17 +3160,17 @@ PostStart
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *preStop* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart,
 
@@ -3228,13 +3200,13 @@ PreStop
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -3279,7 +3251,7 @@ spec:
 
     | *exec* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_exec,
 
@@ -3309,17 +3281,17 @@ Exec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *httpGet* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet,
 
@@ -3349,17 +3321,17 @@ HttpGet
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *tcpSocket* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_tcpSocket,
 
@@ -3389,13 +3361,13 @@ TcpSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -3441,7 +3413,7 @@ spec:
 
     | *command* +
 
-    
+
 
 
 
@@ -3467,9 +3439,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3515,7 +3487,7 @@ spec:
 
     | *host* +
 
-    
+
 
 
 
@@ -3541,13 +3513,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *httpHeaders* +
 
-    
+
 
 
 
@@ -3573,13 +3545,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -3605,13 +3577,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-            
+
 
 integer or string
 
@@ -3639,19 +3611,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *scheme* +
 
-    
+
 
 
 
@@ -3677,9 +3649,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3726,7 +3698,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -3752,13 +3724,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -3784,9 +3756,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3832,7 +3804,7 @@ spec:
 
     | *host* +
 
-    
+
 
 
 
@@ -3858,13 +3830,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-            
+
 
 integer or string
 
@@ -3892,15 +3864,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -3944,7 +3916,7 @@ spec:
 
     | *exec* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_exec,
 
@@ -3974,17 +3946,17 @@ Exec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *failureThreshold* +
 
-    
+
 
 
 
@@ -4010,13 +3982,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *grpc* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_livenessProbe_grpc,
 
@@ -4046,17 +4018,17 @@ Grpc
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *httpGet* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_httpGet,
 
@@ -4086,17 +4058,17 @@ HttpGet
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *initialDelaySeconds* +
 
-    
+
 
 
 
@@ -4122,13 +4094,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *periodSeconds* +
 
-    
+
 
 
 
@@ -4154,13 +4126,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *successThreshold* +
 
-    
+
 
 
 
@@ -4186,13 +4158,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *tcpSocket* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_lifecycle_postStart_tcpSocket,
 
@@ -4222,17 +4194,17 @@ TcpSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *terminationGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -4258,13 +4230,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *timeoutSeconds* +
 
-    
+
 
 
 
@@ -4290,9 +4262,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4337,7 +4309,7 @@ spec:
 
     | *port* +
 
-    
+
 
 
 
@@ -4363,13 +4335,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *service* +
 
-    
+
 
 
 
@@ -4395,9 +4367,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4441,7 +4413,7 @@ spec:
 
     | *containerPort* +
 
-    
+
 
 
 
@@ -4467,13 +4439,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostIP* +
 
-    
+
 
 
 
@@ -4499,13 +4471,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostPort* +
 
-    
+
 
 
 
@@ -4531,13 +4503,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -4563,13 +4535,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *protocol* +
 
-    
+
 
 
 
@@ -4595,9 +4567,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4641,7 +4613,7 @@ spec:
 
     | *limits* +
 
-    
+
 
 
 
@@ -4667,13 +4639,13 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
     | *requests* +
 
-    
+
 
 
 
@@ -4699,9 +4671,9 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4745,7 +4717,7 @@ spec:
 
     | *allowPrivilegeEscalation* +
 
-    
+
 
 
 
@@ -4771,13 +4743,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *capabilities* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_securityContext_capabilities,
 
@@ -4807,17 +4779,17 @@ Capabilities
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *privileged* +
 
-    
+
 
 
 
@@ -4843,13 +4815,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *procMount* +
 
-    
+
 
 
 
@@ -4875,13 +4847,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnlyRootFilesystem* +
 
-    
+
 
 
 
@@ -4907,13 +4879,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsGroup* +
 
-    
+
 
 
 
@@ -4939,13 +4911,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsNonRoot* +
 
-    
+
 
 
 
@@ -4971,13 +4943,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsUser* +
 
-    
+
 
 
 
@@ -5003,13 +4975,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *seLinuxOptions* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_securityContext_seLinuxOptions,
 
@@ -5039,17 +5011,17 @@ SeLinuxOptions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *seccompProfile* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_securityContext_seccompProfile,
 
@@ -5079,17 +5051,17 @@ SeccompProfile
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *windowsOptions* +
 
-            
+
 
             <<Bastion_spec_bastion_initContainers_securityContext_windowsOptions,
 
@@ -5119,13 +5091,13 @@ WindowsOptions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -5170,7 +5142,7 @@ spec:
 
     | *add* +
 
-    
+
 
 
 
@@ -5196,13 +5168,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *drop* +
 
-    
+
 
 
 
@@ -5228,9 +5200,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5275,7 +5247,7 @@ spec:
 
     | *level* +
 
-    
+
 
 
 
@@ -5301,13 +5273,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *role* +
 
-    
+
 
 
 
@@ -5333,13 +5305,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -5365,13 +5337,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *user* +
 
-    
+
 
 
 
@@ -5397,9 +5369,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5444,7 +5416,7 @@ spec:
 
     | *localhostProfile* +
 
-    
+
 
 
 
@@ -5470,13 +5442,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -5502,9 +5474,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5549,7 +5521,7 @@ spec:
 
     | *gmsaCredentialSpec* +
 
-    
+
 
 
 
@@ -5575,13 +5547,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *gmsaCredentialSpecName* +
 
-    
+
 
 
 
@@ -5607,13 +5579,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostProcess* +
 
-    
+
 
 
 
@@ -5639,13 +5611,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsUserName* +
 
-    
+
 
 
 
@@ -5671,9 +5643,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5717,7 +5689,7 @@ spec:
 
     | *devicePath* +
 
-    
+
 
 
 
@@ -5743,13 +5715,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -5775,9 +5747,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5821,7 +5793,7 @@ spec:
 
     | *mountPath* +
 
-    
+
 
 
 
@@ -5847,13 +5819,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *mountPropagation* +
 
-    
+
 
 
 
@@ -5879,13 +5851,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -5911,13 +5883,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -5943,13 +5915,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *subPath* +
 
-    
+
 
 
 
@@ -5975,13 +5947,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *subPathExpr* +
 
-    
+
 
 
 
@@ -6007,9 +5979,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6052,7 +6024,7 @@ spec:
 
     | *preferredDuringSchedulingIgnoredDuringExecution* +
 
-    
+
 
 
 
@@ -6078,13 +6050,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *requiredDuringSchedulingIgnoredDuringExecution* +
 
-            
+
 
             <<Bastion_spec_bastion_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
 
@@ -6114,13 +6086,13 @@ RequiredDuringSchedulingIgnoredDuringExecution
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -6164,7 +6136,7 @@ spec:
 
     | *preference* +
 
-            
+
 
             <<Bastion_spec_bastion_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
 
@@ -6194,17 +6166,17 @@ Preference
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *weight* +
 
-    
+
 
 
 
@@ -6230,9 +6202,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6277,7 +6249,7 @@ spec:
 
     | *matchExpressions* +
 
-    
+
 
 
 
@@ -6303,13 +6275,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *matchFields* +
 
-    
+
 
 
 
@@ -6335,9 +6307,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6383,7 +6355,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -6409,13 +6381,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operator* +
 
-    
+
 
 
 
@@ -6441,13 +6413,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *values* +
 
-    
+
 
 
 
@@ -6473,9 +6445,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6519,7 +6491,7 @@ spec:
 
     | *nodeSelectorTerms* +
 
-    
+
 
 
 
@@ -6545,9 +6517,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6590,7 +6562,7 @@ spec:
 
     | *limits* +
 
-    
+
 
 
 
@@ -6616,13 +6588,13 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
     | *requests* +
 
-    
+
 
 
 
@@ -6648,9 +6620,9 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6693,7 +6665,7 @@ spec:
 
     | *effect* +
 
-    
+
 
 
 
@@ -6719,13 +6691,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *key* +
 
-    
+
 
 
 
@@ -6751,13 +6723,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operator* +
 
-    
+
 
 
 
@@ -6783,13 +6755,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tolerationSeconds* +
 
-    
+
 
 
 
@@ -6815,13 +6787,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -6847,9 +6819,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6891,7 +6863,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -6917,13 +6889,13 @@ string
 
 
 
-    | _(Optional)_ + 
+    | _(Optional)_ +
 
     Pulsar cluster name.
 
     | *antiAffinity* +
 
-            
+
 
             <<Bastion_spec_global_antiAffinity,
 
@@ -6953,17 +6925,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *auth* +
 
-            
+
 
             <<Bastion_spec_global_auth,
 
@@ -6993,17 +6965,17 @@ Auth
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *components* +
 
-            
+
 
             <<Bastion_spec_global_components,
 
@@ -7033,17 +7005,17 @@ Components
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dnsConfig* +
 
-            
+
 
             <<Bastion_spec_global_dnsConfig,
 
@@ -7073,17 +7045,17 @@ DnsConfig
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dnsName* +
 
-    
+
 
 
 
@@ -7109,13 +7081,13 @@ string
 
 
 
-    | 
+    |
 
     Public dns name for the cluster&#39;s load balancer.
 
     | *image* +
 
-    
+
 
 
 
@@ -7141,13 +7113,13 @@ string
 
 
 
-    | 
+    |
 
     Default Pulsar image to use. Any components can be configured to use a different image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -7173,13 +7145,13 @@ string
 
 
 
-    | 
+    |
 
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
 
     | *kubernetesClusterDomain* +
 
-    
+
 
 
 
@@ -7205,13 +7177,13 @@ string
 
 
 
-    | 
+    |
 
-    The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
+    The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;.
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -7237,13 +7209,13 @@ string
 
 
 
-    | 
+    |
 
     Global node selector. If set, this will apply to all the components.
 
     | *persistence* +
 
-    
+
 
 
 
@@ -7269,13 +7241,13 @@ boolean
 
 
 
-    | 
+    |
 
-    If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
+    If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir
 
     | *priorityClassName* +
 
-    
+
 
 
 
@@ -7301,13 +7273,13 @@ string
 
 
 
-    | 
+    |
 
     Priority class name to attach to each pod.
 
     | *racks* +
 
-    
+
 
 
 
@@ -7333,13 +7305,13 @@ string
 
 
 
-    | 
+    |
 
     Racks configuration.
 
     | *resourceSets* +
 
-    
+
 
 
 
@@ -7365,13 +7337,13 @@ string
 
 
 
-    | 
+    |
 
     Resource sets.
 
     | *restartOnConfigMapChange* +
 
-    
+
 
 
 
@@ -7397,13 +7369,13 @@ boolean
 
 
 
-    | 
+    |
 
-    By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
+    By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap.
 
     | *storage* +
 
-            
+
 
             <<Bastion_spec_global_storage,
 
@@ -7433,17 +7405,17 @@ Storage
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *tls* +
 
-            
+
 
             <<Bastion_spec_global_tls,
 
@@ -7473,17 +7445,17 @@ Tls
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeperPlainSslStorePassword* +
 
-    
+
 
 
 
@@ -7509,7 +7481,7 @@ boolean
 
 
 
-    | 
+    |
 
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
 
@@ -7554,7 +7526,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<Bastion_spec_bastion_antiAffinity_host,
 
@@ -7584,17 +7556,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<Bastion_spec_bastion_antiAffinity_zone,
 
@@ -7624,13 +7596,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -7673,7 +7645,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -7699,13 +7671,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable authentication in the cluster. Default is &#39;false&#39;.
 
     | *token* +
 
-            
+
 
             <<Bastion_spec_global_auth_token,
 
@@ -7735,13 +7707,13 @@ Token
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -7785,7 +7757,7 @@ spec:
 
     | *initialize* +
 
-    
+
 
 
 
@@ -7811,13 +7783,13 @@ boolean
 
 
 
-    | 
+    |
 
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
 
     | *privateKeyFile* +
 
-    
+
 
 
 
@@ -7843,13 +7815,13 @@ string
 
 
 
-    | 
+    |
 
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
 
     | *proxyRoles* +
 
-    
+
 
 
 
@@ -7875,13 +7847,13 @@ string
 
 
 
-    | 
+    |
 
     Proxy roles.
 
     | *publicKeyFile* +
 
-    
+
 
 
 
@@ -7907,13 +7879,13 @@ string
 
 
 
-    | 
+    |
 
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
 
     | *superUserRoles* +
 
-    
+
 
 
 
@@ -7939,7 +7911,7 @@ string
 
 
 
-    | 
+    |
 
     Super user roles.
 
@@ -7984,7 +7956,7 @@ spec:
 
     | *autorecoveryBaseName* +
 
-    
+
 
 
 
@@ -8010,13 +7982,13 @@ string
 
 
 
-    | 
+    |
 
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
 
     | *bastionBaseName* +
 
-    
+
 
 
 
@@ -8042,13 +8014,13 @@ string
 
 
 
-    | 
+    |
 
     Bastion base name. Default value is &#39;bastion&#39;.
 
     | *bookkeeperBaseName* +
 
-    
+
 
 
 
@@ -8074,13 +8046,13 @@ string
 
 
 
-    | 
+    |
 
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
 
     | *brokerBaseName* +
 
-    
+
 
 
 
@@ -8106,13 +8078,13 @@ string
 
 
 
-    | 
+    |
 
     Broker base name. Default value is &#39;broker&#39;.
 
     | *functionsWorkerBaseName* +
 
-    
+
 
 
 
@@ -8138,13 +8110,13 @@ string
 
 
 
-    | 
+    |
 
     Functions Worker base name. Default value is &#39;function&#39;.
 
     | *proxyBaseName* +
 
-    
+
 
 
 
@@ -8170,13 +8142,13 @@ string
 
 
 
-    | 
+    |
 
     Proxy base name. Default value is &#39;proxy&#39;.
 
     | *zookeeperBaseName* +
 
-    
+
 
 
 
@@ -8202,7 +8174,7 @@ string
 
 
 
-    | 
+    |
 
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
 
@@ -8247,7 +8219,7 @@ spec:
 
     | *nameservers* +
 
-    
+
 
 
 
@@ -8273,13 +8245,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *options* +
 
-    
+
 
 
 
@@ -8305,13 +8277,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *searches* +
 
-    
+
 
 
 
@@ -8337,9 +8309,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -8382,7 +8354,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<Bastion_spec_global_racks_host,
 
@@ -8412,17 +8384,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<Bastion_spec_global_racks_zone,
 
@@ -8452,13 +8424,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -8502,7 +8474,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -8528,13 +8500,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the rack affinity rules.
 
     | *requireRackAffinity* +
 
-    
+
 
 
 
@@ -8560,13 +8532,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackAntiAffinity* +
 
-    
+
 
 
 
@@ -8592,7 +8564,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
@@ -8638,7 +8610,7 @@ spec:
 
     | *enableHostAntiAffinity* +
 
-    
+
 
 
 
@@ -8664,13 +8636,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -8696,13 +8668,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the rack affinity rules.
 
     | *requireRackAffinity* +
 
-    
+
 
 
 
@@ -8728,13 +8700,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackAntiAffinity* +
 
-    
+
 
 
 
@@ -8760,13 +8732,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackHostAntiAffinity* +
 
-    
+
 
 
 
@@ -8792,7 +8764,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
@@ -8837,7 +8809,7 @@ spec:
 
     | *rack* +
 
-    
+
 
 
 
@@ -8863,7 +8835,7 @@ string
 
 
 
-    | 
+    |
 
     Place this resource set to a specific rack, defined at .global.racks.
 
@@ -8908,7 +8880,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -8934,13 +8906,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *storageClass* +
 
-            
+
 
             <<Bastion_spec_global_storage_storageClass,
 
@@ -8970,13 +8942,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -9020,7 +8992,7 @@ spec:
 
     | *extraParams* +
 
-    
+
 
 
 
@@ -9046,13 +9018,13 @@ spec:
 
 
 
-    | 
+    |
 
     Adds extra parameters for the StorageClass.
 
     | *fsType* +
 
-    
+
 
 
 
@@ -9078,13 +9050,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
 
     | *provisioner* +
 
-    
+
 
 
 
@@ -9110,13 +9082,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the provisioner property for the StorageClass.
 
     | *reclaimPolicy* +
 
-    
+
 
 
 
@@ -9142,13 +9114,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *type* +
 
-    
+
 
 
 
@@ -9174,7 +9146,7 @@ string
 
 
 
-    | 
+    |
 
     Indicates the &#39;type&#39; parameter for the StorageClass.
 
@@ -9219,7 +9191,7 @@ spec:
 
     | *autorecovery* +
 
-            
+
 
             <<Bastion_spec_global_tls_autorecovery,
 
@@ -9249,17 +9221,17 @@ Autorecovery
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bookkeeper* +
 
-            
+
 
             <<Bastion_spec_global_tls_bookkeeper,
 
@@ -9289,17 +9261,17 @@ Bookkeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *broker* +
 
-            
+
 
             <<Bastion_spec_global_tls_broker,
 
@@ -9329,17 +9301,17 @@ Broker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *brokerResourceSets* +
 
-    
+
 
 
 
@@ -9365,13 +9337,13 @@ Broker
 
 
 
-    | 
+    |
 
     TLS configurations related to the Broker resource sets.
 
     | *caPath* +
 
-    
+
 
 
 
@@ -9397,13 +9369,13 @@ string
 
 
 
-    | 
+    |
 
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
 
     | *certProvisioner* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner,
 
@@ -9433,17 +9405,17 @@ CertProvisioner
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *defaultSecretName* +
 
-    
+
 
 
 
@@ -9469,13 +9441,13 @@ string
 
 
 
-    | 
+    |
 
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -9501,13 +9473,13 @@ boolean
 
 
 
-    | 
+    |
 
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
 
     | *functionsWorker* +
 
-            
+
 
             <<Bastion_spec_global_tls_functionsWorker,
 
@@ -9537,17 +9509,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxy* +
 
-            
+
 
             <<Bastion_spec_global_tls_proxy,
 
@@ -9577,17 +9549,17 @@ Proxy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxyResourceSets* +
 
-    
+
 
 
 
@@ -9613,13 +9585,13 @@ Proxy
 
 
 
-    | 
+    |
 
     TLS configurations related to the Proxy resource sets.
 
     | *ssCa* +
 
-            
+
 
             <<Bastion_spec_global_tls_ssCa,
 
@@ -9649,17 +9621,17 @@ SsCa
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeper* +
 
-            
+
 
             <<Bastion_spec_global_tls_zookeeper,
 
@@ -9689,13 +9661,13 @@ Zookeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -9739,7 +9711,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -9765,13 +9737,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -9797,7 +9769,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -9843,7 +9815,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -9869,13 +9841,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -9901,7 +9873,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -9947,7 +9919,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -9973,13 +9945,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -10005,7 +9977,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -10051,7 +10023,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -10077,13 +10049,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -10109,7 +10081,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -10155,7 +10127,7 @@ spec:
 
     | *selfSigned* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned,
 
@@ -10185,13 +10157,13 @@ SelfSigned
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -10236,7 +10208,7 @@ spec:
 
     | *autorecovery* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery,
 
@@ -10266,17 +10238,17 @@ Autorecovery
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bookkeeper* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
 
@@ -10306,17 +10278,17 @@ Bookkeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *broker* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_broker,
 
@@ -10346,17 +10318,17 @@ Broker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *caSecretName* +
 
-    
+
 
 
 
@@ -10382,13 +10354,13 @@ string
 
 
 
-    | 
+    |
 
     Secret where to store the root CA certificate.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -10414,13 +10386,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for broker, proxy and functions worker.
 
     | *functionsWorker* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
 
@@ -10450,17 +10422,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *includeDns* +
 
-    
+
 
 
 
@@ -10486,13 +10458,13 @@ boolean
 
 
 
-    | 
+    |
 
     Include dns name in the DNS names covered by the certificate.
 
     | *perComponent* +
 
-    
+
 
 
 
@@ -10518,13 +10490,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate a different certificate for each component.
 
     | *privateKey* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -10554,17 +10526,17 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxy* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_proxy,
 
@@ -10594,17 +10566,17 @@ Proxy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeper* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_zookeeper,
 
@@ -10634,13 +10606,13 @@ Zookeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -10686,7 +10658,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -10712,13 +10684,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -10748,13 +10720,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -10801,7 +10773,7 @@ spec:
 
     | *algorithm* +
 
-    
+
 
 
 
@@ -10827,13 +10799,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *encoding* +
 
-    
+
 
 
 
@@ -10859,13 +10831,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *rotationPolicy* +
 
-    
+
 
 
 
@@ -10891,13 +10863,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *size* +
 
-    
+
 
 
 
@@ -10923,9 +10895,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -10971,7 +10943,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -10997,13 +10969,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -11033,13 +11005,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11085,7 +11057,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -11111,13 +11083,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -11147,13 +11119,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11199,7 +11171,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -11225,13 +11197,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -11261,13 +11233,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11313,7 +11285,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -11339,13 +11311,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -11375,13 +11347,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11427,7 +11399,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -11453,13 +11425,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<Bastion_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -11489,13 +11461,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11539,7 +11511,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -11565,13 +11537,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -11597,13 +11569,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the functions worker to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -11629,7 +11601,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -11675,7 +11647,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -11701,13 +11673,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -11733,13 +11705,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the proxy to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -11765,7 +11737,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -11811,7 +11783,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -11837,13 +11809,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -11869,13 +11841,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the proxy to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -11901,7 +11873,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -11947,7 +11919,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -11973,13 +11945,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -12005,7 +11977,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -12051,7 +12023,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -12077,13 +12049,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -12109,7 +12081,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -12141,7 +12113,7 @@ Complete namespace: Bastion.Status
 
     | *conditions* +
 
-    
+
 
 
 
@@ -12167,13 +12139,13 @@ Complete namespace: Bastion.Status
 
 
 
-    | 
+    |
 
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
 
     | *lastApplied* +
 
-    
+
 
 
 
@@ -12199,7 +12171,7 @@ string
 
 
 
-    | 
+    |
 
     Last spec applied.
 
@@ -12243,7 +12215,7 @@ spec:
 
     | *lastTransitionTime* +
 
-    
+
 
 
 
@@ -12269,13 +12241,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *message* +
 
-    
+
 
 
 
@@ -12301,13 +12273,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *observedGeneration* +
 
-    
+
 
 
 
@@ -12333,13 +12305,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *reason* +
 
-    
+
 
 
 
@@ -12365,13 +12337,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *status* +
 
-    
+
 
 
 
@@ -12397,13 +12369,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -12429,9 +12401,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 

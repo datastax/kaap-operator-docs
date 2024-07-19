@@ -1,42 +1,14 @@
 = PulsarCluster
-
-v1alpha1
-
-:source-highlighter: highlightjs
-
 :keywords: openapi, rest, PulsarCluster
-
 :specDir: 
-
 :snippetDir: 
-
 :generator-template: v1 2019-12-20
-
 :info-url: https://openapi-generator.tech
-
 :app-name: PulsarCluster
-
-
-
-Auto generated from CRD spec
-
-
-
-
-
+// Auto generated from CRD spec
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
-
-
-
-
-
-Version: v1alpha1
-
-
-
-Namespace: pulsar.oss.datastax.com
-
-
+// Version: v1alpha1
+// Namespace: pulsar.oss.datastax.com
 
 == Pulsarcluster [[PulsarCluster]]
 
@@ -54,7 +26,7 @@ Namespace: pulsar.oss.datastax.com
 
     | *spec* +
 
-            
+
 
             <<PulsarCluster_spec,
 
@@ -84,17 +56,17 @@ Spec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *status* +
 
-            
+
 
             <<PulsarCluster_status,
 
@@ -124,13 +96,13 @@ Status
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -160,7 +132,7 @@ Complete namespace: Pulsarcluster.Spec
 
     | *autorecovery* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery,
 
@@ -190,17 +162,17 @@ Autorecovery
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bastion* +
 
-            
+
 
             <<PulsarCluster_spec_bastion,
 
@@ -230,17 +202,17 @@ Bastion
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bookkeeper* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper,
 
@@ -270,17 +242,17 @@ Bookkeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *broker* +
 
-            
+
 
             <<PulsarCluster_spec_broker,
 
@@ -310,17 +282,17 @@ Broker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *functionsWorker* +
 
-            
+
 
             <<PulsarCluster_spec_functionsWorker,
 
@@ -350,17 +322,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *global* +
 
-            
+
 
             <<PulsarCluster_spec_global,
 
@@ -390,17 +362,17 @@ Global
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxy* +
 
-            
+
 
             <<PulsarCluster_spec_proxy,
 
@@ -430,17 +402,17 @@ Proxy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeper* +
 
-            
+
 
             <<PulsarCluster_spec_zookeeper,
 
@@ -470,13 +442,13 @@ Zookeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -518,7 +490,7 @@ spec:
 
     | *annotations* +
 
-    
+
 
 
 
@@ -544,13 +516,13 @@ spec:
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -580,17 +552,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -616,13 +588,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -648,13 +620,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -680,13 +652,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -712,13 +684,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -744,13 +716,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -776,13 +748,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -808,13 +780,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -840,13 +812,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -872,13 +844,13 @@ string
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -908,17 +880,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -944,13 +916,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -976,13 +948,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -1008,13 +980,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *replicas* +
 
-    
+
 
 
 
@@ -1040,13 +1012,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -1076,17 +1048,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -1112,13 +1084,13 @@ Resources
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -1144,7 +1116,7 @@ Resources
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
@@ -1189,7 +1161,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity_host,
 
@@ -1219,17 +1191,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity_zone,
 
@@ -1259,13 +1231,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -1309,7 +1281,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -1335,13 +1307,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *required* +
 
-    
+
 
 
 
@@ -1367,7 +1339,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
@@ -1413,7 +1385,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -1439,13 +1411,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *required* +
 
-    
+
 
 
 
@@ -1471,7 +1443,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
@@ -1516,7 +1488,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -1542,13 +1514,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -1574,13 +1546,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *valueFrom* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_env_valueFrom,
 
@@ -1610,13 +1582,13 @@ ValueFrom
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -1660,7 +1632,7 @@ spec:
 
     | *configMapKeyRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_env_valueFrom_configMapKeyRef,
 
@@ -1690,17 +1662,17 @@ ConfigMapKeyRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *fieldRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_env_valueFrom_fieldRef,
 
@@ -1730,17 +1702,17 @@ FieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resourceFieldRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_env_valueFrom_resourceFieldRef,
 
@@ -1770,17 +1742,17 @@ ResourceFieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *secretKeyRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_env_valueFrom_configMapKeyRef,
 
@@ -1810,13 +1782,13 @@ SecretKeyRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -1861,7 +1833,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -1887,13 +1859,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -1919,13 +1891,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -1951,9 +1923,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -1998,7 +1970,7 @@ spec:
 
     | *apiVersion* +
 
-    
+
 
 
 
@@ -2024,13 +1996,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fieldPath* +
 
-    
+
 
 
 
@@ -2056,9 +2028,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -2103,7 +2075,7 @@ spec:
 
     | *containerName* +
 
-    
+
 
 
 
@@ -2129,13 +2101,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *divisor* +
 
-            
+
 
 integer or string
 
@@ -2163,19 +2135,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *resource* +
 
-    
+
 
 
 
@@ -2201,9 +2173,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -2246,7 +2218,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -2272,9 +2244,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -2317,7 +2289,7 @@ spec:
 
     | *args* +
 
-    
+
 
 
 
@@ -2343,13 +2315,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *command* +
 
-    
+
 
 
 
@@ -2375,13 +2347,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *env* +
 
-    
+
 
 
 
@@ -2407,13 +2379,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *envFrom* +
 
-    
+
 
 
 
@@ -2439,13 +2411,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *image* +
 
-    
+
 
 
 
@@ -2471,13 +2443,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -2503,13 +2475,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *lifecycle* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle,
 
@@ -2539,17 +2511,17 @@ Lifecycle
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *livenessProbe* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_livenessProbe,
 
@@ -2579,17 +2551,17 @@ LivenessProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *name* +
 
-    
+
 
 
 
@@ -2615,13 +2587,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *ports* +
 
-    
+
 
 
 
@@ -2647,13 +2619,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readinessProbe* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_livenessProbe,
 
@@ -2683,17 +2655,17 @@ ReadinessProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_resources,
 
@@ -2723,17 +2695,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *securityContext* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_securityContext,
 
@@ -2763,17 +2735,17 @@ SecurityContext
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *startupProbe* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_livenessProbe,
 
@@ -2803,17 +2775,17 @@ StartupProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *stdin* +
 
-    
+
 
 
 
@@ -2839,13 +2811,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *stdinOnce* +
 
-    
+
 
 
 
@@ -2871,13 +2843,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *terminationMessagePath* +
 
-    
+
 
 
 
@@ -2903,13 +2875,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *terminationMessagePolicy* +
 
-    
+
 
 
 
@@ -2935,13 +2907,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tty* +
 
-    
+
 
 
 
@@ -2967,13 +2939,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeDevices* +
 
-    
+
 
 
 
@@ -2999,13 +2971,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeMounts* +
 
-    
+
 
 
 
@@ -3031,13 +3003,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *workingDir* +
 
-    
+
 
 
 
@@ -3063,9 +3035,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3109,7 +3081,7 @@ spec:
 
     | *configMapRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_envFrom_configMapRef,
 
@@ -3139,17 +3111,17 @@ ConfigMapRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *prefix* +
 
-    
+
 
 
 
@@ -3175,13 +3147,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_envFrom_configMapRef,
 
@@ -3211,13 +3183,13 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -3262,7 +3234,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -3288,13 +3260,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -3320,9 +3292,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3366,7 +3338,7 @@ spec:
 
     | *postStart* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart,
 
@@ -3396,17 +3368,17 @@ PostStart
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *preStop* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart,
 
@@ -3436,13 +3408,13 @@ PreStop
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -3487,7 +3459,7 @@ spec:
 
     | *exec* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart_exec,
 
@@ -3517,17 +3489,17 @@ Exec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *httpGet* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart_httpGet,
 
@@ -3557,17 +3529,17 @@ HttpGet
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *tcpSocket* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket,
 
@@ -3597,13 +3569,13 @@ TcpSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -3649,7 +3621,7 @@ spec:
 
     | *command* +
 
-    
+
 
 
 
@@ -3675,9 +3647,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3723,7 +3695,7 @@ spec:
 
     | *host* +
 
-    
+
 
 
 
@@ -3749,13 +3721,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *httpHeaders* +
 
-    
+
 
 
 
@@ -3781,13 +3753,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -3813,13 +3785,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-            
+
 
 integer or string
 
@@ -3847,19 +3819,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *scheme* +
 
-    
+
 
 
 
@@ -3885,9 +3857,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3934,7 +3906,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -3960,13 +3932,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -3992,9 +3964,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4040,7 +4012,7 @@ spec:
 
     | *host* +
 
-    
+
 
 
 
@@ -4066,13 +4038,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-            
+
 
 integer or string
 
@@ -4100,15 +4072,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -4152,7 +4124,7 @@ spec:
 
     | *exec* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart_exec,
 
@@ -4182,17 +4154,17 @@ Exec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *failureThreshold* +
 
-    
+
 
 
 
@@ -4218,13 +4190,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *grpc* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_livenessProbe_grpc,
 
@@ -4254,17 +4226,17 @@ Grpc
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *httpGet* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart_httpGet,
 
@@ -4294,17 +4266,17 @@ HttpGet
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *initialDelaySeconds* +
 
-    
+
 
 
 
@@ -4330,13 +4302,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *periodSeconds* +
 
-    
+
 
 
 
@@ -4362,13 +4334,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *successThreshold* +
 
-    
+
 
 
 
@@ -4394,13 +4366,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *tcpSocket* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_lifecycle_postStart_tcpSocket,
 
@@ -4430,17 +4402,17 @@ TcpSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *terminationGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -4466,13 +4438,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *timeoutSeconds* +
 
-    
+
 
 
 
@@ -4498,9 +4470,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4545,7 +4517,7 @@ spec:
 
     | *port* +
 
-    
+
 
 
 
@@ -4571,13 +4543,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *service* +
 
-    
+
 
 
 
@@ -4603,9 +4575,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4649,7 +4621,7 @@ spec:
 
     | *containerPort* +
 
-    
+
 
 
 
@@ -4675,13 +4647,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostIP* +
 
-    
+
 
 
 
@@ -4707,13 +4679,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostPort* +
 
-    
+
 
 
 
@@ -4739,13 +4711,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -4771,13 +4743,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *protocol* +
 
-    
+
 
 
 
@@ -4803,9 +4775,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4849,7 +4821,7 @@ spec:
 
     | *limits* +
 
-    
+
 
 
 
@@ -4875,13 +4847,13 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
     | *requests* +
 
-    
+
 
 
 
@@ -4907,9 +4879,9 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4953,7 +4925,7 @@ spec:
 
     | *allowPrivilegeEscalation* +
 
-    
+
 
 
 
@@ -4979,13 +4951,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *capabilities* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_securityContext_capabilities,
 
@@ -5015,17 +4987,17 @@ Capabilities
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *privileged* +
 
-    
+
 
 
 
@@ -5051,13 +5023,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *procMount* +
 
-    
+
 
 
 
@@ -5083,13 +5055,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnlyRootFilesystem* +
 
-    
+
 
 
 
@@ -5115,13 +5087,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsGroup* +
 
-    
+
 
 
 
@@ -5147,13 +5119,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsNonRoot* +
 
-    
+
 
 
 
@@ -5179,13 +5151,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsUser* +
 
-    
+
 
 
 
@@ -5211,13 +5183,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *seLinuxOptions* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_securityContext_seLinuxOptions,
 
@@ -5247,17 +5219,17 @@ SeLinuxOptions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *seccompProfile* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_securityContext_seccompProfile,
 
@@ -5287,17 +5259,17 @@ SeccompProfile
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *windowsOptions* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_securityContext_windowsOptions,
 
@@ -5327,13 +5299,13 @@ WindowsOptions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -5378,7 +5350,7 @@ spec:
 
     | *add* +
 
-    
+
 
 
 
@@ -5404,13 +5376,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *drop* +
 
-    
+
 
 
 
@@ -5436,9 +5408,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5483,7 +5455,7 @@ spec:
 
     | *level* +
 
-    
+
 
 
 
@@ -5509,13 +5481,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *role* +
 
-    
+
 
 
 
@@ -5541,13 +5513,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -5573,13 +5545,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *user* +
 
-    
+
 
 
 
@@ -5605,9 +5577,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5652,7 +5624,7 @@ spec:
 
     | *localhostProfile* +
 
-    
+
 
 
 
@@ -5678,13 +5650,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -5710,9 +5682,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5757,7 +5729,7 @@ spec:
 
     | *gmsaCredentialSpec* +
 
-    
+
 
 
 
@@ -5783,13 +5755,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *gmsaCredentialSpecName* +
 
-    
+
 
 
 
@@ -5815,13 +5787,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostProcess* +
 
-    
+
 
 
 
@@ -5847,13 +5819,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsUserName* +
 
-    
+
 
 
 
@@ -5879,9 +5851,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5925,7 +5897,7 @@ spec:
 
     | *devicePath* +
 
-    
+
 
 
 
@@ -5951,13 +5923,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -5983,9 +5955,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6029,7 +6001,7 @@ spec:
 
     | *mountPath* +
 
-    
+
 
 
 
@@ -6055,13 +6027,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *mountPropagation* +
 
-    
+
 
 
 
@@ -6087,13 +6059,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -6119,13 +6091,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -6151,13 +6123,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *subPath* +
 
-    
+
 
 
 
@@ -6183,13 +6155,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *subPathExpr* +
 
-    
+
 
 
 
@@ -6215,9 +6187,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6260,7 +6232,7 @@ spec:
 
     | *preferredDuringSchedulingIgnoredDuringExecution* +
 
-    
+
 
 
 
@@ -6286,13 +6258,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *requiredDuringSchedulingIgnoredDuringExecution* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
 
@@ -6322,13 +6294,13 @@ RequiredDuringSchedulingIgnoredDuringExecution
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -6372,7 +6344,7 @@ spec:
 
     | *preference* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
 
@@ -6402,17 +6374,17 @@ Preference
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *weight* +
 
-    
+
 
 
 
@@ -6438,9 +6410,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6485,7 +6457,7 @@ spec:
 
     | *matchExpressions* +
 
-    
+
 
 
 
@@ -6511,13 +6483,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *matchFields* +
 
-    
+
 
 
 
@@ -6543,9 +6515,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6591,7 +6563,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -6617,13 +6589,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operator* +
 
-    
+
 
 
 
@@ -6649,13 +6621,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *values* +
 
-    
+
 
 
 
@@ -6681,9 +6653,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6727,7 +6699,7 @@ spec:
 
     | *nodeSelectorTerms* +
 
-    
+
 
 
 
@@ -6753,9 +6725,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6798,7 +6770,7 @@ spec:
 
     | *limits* +
 
-    
+
 
 
 
@@ -6824,13 +6796,13 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
     | *requests* +
 
-    
+
 
 
 
@@ -6856,9 +6828,9 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6901,7 +6873,7 @@ spec:
 
     | *effect* +
 
-    
+
 
 
 
@@ -6927,13 +6899,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *key* +
 
-    
+
 
 
 
@@ -6959,13 +6931,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operator* +
 
-    
+
 
 
 
@@ -6991,13 +6963,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tolerationSeconds* +
 
-    
+
 
 
 
@@ -7023,13 +6995,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -7055,9 +7027,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -7099,7 +7071,7 @@ spec:
 
     | *annotations* +
 
-    
+
 
 
 
@@ -7125,13 +7097,13 @@ spec:
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -7161,17 +7133,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -7197,13 +7169,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -7229,13 +7201,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -7261,13 +7233,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -7293,13 +7265,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -7325,13 +7297,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -7357,13 +7329,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -7389,13 +7361,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -7421,13 +7393,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -7453,13 +7425,13 @@ string
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -7489,17 +7461,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -7525,13 +7497,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -7557,13 +7529,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -7589,13 +7561,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *replicas* +
 
-    
+
 
 
 
@@ -7621,13 +7593,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -7657,17 +7629,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -7693,13 +7665,13 @@ Resources
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *targetProxy* +
 
-    
+
 
 
 
@@ -7725,13 +7697,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates to connect to proxy or the broker. The default value depends whether Proxy is deployed or not.
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -7757,7 +7729,7 @@ boolean
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
@@ -7801,7 +7773,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -7831,17 +7803,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -7867,13 +7839,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -7903,17 +7875,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *autoRackConfig* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_autoRackConfig,
 
@@ -7943,17 +7915,17 @@ AutoRackConfig
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *autoscaler* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_autoscaler,
 
@@ -7983,17 +7955,17 @@ Autoscaler
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *cleanUpPvcs* +
 
-    
+
 
 
 
@@ -8019,13 +7991,13 @@ boolean
 
 
 
-    | 
+    |
 
     Cleanup PVCs after the bookie has been removed.
 
     | *config* +
 
-    
+
 
 
 
@@ -8051,13 +8023,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -8083,13 +8055,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -8115,13 +8087,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -8147,13 +8119,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -8179,13 +8151,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -8211,13 +8183,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -8243,13 +8215,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -8275,13 +8247,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -8307,13 +8279,13 @@ string
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -8343,17 +8315,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -8379,13 +8351,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *overrideResourceName* +
 
-    
+
 
 
 
@@ -8411,13 +8383,13 @@ string
 
 
 
-    | 
+    |
 
     Override the resource names generated by the operator.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -8447,17 +8419,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -8483,13 +8455,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -8515,13 +8487,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *podManagementPolicy* +
 
-    
+
 
 
 
@@ -8547,13 +8519,13 @@ string
 
 
 
-    | 
+    |
 
     Pod management policy. Default value is &#39;Parallel&#39;.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes,
 
@@ -8583,17 +8555,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *pvcPrefix* +
 
-    
+
 
 
 
@@ -8619,13 +8591,13 @@ string
 
 
 
-    | 
+    |
 
     Prefix for each PVC created.
 
     | *replicas* +
 
-    
+
 
 
 
@@ -8651,13 +8623,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -8687,17 +8659,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_service,
 
@@ -8727,17 +8699,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sets* +
 
-    
+
 
 
 
@@ -8763,13 +8735,13 @@ Service
 
 
 
-    | 
+    |
 
     Bookie sets.
 
     | *setsUpdateStrategy* +
 
-    
+
 
 
 
@@ -8795,13 +8767,13 @@ string
 
 
 
-    | 
+    |
 
     Sets update strategy. &#39;RollingUpdate&#39; or &#39;Parallel&#39;. Default is &#39;RollingUpdate&#39;.
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -8827,13 +8799,13 @@ string
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -8859,13 +8831,13 @@ string
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_updateStrategy,
 
@@ -8895,17 +8867,17 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *volumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes,
 
@@ -8935,13 +8907,13 @@ Volumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -8984,7 +8956,7 @@ spec:
 
     | *mounts* +
 
-    
+
 
 
 
@@ -9010,13 +8982,13 @@ spec:
 
 
 
-    | 
+    |
 
     Mount points for the additional volumes
 
     | *volumes* +
 
-    
+
 
 
 
@@ -9042,7 +9014,7 @@ spec:
 
 
 
-    | 
+    |
 
     Additional volumes to be mounted to the pod
 
@@ -9088,7 +9060,7 @@ spec:
 
     | *awsElasticBlockStore* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_awsElasticBlockStore,
 
@@ -9118,17 +9090,17 @@ AwsElasticBlockStore
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *azureDisk* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_azureDisk,
 
@@ -9158,17 +9130,17 @@ AzureDisk
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *azureFile* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_azureFile,
 
@@ -9198,17 +9170,17 @@ AzureFile
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *cephfs* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_cephfs,
 
@@ -9238,17 +9210,17 @@ Cephfs
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *cinder* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_cinder,
 
@@ -9278,17 +9250,17 @@ Cinder
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *configMap* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_configMap,
 
@@ -9318,17 +9290,17 @@ ConfigMap
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *csi* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_csi,
 
@@ -9358,17 +9330,17 @@ Csi
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *downwardAPI* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_downwardAPI,
 
@@ -9398,17 +9370,17 @@ DownwardAPI
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *emptyDir* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_emptyDir,
 
@@ -9438,17 +9410,17 @@ EmptyDir
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *ephemeral* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_ephemeral,
 
@@ -9478,17 +9450,17 @@ Ephemeral
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *fc* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_fc,
 
@@ -9518,17 +9490,17 @@ Fc
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *flexVolume* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_flexVolume,
 
@@ -9558,17 +9530,17 @@ FlexVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *flocker* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_flocker,
 
@@ -9598,17 +9570,17 @@ Flocker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *gcePersistentDisk* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_gcePersistentDisk,
 
@@ -9638,17 +9610,17 @@ GcePersistentDisk
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *gitRepo* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_gitRepo,
 
@@ -9678,17 +9650,17 @@ GitRepo
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *glusterfs* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_glusterfs,
 
@@ -9718,17 +9690,17 @@ Glusterfs
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *hostPath* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_hostPath,
 
@@ -9758,17 +9730,17 @@ HostPath
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *iscsi* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_iscsi,
 
@@ -9798,17 +9770,17 @@ Iscsi
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *name* +
 
-    
+
 
 
 
@@ -9834,13 +9806,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *nfs* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_nfs,
 
@@ -9870,17 +9842,17 @@ Nfs
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *persistentVolumeClaim* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_persistentVolumeClaim,
 
@@ -9910,17 +9882,17 @@ PersistentVolumeClaim
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *photonPersistentDisk* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_photonPersistentDisk,
 
@@ -9950,17 +9922,17 @@ PhotonPersistentDisk
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *portworxVolume* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_portworxVolume,
 
@@ -9990,17 +9962,17 @@ PortworxVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *projected* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_projected,
 
@@ -10030,17 +10002,17 @@ Projected
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *quobyte* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_quobyte,
 
@@ -10070,17 +10042,17 @@ Quobyte
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *rbd* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_rbd,
 
@@ -10110,17 +10082,17 @@ Rbd
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *scaleIO* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_scaleIO,
 
@@ -10150,17 +10122,17 @@ ScaleIO
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *secret* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_secret,
 
@@ -10190,17 +10162,17 @@ Secret
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *storageos* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_storageos,
 
@@ -10230,17 +10202,17 @@ Storageos
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *vsphereVolume* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_vsphereVolume,
 
@@ -10270,13 +10242,13 @@ VsphereVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -10321,7 +10293,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -10347,13 +10319,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *partition* +
 
-    
+
 
 
 
@@ -10379,13 +10351,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -10411,13 +10383,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeID* +
 
-    
+
 
 
 
@@ -10443,9 +10415,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -10490,7 +10462,7 @@ spec:
 
     | *cachingMode* +
 
-    
+
 
 
 
@@ -10516,13 +10488,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *diskName* +
 
-    
+
 
 
 
@@ -10548,13 +10520,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *diskURI* +
 
-    
+
 
 
 
@@ -10580,13 +10552,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -10612,13 +10584,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *kind* +
 
-    
+
 
 
 
@@ -10644,13 +10616,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -10676,9 +10648,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -10723,7 +10695,7 @@ spec:
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -10749,13 +10721,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretName* +
 
-    
+
 
 
 
@@ -10781,13 +10753,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *shareName* +
 
-    
+
 
 
 
@@ -10813,9 +10785,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -10860,7 +10832,7 @@ spec:
 
     | *monitors* +
 
-    
+
 
 
 
@@ -10886,13 +10858,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -10918,13 +10890,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -10950,13 +10922,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretFile* +
 
-    
+
 
 
 
@@ -10982,13 +10954,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -11018,17 +10990,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *user* +
 
-    
+
 
 
 
@@ -11054,9 +11026,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11101,7 +11073,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -11127,13 +11099,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -11159,13 +11131,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -11195,17 +11167,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *volumeID* +
 
-    
+
 
 
 
@@ -11231,9 +11203,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11278,7 +11250,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -11304,13 +11276,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *items* +
 
-    
+
 
 
 
@@ -11336,13 +11308,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -11368,13 +11340,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -11400,9 +11372,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11448,7 +11420,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -11474,13 +11446,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *mode* +
 
-    
+
 
 
 
@@ -11506,13 +11478,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -11538,9 +11510,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11585,7 +11557,7 @@ spec:
 
     | *driver* +
 
-    
+
 
 
 
@@ -11611,13 +11583,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -11643,13 +11615,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *nodePublishSecretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -11679,17 +11651,17 @@ NodePublishSecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -11715,13 +11687,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeAttributes* +
 
-    
+
 
 
 
@@ -11747,9 +11719,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11794,7 +11766,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -11820,13 +11792,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *items* +
 
-    
+
 
 
 
@@ -11852,9 +11824,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11900,7 +11872,7 @@ spec:
 
     | *fieldRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_env_valueFrom_fieldRef,
 
@@ -11930,17 +11902,17 @@ FieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *mode* +
 
-    
+
 
 
 
@@ -11966,13 +11938,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -11998,13 +11970,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *resourceFieldRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_env_valueFrom_resourceFieldRef,
 
@@ -12034,13 +12006,13 @@ ResourceFieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -12085,7 +12057,7 @@ spec:
 
     | *medium* +
 
-    
+
 
 
 
@@ -12111,13 +12083,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *sizeLimit* +
 
-            
+
 
 integer or string
 
@@ -12145,15 +12117,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -12198,7 +12170,7 @@ spec:
 
     | *volumeClaimTemplate* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate,
 
@@ -12228,13 +12200,13 @@ VolumeClaimTemplate
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -12280,7 +12252,7 @@ spec:
 
     | *metadata* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata,
 
@@ -12310,17 +12282,17 @@ Metadata
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *spec* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec,
 
@@ -12350,13 +12322,13 @@ Spec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -12403,7 +12375,7 @@ spec:
 
     | *annotations* +
 
-    
+
 
 
 
@@ -12429,13 +12401,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *creationTimestamp* +
 
-    
+
 
 
 
@@ -12461,13 +12433,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *deletionGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -12493,13 +12465,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *deletionTimestamp* +
 
-    
+
 
 
 
@@ -12525,13 +12497,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *finalizers* +
 
-    
+
 
 
 
@@ -12557,13 +12529,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *generateName* +
 
-    
+
 
 
 
@@ -12589,13 +12561,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *generation* +
 
-    
+
 
 
 
@@ -12621,13 +12593,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *labels* +
 
-    
+
 
 
 
@@ -12653,13 +12625,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *managedFields* +
 
-    
+
 
 
 
@@ -12685,13 +12657,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -12717,13 +12689,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *namespace* +
 
-    
+
 
 
 
@@ -12749,13 +12721,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *ownerReferences* +
 
-    
+
 
 
 
@@ -12781,13 +12753,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *resourceVersion* +
 
-    
+
 
 
 
@@ -12813,13 +12785,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *selfLink* +
 
-    
+
 
 
 
@@ -12845,13 +12817,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *uid* +
 
-    
+
 
 
 
@@ -12877,9 +12849,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -12927,7 +12899,7 @@ spec:
 
     | *apiVersion* +
 
-    
+
 
 
 
@@ -12953,13 +12925,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fieldsType* +
 
-    
+
 
 
 
@@ -12985,13 +12957,12 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fieldsV1* +
 
-    
 
 
 
@@ -13017,13 +12988,14 @@ string
 
 
 
-    | 
 
-    
+    |
+
+
 
     | *manager* +
 
-    
+
 
 
 
@@ -13049,13 +13021,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operation* +
 
-    
+
 
 
 
@@ -13081,13 +13053,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *subresource* +
 
-    
+
 
 
 
@@ -13113,13 +13085,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *time* +
 
-    
+
 
 
 
@@ -13145,9 +13117,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13195,7 +13167,7 @@ spec:
 
     | *apiVersion* +
 
-    
+
 
 
 
@@ -13221,13 +13193,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *blockOwnerDeletion* +
 
-    
+
 
 
 
@@ -13253,13 +13225,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *controller* +
 
-    
+
 
 
 
@@ -13285,13 +13257,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *kind* +
 
-    
+
 
 
 
@@ -13317,13 +13289,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -13349,13 +13321,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *uid* +
 
-    
+
 
 
 
@@ -13381,9 +13353,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13430,7 +13402,7 @@ spec:
 
     | *accessModes* +
 
-    
+
 
 
 
@@ -13456,13 +13428,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *dataSource* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
 
@@ -13492,17 +13464,17 @@ DataSource
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dataSourceRef* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
 
@@ -13532,17 +13504,17 @@ DataSourceRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_initContainers_resources,
 
@@ -13572,17 +13544,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *selector* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector,
 
@@ -13612,17 +13584,17 @@ Selector
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *storageClassName* +
 
-    
+
 
 
 
@@ -13648,13 +13620,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeMode* +
 
-    
+
 
 
 
@@ -13680,13 +13652,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeName* +
 
-    
+
 
 
 
@@ -13712,9 +13684,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13762,7 +13734,7 @@ spec:
 
     | *apiGroup* +
 
-    
+
 
 
 
@@ -13788,13 +13760,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *kind* +
 
-    
+
 
 
 
@@ -13820,13 +13792,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -13852,9 +13824,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13902,7 +13874,7 @@ spec:
 
     | *matchExpressions* +
 
-    
+
 
 
 
@@ -13928,13 +13900,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -13960,9 +13932,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14007,7 +13979,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -14033,13 +14005,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *lun* +
 
-    
+
 
 
 
@@ -14065,13 +14037,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -14097,13 +14069,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *targetWWNs* +
 
-    
+
 
 
 
@@ -14129,13 +14101,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *wwids* +
 
-    
+
 
 
 
@@ -14161,9 +14133,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14208,7 +14180,7 @@ spec:
 
     | *driver* +
 
-    
+
 
 
 
@@ -14234,13 +14206,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -14266,13 +14238,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *options* +
 
-    
+
 
 
 
@@ -14298,13 +14270,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -14330,13 +14302,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -14366,13 +14338,13 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -14417,7 +14389,7 @@ spec:
 
     | *datasetName* +
 
-    
+
 
 
 
@@ -14443,13 +14415,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *datasetUUID* +
 
-    
+
 
 
 
@@ -14475,9 +14447,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14522,7 +14494,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -14548,13 +14520,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *partition* +
 
-    
+
 
 
 
@@ -14580,13 +14552,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *pdName* +
 
-    
+
 
 
 
@@ -14612,13 +14584,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -14644,9 +14616,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14691,7 +14663,7 @@ spec:
 
     | *directory* +
 
-    
+
 
 
 
@@ -14717,13 +14689,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *repository* +
 
-    
+
 
 
 
@@ -14749,13 +14721,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *revision* +
 
-    
+
 
 
 
@@ -14781,9 +14753,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14828,7 +14800,7 @@ spec:
 
     | *endpoints* +
 
-    
+
 
 
 
@@ -14854,13 +14826,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -14886,13 +14858,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -14918,9 +14890,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14965,7 +14937,7 @@ spec:
 
     | *path* +
 
-    
+
 
 
 
@@ -14991,13 +14963,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -15023,9 +14995,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15070,7 +15042,7 @@ spec:
 
     | *chapAuthDiscovery* +
 
-    
+
 
 
 
@@ -15096,13 +15068,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *chapAuthSession* +
 
-    
+
 
 
 
@@ -15128,13 +15100,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -15160,13 +15132,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *initiatorName* +
 
-    
+
 
 
 
@@ -15192,13 +15164,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *iqn* +
 
-    
+
 
 
 
@@ -15224,13 +15196,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *iscsiInterface* +
 
-    
+
 
 
 
@@ -15256,13 +15228,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *lun* +
 
-    
+
 
 
 
@@ -15288,13 +15260,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *portals* +
 
-    
+
 
 
 
@@ -15320,13 +15292,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -15352,13 +15324,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -15388,17 +15360,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *targetPortal* +
 
-    
+
 
 
 
@@ -15424,9 +15396,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15471,7 +15443,7 @@ spec:
 
     | *path* +
 
-    
+
 
 
 
@@ -15497,13 +15469,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -15529,13 +15501,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *server* +
 
-    
+
 
 
 
@@ -15561,9 +15533,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15608,7 +15580,7 @@ spec:
 
     | *claimName* +
 
-    
+
 
 
 
@@ -15634,13 +15606,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -15666,9 +15638,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15713,7 +15685,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -15739,13 +15711,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *pdID* +
 
-    
+
 
 
 
@@ -15771,9 +15743,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15818,7 +15790,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -15844,13 +15816,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -15876,13 +15848,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeID* +
 
-    
+
 
 
 
@@ -15908,9 +15880,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15955,7 +15927,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -15981,13 +15953,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *sources* +
 
-    
+
 
 
 
@@ -16013,9 +15985,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16061,7 +16033,7 @@ spec:
 
     | *configMap* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_projected_sources_configMap,
 
@@ -16091,17 +16063,17 @@ ConfigMap
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *downwardAPI* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_projected_sources_downwardAPI,
 
@@ -16131,17 +16103,17 @@ DownwardAPI
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *secret* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_projected_sources_configMap,
 
@@ -16171,17 +16143,17 @@ Secret
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *serviceAccountToken* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes_volumes_projected_sources_serviceAccountToken,
 
@@ -16211,13 +16183,13 @@ ServiceAccountToken
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -16264,7 +16236,7 @@ spec:
 
     | *items* +
 
-    
+
 
 
 
@@ -16290,13 +16262,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -16322,13 +16294,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -16354,9 +16326,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16403,7 +16375,7 @@ spec:
 
     | *items* +
 
-    
+
 
 
 
@@ -16429,9 +16401,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16478,7 +16450,7 @@ spec:
 
     | *audience* +
 
-    
+
 
 
 
@@ -16504,13 +16476,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *expirationSeconds* +
 
-    
+
 
 
 
@@ -16536,13 +16508,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -16568,9 +16540,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16615,7 +16587,7 @@ spec:
 
     | *group* +
 
-    
+
 
 
 
@@ -16641,13 +16613,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -16673,13 +16645,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *registry* +
 
-    
+
 
 
 
@@ -16705,13 +16677,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tenant* +
 
-    
+
 
 
 
@@ -16737,13 +16709,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *user* +
 
-    
+
 
 
 
@@ -16769,13 +16741,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volume* +
 
-    
+
 
 
 
@@ -16801,9 +16773,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16848,7 +16820,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -16874,13 +16846,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *image* +
 
-    
+
 
 
 
@@ -16906,13 +16878,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *keyring* +
 
-    
+
 
 
 
@@ -16938,13 +16910,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *monitors* +
 
-    
+
 
 
 
@@ -16970,13 +16942,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *pool* +
 
-    
+
 
 
 
@@ -17002,13 +16974,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -17034,13 +17006,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -17070,17 +17042,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *user* +
 
-    
+
 
 
 
@@ -17106,9 +17078,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -17153,7 +17125,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -17179,13 +17151,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *gateway* +
 
-    
+
 
 
 
@@ -17211,13 +17183,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *protectionDomain* +
 
-    
+
 
 
 
@@ -17243,13 +17215,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -17275,13 +17247,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -17311,17 +17283,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sslEnabled* +
 
-    
+
 
 
 
@@ -17347,13 +17319,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *storageMode* +
 
-    
+
 
 
 
@@ -17379,13 +17351,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *storagePool* +
 
-    
+
 
 
 
@@ -17411,13 +17383,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *system* +
 
-    
+
 
 
 
@@ -17443,13 +17415,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeName* +
 
-    
+
 
 
 
@@ -17475,9 +17447,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -17522,7 +17494,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -17548,13 +17520,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *items* +
 
-    
+
 
 
 
@@ -17580,13 +17552,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -17612,13 +17584,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretName* +
 
-    
+
 
 
 
@@ -17644,9 +17616,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -17691,7 +17663,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -17717,13 +17689,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -17749,13 +17721,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_imagePullSecrets,
 
@@ -17785,17 +17757,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *volumeName* +
 
-    
+
 
 
 
@@ -17821,13 +17793,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeNamespace* +
 
-    
+
 
 
 
@@ -17853,9 +17825,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -17900,7 +17872,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -17926,13 +17898,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *storagePolicyID* +
 
-    
+
 
 
 
@@ -17958,13 +17930,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *storagePolicyName* +
 
-    
+
 
 
 
@@ -17990,13 +17962,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumePath* +
 
-    
+
 
 
 
@@ -18022,9 +17994,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -18067,7 +18039,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -18093,13 +18065,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable rack configuration monitoring.
 
     | *periodMs* +
 
-    
+
 
 
 
@@ -18125,7 +18097,7 @@ integer
 
 
 
-    | 
+    |
 
     Period for the schedule of the monitoring thread.
 
@@ -18170,7 +18142,7 @@ spec:
 
     | *diskUsageToleranceHwm* +
 
-    
+
 
 
 
@@ -18196,13 +18168,13 @@ bigdecimal
 
 
 
-    | 
+    |
 
     The threshold to trigger a scale down. The autoscaler will scale down if all the bookies&#39; disk usage is lower than this threshold. Default is &#39;0.92&#39;
 
     | *diskUsageToleranceLwm* +
 
-    
+
 
 
 
@@ -18228,13 +18200,13 @@ bigdecimal
 
 
 
-    | 
+    |
 
     The threshold to trigger a scale up. The autoscaler will scale up if all the bookies&#39; disk usage is higher than this threshold. Default is &#39;0.75&#39;
 
     | *enabled* +
 
-    
+
 
 
 
@@ -18260,13 +18232,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable autoscaling for bookies.
 
     | *minWritableBookies* +
 
-    
+
 
 
 
@@ -18292,13 +18264,13 @@ integer
 
 
 
-    | 
+    |
 
     Min number of writable bookies. The autoscaler will scale up if not enough writable bookies are detected. For instance, if a bookie went to read-only mode, the autoscaler will scale up to replace it. Default is &#39;3&#39;.
 
     | *periodMs* +
 
-    
+
 
 
 
@@ -18324,13 +18296,13 @@ integer
 
 
 
-    | 
+    |
 
     The interval in milliseconds between two consecutive autoscaling checks.
 
     | *scaleDownBy* +
 
-    
+
 
 
 
@@ -18356,13 +18328,13 @@ integer
 
 
 
-    | 
+    |
 
     The number of bookies to remove at each scale down. Default is &#39;1&#39;
 
     | *scaleUpBy* +
 
-    
+
 
 
 
@@ -18388,13 +18360,13 @@ integer
 
 
 
-    | 
+    |
 
     The number of bookies to add at each scale up. Default is &#39;1&#39;
 
     | *scaleUpMaxLimit* +
 
-    
+
 
 
 
@@ -18420,13 +18392,13 @@ integer
 
 
 
-    | 
+    |
 
     Max number of bookies. If the number of bookies is equals to this value, the autoscaler will never scale up.
 
     | *stabilizationWindowMs* +
 
-    
+
 
 
 
@@ -18452,7 +18424,7 @@ integer
 
 
 
-    | 
+    |
 
     The stabilization window is used to restrict the flapping of replica count when the metrics used for scaling keep fluctuating. The autoscaling algorithm uses this window to infer a previous desired state and avoid unwanted changes to workload scale.Default value is 5 minutes after the pod readiness.
 
@@ -18497,7 +18469,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -18523,13 +18495,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable Pdb policy.
 
     | *maxUnavailable* +
 
-    
+
 
 
 
@@ -18555,7 +18527,7 @@ integer
 
 
 
-    | 
+    |
 
     Number of maxUnavailable pods.
 
@@ -18600,7 +18572,7 @@ spec:
 
     | *liveness* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes_liveness,
 
@@ -18630,17 +18602,17 @@ Liveness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *readiness* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes_readiness,
 
@@ -18670,13 +18642,13 @@ Readiness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -18720,7 +18692,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -18746,13 +18718,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enables the probe.
 
     | *failureThreshold* +
 
-    
+
 
 
 
@@ -18778,13 +18750,13 @@ integer
 
 
 
-    | 
+    |
 
     Failure threshold.
 
     | *initialDelaySeconds* +
 
-    
+
 
 
 
@@ -18810,13 +18782,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the initial delay (in seconds) for the probe.
 
     | *periodSeconds* +
 
-    
+
 
 
 
@@ -18842,13 +18814,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the period (in seconds) for the probe.
 
     | *successThreshold* +
 
-    
+
 
 
 
@@ -18874,13 +18846,13 @@ integer
 
 
 
-    | 
+    |
 
     Success threshold.
 
     | *terminationGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -18906,13 +18878,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the termination grace period (in seconds) for the probe.
 
     | *timeoutSeconds* +
 
-    
+
 
 
 
@@ -18938,7 +18910,7 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the timeout (in seconds) for the probe.
 
@@ -18984,7 +18956,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -19010,13 +18982,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enables the probe.
 
     | *failureThreshold* +
 
-    
+
 
 
 
@@ -19042,13 +19014,13 @@ integer
 
 
 
-    | 
+    |
 
     Failure threshold.
 
     | *initialDelaySeconds* +
 
-    
+
 
 
 
@@ -19074,13 +19046,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the initial delay (in seconds) for the probe.
 
     | *periodSeconds* +
 
-    
+
 
 
 
@@ -19106,13 +19078,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the period (in seconds) for the probe.
 
     | *successThreshold* +
 
-    
+
 
 
 
@@ -19138,13 +19110,13 @@ integer
 
 
 
-    | 
+    |
 
     Success threshold.
 
     | *terminationGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -19170,13 +19142,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the termination grace period (in seconds) for the probe.
 
     | *timeoutSeconds* +
 
-    
+
 
 
 
@@ -19202,7 +19174,7 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the timeout (in seconds) for the probe.
 
@@ -19247,7 +19219,7 @@ spec:
 
     | *additionalPorts* +
 
-    
+
 
 
 
@@ -19273,13 +19245,13 @@ spec:
 
 
 
-    | 
+    |
 
     Additional ports to add to the Service.
 
     | *annotations* +
 
-    
+
 
 
 
@@ -19305,7 +19277,7 @@ spec:
 
 
 
-    | 
+    |
 
     Additional annotations to add to the Service.
 
@@ -19351,7 +19323,7 @@ spec:
 
     | *appProtocol* +
 
-    
+
 
 
 
@@ -19377,13 +19349,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -19409,13 +19381,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *nodePort* +
 
-    
+
 
 
 
@@ -19441,13 +19413,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-    
+
 
 
 
@@ -19473,13 +19445,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *protocol* +
 
-    
+
 
 
 
@@ -19505,13 +19477,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *targetPort* +
 
-            
+
 
 integer or string
 
@@ -19539,15 +19511,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -19590,7 +19562,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -19620,17 +19592,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -19656,13 +19628,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -19692,17 +19664,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *autoscaler* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_autoscaler,
 
@@ -19732,17 +19704,17 @@ Autoscaler
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *cleanUpPvcs* +
 
-    
+
 
 
 
@@ -19768,13 +19740,13 @@ boolean
 
 
 
-    | 
+    |
 
     Cleanup PVCs after the bookie has been removed.
 
     | *config* +
 
-    
+
 
 
 
@@ -19800,13 +19772,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -19832,13 +19804,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -19864,13 +19836,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -19896,13 +19868,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -19928,13 +19900,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -19960,13 +19932,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -19992,13 +19964,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -20024,13 +19996,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -20056,13 +20028,13 @@ string
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -20092,17 +20064,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -20128,13 +20100,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *overrideResourceName* +
 
-    
+
 
 
 
@@ -20160,13 +20132,13 @@ string
 
 
 
-    | 
+    |
 
     Override the resource names generated by the operator.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -20196,17 +20168,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -20232,13 +20204,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -20264,13 +20236,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *podManagementPolicy* +
 
-    
+
 
 
 
@@ -20296,13 +20268,13 @@ string
 
 
 
-    | 
+    |
 
     Pod management policy. Default value is &#39;Parallel&#39;.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes,
 
@@ -20332,17 +20304,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *pvcPrefix* +
 
-    
+
 
 
 
@@ -20368,13 +20340,13 @@ string
 
 
 
-    | 
+    |
 
     Prefix for each PVC created.
 
     | *replicas* +
 
-    
+
 
 
 
@@ -20400,13 +20372,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -20436,17 +20408,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_service,
 
@@ -20476,17 +20448,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -20512,13 +20484,13 @@ Service
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -20544,13 +20516,13 @@ Service
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_updateStrategy,
 
@@ -20580,17 +20552,17 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *volumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes,
 
@@ -20620,13 +20592,13 @@ Volumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -20670,7 +20642,7 @@ spec:
 
     | *rollingUpdate* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_updateStrategy_rollingUpdate,
 
@@ -20700,17 +20672,17 @@ RollingUpdate
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *type* +
 
-    
+
 
 
 
@@ -20736,9 +20708,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -20783,7 +20755,7 @@ spec:
 
     | *maxUnavailable* +
 
-            
+
 
 integer or string
 
@@ -20811,19 +20783,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *partition* +
 
-    
+
 
 
 
@@ -20849,9 +20821,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -20895,7 +20867,7 @@ spec:
 
     | *journal* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes_journal,
 
@@ -20925,17 +20897,17 @@ Journal
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *ledgers* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes_ledgers,
 
@@ -20965,13 +20937,13 @@ Ledgers
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -21016,7 +20988,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -21042,13 +21014,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *name* +
 
-    
+
 
 
 
@@ -21074,13 +21046,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the suffix for the volume. Default value is &#39;data&#39;.
 
     | *size* +
 
-    
+
 
 
 
@@ -21106,13 +21078,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
 
     | *storageClass* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes_journal_storageClass,
 
@@ -21142,13 +21114,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -21194,7 +21166,7 @@ spec:
 
     | *extraParams* +
 
-    
+
 
 
 
@@ -21220,13 +21192,13 @@ spec:
 
 
 
-    | 
+    |
 
     Adds extra parameters for the StorageClass.
 
     | *fsType* +
 
-    
+
 
 
 
@@ -21252,13 +21224,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
 
     | *provisioner* +
 
-    
+
 
 
 
@@ -21284,13 +21256,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the provisioner property for the StorageClass.
 
     | *reclaimPolicy* +
 
-    
+
 
 
 
@@ -21316,13 +21288,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *type* +
 
-    
+
 
 
 
@@ -21348,7 +21320,7 @@ string
 
 
 
-    | 
+    |
 
     Indicates the &#39;type&#39; parameter for the StorageClass.
 
@@ -21395,7 +21367,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -21421,13 +21393,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *name* +
 
-    
+
 
 
 
@@ -21453,13 +21425,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the suffix for the volume. Default value is &#39;data&#39;.
 
     | *size* +
 
-    
+
 
 
 
@@ -21485,13 +21457,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
 
     | *storageClass* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes_journal_storageClass,
 
@@ -21521,13 +21493,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -21569,7 +21541,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -21599,17 +21571,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -21635,13 +21607,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -21671,17 +21643,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *autoscaler* +
 
-            
+
 
             <<PulsarCluster_spec_broker_autoscaler,
 
@@ -21711,17 +21683,17 @@ Autoscaler
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -21747,13 +21719,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -21779,13 +21751,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *functionsWorkerEnabled* +
 
-    
+
 
 
 
@@ -21811,13 +21783,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable functions worker embedded in the broker.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -21843,13 +21815,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -21875,13 +21847,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -21907,13 +21879,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -21939,13 +21911,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -21971,13 +21943,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *kafka* +
 
-            
+
 
             <<PulsarCluster_spec_broker_kafka,
 
@@ -22007,17 +21979,17 @@ Kafka
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *labels* +
 
-    
+
 
 
 
@@ -22043,13 +22015,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -22075,13 +22047,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -22111,17 +22083,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -22147,13 +22119,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *overrideResourceName* +
 
-    
+
 
 
 
@@ -22179,13 +22151,13 @@ string
 
 
 
-    | 
+    |
 
     Override the resource names generated by the operator.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -22215,17 +22187,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -22251,13 +22223,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -22283,13 +22255,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *podManagementPolicy* +
 
-    
+
 
 
 
@@ -22315,13 +22287,13 @@ string
 
 
 
-    | 
+    |
 
     Pod management policy.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_broker_probes,
 
@@ -22351,17 +22323,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *replicas* +
 
-    
+
 
 
 
@@ -22387,13 +22359,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -22423,17 +22395,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_broker_service,
 
@@ -22463,17 +22435,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *serviceAccountName* +
 
-    
+
 
 
 
@@ -22499,13 +22471,13 @@ string
 
 
 
-    | 
+    |
 
     Service account name for the Broker StatefulSet.
 
     | *sets* +
 
-    
+
 
 
 
@@ -22531,13 +22503,13 @@ string
 
 
 
-    | 
+    |
 
     Broker sets.
 
     | *setsUpdateStrategy* +
 
-    
+
 
 
 
@@ -22563,13 +22535,13 @@ string
 
 
 
-    | 
+    |
 
     Sets update strategy. &#39;RollingUpdate&#39; or &#39;Parallel&#39;. Default is &#39;RollingUpdate&#39;.
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -22595,13 +22567,13 @@ string
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -22627,13 +22599,13 @@ string
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *transactions* +
 
-            
+
 
             <<PulsarCluster_spec_broker_sets_transactions,
 
@@ -22663,17 +22635,17 @@ Transactions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_broker_sets_updateStrategy,
 
@@ -22703,13 +22675,13 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -22752,7 +22724,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -22778,13 +22750,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable autoscaling for brokers.
 
     | *higherCpuThreshold* +
 
-    
+
 
 
 
@@ -22810,13 +22782,13 @@ bigdecimal
 
 
 
-    | 
+    |
 
     The threshold to trigger a scale up. The autoscaler will scale up if all the brokers cpu usage is higher than this threshold. Default is &#39;0.8&#39;
 
     | *lowerCpuThreshold* +
 
-    
+
 
 
 
@@ -22842,13 +22814,13 @@ bigdecimal
 
 
 
-    | 
+    |
 
     The threshold to trigger a scale down. The autoscaler will scale down if all the brokers cpu usage is lower than this threshold. Default is &#39;0.4&#39;
 
     | *max* +
 
-    
+
 
 
 
@@ -22874,13 +22846,13 @@ integer
 
 
 
-    | 
+    |
 
     Max number of brokers. If the number of brokers is equals to this value, the autoscaler will never scale up.
 
     | *min* +
 
-    
+
 
 
 
@@ -22906,13 +22878,13 @@ integer
 
 
 
-    | 
+    |
 
     Min number of brokers. If the number of brokers is equals to this value, the autoscaler will never scale down.
 
     | *periodMs* +
 
-    
+
 
 
 
@@ -22938,13 +22910,13 @@ integer
 
 
 
-    | 
+    |
 
     The interval in milliseconds between two consecutive autoscaling checks.
 
     | *resourcesUsageSource* +
 
-    
+
 
 
 
@@ -22970,13 +22942,13 @@ string
 
 
 
-    | 
+    |
 
     Source for getting the brokers resources usage. Possible values are &#39;PulsarLBReport&#39; and &#39;K8SMetrics&#39;. Default is &#39;PulsarLBReport&#39;
 
     | *scaleDownBy* +
 
-    
+
 
 
 
@@ -23002,13 +22974,13 @@ integer
 
 
 
-    | 
+    |
 
     The number of brokers to remove at each scale down. Default is &#39;1&#39;
 
     | *scaleUpBy* +
 
-    
+
 
 
 
@@ -23034,13 +23006,13 @@ integer
 
 
 
-    | 
+    |
 
     The number of brokers to add at each scale up. Default is &#39;1&#39;
 
     | *stabilizationWindowMs* +
 
-    
+
 
 
 
@@ -23066,7 +23038,7 @@ integer
 
 
 
-    | 
+    |
 
     The stabilization window is used to restrict the flapping of replica count when the metrics used for scaling keep fluctuating. The autoscaling algorithm uses this window to infer a previous desired state and avoid unwanted changes to workload scale.Default value is 5 minutes after the pod readiness.
 
@@ -23111,7 +23083,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -23137,13 +23109,13 @@ boolean
 
 
 
-    | 
+    |
 
     Allow the cluster to accept Kafka protocol. Default is &#39;false&#39;.
 
     | *exposePorts* +
 
-    
+
 
 
 
@@ -23169,7 +23141,7 @@ boolean
 
 
 
-    | 
+    |
 
     Expose the kafka protocol port.
 
@@ -23214,7 +23186,7 @@ spec:
 
     | *liveness* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes_liveness,
 
@@ -23244,17 +23216,17 @@ Liveness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *readiness* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes_readiness,
 
@@ -23284,17 +23256,17 @@ Readiness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *useHealthCheckForLiveness* +
 
-    
+
 
 
 
@@ -23320,13 +23292,13 @@ boolean
 
 
 
-    | 
+    |
 
     Use healthcheck for the liveness probe. If false, the /metrics endpoint will be used.
 
     | *useHealthCheckForReadiness* +
 
-    
+
 
 
 
@@ -23352,7 +23324,7 @@ boolean
 
 
 
-    | 
+    |
 
     Use healthcheck for the readiness probe. If false, the /metrics endpoint will be used.
 
@@ -23397,7 +23369,7 @@ spec:
 
     | *additionalPorts* +
 
-    
+
 
 
 
@@ -23423,13 +23395,13 @@ spec:
 
 
 
-    | 
+    |
 
     Additional ports to add to the Service.
 
     | *annotations* +
 
-    
+
 
 
 
@@ -23455,13 +23427,13 @@ spec:
 
 
 
-    | 
+    |
 
     Additional annotations to add to the Service.
 
     | *type* +
 
-    
+
 
 
 
@@ -23487,7 +23459,7 @@ string
 
 
 
-    | 
+    |
 
     Service type. Default value is &#39;ClusterIP&#39;
 
@@ -23532,7 +23504,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -23562,17 +23534,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -23598,13 +23570,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -23634,17 +23606,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *autoscaler* +
 
-            
+
 
             <<PulsarCluster_spec_broker_autoscaler,
 
@@ -23674,17 +23646,17 @@ Autoscaler
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -23710,13 +23682,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -23742,13 +23714,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *functionsWorkerEnabled* +
 
-    
+
 
 
 
@@ -23774,13 +23746,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable functions worker embedded in the broker.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -23806,13 +23778,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -23838,13 +23810,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -23870,13 +23842,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -23902,13 +23874,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -23934,13 +23906,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *kafka* +
 
-            
+
 
             <<PulsarCluster_spec_broker_kafka,
 
@@ -23970,17 +23942,17 @@ Kafka
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *labels* +
 
-    
+
 
 
 
@@ -24006,13 +23978,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -24038,13 +24010,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -24074,17 +24046,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -24110,13 +24082,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *overrideResourceName* +
 
-    
+
 
 
 
@@ -24142,13 +24114,13 @@ string
 
 
 
-    | 
+    |
 
     Override the resource names generated by the operator.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -24178,17 +24150,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -24214,13 +24186,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -24246,13 +24218,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *podManagementPolicy* +
 
-    
+
 
 
 
@@ -24278,13 +24250,13 @@ string
 
 
 
-    | 
+    |
 
     Pod management policy.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_broker_probes,
 
@@ -24314,17 +24286,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *replicas* +
 
-    
+
 
 
 
@@ -24350,13 +24322,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -24386,17 +24358,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_broker_service,
 
@@ -24426,17 +24398,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *serviceAccountName* +
 
-    
+
 
 
 
@@ -24462,13 +24434,13 @@ string
 
 
 
-    | 
+    |
 
     Service account name for the Broker StatefulSet.
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -24494,13 +24466,13 @@ string
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -24526,13 +24498,13 @@ string
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *transactions* +
 
-            
+
 
             <<PulsarCluster_spec_broker_sets_transactions,
 
@@ -24562,17 +24534,17 @@ Transactions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_broker_sets_updateStrategy,
 
@@ -24602,13 +24574,13 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -24652,7 +24624,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -24678,13 +24650,13 @@ boolean
 
 
 
-    | 
+    |
 
     Initialize the transaction coordinator if it&#39;s not yet and configure the broker to accept transactions.
 
     | *initJob* +
 
-            
+
 
             <<PulsarCluster_spec_broker_sets_transactions_initJob,
 
@@ -24714,17 +24686,17 @@ InitJob
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *partitions* +
 
-    
+
 
 
 
@@ -24750,7 +24722,7 @@ integer
 
 
 
-    | 
+    |
 
     Number of coordinators to create.
 
@@ -24797,7 +24769,7 @@ spec:
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -24827,13 +24799,13 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -24877,7 +24849,7 @@ spec:
 
     | *rollingUpdate* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_updateStrategy_rollingUpdate,
 
@@ -24907,17 +24879,17 @@ RollingUpdate
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *type* +
 
-    
+
 
 
 
@@ -24943,9 +24915,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -24987,7 +24959,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -25017,17 +24989,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -25053,13 +25025,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -25089,17 +25061,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -25125,13 +25097,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -25157,13 +25129,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -25189,13 +25161,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -25221,13 +25193,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -25253,13 +25225,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -25285,13 +25257,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -25317,13 +25289,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -25349,13 +25321,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *logsVolume* +
 
-            
+
 
             <<PulsarCluster_spec_functionsWorker_logsVolume,
 
@@ -25385,17 +25357,17 @@ LogsVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -25421,13 +25393,13 @@ LogsVolume
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -25457,17 +25429,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -25493,13 +25465,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -25529,17 +25501,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -25565,13 +25537,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -25597,13 +25569,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *podManagementPolicy* +
 
-    
+
 
 
 
@@ -25629,13 +25601,13 @@ string
 
 
 
-    | 
+    |
 
     Pod management policy.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes,
 
@@ -25665,17 +25637,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *rbac* +
 
-            
+
 
             <<PulsarCluster_spec_functionsWorker_rbac,
 
@@ -25705,17 +25677,17 @@ Rbac
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *replicas* +
 
-    
+
 
 
 
@@ -25741,13 +25713,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -25777,17 +25749,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *runtime* +
 
-    
+
 
 
 
@@ -25813,13 +25785,13 @@ string
 
 
 
-    | 
+    |
 
     Runtime mode for functions.
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_broker_service,
 
@@ -25849,17 +25821,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -25885,13 +25857,13 @@ Service
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -25917,13 +25889,13 @@ Service
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_broker_sets_updateStrategy,
 
@@ -25953,13 +25925,13 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -26002,7 +25974,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -26028,13 +26000,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *name* +
 
-    
+
 
 
 
@@ -26060,13 +26032,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the suffix for the volume. Default value is &#39;data&#39;.
 
     | *size* +
 
-    
+
 
 
 
@@ -26092,13 +26064,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
 
     | *storageClass* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes_journal_storageClass,
 
@@ -26128,13 +26100,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -26177,7 +26149,7 @@ spec:
 
     | *create* +
 
-    
+
 
 
 
@@ -26203,13 +26175,13 @@ boolean
 
 
 
-    | 
+    |
 
     Create needed RBAC to run the Functions Worker.
 
     | *namespaced* +
 
-    
+
 
 
 
@@ -26235,7 +26207,7 @@ boolean
 
 
 
-    | 
+    |
 
     Whether or not the RBAC is created per-namespace or cluster-wise.
 
@@ -26279,7 +26251,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -26305,13 +26277,13 @@ string
 
 
 
-    | _(Optional)_ + 
+    | _(Optional)_ +
 
     Pulsar cluster name.
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_global_antiAffinity,
 
@@ -26341,17 +26313,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *auth* +
 
-            
+
 
             <<PulsarCluster_spec_global_auth,
 
@@ -26381,17 +26353,17 @@ Auth
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *components* +
 
-            
+
 
             <<PulsarCluster_spec_global_components,
 
@@ -26421,17 +26393,17 @@ Components
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dnsConfig* +
 
-            
+
 
             <<PulsarCluster_spec_global_dnsConfig,
 
@@ -26461,17 +26433,17 @@ DnsConfig
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dnsName* +
 
-    
+
 
 
 
@@ -26497,13 +26469,13 @@ string
 
 
 
-    | 
+    |
 
     Public dns name for the cluster&#39;s load balancer.
 
     | *image* +
 
-    
+
 
 
 
@@ -26529,13 +26501,13 @@ string
 
 
 
-    | 
+    |
 
     Default Pulsar image to use. Any components can be configured to use a different image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -26561,13 +26533,13 @@ string
 
 
 
-    | 
+    |
 
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
 
     | *kubernetesClusterDomain* +
 
-    
+
 
 
 
@@ -26593,13 +26565,13 @@ string
 
 
 
-    | 
+    |
 
-    The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
+    The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;.
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -26625,13 +26597,13 @@ string
 
 
 
-    | 
+    |
 
     Global node selector. If set, this will apply to all the components.
 
     | *persistence* +
 
-    
+
 
 
 
@@ -26657,13 +26629,13 @@ boolean
 
 
 
-    | 
+    |
 
-    If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
+    If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir
 
     | *priorityClassName* +
 
-    
+
 
 
 
@@ -26689,13 +26661,13 @@ string
 
 
 
-    | 
+    |
 
     Priority class name to attach to each pod.
 
     | *racks* +
 
-    
+
 
 
 
@@ -26721,13 +26693,13 @@ string
 
 
 
-    | 
+    |
 
     Racks configuration.
 
     | *resourceSets* +
 
-    
+
 
 
 
@@ -26753,13 +26725,13 @@ string
 
 
 
-    | 
+    |
 
     Resource sets.
 
     | *restartOnConfigMapChange* +
 
-    
+
 
 
 
@@ -26785,13 +26757,13 @@ boolean
 
 
 
-    | 
+    |
 
-    By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
+    By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap.
 
     | *storage* +
 
-            
+
 
             <<PulsarCluster_spec_global_storage,
 
@@ -26821,17 +26793,17 @@ Storage
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *tls* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls,
 
@@ -26861,17 +26833,17 @@ Tls
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeperPlainSslStorePassword* +
 
-    
+
 
 
 
@@ -26897,7 +26869,7 @@ boolean
 
 
 
-    | 
+    |
 
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
 
@@ -26942,7 +26914,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity_host,
 
@@ -26972,17 +26944,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity_zone,
 
@@ -27012,13 +26984,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -27061,7 +27033,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -27087,13 +27059,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable authentication in the cluster. Default is &#39;false&#39;.
 
     | *token* +
 
-            
+
 
             <<PulsarCluster_spec_global_auth_token,
 
@@ -27123,13 +27095,13 @@ Token
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -27173,7 +27145,7 @@ spec:
 
     | *initialize* +
 
-    
+
 
 
 
@@ -27199,13 +27171,13 @@ boolean
 
 
 
-    | 
+    |
 
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
 
     | *privateKeyFile* +
 
-    
+
 
 
 
@@ -27231,13 +27203,13 @@ string
 
 
 
-    | 
+    |
 
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
 
     | *proxyRoles* +
 
-    
+
 
 
 
@@ -27263,13 +27235,13 @@ string
 
 
 
-    | 
+    |
 
     Proxy roles.
 
     | *publicKeyFile* +
 
-    
+
 
 
 
@@ -27295,13 +27267,13 @@ string
 
 
 
-    | 
+    |
 
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
 
     | *superUserRoles* +
 
-    
+
 
 
 
@@ -27327,7 +27299,7 @@ string
 
 
 
-    | 
+    |
 
     Super user roles.
 
@@ -27372,7 +27344,7 @@ spec:
 
     | *autorecoveryBaseName* +
 
-    
+
 
 
 
@@ -27398,13 +27370,13 @@ string
 
 
 
-    | 
+    |
 
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
 
     | *bastionBaseName* +
 
-    
+
 
 
 
@@ -27430,13 +27402,13 @@ string
 
 
 
-    | 
+    |
 
     Bastion base name. Default value is &#39;bastion&#39;.
 
     | *bookkeeperBaseName* +
 
-    
+
 
 
 
@@ -27462,13 +27434,13 @@ string
 
 
 
-    | 
+    |
 
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
 
     | *brokerBaseName* +
 
-    
+
 
 
 
@@ -27494,13 +27466,13 @@ string
 
 
 
-    | 
+    |
 
     Broker base name. Default value is &#39;broker&#39;.
 
     | *functionsWorkerBaseName* +
 
-    
+
 
 
 
@@ -27526,13 +27498,13 @@ string
 
 
 
-    | 
+    |
 
     Functions Worker base name. Default value is &#39;function&#39;.
 
     | *proxyBaseName* +
 
-    
+
 
 
 
@@ -27558,13 +27530,13 @@ string
 
 
 
-    | 
+    |
 
     Proxy base name. Default value is &#39;proxy&#39;.
 
     | *zookeeperBaseName* +
 
-    
+
 
 
 
@@ -27590,7 +27562,7 @@ string
 
 
 
-    | 
+    |
 
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
 
@@ -27635,7 +27607,7 @@ spec:
 
     | *nameservers* +
 
-    
+
 
 
 
@@ -27661,13 +27633,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *options* +
 
-    
+
 
 
 
@@ -27693,13 +27665,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *searches* +
 
-    
+
 
 
 
@@ -27725,9 +27697,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -27770,7 +27742,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<PulsarCluster_spec_global_racks_host,
 
@@ -27800,17 +27772,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<PulsarCluster_spec_global_racks_zone,
 
@@ -27840,13 +27812,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -27890,7 +27862,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -27916,13 +27888,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the rack affinity rules.
 
     | *requireRackAffinity* +
 
-    
+
 
 
 
@@ -27948,13 +27920,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackAntiAffinity* +
 
-    
+
 
 
 
@@ -27980,7 +27952,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
@@ -28026,7 +27998,7 @@ spec:
 
     | *enableHostAntiAffinity* +
 
-    
+
 
 
 
@@ -28052,13 +28024,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -28084,13 +28056,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the rack affinity rules.
 
     | *requireRackAffinity* +
 
-    
+
 
 
 
@@ -28116,13 +28088,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackAntiAffinity* +
 
-    
+
 
 
 
@@ -28148,13 +28120,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackHostAntiAffinity* +
 
-    
+
 
 
 
@@ -28180,7 +28152,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
@@ -28225,7 +28197,7 @@ spec:
 
     | *rack* +
 
-    
+
 
 
 
@@ -28251,7 +28223,7 @@ string
 
 
 
-    | 
+    |
 
     Place this resource set to a specific rack, defined at .global.racks.
 
@@ -28296,7 +28268,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -28322,13 +28294,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *storageClass* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes_journal_storageClass,
 
@@ -28358,13 +28330,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -28407,7 +28379,7 @@ spec:
 
     | *autorecovery* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_autorecovery,
 
@@ -28437,17 +28409,17 @@ Autorecovery
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bookkeeper* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_bookkeeper,
 
@@ -28477,17 +28449,17 @@ Bookkeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *broker* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_broker,
 
@@ -28517,17 +28489,17 @@ Broker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *brokerResourceSets* +
 
-    
+
 
 
 
@@ -28553,13 +28525,13 @@ Broker
 
 
 
-    | 
+    |
 
     TLS configurations related to the Broker resource sets.
 
     | *caPath* +
 
-    
+
 
 
 
@@ -28585,13 +28557,13 @@ string
 
 
 
-    | 
+    |
 
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
 
     | *certProvisioner* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner,
 
@@ -28621,17 +28593,17 @@ CertProvisioner
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *defaultSecretName* +
 
-    
+
 
 
 
@@ -28657,13 +28629,13 @@ string
 
 
 
-    | 
+    |
 
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -28689,13 +28661,13 @@ boolean
 
 
 
-    | 
+    |
 
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
 
     | *functionsWorker* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_functionsWorker,
 
@@ -28725,17 +28697,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxy* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_proxy,
 
@@ -28765,17 +28737,17 @@ Proxy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxyResourceSets* +
 
-    
+
 
 
 
@@ -28801,13 +28773,13 @@ Proxy
 
 
 
-    | 
+    |
 
     TLS configurations related to the Proxy resource sets.
 
     | *ssCa* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_ssCa,
 
@@ -28837,17 +28809,17 @@ SsCa
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeper* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_zookeeper,
 
@@ -28877,13 +28849,13 @@ Zookeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -28927,7 +28899,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -28953,13 +28925,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -28985,7 +28957,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -29031,7 +29003,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -29057,13 +29029,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -29089,7 +29061,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -29135,7 +29107,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -29161,13 +29133,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -29193,7 +29165,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -29239,7 +29211,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -29265,13 +29237,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -29297,7 +29269,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -29343,7 +29315,7 @@ spec:
 
     | *selfSigned* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned,
 
@@ -29373,13 +29345,13 @@ SelfSigned
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -29424,7 +29396,7 @@ spec:
 
     | *autorecovery* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery,
 
@@ -29454,17 +29426,17 @@ Autorecovery
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bookkeeper* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
 
@@ -29494,17 +29466,17 @@ Bookkeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *broker* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_broker,
 
@@ -29534,17 +29506,17 @@ Broker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *caSecretName* +
 
-    
+
 
 
 
@@ -29570,13 +29542,13 @@ string
 
 
 
-    | 
+    |
 
     Secret where to store the root CA certificate.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -29602,13 +29574,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for broker, proxy and functions worker.
 
     | *functionsWorker* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
 
@@ -29638,17 +29610,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *includeDns* +
 
-    
+
 
 
 
@@ -29674,13 +29646,13 @@ boolean
 
 
 
-    | 
+    |
 
     Include dns name in the DNS names covered by the certificate.
 
     | *perComponent* +
 
-    
+
 
 
 
@@ -29706,13 +29678,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate a different certificate for each component.
 
     | *privateKey* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -29742,17 +29714,17 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxy* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_proxy,
 
@@ -29782,17 +29754,17 @@ Proxy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeper* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_zookeeper,
 
@@ -29822,13 +29794,13 @@ Zookeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -29874,7 +29846,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -29900,13 +29872,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -29936,13 +29908,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -29989,7 +29961,7 @@ spec:
 
     | *algorithm* +
 
-    
+
 
 
 
@@ -30015,13 +29987,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *encoding* +
 
-    
+
 
 
 
@@ -30047,13 +30019,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *rotationPolicy* +
 
-    
+
 
 
 
@@ -30079,13 +30051,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *size* +
 
-    
+
 
 
 
@@ -30111,9 +30083,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -30159,7 +30131,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -30185,13 +30157,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -30221,13 +30193,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -30273,7 +30245,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -30299,13 +30271,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -30335,13 +30307,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -30387,7 +30359,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -30413,13 +30385,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -30449,13 +30421,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -30501,7 +30473,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -30527,13 +30499,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -30563,13 +30535,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -30615,7 +30587,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -30641,13 +30613,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<PulsarCluster_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -30677,13 +30649,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -30727,7 +30699,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -30753,13 +30725,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -30785,13 +30757,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the functions worker to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -30817,7 +30789,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -30863,7 +30835,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -30889,13 +30861,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -30921,13 +30893,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the proxy to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -30953,7 +30925,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -30999,7 +30971,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -31025,13 +30997,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -31057,13 +31029,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the proxy to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -31089,7 +31061,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -31135,7 +31107,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -31161,13 +31133,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -31193,7 +31165,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -31239,7 +31211,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -31265,13 +31237,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -31297,7 +31269,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -31341,7 +31313,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -31371,17 +31343,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -31407,13 +31379,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -31443,17 +31415,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -31479,13 +31451,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -31511,13 +31483,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -31543,13 +31515,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -31575,13 +31547,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -31607,13 +31579,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -31639,13 +31611,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -31671,13 +31643,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *kafka* +
 
-            
+
 
             <<PulsarCluster_spec_broker_kafka,
 
@@ -31707,17 +31679,17 @@ Kafka
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *labels* +
 
-    
+
 
 
 
@@ -31743,13 +31715,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -31775,13 +31747,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -31811,17 +31783,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -31847,13 +31819,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *overrideResourceName* +
 
-    
+
 
 
 
@@ -31879,13 +31851,13 @@ string
 
 
 
-    | 
+    |
 
     Override the resource names generated by the operator.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -31915,17 +31887,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -31951,13 +31923,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -31983,13 +31955,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes,
 
@@ -32019,17 +31991,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *replicas* +
 
-    
+
 
 
 
@@ -32055,13 +32027,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -32091,17 +32063,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_proxy_service,
 
@@ -32131,17 +32103,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sets* +
 
-    
+
 
 
 
@@ -32167,13 +32139,13 @@ Service
 
 
 
-    | 
+    |
 
     Proxy sets.
 
     | *setsUpdateStrategy* +
 
-    
+
 
 
 
@@ -32199,13 +32171,13 @@ string
 
 
 
-    | 
+    |
 
     Sets update strategy. &#39;RollingUpdate&#39; or &#39;Parallel&#39;. Default is &#39;RollingUpdate&#39;.
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -32231,13 +32203,13 @@ string
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *standaloneFunctionsWorker* +
 
-    
+
 
 
 
@@ -32263,13 +32235,13 @@ boolean
 
 
 
-    | 
+    |
 
     Whether or not the functions worker is in standalone mode.
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -32295,13 +32267,13 @@ boolean
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_proxy_sets_updateStrategy,
 
@@ -32331,17 +32303,17 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *webSocket* +
 
-            
+
 
             <<PulsarCluster_spec_proxy_sets_webSocket,
 
@@ -32371,13 +32343,13 @@ WebSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -32420,7 +32392,7 @@ spec:
 
     | *additionalPorts* +
 
-    
+
 
 
 
@@ -32446,13 +32418,13 @@ spec:
 
 
 
-    | 
+    |
 
     Additional ports to add to the Service.
 
     | *annotations* +
 
-    
+
 
 
 
@@ -32478,13 +32450,13 @@ spec:
 
 
 
-    | 
+    |
 
     Additional annotations to add to the Service.
 
     | *enablePlainTextWithTLS* +
 
-    
+
 
 
 
@@ -32510,13 +32482,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable plain text connections even if TLS is enabled.
 
     | *loadBalancerIP* +
 
-    
+
 
 
 
@@ -32542,13 +32514,13 @@ string
 
 
 
-    | 
+    |
 
     Assign a load balancer IP.
 
     | *type* +
 
-    
+
 
 
 
@@ -32574,7 +32546,7 @@ string
 
 
 
-    | 
+    |
 
     Service type. Default value is &#39;ClusterIP&#39;
 
@@ -32619,7 +32591,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -32649,17 +32621,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -32685,13 +32657,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -32721,17 +32693,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -32757,13 +32729,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -32789,13 +32761,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -32821,13 +32793,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -32853,13 +32825,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -32885,13 +32857,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -32917,13 +32889,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -32949,13 +32921,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *kafka* +
 
-            
+
 
             <<PulsarCluster_spec_broker_kafka,
 
@@ -32985,17 +32957,17 @@ Kafka
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *labels* +
 
-    
+
 
 
 
@@ -33021,13 +32993,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -33053,13 +33025,13 @@ Kafka
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -33089,17 +33061,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -33125,13 +33097,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *overrideResourceName* +
 
-    
+
 
 
 
@@ -33157,13 +33129,13 @@ string
 
 
 
-    | 
+    |
 
     Override the resource names generated by the operator.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -33193,17 +33165,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -33229,13 +33201,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -33261,13 +33233,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes,
 
@@ -33297,17 +33269,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *replicas* +
 
-    
+
 
 
 
@@ -33333,13 +33305,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -33369,17 +33341,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_proxy_service,
 
@@ -33409,17 +33381,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -33445,13 +33417,13 @@ Service
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *standaloneFunctionsWorker* +
 
-    
+
 
 
 
@@ -33477,13 +33449,13 @@ boolean
 
 
 
-    | 
+    |
 
     Whether or not the functions worker is in standalone mode.
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -33509,13 +33481,13 @@ boolean
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_proxy_sets_updateStrategy,
 
@@ -33545,17 +33517,17 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *webSocket* +
 
-            
+
 
             <<PulsarCluster_spec_proxy_sets_webSocket,
 
@@ -33585,13 +33557,13 @@ WebSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -33635,7 +33607,7 @@ spec:
 
     | *rollingUpdate* +
 
-            
+
 
             <<PulsarCluster_spec_proxy_sets_updateStrategy_rollingUpdate,
 
@@ -33665,17 +33637,17 @@ RollingUpdate
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *type* +
 
-    
+
 
 
 
@@ -33701,9 +33673,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -33748,7 +33720,7 @@ spec:
 
     | *maxSurge* +
 
-            
+
 
 integer or string
 
@@ -33776,19 +33748,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *maxUnavailable* +
 
-            
+
 
 integer or string
 
@@ -33816,15 +33788,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -33868,7 +33840,7 @@ spec:
 
     | *config* +
 
-    
+
 
 
 
@@ -33894,13 +33866,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -33926,13 +33898,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable WebSocket standalone as container in the proxy pod.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes,
 
@@ -33962,17 +33934,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -34002,13 +33974,13 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -34050,7 +34022,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_additionalVolumes,
 
@@ -34080,17 +34052,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -34116,13 +34088,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_antiAffinity,
 
@@ -34152,17 +34124,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -34188,13 +34160,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *dataVolume* +
 
-            
+
 
             <<PulsarCluster_spec_zookeeper_dataVolume,
 
@@ -34224,17 +34196,17 @@ DataVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *env* +
 
-    
+
 
 
 
@@ -34260,13 +34232,13 @@ DataVolume
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -34292,13 +34264,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -34324,13 +34296,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -34356,13 +34328,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -34388,13 +34360,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -34420,13 +34392,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -34452,13 +34424,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -34484,13 +34456,13 @@ string
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *metadataInitializationJob* +
 
-            
+
 
             <<PulsarCluster_spec_zookeeper_metadataInitializationJob,
 
@@ -34520,17 +34492,17 @@ MetadataInitializationJob
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeAffinity* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_nodeAffinity,
 
@@ -34560,17 +34532,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -34596,13 +34568,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *pdb* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_pdb,
 
@@ -34632,17 +34604,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -34668,13 +34640,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -34700,13 +34672,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *podManagementPolicy* +
 
-    
+
 
 
 
@@ -34732,13 +34704,13 @@ string
 
 
 
-    | 
+    |
 
     Pod management policy. Default value is &#39;Parallel&#39;.
 
     | *probes* +
 
-            
+
 
             <<PulsarCluster_spec_zookeeper_probes,
 
@@ -34768,17 +34740,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *replicas* +
 
-    
+
 
 
 
@@ -34804,13 +34776,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -34840,17 +34812,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *service* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_service,
 
@@ -34880,17 +34852,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -34916,13 +34888,13 @@ Service
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -34948,13 +34920,13 @@ Service
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *updateStrategy* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_updateStrategy,
 
@@ -34984,13 +34956,13 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -35033,7 +35005,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -35059,13 +35031,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *name* +
 
-    
+
 
 
 
@@ -35091,13 +35063,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the suffix for the volume. Default value is &#39;data&#39;.
 
     | *size* +
 
-    
+
 
 
 
@@ -35123,13 +35095,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
 
     | *storageClass* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_sets_volumes_journal_storageClass,
 
@@ -35159,13 +35131,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -35208,7 +35180,7 @@ spec:
 
     | *resources* +
 
-            
+
 
             <<PulsarCluster_spec_autorecovery_resources,
 
@@ -35238,17 +35210,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *timeout* +
 
-    
+
 
 
 
@@ -35274,7 +35246,7 @@ integer
 
 
 
-    | 
+    |
 
     Timeout (in seconds) for the metadata initialization execution. Default value is 60.
 
@@ -35319,7 +35291,7 @@ spec:
 
     | *liveness* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes_liveness,
 
@@ -35349,17 +35321,17 @@ Liveness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *readiness* +
 
-            
+
 
             <<PulsarCluster_spec_bookkeeper_probes_readiness,
 
@@ -35389,13 +35361,13 @@ Readiness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -35425,7 +35397,7 @@ Complete namespace: Pulsarcluster.Status
 
     | *conditions* +
 
-    
+
 
 
 
@@ -35451,13 +35423,13 @@ Complete namespace: Pulsarcluster.Status
 
 
 
-    | 
+    |
 
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
 
     | *lastApplied* +
 
-    
+
 
 
 
@@ -35483,7 +35455,7 @@ string
 
 
 
-    | 
+    |
 
     Last spec applied.
 
@@ -35527,7 +35499,7 @@ spec:
 
     | *lastTransitionTime* +
 
-    
+
 
 
 
@@ -35553,13 +35525,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *message* +
 
-    
+
 
 
 
@@ -35585,13 +35557,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *observedGeneration* +
 
-    
+
 
 
 
@@ -35617,13 +35589,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *reason* +
 
-    
+
 
 
 
@@ -35649,13 +35621,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *status* +
 
-    
+
 
 
 
@@ -35681,13 +35653,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -35713,9 +35685,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 

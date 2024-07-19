@@ -1,42 +1,14 @@
 = FunctionsWorker
-
-v1alpha1
-
-:source-highlighter: highlightjs
-
 :keywords: openapi, rest, FunctionsWorker
-
 :specDir: 
-
 :snippetDir: 
-
 :generator-template: v1 2019-12-20
-
 :info-url: https://openapi-generator.tech
-
 :app-name: FunctionsWorker
-
-
-
-Auto generated from CRD spec
-
-
-
-
-
+// Auto generated from CRD spec
 // markup not found, no include::{specDir}intro.adoc[opts=optional]
-
-
-
-
-
-Version: v1alpha1
-
-
-
-Namespace: pulsar.oss.datastax.com
-
-
+// Version: v1alpha1
+// Namespace: pulsar.oss.datastax.com
 
 == Functionsworker [[FunctionsWorker]]
 
@@ -54,7 +26,7 @@ Namespace: pulsar.oss.datastax.com
 
     | *spec* +
 
-            
+
 
             <<FunctionsWorker_spec,
 
@@ -84,17 +56,17 @@ Spec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *status* +
 
-            
+
 
             <<FunctionsWorker_status,
 
@@ -124,13 +96,13 @@ Status
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -160,7 +132,7 @@ Complete namespace: Functionsworker.Spec
 
     | *functionsWorker* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker,
 
@@ -190,17 +162,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *global* +
 
-            
+
 
             <<FunctionsWorker_spec_global,
 
@@ -230,13 +202,13 @@ Global
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -278,7 +250,7 @@ spec:
 
     | *additionalVolumes* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes,
 
@@ -308,17 +280,17 @@ AdditionalVolumes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *annotations* +
 
-    
+
 
 
 
@@ -344,13 +316,13 @@ AdditionalVolumes
 
 
 
-    | 
+    |
 
     Annotations to add to each resource (except pods).
 
     | *antiAffinity* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_antiAffinity,
 
@@ -380,17 +352,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *config* +
 
-    
+
 
 
 
@@ -416,13 +388,13 @@ any
 
 
 
-    | 
+    |
 
     Configuration.
 
     | *env* +
 
-    
+
 
 
 
@@ -448,13 +420,13 @@ any
 
 
 
-    | 
+    |
 
     Additional container env variables.
 
     | *gracePeriod* +
 
-    
+
 
 
 
@@ -480,13 +452,13 @@ integer
 
 
 
-    | 
+    |
 
     Termination grace period in seconds.
 
     | *image* +
 
-    
+
 
 
 
@@ -512,13 +484,13 @@ string
 
 
 
-    | 
+    |
 
     Override Pulsar image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -544,13 +516,13 @@ string
 
 
 
-    | 
+    |
 
     Override image pull policy.
 
     | *imagePullSecrets* +
 
-    
+
 
 
 
@@ -576,13 +548,13 @@ string
 
 
 
-    | 
+    |
 
     Image pull secrets.
 
     | *initContainers* +
 
-    
+
 
 
 
@@ -608,13 +580,13 @@ string
 
 
 
-    | 
+    |
 
     Init containers
 
     | *labels* +
 
-    
+
 
 
 
@@ -640,13 +612,13 @@ string
 
 
 
-    | 
+    |
 
     Labels to add to each resource (except pods).
 
     | *logsVolume* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_logsVolume,
 
@@ -676,17 +648,17 @@ LogsVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -712,13 +684,13 @@ LogsVolume
 
 
 
-    | 
+    |
 
     Match labels selectors to add to each pod.
 
     | *nodeAffinity* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_nodeAffinity,
 
@@ -748,17 +720,17 @@ NodeAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -784,13 +756,13 @@ NodeAffinity
 
 
 
-    | 
+    |
 
     Additional node selectors.
 
     | *pdb* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_pdb,
 
@@ -820,17 +792,17 @@ Pdb
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *podAnnotations* +
 
-    
+
 
 
 
@@ -856,13 +828,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Annotations to add to pod.
 
     | *podLabels* +
 
-    
+
 
 
 
@@ -888,13 +860,13 @@ Pdb
 
 
 
-    | 
+    |
 
     Labels to add to each pod.
 
     | *podManagementPolicy* +
 
-    
+
 
 
 
@@ -920,13 +892,13 @@ string
 
 
 
-    | 
+    |
 
     Pod management policy.
 
     | *probes* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_probes,
 
@@ -956,17 +928,17 @@ Probes
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *rbac* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_rbac,
 
@@ -996,17 +968,17 @@ Rbac
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *replicas* +
 
-    
+
 
 
 
@@ -1032,13 +1004,13 @@ integer
 
 
 
-    | 
+    |
 
     Number of desired replicas.
 
     | *resources* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_resources,
 
@@ -1068,17 +1040,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *runtime* +
 
-    
+
 
 
 
@@ -1104,13 +1076,13 @@ string
 
 
 
-    | 
+    |
 
     Runtime mode for functions.
 
     | *service* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_service,
 
@@ -1140,17 +1112,17 @@ Service
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sidecars* +
 
-    
+
 
 
 
@@ -1176,13 +1148,13 @@ Service
 
 
 
-    | 
+    |
 
     Sidecar containers
 
     | *tolerations* +
 
-    
+
 
 
 
@@ -1208,13 +1180,13 @@ Service
 
 
 
-    | 
+    |
 
     Pod tolerations.
 
     | *updateStrategy* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_updateStrategy,
 
@@ -1244,13 +1216,13 @@ UpdateStrategy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -1293,7 +1265,7 @@ spec:
 
     | *mounts* +
 
-    
+
 
 
 
@@ -1319,13 +1291,13 @@ spec:
 
 
 
-    | 
+    |
 
     Mount points for the additional volumes
 
     | *volumes* +
 
-    
+
 
 
 
@@ -1351,7 +1323,7 @@ spec:
 
 
 
-    | 
+    |
 
     Additional volumes to be mounted to the pod
 
@@ -1397,7 +1369,7 @@ spec:
 
     | *mountPath* +
 
-    
+
 
 
 
@@ -1423,13 +1395,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *mountPropagation* +
 
-    
+
 
 
 
@@ -1455,13 +1427,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -1487,13 +1459,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -1519,13 +1491,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *subPath* +
 
-    
+
 
 
 
@@ -1551,13 +1523,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *subPathExpr* +
 
-    
+
 
 
 
@@ -1583,9 +1555,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -1629,7 +1601,7 @@ spec:
 
     | *awsElasticBlockStore* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_awsElasticBlockStore,
 
@@ -1659,17 +1631,17 @@ AwsElasticBlockStore
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *azureDisk* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_azureDisk,
 
@@ -1699,17 +1671,17 @@ AzureDisk
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *azureFile* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_azureFile,
 
@@ -1739,17 +1711,17 @@ AzureFile
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *cephfs* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs,
 
@@ -1779,17 +1751,17 @@ Cephfs
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *cinder* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cinder,
 
@@ -1819,17 +1791,17 @@ Cinder
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *configMap* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_configMap,
 
@@ -1859,17 +1831,17 @@ ConfigMap
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *csi* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_csi,
 
@@ -1899,17 +1871,17 @@ Csi
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *downwardAPI* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_downwardAPI,
 
@@ -1939,17 +1911,17 @@ DownwardAPI
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *emptyDir* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_emptyDir,
 
@@ -1979,17 +1951,17 @@ EmptyDir
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *ephemeral* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral,
 
@@ -2019,17 +1991,17 @@ Ephemeral
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *fc* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_fc,
 
@@ -2059,17 +2031,17 @@ Fc
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *flexVolume* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_flexVolume,
 
@@ -2099,17 +2071,17 @@ FlexVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *flocker* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_flocker,
 
@@ -2139,17 +2111,17 @@ Flocker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *gcePersistentDisk* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_gcePersistentDisk,
 
@@ -2179,17 +2151,17 @@ GcePersistentDisk
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *gitRepo* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_gitRepo,
 
@@ -2219,17 +2191,17 @@ GitRepo
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *glusterfs* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_glusterfs,
 
@@ -2259,17 +2231,17 @@ Glusterfs
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *hostPath* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_hostPath,
 
@@ -2299,17 +2271,17 @@ HostPath
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *iscsi* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_iscsi,
 
@@ -2339,17 +2311,17 @@ Iscsi
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *name* +
 
-    
+
 
 
 
@@ -2375,13 +2347,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *nfs* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_nfs,
 
@@ -2411,17 +2383,17 @@ Nfs
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *persistentVolumeClaim* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_persistentVolumeClaim,
 
@@ -2451,17 +2423,17 @@ PersistentVolumeClaim
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *photonPersistentDisk* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_photonPersistentDisk,
 
@@ -2491,17 +2463,17 @@ PhotonPersistentDisk
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *portworxVolume* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_portworxVolume,
 
@@ -2531,17 +2503,17 @@ PortworxVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *projected* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_projected,
 
@@ -2571,17 +2543,17 @@ Projected
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *quobyte* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_quobyte,
 
@@ -2611,17 +2583,17 @@ Quobyte
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *rbd* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_rbd,
 
@@ -2651,17 +2623,17 @@ Rbd
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *scaleIO* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_scaleIO,
 
@@ -2691,17 +2663,17 @@ ScaleIO
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *secret* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_secret,
 
@@ -2731,17 +2703,17 @@ Secret
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *storageos* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_storageos,
 
@@ -2771,17 +2743,17 @@ Storageos
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *vsphereVolume* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_vsphereVolume,
 
@@ -2811,13 +2783,13 @@ VsphereVolume
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -2862,7 +2834,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -2888,13 +2860,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *partition* +
 
-    
+
 
 
 
@@ -2920,13 +2892,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -2952,13 +2924,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeID* +
 
-    
+
 
 
 
@@ -2984,9 +2956,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3031,7 +3003,7 @@ spec:
 
     | *cachingMode* +
 
-    
+
 
 
 
@@ -3057,13 +3029,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *diskName* +
 
-    
+
 
 
 
@@ -3089,13 +3061,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *diskURI* +
 
-    
+
 
 
 
@@ -3121,13 +3093,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -3153,13 +3125,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *kind* +
 
-    
+
 
 
 
@@ -3185,13 +3157,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -3217,9 +3189,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3264,7 +3236,7 @@ spec:
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -3290,13 +3262,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretName* +
 
-    
+
 
 
 
@@ -3322,13 +3294,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *shareName* +
 
-    
+
 
 
 
@@ -3354,9 +3326,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3401,7 +3373,7 @@ spec:
 
     | *monitors* +
 
-    
+
 
 
 
@@ -3427,13 +3399,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -3459,13 +3431,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -3491,13 +3463,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretFile* +
 
-    
+
 
 
 
@@ -3523,13 +3495,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -3559,17 +3531,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *user* +
 
-    
+
 
 
 
@@ -3595,9 +3567,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3643,7 +3615,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -3669,9 +3641,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3716,7 +3688,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -3742,13 +3714,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -3774,13 +3746,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -3810,17 +3782,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *volumeID* +
 
-    
+
 
 
 
@@ -3846,9 +3818,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -3893,7 +3865,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -3919,13 +3891,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *items* +
 
-    
+
 
 
 
@@ -3951,13 +3923,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -3983,13 +3955,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -4015,9 +3987,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4063,7 +4035,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -4089,13 +4061,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *mode* +
 
-    
+
 
 
 
@@ -4121,13 +4093,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -4153,9 +4125,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4200,7 +4172,7 @@ spec:
 
     | *driver* +
 
-    
+
 
 
 
@@ -4226,13 +4198,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -4258,13 +4230,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *nodePublishSecretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -4294,17 +4266,17 @@ NodePublishSecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -4330,13 +4302,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeAttributes* +
 
-    
+
 
 
 
@@ -4362,9 +4334,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4409,7 +4381,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -4435,13 +4407,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *items* +
 
-    
+
 
 
 
@@ -4467,9 +4439,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4515,7 +4487,7 @@ spec:
 
     | *fieldRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_downwardAPI_items_fieldRef,
 
@@ -4545,17 +4517,17 @@ FieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *mode* +
 
-    
+
 
 
 
@@ -4581,13 +4553,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -4613,13 +4585,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *resourceFieldRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
 
@@ -4649,13 +4621,13 @@ ResourceFieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -4702,7 +4674,7 @@ spec:
 
     | *apiVersion* +
 
-    
+
 
 
 
@@ -4728,13 +4700,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fieldPath* +
 
-    
+
 
 
 
@@ -4760,9 +4732,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4809,7 +4781,7 @@ spec:
 
     | *containerName* +
 
-    
+
 
 
 
@@ -4835,13 +4807,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *divisor* +
 
-            
+
 
 integer or string
 
@@ -4869,19 +4841,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *resource* +
 
-    
+
 
 
 
@@ -4907,9 +4879,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -4954,7 +4926,7 @@ spec:
 
     | *medium* +
 
-    
+
 
 
 
@@ -4980,13 +4952,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *sizeLimit* +
 
-            
+
 
 integer or string
 
@@ -5014,15 +4986,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -5067,7 +5039,7 @@ spec:
 
     | *volumeClaimTemplate* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate,
 
@@ -5097,13 +5069,13 @@ VolumeClaimTemplate
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -5149,7 +5121,7 @@ spec:
 
     | *metadata* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_metadata,
 
@@ -5179,17 +5151,17 @@ Metadata
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *spec* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec,
 
@@ -5219,13 +5191,13 @@ Spec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -5272,7 +5244,7 @@ spec:
 
     | *annotations* +
 
-    
+
 
 
 
@@ -5298,13 +5270,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *creationTimestamp* +
 
-    
+
 
 
 
@@ -5330,13 +5302,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *deletionGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -5362,13 +5334,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *deletionTimestamp* +
 
-    
+
 
 
 
@@ -5394,13 +5366,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *finalizers* +
 
-    
+
 
 
 
@@ -5426,13 +5398,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *generateName* +
 
-    
+
 
 
 
@@ -5458,13 +5430,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *generation* +
 
-    
+
 
 
 
@@ -5490,13 +5462,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *labels* +
 
-    
+
 
 
 
@@ -5522,13 +5494,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *managedFields* +
 
-    
+
 
 
 
@@ -5554,13 +5526,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -5586,13 +5558,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *namespace* +
 
-    
+
 
 
 
@@ -5618,13 +5590,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *ownerReferences* +
 
-    
+
 
 
 
@@ -5650,13 +5622,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *resourceVersion* +
 
-    
+
 
 
 
@@ -5682,13 +5654,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *selfLink* +
 
-    
+
 
 
 
@@ -5714,13 +5686,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *uid* +
 
-    
+
 
 
 
@@ -5746,9 +5718,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -5796,7 +5768,7 @@ spec:
 
     | *apiVersion* +
 
-    
+
 
 
 
@@ -5822,13 +5794,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fieldsType* +
 
-    
+
 
 
 
@@ -5854,13 +5826,12 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fieldsV1* +
 
-    
 
 
 
@@ -5886,13 +5857,14 @@ string
 
 
 
-    | 
 
-    
+    |
+
+
 
     | *manager* +
 
-    
+
 
 
 
@@ -5918,13 +5890,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operation* +
 
-    
+
 
 
 
@@ -5950,13 +5922,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *subresource* +
 
-    
+
 
 
 
@@ -5982,13 +5954,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *time* +
 
-    
+
 
 
 
@@ -6014,9 +5986,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6064,7 +6036,7 @@ spec:
 
     | *apiVersion* +
 
-    
+
 
 
 
@@ -6090,13 +6062,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *blockOwnerDeletion* +
 
-    
+
 
 
 
@@ -6122,13 +6094,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *controller* +
 
-    
+
 
 
 
@@ -6154,13 +6126,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *kind* +
 
-    
+
 
 
 
@@ -6186,13 +6158,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -6218,13 +6190,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *uid* +
 
-    
+
 
 
 
@@ -6250,9 +6222,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6299,7 +6271,7 @@ spec:
 
     | *accessModes* +
 
-    
+
 
 
 
@@ -6325,13 +6297,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *dataSource* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
 
@@ -6361,17 +6333,17 @@ DataSource
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dataSourceRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_dataSource,
 
@@ -6401,17 +6373,17 @@ DataSourceRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resources* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
 
@@ -6441,17 +6413,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *selector* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_selector,
 
@@ -6481,17 +6453,17 @@ Selector
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *storageClassName* +
 
-    
+
 
 
 
@@ -6517,13 +6489,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeMode* +
 
-    
+
 
 
 
@@ -6549,13 +6521,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeName* +
 
-    
+
 
 
 
@@ -6581,9 +6553,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6631,7 +6603,7 @@ spec:
 
     | *apiGroup* +
 
-    
+
 
 
 
@@ -6657,13 +6629,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *kind* +
 
-    
+
 
 
 
@@ -6689,13 +6661,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -6721,9 +6693,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6771,7 +6743,7 @@ spec:
 
     | *limits* +
 
-    
+
 
 
 
@@ -6797,13 +6769,13 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
     | *requests* +
 
-    
+
 
 
 
@@ -6829,9 +6801,9 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6879,7 +6851,7 @@ spec:
 
     | *matchExpressions* +
 
-    
+
 
 
 
@@ -6905,13 +6877,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *matchLabels* +
 
-    
+
 
 
 
@@ -6937,9 +6909,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -6988,7 +6960,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -7014,13 +6986,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operator* +
 
-    
+
 
 
 
@@ -7046,13 +7018,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *values* +
 
-    
+
 
 
 
@@ -7078,9 +7050,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -7125,7 +7097,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -7151,13 +7123,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *lun* +
 
-    
+
 
 
 
@@ -7183,13 +7155,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -7215,13 +7187,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *targetWWNs* +
 
-    
+
 
 
 
@@ -7247,13 +7219,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *wwids* +
 
-    
+
 
 
 
@@ -7279,9 +7251,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -7326,7 +7298,7 @@ spec:
 
     | *driver* +
 
-    
+
 
 
 
@@ -7352,13 +7324,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -7384,13 +7356,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *options* +
 
-    
+
 
 
 
@@ -7416,13 +7388,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -7448,13 +7420,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -7484,13 +7456,13 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -7535,7 +7507,7 @@ spec:
 
     | *datasetName* +
 
-    
+
 
 
 
@@ -7561,13 +7533,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *datasetUUID* +
 
-    
+
 
 
 
@@ -7593,9 +7565,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -7640,7 +7612,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -7666,13 +7638,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *partition* +
 
-    
+
 
 
 
@@ -7698,13 +7670,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *pdName* +
 
-    
+
 
 
 
@@ -7730,13 +7702,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -7762,9 +7734,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -7809,7 +7781,7 @@ spec:
 
     | *directory* +
 
-    
+
 
 
 
@@ -7835,13 +7807,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *repository* +
 
-    
+
 
 
 
@@ -7867,13 +7839,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *revision* +
 
-    
+
 
 
 
@@ -7899,9 +7871,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -7946,7 +7918,7 @@ spec:
 
     | *endpoints* +
 
-    
+
 
 
 
@@ -7972,13 +7944,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -8004,13 +7976,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -8036,9 +8008,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -8083,7 +8055,7 @@ spec:
 
     | *path* +
 
-    
+
 
 
 
@@ -8109,13 +8081,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -8141,9 +8113,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -8188,7 +8160,7 @@ spec:
 
     | *chapAuthDiscovery* +
 
-    
+
 
 
 
@@ -8214,13 +8186,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *chapAuthSession* +
 
-    
+
 
 
 
@@ -8246,13 +8218,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *fsType* +
 
-    
+
 
 
 
@@ -8278,13 +8250,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *initiatorName* +
 
-    
+
 
 
 
@@ -8310,13 +8282,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *iqn* +
 
-    
+
 
 
 
@@ -8342,13 +8314,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *iscsiInterface* +
 
-    
+
 
 
 
@@ -8374,13 +8346,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *lun* +
 
-    
+
 
 
 
@@ -8406,13 +8378,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *portals* +
 
-    
+
 
 
 
@@ -8438,13 +8410,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -8470,13 +8442,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -8506,17 +8478,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *targetPortal* +
 
-    
+
 
 
 
@@ -8542,9 +8514,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -8589,7 +8561,7 @@ spec:
 
     | *path* +
 
-    
+
 
 
 
@@ -8615,13 +8587,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -8647,13 +8619,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *server* +
 
-    
+
 
 
 
@@ -8679,9 +8651,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -8726,7 +8698,7 @@ spec:
 
     | *claimName* +
 
-    
+
 
 
 
@@ -8752,13 +8724,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -8784,9 +8756,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -8831,7 +8803,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -8857,13 +8829,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *pdID* +
 
-    
+
 
 
 
@@ -8889,9 +8861,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -8936,7 +8908,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -8962,13 +8934,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -8994,13 +8966,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeID* +
 
-    
+
 
 
 
@@ -9026,9 +8998,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -9073,7 +9045,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -9099,13 +9071,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *sources* +
 
-    
+
 
 
 
@@ -9131,9 +9103,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -9179,7 +9151,7 @@ spec:
 
     | *configMap* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_projected_sources_configMap,
 
@@ -9209,17 +9181,17 @@ ConfigMap
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *downwardAPI* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_projected_sources_downwardAPI,
 
@@ -9249,17 +9221,17 @@ DownwardAPI
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *secret* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_projected_sources_configMap,
 
@@ -9289,17 +9261,17 @@ Secret
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *serviceAccountToken* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_projected_sources_serviceAccountToken,
 
@@ -9329,13 +9301,13 @@ ServiceAccountToken
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -9382,7 +9354,7 @@ spec:
 
     | *items* +
 
-    
+
 
 
 
@@ -9408,13 +9380,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -9440,13 +9412,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -9472,9 +9444,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -9521,7 +9493,7 @@ spec:
 
     | *items* +
 
-    
+
 
 
 
@@ -9547,9 +9519,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -9596,7 +9568,7 @@ spec:
 
     | *audience* +
 
-    
+
 
 
 
@@ -9622,13 +9594,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *expirationSeconds* +
 
-    
+
 
 
 
@@ -9654,13 +9626,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -9686,9 +9658,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -9733,7 +9705,7 @@ spec:
 
     | *group* +
 
-    
+
 
 
 
@@ -9759,13 +9731,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -9791,13 +9763,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *registry* +
 
-    
+
 
 
 
@@ -9823,13 +9795,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tenant* +
 
-    
+
 
 
 
@@ -9855,13 +9827,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *user* +
 
-    
+
 
 
 
@@ -9887,13 +9859,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volume* +
 
-    
+
 
 
 
@@ -9919,9 +9891,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -9966,7 +9938,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -9992,13 +9964,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *image* +
 
-    
+
 
 
 
@@ -10024,13 +9996,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *keyring* +
 
-    
+
 
 
 
@@ -10056,13 +10028,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *monitors* +
 
-    
+
 
 
 
@@ -10088,13 +10060,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *pool* +
 
-    
+
 
 
 
@@ -10120,13 +10092,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -10152,13 +10124,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -10188,17 +10160,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *user* +
 
-    
+
 
 
 
@@ -10224,9 +10196,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -10271,7 +10243,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -10297,13 +10269,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *gateway* +
 
-    
+
 
 
 
@@ -10329,13 +10301,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *protectionDomain* +
 
-    
+
 
 
 
@@ -10361,13 +10333,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -10393,13 +10365,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -10429,17 +10401,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *sslEnabled* +
 
-    
+
 
 
 
@@ -10465,13 +10437,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *storageMode* +
 
-    
+
 
 
 
@@ -10497,13 +10469,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *storagePool* +
 
-    
+
 
 
 
@@ -10529,13 +10501,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *system* +
 
-    
+
 
 
 
@@ -10561,13 +10533,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeName* +
 
-    
+
 
 
 
@@ -10593,9 +10565,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -10640,7 +10612,7 @@ spec:
 
     | *defaultMode* +
 
-    
+
 
 
 
@@ -10666,13 +10638,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *items* +
 
-    
+
 
 
 
@@ -10698,13 +10670,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -10730,13 +10702,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretName* +
 
-    
+
 
 
 
@@ -10762,9 +10734,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -10809,7 +10781,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -10835,13 +10807,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnly* +
 
-    
+
 
 
 
@@ -10867,13 +10839,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_cephfs_secretRef,
 
@@ -10903,17 +10875,17 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *volumeName* +
 
-    
+
 
 
 
@@ -10939,13 +10911,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeNamespace* +
 
-    
+
 
 
 
@@ -10971,9 +10943,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11018,7 +10990,7 @@ spec:
 
     | *fsType* +
 
-    
+
 
 
 
@@ -11044,13 +11016,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *storagePolicyID* +
 
-    
+
 
 
 
@@ -11076,13 +11048,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *storagePolicyName* +
 
-    
+
 
 
 
@@ -11108,13 +11080,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumePath* +
 
-    
+
 
 
 
@@ -11140,9 +11112,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11185,7 +11157,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_antiAffinity_host,
 
@@ -11215,17 +11187,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_antiAffinity_zone,
 
@@ -11255,13 +11227,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11305,7 +11277,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -11331,13 +11303,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *required* +
 
-    
+
 
 
 
@@ -11363,7 +11335,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
@@ -11409,7 +11381,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -11435,13 +11407,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *required* +
 
-    
+
 
 
 
@@ -11467,7 +11439,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
@@ -11512,7 +11484,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -11538,13 +11510,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -11570,13 +11542,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *valueFrom* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_env_valueFrom,
 
@@ -11606,13 +11578,13 @@ ValueFrom
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11656,7 +11628,7 @@ spec:
 
     | *configMapKeyRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_env_valueFrom_configMapKeyRef,
 
@@ -11686,17 +11658,17 @@ ConfigMapKeyRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *fieldRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_downwardAPI_items_fieldRef,
 
@@ -11726,17 +11698,17 @@ FieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resourceFieldRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_downwardAPI_items_resourceFieldRef,
 
@@ -11766,17 +11738,17 @@ ResourceFieldRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *secretKeyRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_env_valueFrom_configMapKeyRef,
 
@@ -11806,13 +11778,13 @@ SecretKeyRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -11857,7 +11829,7 @@ spec:
 
     | *key* +
 
-    
+
 
 
 
@@ -11883,13 +11855,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -11915,13 +11887,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -11947,9 +11919,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -11992,7 +11964,7 @@ spec:
 
     | *args* +
 
-    
+
 
 
 
@@ -12018,13 +11990,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *command* +
 
-    
+
 
 
 
@@ -12050,13 +12022,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *env* +
 
-    
+
 
 
 
@@ -12082,13 +12054,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *envFrom* +
 
-    
+
 
 
 
@@ -12114,13 +12086,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *image* +
 
-    
+
 
 
 
@@ -12146,13 +12118,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -12178,13 +12150,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *lifecycle* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle,
 
@@ -12214,17 +12186,17 @@ Lifecycle
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *livenessProbe* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_livenessProbe,
 
@@ -12254,17 +12226,17 @@ LivenessProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *name* +
 
-    
+
 
 
 
@@ -12290,13 +12262,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *ports* +
 
-    
+
 
 
 
@@ -12322,13 +12294,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readinessProbe* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_livenessProbe,
 
@@ -12358,17 +12330,17 @@ ReadinessProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *resources* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_additionalVolumes_volumes_ephemeral_volumeClaimTemplate_spec_resources,
 
@@ -12398,17 +12370,17 @@ Resources
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *securityContext* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_securityContext,
 
@@ -12438,17 +12410,17 @@ SecurityContext
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *startupProbe* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_livenessProbe,
 
@@ -12478,17 +12450,17 @@ StartupProbe
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *stdin* +
 
-    
+
 
 
 
@@ -12514,13 +12486,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *stdinOnce* +
 
-    
+
 
 
 
@@ -12546,13 +12518,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *terminationMessagePath* +
 
-    
+
 
 
 
@@ -12578,13 +12550,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *terminationMessagePolicy* +
 
-    
+
 
 
 
@@ -12610,13 +12582,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tty* +
 
-    
+
 
 
 
@@ -12642,13 +12614,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeDevices* +
 
-    
+
 
 
 
@@ -12674,13 +12646,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *volumeMounts* +
 
-    
+
 
 
 
@@ -12706,13 +12678,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *workingDir* +
 
-    
+
 
 
 
@@ -12738,9 +12710,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -12784,7 +12756,7 @@ spec:
 
     | *configMapRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_envFrom_configMapRef,
 
@@ -12814,17 +12786,17 @@ ConfigMapRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *prefix* +
 
-    
+
 
 
 
@@ -12850,13 +12822,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *secretRef* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_envFrom_configMapRef,
 
@@ -12886,13 +12858,13 @@ SecretRef
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -12937,7 +12909,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -12963,13 +12935,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *optional* +
 
-    
+
 
 
 
@@ -12995,9 +12967,9 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13041,7 +13013,7 @@ spec:
 
     | *postStart* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart,
 
@@ -13071,17 +13043,17 @@ PostStart
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *preStop* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart,
 
@@ -13111,13 +13083,13 @@ PreStop
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -13162,7 +13134,7 @@ spec:
 
     | *exec* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart_exec,
 
@@ -13192,17 +13164,17 @@ Exec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *httpGet* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart_httpGet,
 
@@ -13232,17 +13204,17 @@ HttpGet
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *tcpSocket* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart_tcpSocket,
 
@@ -13272,13 +13244,13 @@ TcpSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -13324,7 +13296,7 @@ spec:
 
     | *command* +
 
-    
+
 
 
 
@@ -13350,9 +13322,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13398,7 +13370,7 @@ spec:
 
     | *host* +
 
-    
+
 
 
 
@@ -13424,13 +13396,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *httpHeaders* +
 
-    
+
 
 
 
@@ -13456,13 +13428,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *path* +
 
-    
+
 
 
 
@@ -13488,13 +13460,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-            
+
 
 integer or string
 
@@ -13522,19 +13494,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *scheme* +
 
-    
+
 
 
 
@@ -13560,9 +13532,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13609,7 +13581,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -13635,13 +13607,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -13667,9 +13639,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -13715,7 +13687,7 @@ spec:
 
     | *host* +
 
-    
+
 
 
 
@@ -13741,13 +13713,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-            
+
 
 integer or string
 
@@ -13775,15 +13747,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -13827,7 +13799,7 @@ spec:
 
     | *exec* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart_exec,
 
@@ -13857,17 +13829,17 @@ Exec
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *failureThreshold* +
 
-    
+
 
 
 
@@ -13893,13 +13865,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *grpc* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_livenessProbe_grpc,
 
@@ -13929,17 +13901,17 @@ Grpc
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *httpGet* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart_httpGet,
 
@@ -13969,17 +13941,17 @@ HttpGet
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *initialDelaySeconds* +
 
-    
+
 
 
 
@@ -14005,13 +13977,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *periodSeconds* +
 
-    
+
 
 
 
@@ -14037,13 +14009,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *successThreshold* +
 
-    
+
 
 
 
@@ -14069,13 +14041,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *tcpSocket* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_lifecycle_postStart_tcpSocket,
 
@@ -14105,17 +14077,17 @@ TcpSocket
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *terminationGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -14141,13 +14113,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *timeoutSeconds* +
 
-    
+
 
 
 
@@ -14173,9 +14145,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14220,7 +14192,7 @@ spec:
 
     | *port* +
 
-    
+
 
 
 
@@ -14246,13 +14218,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *service* +
 
-    
+
 
 
 
@@ -14278,9 +14250,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14324,7 +14296,7 @@ spec:
 
     | *containerPort* +
 
-    
+
 
 
 
@@ -14350,13 +14322,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostIP* +
 
-    
+
 
 
 
@@ -14382,13 +14354,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostPort* +
 
-    
+
 
 
 
@@ -14414,13 +14386,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -14446,13 +14418,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *protocol* +
 
-    
+
 
 
 
@@ -14478,9 +14450,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -14524,7 +14496,7 @@ spec:
 
     | *allowPrivilegeEscalation* +
 
-    
+
 
 
 
@@ -14550,13 +14522,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *capabilities* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_securityContext_capabilities,
 
@@ -14586,17 +14558,17 @@ Capabilities
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *privileged* +
 
-    
+
 
 
 
@@ -14622,13 +14594,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *procMount* +
 
-    
+
 
 
 
@@ -14654,13 +14626,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *readOnlyRootFilesystem* +
 
-    
+
 
 
 
@@ -14686,13 +14658,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsGroup* +
 
-    
+
 
 
 
@@ -14718,13 +14690,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsNonRoot* +
 
-    
+
 
 
 
@@ -14750,13 +14722,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsUser* +
 
-    
+
 
 
 
@@ -14782,13 +14754,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *seLinuxOptions* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_securityContext_seLinuxOptions,
 
@@ -14818,17 +14790,17 @@ SeLinuxOptions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *seccompProfile* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_securityContext_seccompProfile,
 
@@ -14858,17 +14830,17 @@ SeccompProfile
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *windowsOptions* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_initContainers_securityContext_windowsOptions,
 
@@ -14898,13 +14870,13 @@ WindowsOptions
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -14949,7 +14921,7 @@ spec:
 
     | *add* +
 
-    
+
 
 
 
@@ -14975,13 +14947,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *drop* +
 
-    
+
 
 
 
@@ -15007,9 +14979,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15054,7 +15026,7 @@ spec:
 
     | *level* +
 
-    
+
 
 
 
@@ -15080,13 +15052,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *role* +
 
-    
+
 
 
 
@@ -15112,13 +15084,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -15144,13 +15116,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *user* +
 
-    
+
 
 
 
@@ -15176,9 +15148,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15223,7 +15195,7 @@ spec:
 
     | *localhostProfile* +
 
-    
+
 
 
 
@@ -15249,13 +15221,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -15281,9 +15253,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15328,7 +15300,7 @@ spec:
 
     | *gmsaCredentialSpec* +
 
-    
+
 
 
 
@@ -15354,13 +15326,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *gmsaCredentialSpecName* +
 
-    
+
 
 
 
@@ -15386,13 +15358,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *hostProcess* +
 
-    
+
 
 
 
@@ -15418,13 +15390,13 @@ boolean
 
 
 
-    | 
+    |
 
-    
+
 
     | *runAsUserName* +
 
-    
+
 
 
 
@@ -15450,9 +15422,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15496,7 +15468,7 @@ spec:
 
     | *devicePath* +
 
-    
+
 
 
 
@@ -15522,13 +15494,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -15554,9 +15526,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -15599,7 +15571,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -15625,13 +15597,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *name* +
 
-    
+
 
 
 
@@ -15657,13 +15629,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the suffix for the volume. Default value is &#39;data&#39;.
 
     | *size* +
 
-    
+
 
 
 
@@ -15689,13 +15661,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the requested size for the volume. The format follows the Kubernetes&#39; Quantity.
 
     | *storageClass* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_logsVolume_storageClass,
 
@@ -15725,13 +15697,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -15775,7 +15747,7 @@ spec:
 
     | *extraParams* +
 
-    
+
 
 
 
@@ -15801,13 +15773,13 @@ spec:
 
 
 
-    | 
+    |
 
     Adds extra parameters for the StorageClass.
 
     | *fsType* +
 
-    
+
 
 
 
@@ -15833,13 +15805,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the &#39;fsType&#39; parameter for the StorageClass.
 
     | *provisioner* +
 
-    
+
 
 
 
@@ -15865,13 +15837,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the provisioner property for the StorageClass.
 
     | *reclaimPolicy* +
 
-    
+
 
 
 
@@ -15897,13 +15869,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates the reclaimPolicy property for the StorageClass.
 
     | *type* +
 
-    
+
 
 
 
@@ -15929,7 +15901,7 @@ string
 
 
 
-    | 
+    |
 
     Indicates the &#39;type&#39; parameter for the StorageClass.
 
@@ -15974,7 +15946,7 @@ spec:
 
     | *preferredDuringSchedulingIgnoredDuringExecution* +
 
-    
+
 
 
 
@@ -16000,13 +15972,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *requiredDuringSchedulingIgnoredDuringExecution* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_nodeAffinity_requiredDuringSchedulingIgnoredDuringExecution,
 
@@ -16036,13 +16008,13 @@ RequiredDuringSchedulingIgnoredDuringExecution
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -16086,7 +16058,7 @@ spec:
 
     | *preference* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_nodeAffinity_preferredDuringSchedulingIgnoredDuringExecution_preference,
 
@@ -16116,17 +16088,17 @@ Preference
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *weight* +
 
-    
+
 
 
 
@@ -16152,9 +16124,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16199,7 +16171,7 @@ spec:
 
     | *matchExpressions* +
 
-    
+
 
 
 
@@ -16225,13 +16197,13 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
     | *matchFields* +
 
-    
+
 
 
 
@@ -16257,9 +16229,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16303,7 +16275,7 @@ spec:
 
     | *nodeSelectorTerms* +
 
-    
+
 
 
 
@@ -16329,9 +16301,9 @@ spec:
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -16374,7 +16346,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -16400,13 +16372,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable Pdb policy.
 
     | *maxUnavailable* +
 
-    
+
 
 
 
@@ -16432,7 +16404,7 @@ integer
 
 
 
-    | 
+    |
 
     Number of maxUnavailable pods.
 
@@ -16477,7 +16449,7 @@ spec:
 
     | *liveness* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_probes_liveness,
 
@@ -16507,17 +16479,17 @@ Liveness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *readiness* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_probes_readiness,
 
@@ -16547,13 +16519,13 @@ Readiness
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -16597,7 +16569,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -16623,13 +16595,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enables the probe.
 
     | *failureThreshold* +
 
-    
+
 
 
 
@@ -16655,13 +16627,13 @@ integer
 
 
 
-    | 
+    |
 
     Failure threshold.
 
     | *initialDelaySeconds* +
 
-    
+
 
 
 
@@ -16687,13 +16659,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the initial delay (in seconds) for the probe.
 
     | *periodSeconds* +
 
-    
+
 
 
 
@@ -16719,13 +16691,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the period (in seconds) for the probe.
 
     | *successThreshold* +
 
-    
+
 
 
 
@@ -16751,13 +16723,13 @@ integer
 
 
 
-    | 
+    |
 
     Success threshold.
 
     | *terminationGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -16783,13 +16755,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the termination grace period (in seconds) for the probe.
 
     | *timeoutSeconds* +
 
-    
+
 
 
 
@@ -16815,7 +16787,7 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the timeout (in seconds) for the probe.
 
@@ -16861,7 +16833,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -16887,13 +16859,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enables the probe.
 
     | *failureThreshold* +
 
-    
+
 
 
 
@@ -16919,13 +16891,13 @@ integer
 
 
 
-    | 
+    |
 
     Failure threshold.
 
     | *initialDelaySeconds* +
 
-    
+
 
 
 
@@ -16951,13 +16923,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the initial delay (in seconds) for the probe.
 
     | *periodSeconds* +
 
-    
+
 
 
 
@@ -16983,13 +16955,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the period (in seconds) for the probe.
 
     | *successThreshold* +
 
-    
+
 
 
 
@@ -17015,13 +16987,13 @@ integer
 
 
 
-    | 
+    |
 
     Success threshold.
 
     | *terminationGracePeriodSeconds* +
 
-    
+
 
 
 
@@ -17047,13 +17019,13 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the termination grace period (in seconds) for the probe.
 
     | *timeoutSeconds* +
 
-    
+
 
 
 
@@ -17079,7 +17051,7 @@ integer
 
 
 
-    | 
+    |
 
     Indicates the timeout (in seconds) for the probe.
 
@@ -17124,7 +17096,7 @@ spec:
 
     | *create* +
 
-    
+
 
 
 
@@ -17150,13 +17122,13 @@ boolean
 
 
 
-    | 
+    |
 
     Create needed RBAC to run the Functions Worker.
 
     | *namespaced* +
 
-    
+
 
 
 
@@ -17182,7 +17154,7 @@ boolean
 
 
 
-    | 
+    |
 
     Whether or not the RBAC is created per-namespace or cluster-wise.
 
@@ -17227,7 +17199,7 @@ spec:
 
     | *limits* +
 
-    
+
 
 
 
@@ -17253,13 +17225,13 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
     | *requests* +
 
-    
+
 
 
 
@@ -17285,9 +17257,9 @@ integer or string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -17330,7 +17302,7 @@ spec:
 
     | *additionalPorts* +
 
-    
+
 
 
 
@@ -17356,13 +17328,13 @@ spec:
 
 
 
-    | 
+    |
 
     Additional ports to add to the Service.
 
     | *annotations* +
 
-    
+
 
 
 
@@ -17388,13 +17360,13 @@ spec:
 
 
 
-    | 
+    |
 
     Additional annotations to add to the Service.
 
     | *type* +
 
-    
+
 
 
 
@@ -17420,7 +17392,7 @@ string
 
 
 
-    | 
+    |
 
     Service type. Default value is &#39;ClusterIP&#39;
 
@@ -17466,7 +17438,7 @@ spec:
 
     | *appProtocol* +
 
-    
+
 
 
 
@@ -17492,13 +17464,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *name* +
 
-    
+
 
 
 
@@ -17524,13 +17496,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *nodePort* +
 
-    
+
 
 
 
@@ -17556,13 +17528,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *port* +
 
-    
+
 
 
 
@@ -17588,13 +17560,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *protocol* +
 
-    
+
 
 
 
@@ -17620,13 +17592,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *targetPort* +
 
-            
+
 
 integer or string
 
@@ -17654,15 +17626,15 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
 |===
 
@@ -17705,7 +17677,7 @@ spec:
 
     | *effect* +
 
-    
+
 
 
 
@@ -17731,13 +17703,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *key* +
 
-    
+
 
 
 
@@ -17763,13 +17735,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *operator* +
 
-    
+
 
 
 
@@ -17795,13 +17767,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *tolerationSeconds* +
 
-    
+
 
 
 
@@ -17827,13 +17799,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *value* +
 
-    
+
 
 
 
@@ -17859,9 +17831,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -17904,7 +17876,7 @@ spec:
 
     | *rollingUpdate* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_updateStrategy_rollingUpdate,
 
@@ -17934,17 +17906,17 @@ RollingUpdate
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *type* +
 
-    
+
 
 
 
@@ -17970,9 +17942,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -18016,7 +17988,7 @@ spec:
 
     | *maxUnavailable* +
 
-            
+
 
 integer or string
 
@@ -18044,19 +18016,19 @@ integer or string
 
 
 
-            
 
-        
 
-    
 
-    | 
 
-    
+
+
+    |
+
+
 
     | *partition* +
 
-    
+
 
 
 
@@ -18082,9 +18054,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -18126,7 +18098,7 @@ spec:
 
     | *name* +
 
-    
+
 
 
 
@@ -18152,13 +18124,13 @@ string
 
 
 
-    | _(Optional)_ + 
+    | _(Optional)_ +
 
     Pulsar cluster name.
 
     | *antiAffinity* +
 
-            
+
 
             <<FunctionsWorker_spec_global_antiAffinity,
 
@@ -18188,17 +18160,17 @@ AntiAffinity
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *auth* +
 
-            
+
 
             <<FunctionsWorker_spec_global_auth,
 
@@ -18228,17 +18200,17 @@ Auth
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *components* +
 
-            
+
 
             <<FunctionsWorker_spec_global_components,
 
@@ -18268,17 +18240,17 @@ Components
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dnsConfig* +
 
-            
+
 
             <<FunctionsWorker_spec_global_dnsConfig,
 
@@ -18308,17 +18280,17 @@ DnsConfig
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *dnsName* +
 
-    
+
 
 
 
@@ -18344,13 +18316,13 @@ string
 
 
 
-    | 
+    |
 
     Public dns name for the cluster&#39;s load balancer.
 
     | *image* +
 
-    
+
 
 
 
@@ -18376,13 +18348,13 @@ string
 
 
 
-    | 
+    |
 
     Default Pulsar image to use. Any components can be configured to use a different image.
 
     | *imagePullPolicy* +
 
-    
+
 
 
 
@@ -18408,13 +18380,13 @@ string
 
 
 
-    | 
+    |
 
     Default Pulsar image pull policy to use. Any components can be configured to use a different image pull policy. Default value is &#39;IfNotPresent&#39;.
 
     | *kubernetesClusterDomain* +
 
-    
+
 
 
 
@@ -18440,13 +18412,13 @@ string
 
 
 
-    | 
+    |
 
-    The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;. 
+    The domain name for your kubernetes cluster. This domain is documented here: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records-1 . It&#39;s used to fully qualify service names when configuring Pulsar. The default value is &#39;cluster.local&#39;.
 
     | *nodeSelectors* +
 
-    
+
 
 
 
@@ -18472,13 +18444,13 @@ string
 
 
 
-    | 
+    |
 
     Global node selector. If set, this will apply to all the components.
 
     | *persistence* +
 
-    
+
 
 
 
@@ -18504,13 +18476,13 @@ boolean
 
 
 
-    | 
+    |
 
-    If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir 
+    If persistence is enabled, components that has state will be deployed with PersistentVolumeClaims, otherwise, for test purposes, they will be deployed with emptyDir
 
     | *priorityClassName* +
 
-    
+
 
 
 
@@ -18536,13 +18508,13 @@ string
 
 
 
-    | 
+    |
 
     Priority class name to attach to each pod.
 
     | *racks* +
 
-    
+
 
 
 
@@ -18568,13 +18540,13 @@ string
 
 
 
-    | 
+    |
 
     Racks configuration.
 
     | *resourceSets* +
 
-    
+
 
 
 
@@ -18600,13 +18572,13 @@ string
 
 
 
-    | 
+    |
 
     Resource sets.
 
     | *restartOnConfigMapChange* +
 
-    
+
 
 
 
@@ -18632,13 +18604,13 @@ boolean
 
 
 
-    | 
+    |
 
-    By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap. 
+    By default, Kubernetes will not restart pods when only their configmap is changed. This setting will restart pods when their configmap is changed using an annotation that calculates the checksum of the configmap.
 
     | *storage* +
 
-            
+
 
             <<FunctionsWorker_spec_global_storage,
 
@@ -18668,17 +18640,17 @@ Storage
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *tls* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls,
 
@@ -18708,17 +18680,17 @@ Tls
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeperPlainSslStorePassword* +
 
-    
+
 
 
 
@@ -18744,7 +18716,7 @@ boolean
 
 
 
-    | 
+    |
 
     Use plain password in zookeeper server and client configuration. Default is false. Old versions of Apache Zookeeper (&lt;3.8.0) does not support getting password from file. In that case, set this to true.
 
@@ -18789,7 +18761,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_antiAffinity_host,
 
@@ -18819,17 +18791,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_antiAffinity_zone,
 
@@ -18859,13 +18831,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -18908,7 +18880,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -18934,13 +18906,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable authentication in the cluster. Default is &#39;false&#39;.
 
     | *token* +
 
-            
+
 
             <<FunctionsWorker_spec_global_auth_token,
 
@@ -18970,13 +18942,13 @@ Token
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -19020,7 +18992,7 @@ spec:
 
     | *initialize* +
 
-    
+
 
 
 
@@ -19046,13 +19018,13 @@ boolean
 
 
 
-    | 
+    |
 
     Initialize Secrets with new pair of keys and tokens for the super user roles. The generated Secret name is &#39;token-&lt;role&gt;&#39;.
 
     | *privateKeyFile* +
 
-    
+
 
 
 
@@ -19078,13 +19050,13 @@ string
 
 
 
-    | 
+    |
 
     Private key file name stored in the Secret. Default is &#39;my-private.key&#39;
 
     | *proxyRoles* +
 
-    
+
 
 
 
@@ -19110,13 +19082,13 @@ string
 
 
 
-    | 
+    |
 
     Proxy roles.
 
     | *publicKeyFile* +
 
-    
+
 
 
 
@@ -19142,13 +19114,13 @@ string
 
 
 
-    | 
+    |
 
     Public key file name stored in the Secret. Default is &#39;my-public.key&#39;
 
     | *superUserRoles* +
 
-    
+
 
 
 
@@ -19174,7 +19146,7 @@ string
 
 
 
-    | 
+    |
 
     Super user roles.
 
@@ -19219,7 +19191,7 @@ spec:
 
     | *autorecoveryBaseName* +
 
-    
+
 
 
 
@@ -19245,13 +19217,13 @@ string
 
 
 
-    | 
+    |
 
     Autorecovery base name. Default value is &#39;autorecovery&#39;.
 
     | *bastionBaseName* +
 
-    
+
 
 
 
@@ -19277,13 +19249,13 @@ string
 
 
 
-    | 
+    |
 
     Bastion base name. Default value is &#39;bastion&#39;.
 
     | *bookkeeperBaseName* +
 
-    
+
 
 
 
@@ -19309,13 +19281,13 @@ string
 
 
 
-    | 
+    |
 
     BookKeeper base name. Default value is &#39;bookkeeper&#39;.
 
     | *brokerBaseName* +
 
-    
+
 
 
 
@@ -19341,13 +19313,13 @@ string
 
 
 
-    | 
+    |
 
     Broker base name. Default value is &#39;broker&#39;.
 
     | *functionsWorkerBaseName* +
 
-    
+
 
 
 
@@ -19373,13 +19345,13 @@ string
 
 
 
-    | 
+    |
 
     Functions Worker base name. Default value is &#39;function&#39;.
 
     | *proxyBaseName* +
 
-    
+
 
 
 
@@ -19405,13 +19377,13 @@ string
 
 
 
-    | 
+    |
 
     Proxy base name. Default value is &#39;proxy&#39;.
 
     | *zookeeperBaseName* +
 
-    
+
 
 
 
@@ -19437,7 +19409,7 @@ string
 
 
 
-    | 
+    |
 
     Zookeeper base name. Default value is &#39;zookeeper&#39;.
 
@@ -19482,7 +19454,7 @@ spec:
 
     | *nameservers* +
 
-    
+
 
 
 
@@ -19508,13 +19480,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *options* +
 
-    
+
 
 
 
@@ -19540,13 +19512,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *searches* +
 
-    
+
 
 
 
@@ -19572,9 +19544,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -19617,7 +19589,7 @@ spec:
 
     | *host* +
 
-            
+
 
             <<FunctionsWorker_spec_global_racks_host,
 
@@ -19647,17 +19619,17 @@ Host
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zone* +
 
-            
+
 
             <<FunctionsWorker_spec_global_racks_zone,
 
@@ -19687,13 +19659,13 @@ Zone
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -19737,7 +19709,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -19763,13 +19735,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the rack affinity rules.
 
     | *requireRackAffinity* +
 
-    
+
 
 
 
@@ -19795,13 +19767,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackAntiAffinity* +
 
-    
+
 
 
 
@@ -19827,7 +19799,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
@@ -19873,7 +19845,7 @@ spec:
 
     | *enableHostAntiAffinity* +
 
-    
+
 
 
 
@@ -19899,13 +19871,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the host anti affinity. If set, all the pods of the same rack will deployed on different nodes of the same zone.Default is true.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -19931,13 +19903,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable the rack affinity rules.
 
     | *requireRackAffinity* +
 
-    
+
 
 
 
@@ -19963,13 +19935,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAffinity rules will be enforced. Default is false. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackAntiAffinity* +
 
-    
+
 
 
 
@@ -19995,13 +19967,13 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
     | *requireRackHostAntiAffinity* +
 
-    
+
 
 
 
@@ -20027,7 +19999,7 @@ boolean
 
 
 
-    | 
+    |
 
     Indicates if the podAntiAffinity rules will be enforced for the host. Default is true. If required, the affinity rule will be enforced using &#39;requiredDuringSchedulingIgnoredDuringExecution&#39;.
 
@@ -20072,7 +20044,7 @@ spec:
 
     | *rack* +
 
-    
+
 
 
 
@@ -20098,7 +20070,7 @@ string
 
 
 
-    | 
+    |
 
     Place this resource set to a specific rack, defined at .global.racks.
 
@@ -20143,7 +20115,7 @@ spec:
 
     | *existingStorageClassName* +
 
-    
+
 
 
 
@@ -20169,13 +20141,13 @@ string
 
 
 
-    | 
+    |
 
     Indicates if an already existing storage class should be used.
 
     | *storageClass* +
 
-            
+
 
             <<FunctionsWorker_spec_functionsWorker_logsVolume_storageClass,
 
@@ -20205,13 +20177,13 @@ StorageClass
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -20254,7 +20226,7 @@ spec:
 
     | *autorecovery* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_autorecovery,
 
@@ -20284,17 +20256,17 @@ Autorecovery
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bookkeeper* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_bookkeeper,
 
@@ -20324,17 +20296,17 @@ Bookkeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *broker* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_broker,
 
@@ -20364,17 +20336,17 @@ Broker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *brokerResourceSets* +
 
-    
+
 
 
 
@@ -20400,13 +20372,13 @@ Broker
 
 
 
-    | 
+    |
 
     TLS configurations related to the Broker resource sets.
 
     | *caPath* +
 
-    
+
 
 
 
@@ -20432,13 +20404,13 @@ string
 
 
 
-    | 
+    |
 
     Path in the container filesystem where the TLS CA certificates are retrieved. It has to point to a certificate file. The default value is /etc/ssl/certs/ca-certificates.crt.
 
     | *certProvisioner* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner,
 
@@ -20468,17 +20440,17 @@ CertProvisioner
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *defaultSecretName* +
 
-    
+
 
 
 
@@ -20504,13 +20476,13 @@ string
 
 
 
-    | 
+    |
 
     Secret name used by each component to load TLS certificates. Each component can load a different secret by setting the &#39;secretName&#39; entry in the tls component spec.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -20536,13 +20508,13 @@ boolean
 
 
 
-    | 
+    |
 
     Global switch to turn on or off the TLS configurations. Additionally, you have configure each component section.
 
     | *functionsWorker* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_functionsWorker,
 
@@ -20572,17 +20544,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxy* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_proxy,
 
@@ -20612,17 +20584,17 @@ Proxy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxyResourceSets* +
 
-    
+
 
 
 
@@ -20648,13 +20620,13 @@ Proxy
 
 
 
-    | 
+    |
 
     TLS configurations related to the Proxy resource sets.
 
     | *ssCa* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_ssCa,
 
@@ -20684,17 +20656,17 @@ SsCa
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeper* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_zookeeper,
 
@@ -20724,13 +20696,13 @@ Zookeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -20774,7 +20746,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -20800,13 +20772,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -20832,7 +20804,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -20878,7 +20850,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -20904,13 +20876,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -20936,7 +20908,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -20982,7 +20954,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -21008,13 +20980,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -21040,7 +21012,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -21086,7 +21058,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -21112,13 +21084,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -21144,7 +21116,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -21190,7 +21162,7 @@ spec:
 
     | *selfSigned* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned,
 
@@ -21220,13 +21192,13 @@ SelfSigned
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -21271,7 +21243,7 @@ spec:
 
     | *autorecovery* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery,
 
@@ -21301,17 +21273,17 @@ Autorecovery
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *bookkeeper* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_bookkeeper,
 
@@ -21341,17 +21313,17 @@ Bookkeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *broker* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_broker,
 
@@ -21381,17 +21353,17 @@ Broker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *caSecretName* +
 
-    
+
 
 
 
@@ -21417,13 +21389,13 @@ string
 
 
 
-    | 
+    |
 
     Secret where to store the root CA certificate.
 
     | *enabled* +
 
-    
+
 
 
 
@@ -21449,13 +21421,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for broker, proxy and functions worker.
 
     | *functionsWorker* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_functionsWorker,
 
@@ -21485,17 +21457,17 @@ FunctionsWorker
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *includeDns* +
 
-    
+
 
 
 
@@ -21521,13 +21493,13 @@ boolean
 
 
 
-    | 
+    |
 
     Include dns name in the DNS names covered by the certificate.
 
     | *perComponent* +
 
-    
+
 
 
 
@@ -21553,13 +21525,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate a different certificate for each component.
 
     | *privateKey* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -21589,17 +21561,17 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *proxy* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_proxy,
 
@@ -21629,17 +21601,17 @@ Proxy
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
     | *zookeeper* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_zookeeper,
 
@@ -21669,13 +21641,13 @@ Zookeeper
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -21721,7 +21693,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -21747,13 +21719,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -21783,13 +21755,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -21836,7 +21808,7 @@ spec:
 
     | *algorithm* +
 
-    
+
 
 
 
@@ -21862,13 +21834,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *encoding* +
 
-    
+
 
 
 
@@ -21894,13 +21866,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *rotationPolicy* +
 
-    
+
 
 
 
@@ -21926,13 +21898,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *size* +
 
-    
+
 
 
 
@@ -21958,9 +21930,9 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 
@@ -22006,7 +21978,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -22032,13 +22004,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -22068,13 +22040,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -22120,7 +22092,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -22146,13 +22118,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -22182,13 +22154,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -22234,7 +22206,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -22260,13 +22232,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -22296,13 +22268,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -22348,7 +22320,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -22374,13 +22346,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -22410,13 +22382,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -22462,7 +22434,7 @@ spec:
 
     | *generate* +
 
-    
+
 
 
 
@@ -22488,13 +22460,13 @@ boolean
 
 
 
-    | 
+    |
 
     Generate self signed certificates for the component.
 
     | *privateKey* +
 
-            
+
 
             <<FunctionsWorker_spec_global_tls_certProvisioner_selfSigned_autorecovery_privateKey,
 
@@ -22524,13 +22496,13 @@ PrivateKey
 
 >>
 
-        
 
-    
 
-    | 
 
-    
+
+    |
+
+
 
 |===
 
@@ -22574,7 +22546,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -22600,13 +22572,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -22632,13 +22604,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the functions worker to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -22664,7 +22636,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -22710,7 +22682,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -22736,13 +22708,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -22768,13 +22740,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the proxy to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -22800,7 +22772,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -22846,7 +22818,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -22872,13 +22844,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *enabledWithBroker* +
 
-    
+
 
 
 
@@ -22904,13 +22876,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS for the proxy to broker connections.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -22936,7 +22908,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -22982,7 +22954,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -23008,13 +22980,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -23040,7 +23012,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -23086,7 +23058,7 @@ spec:
 
     | *enabled* +
 
-    
+
 
 
 
@@ -23112,13 +23084,13 @@ boolean
 
 
 
-    | 
+    |
 
     Enable TLS.
 
     | *secretName* +
 
-    
+
 
 
 
@@ -23144,7 +23116,7 @@ string
 
 
 
-    | 
+    |
 
     Override the default secret name from where to load the certificates.
 
@@ -23176,7 +23148,7 @@ Complete namespace: Functionsworker.Status
 
     | *conditions* +
 
-    
+
 
 
 
@@ -23202,13 +23174,13 @@ Complete namespace: Functionsworker.Status
 
 
 
-    | 
+    |
 
     Conditions:  1. Condition Ready: possible status are True or False. If False, the reason contains the error message.
 
     | *lastApplied* +
 
-    
+
 
 
 
@@ -23234,7 +23206,7 @@ string
 
 
 
-    | 
+    |
 
     Last spec applied.
 
@@ -23278,7 +23250,7 @@ spec:
 
     | *lastTransitionTime* +
 
-    
+
 
 
 
@@ -23304,13 +23276,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *message* +
 
-    
+
 
 
 
@@ -23336,13 +23308,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *observedGeneration* +
 
-    
+
 
 
 
@@ -23368,13 +23340,13 @@ integer
 
 
 
-    | 
+    |
 
-    
+
 
     | *reason* +
 
-    
+
 
 
 
@@ -23400,13 +23372,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *status* +
 
-    
+
 
 
 
@@ -23432,13 +23404,13 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
     | *type* +
 
-    
+
 
 
 
@@ -23464,9 +23436,9 @@ string
 
 
 
-    | 
+    |
 
-    
+
 
 |===
 

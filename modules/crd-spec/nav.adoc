@@ -1,5 +1,4 @@
 .CRD spec
-* xref:Autorecovery.openapi.adoc[CRD Spec]
 * xref:Autorecovery.openapi.adoc[]
 * xref:Bastion.openapi.adoc[]
 * xref:BookKeeper.openapi.adoc[]
