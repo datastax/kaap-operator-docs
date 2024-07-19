@@ -1,4 +1,5 @@
+.Get started
 * xref:index.adoc[]
-** xref:operator.adoc[]
-** xref:stack.adoc[]
-** xref:upgrades.adoc[]
+* xref:operator.adoc[]
+* xref:stack.adoc[]
+* xref:upgrades.adoc[]

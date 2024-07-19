@@ -1,1 +1,2 @@
+.Migrate
 * xref:migrate-cluster.adoc[]
