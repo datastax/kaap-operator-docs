@@ -7,7 +7,7 @@ A resource set can be mapped to a rack. For example, to guarantee high availabil
 When a resource set is mapped to a rack, all the resource set's replicas will be placed in the same failure domain.
 
 To use a rack, assign it to a resource set:
-[source,helm]
+[source,shell]
 ----
 spec:
     global:

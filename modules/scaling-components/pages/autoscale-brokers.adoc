@@ -7,13 +7,13 @@ When the operator sees that the CPU usage of all brokers is low, it will scale d
 CPU usage is tightly coupled to traffic, so you can expect to see significant scaling activity with broker autoscaler enabled. This value can be controlled with the `stabilizationWindowMs` parameter, which tells the operator how long to wait between scaling events.
 
 == Install Operator with broker autoscaler enabled
-[source,bash]
+[source,shell]
 ----
 helm install pulsar-operator helm/pulsar-stack \
     --values helm/examples/broker-autoscaling/values.yaml
 ----
 The operator's thresholds are set in the values.yaml file. +
-[source,helm]
+[source,shell]
 ----
       broker:
         replicas: 2
@@ -88,7 +88,7 @@ Once you've deployed a Pulsar cluster with broker autoscaling enabled, test it b
 [NOTE]
 ====
 If you don't have a bastion pod, you can add it to your cluster in the same values.yaml file you used to deploy the operator.
-[source,helm]
+[source,shell]
 ----
 bastion:
   replicas: 1
@@ -101,7 +101,7 @@ bastion:
 
 . Exec into your bastion pod.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 ----
@@ -113,7 +113,7 @@ kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 Bastion pod::
 +
 --
-[source,helm]
+[source,shell]
 ----
 bin/pulsar-perf produce topic
 ----

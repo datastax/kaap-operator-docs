@@ -2,7 +2,7 @@
 
 This is an example about functions worker deployment.
 
-[source, yaml]
+[source,yaml]
 --
 pulsar-operator:
   cluster:

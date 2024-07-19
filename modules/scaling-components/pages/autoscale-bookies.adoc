@@ -5,7 +5,7 @@ In a Pulsar cluster managed by KAAP, BookKeeper nodes are scaled up in response 
 When KAAP sees low storage usage on a Bookkeeper node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down bookies has been a consistent pain point in Pulsar, and KAAP automates this without sacrifing Pulsar's data guarantees.
 
 == Install Operator with Bookkeeper autoscaler enabled
-[source,bash]
+[source,shell]
 ----
 helm install pulsar-operator helm/pulsar-operator \
     --values helm/examples/bookie-autoscaling/values.yaml
@@ -18,7 +18,7 @@ The operator checks the disk usage percentage of all bookies at a regular interv
 When a bookie's memory is underutilized, you want to decommission it to save resources.
 The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/[Kubernetes Horizontal Pod Autoscaler.
 The operator's thresholds are set in the values.yaml file. +
-[source,helm]
+[source,shell]
 ----
     bookkeeper:
       replicas: 2
@@ -92,7 +92,7 @@ Once you've deployed a Pulsar cluster with bookie autoscaling enabled, test it b
 [NOTE]
 ====
 If you don't have a bastion pod, you can add it to your cluster in the same values.yaml file you used to deploy the operator.
-[source,helm]
+[source,shell]
 ----
 bastion:
   replicas: 1
@@ -105,7 +105,7 @@ bastion:
 
 . Exec into your bastion pod.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 ----
@@ -117,7 +117,7 @@ kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 Bastion pod::
 +
 --
-[source,helm]
+[source,shell]
 ----
 bin/pulsar-perf produce topic
 ----

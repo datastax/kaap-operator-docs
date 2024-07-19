@@ -28,7 +28,7 @@ clusterName: <cluster-name>
 Helm::
 +
 --
-[source,helm]
+[source,shell]
 ----
 kubectl config get-contexts
 ----
@@ -85,7 +85,7 @@ pulsar-operator:
 
 . Install the operator release with the above values file.
 +
-[source,helm]
+[source,shell]
 ----
 helm install pulsar kaap/kaap-stack --values <values.yaml>
 ----
@@ -101,7 +101,7 @@ Since the generated resources will match the existing cluster's resources, the f
 
 . Delete the existing chart release.
 +
-[source,kubectl]
+[source,shell]
 ----
 kubectl delete secret -l name=<old-release-name>,owner=helm
 ----

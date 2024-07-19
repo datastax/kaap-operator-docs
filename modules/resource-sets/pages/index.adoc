@@ -14,7 +14,7 @@ Racks, proxies, bookies, and pods can likewise be created as resource sets with 
 * xref:resource-sets:pods.adoc[]
 
 == Install Operator with resource sets enabled
-[source,helm]
+[source,shell]
 ----
 helm install pulsar-operator helm/pulsar-operator \
     --values helm/examples/resource-sets/values.yaml

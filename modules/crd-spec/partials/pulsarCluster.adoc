@@ -2,7 +2,7 @@
 
 This is an example talking about the PulsarCluster object.
 
-[source, yaml]
+[source,yaml]
 --
 pulsar-operator:
   cluster:

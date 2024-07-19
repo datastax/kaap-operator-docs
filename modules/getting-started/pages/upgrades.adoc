@@ -10,7 +10,7 @@ If you're upgrading from KAAP v0.1.0 to v0.2.0, you must upgrade the CRDs to v1b
 ====
 
 The {pulsar-operator} follows a fixed schema to upgrade the cluster:
-[source,plain]
+[source,console]
 ----
 stateDiagram-v2
     zk: Zookeeper Statefulset
@@ -45,7 +45,7 @@ For example, if you've installed the operator and a Pulsar cluster with this yam
 Helm::
 +
 --
-[source,helm]
+[source,shell]
 ----
 helm install pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
 ----
@@ -69,7 +69,7 @@ TEST SUITE: None
 . While looking over your configuration, you decide you also need more brokers to handle requests.
 Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3:
 +
-[source,helm]
+[source,shell]
 ----
 broker:
       replicas: 3
@@ -90,7 +90,7 @@ broker:
 Helm::
 +
 --
-[source,helm]
+[source,shell]
 ----
 helm upgrade pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
 ----
@@ -119,7 +119,7 @@ TEST SUITE: None
 Kubectl::
 +
 --
-[source,bash]
+[source,shell]
 ----
 kubectl get pods -A
 ----
@@ -154,7 +154,7 @@ To upgrade CRDs:
 Helm::
 +
 --
-[source,helm]
+[source,shell]
 ----
 kubectl replace -f helm/pulsar-operator/crds
 ----

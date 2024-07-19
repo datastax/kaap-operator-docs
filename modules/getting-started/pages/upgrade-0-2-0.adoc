@@ -16,7 +16,7 @@ This process will update the CRD by adding a new version `v1beta1`.
 Kubectl::
 +
 --
-[source,kubectl]
+[source,shell]
 ----
 kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2.0/autorecoveries.kaap.oss.datastax.com-v1-migration.yml --server-side --force-conflicts
 kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2.0/bastions.kaap.oss.datastax.com-v1-migration.yml --server-side --force-conflicts
@@ -32,7 +32,7 @@ kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2
 Result::
 +
 --
-[source,bash]
+[source,console]
 ----
 customresourcedefinition.apiextensions.k8s.io/autorecoveries.kaap.oss.datastax.com serverside-applied
 customresourcedefinition.apiextensions.k8s.io/bastions.kaap.oss.datastax.com serverside-applied
@@ -59,7 +59,7 @@ customresourcedefinition.apiextensions.k8s.io/zookeepers.kaap.oss.datastax.com s
 Kubectl::
 +
 --
-[source,kubectl]
+[source,shell]
 ----
 namespace=default # change this according to your kaap namespace
 name=pulsar # change this according to your pulsar cluster name
@@ -77,7 +77,7 @@ kubectl get -n $namespace pulsarclusters $name -o yaml | sed 's/apiVersion: kaap
 Result::
 +
 --
-[source,bash]
+[source,console]
 ----
 autorecovery.kaap.oss.datastax.com/pulsar-autorecovery configured
 bastion.kaap.oss.datastax.com/pulsar-bastion configured
@@ -98,7 +98,7 @@ pulsarcluster.kaap.oss.datastax.com/pulsar configured
 Kubectl::
 +
 --
-[source,kubectl]
+[source,shell]
 ----
 kubectl get -n $namespace pulsarclusters.v1beta1.kaap.oss.datastax.com $name
 ----
@@ -156,7 +156,7 @@ You should expect each component to be restarted.
 
 Run this command until it returns only one match:
 
-[source,kubectl]
+[source,shell]
 ----
 kubectl get -n $namespace all -o yaml | grep kaap.oss.datastax.com/v1alpha1
 ----
