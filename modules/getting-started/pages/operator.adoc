@@ -9,7 +9,7 @@ You can install just the operator and the PulsarCluster CRDs, or you can install
 [#operator]
 == Install {pulsar-operator}
 Install the DataStax Helm repository:
-[source,helm]
+[source,shell]
 ----
 helm repo add kaap https://datastax.github.io/kaap
 helm repo update
@@ -18,7 +18,7 @@ helm repo update
 . The KAAP Operator Helm chart is available for download (https://github.com/datastax/kaap/releases/latest)[here].
 . Install the KAAP operator Helm chart:
 +
-[source,helm]
+[source,shell]
 ----
 helm install kaap kaap/kaap
 ...
@@ -36,7 +36,7 @@ TEST SUITE: None
 Kubectl::
 +
 --
-[source,kubectl]
+[source,shell]
 ----
 kubectl get deployment
 ----
@@ -45,7 +45,7 @@ kubectl get deployment
 Result::
 +
 --
-[source,bash]
+[source,console]
 ----
 NAME              READY   UP-TO-DATE   AVAILABLE   AGE
 kaap   1/1     1            1           13m
@@ -59,7 +59,7 @@ kaap   1/1     1            1           13m
 Kubectl::
 +
 --
-[source,kubectl]
+[source,shell]
 ----
 kubectl describe deployment kaap
 ----
@@ -68,7 +68,7 @@ kubectl describe deployment kaap
 Result::
 +
 --
-[source,plain]
+[source,console]
 ----
 Name:                   kaap
 Namespace:              pulsar-cluster
@@ -136,7 +136,7 @@ This setting is defined in the Pulsar operator values.yaml file as `crd: create:
 Kubectl::
 +
 --
-[source,kubectl]
+[source,shell]
 ----
 kubectl get crds | grep kaap
 ----
@@ -167,7 +167,7 @@ To uninstall the {pulsar-operator}:
 Helm::
 +
 --
-[source,helm]
+[source,shell]
 ----
 helm uninstall kaap
 ----

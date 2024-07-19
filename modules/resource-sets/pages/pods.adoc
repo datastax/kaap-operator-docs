@@ -5,7 +5,7 @@ When a resource set is mapped to a rack, that set's replicas will be placed in t
 A failure domain can be a region's availability zone (`zone`), or a cluster node (`host`).
 
 When a rack is specified, the default configuration is:
-[source,helm]
+[source,shell]
 ----
 global:
     racks:
@@ -24,7 +24,7 @@ global:
 
 The default configuration disables placement policy.
 To place all pods in the same node, you must set:
-[source,helm]
+[source,shell]
 ----
 global:
     racks:
@@ -40,7 +40,7 @@ With `requireRackAntiAffinity=false`, each pod of the same rack will be placed i
 Set `requireRackAntiAffinity=true`, to strictly enforce this behavior. If no node is free, the pod will wait until a new node is added.
 
 To place all pods in the same zone, you must set:
-[source,helm]
+[source,shell]
 ----
 global:
     racks:
@@ -62,7 +62,7 @@ Soft or preferred constraints are acceptable - for example, you might prefer to 
 Pod placement anti-affinity rules leverage the K8s `requiredDuringSchedulingIgnoredDuringExecution` and `preferredDuringSchedulingIgnoredDuringExecution` properties.
 
 The default configuration is:
-[source,helm]
+[source,shell]
 ----
 global:
     antiAffinity:
@@ -77,7 +77,7 @@ global:
 In this configuration, each replica of any deployment/statefulset will be forced to be placed on different host nodes. There is no requirement for the pods to be placed in different availability zones, therefore each pod could still be in the same zone.
 
 To achieve multi-zone availability, you must set:
-[source,helm]
+[source,shell]
 ----
 global:
     antiAffinity:
@@ -92,7 +92,7 @@ global:
 In this way each pod will be placed to a different zone, if possible.
 
 To force zone anti-affinity, you must set:
-[source,helm]
+[source,shell]
 ----
 global:
     antiAffinity:

@@ -17,7 +17,7 @@ The client work load is generated using the basic Kafka Performance tools.
 . Install the operator and a Pulsar cluster.
 In this case, we're installing xref:getting-started:stack.adoc[Pulsar Stack] with the Kafka protocol enabled.
 +
-[source,bash]
+[source,shell]
 ----
 helm install pos helm/pulsar-stack --values helm/examples/kafka/values.yaml
 ----
@@ -58,28 +58,28 @@ proxy:
 
 . Deploy the Kafka producers.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl apply -f helm/examples/kafka/kafka-producer-perf.yaml
 ----
 
 . See the logs of the Kafka producers.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl logs -f deploy/kafka-client-producer
 ----
 
 . Deploy the Kafka consumers.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl apply -f helm/examples/kafka/kafka-consumer-perf.yaml
 ----
 
 . See the logs of the Kafka consumers.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl logs -f deploy/kafka-client-consumer
 ----
@@ -88,14 +88,14 @@ kubectl logs -f deploy/kafka-client-consumer
 
 . Open a terminal and view the logs of the Operator.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl logs -f deploy/pulsar-operator
 ----
 
 . You can use Kubectl to scale the client applications up and down.
 +
-[source,bash]
+[source,shell]
 ----
 kubectl scale deploy/kafka-client-consumer  --replicas 10
 ----
