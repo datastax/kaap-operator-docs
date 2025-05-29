@@ -13,6 +13,7 @@ Check out the {pulsar-stack}.
 To install a PulsarCluster with the {pulsar-stack} included, do the following:
 
 . Install the DataStax Helm repository.
++
 [source,shell]
 ----
 helm repo add kaap https://datastax.github.io/kaap
