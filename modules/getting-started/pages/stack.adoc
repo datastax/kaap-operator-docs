@@ -11,7 +11,6 @@ Check out the {pulsar-stack}.
 * Keycloak
 
 To install a PulsarCluster with the {pulsar-stack} included:
-+
 [tabs]
 ====
 Kubectl::
