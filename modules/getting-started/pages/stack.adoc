@@ -10,7 +10,7 @@ Check out the {pulsar-stack}.
 * Cert Manager
 * Keycloak
 
-. Install a PulsarCluster with the {pulsar-stack} included:
+To install a PulsarCluster with the {pulsar-stack} included, do the following:
 [tabs]
 ====
 Kubectl::
