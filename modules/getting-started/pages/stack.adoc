@@ -10,7 +10,17 @@ Check out the {pulsar-stack}.
 * Cert Manager
 * Keycloak
 
-To install a PulsarCluster with the {pulsar-stack} included:
+To install a PulsarCluster with the {pulsar-stack} included, do the following:
+
+. Install the DataStax Helm repository.
++
+[source,shell]
+----
+helm repo add kaap https://datastax.github.io/kaap
+helm repo update
+----
+
+. Install the {pulsar-stack} Helm chart.
 +
 [tabs]
 ====
@@ -19,8 +29,6 @@ Kubectl::
 --
 [source,shell]
 ----
-helm repo add kaap https://datastax.github.io/kaap
-helm repo update
 helm install pulsar kaap/kaap-stack --values helm/examples/dev-cluster/values.yaml
 ----
 --
