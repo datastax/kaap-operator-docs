@@ -59,22 +59,29 @@ Think of {pulsar-operator} as a manager for the individual components of Pulsar.
 
 A typical Pulsar cluster *requires* the following components:
 
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#metadata-store[Zookeeper - This is Pulsar’s meta data store. It stores data about a cluster’s configuration, helps the proxy direct messages to the correct broker, and holds Bookie configurations.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#metadata-store[Zookeeper] - This is Pulsar’s meta data store. It stores data about a cluster’s configuration, helps the proxy direct messages to the correct broker, and holds Bookie configurations.
 
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#brokers[Broker - This is Pulsar's message router.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#brokers[Broker] - This is Pulsar's message router.
 
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#apache-bookkeeper[Bookkeeper (bookie) - This is Pulsar’s data store.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#apache-bookkeeper[Bookkeeper (bookie)] - This is Pulsar’s data store.
 Bookkeeper stores message data in a low-latency, resilient way.
 
 In addition to the required components, you might want to include some *optional components*:
 
-* https://bookkeeper.apache.org/docs/admin/autorecovery[Bookkeeper AutoRecovery - This is a Pulsar component that recovers Bookkeeper data in the event of a bookie outage.
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#pulsar-proxy[Pulsar proxy - The Pulsar proxy is just that - a proxy that runs at the edge of the cluster with public facing endpoints.
+* https://bookkeeper.apache.org/docs/admin/autorecovery[Bookkeeper AutoRecovery] - This is a Pulsar component that recovers Bookkeeper data in the event of a bookie outage.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#pulsar-proxy[Pulsar proxy] - The Pulsar proxy is just that - a proxy that runs at the edge of the cluster with public facing endpoints.
 Pulsar proxy also offers special options for cluster extensions, like our [Starlight Suite of APIs].
-* https://pulsar.apache.org/docs/functions-worker-run-separately/[Dedicated functions worker(s) - You can optionally run dedicated function workers in a Pulsar cluster.
+* https://pulsar.apache.org/docs/functions-worker-run-separately/[Dedicated functions worker(s)] - You can optionally run dedicated function workers in a Pulsar cluster.
 * xref:luna-streaming:components:admin-console-tutorial.adoc[Pulsar AdminConsole] - This is an optional web-based admin console for managing Pulsar clusters.
 * xref:luna-streaming:components:heartbeat-vm.adoc[Pulsar Heartbeat] - This is an optional component that monitors the health of Pulsar cluster and emits metrics about the cluster that are helpful for observing and debugging issues.
 * Prometheus/Grafana/Alert manager stack - This is the default observability stack for a cluster. The Luna Helm chart includes pre-made dashboards in Grafana and pre-wires all the metrics scraping.
+
+To enable these optional components, set them in the Helm chart values. For example, to enable the Pulsar Admin Console in your KAAP stack deployment, add the following configuration to your https://github.com/datastax/kaap/blob/755807d3744735b6f6ae0400365e159e5dcf5dd0/helm/kaap-stack/values.yaml#L25C1-L26C17[values.yaml] file:
+[source,yaml]
+----
+pulsarAdminConsole:
+  enabled: true
+----
 
 == How {pulsar-operator} installs Pulsar
 
