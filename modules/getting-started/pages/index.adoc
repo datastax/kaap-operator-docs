@@ -1,4 +1,4 @@
-= Getting started
+= Get started
 
 {pulsar-operator} can be installed in two ways.
 

@@ -1,5 +1,0 @@
-.Scaling components
-* xref:index.adoc[]
-* xref:autoscale-bookies.adoc[]
-* xref:autoscale-brokers.adoc[]
-* xref:kafka.adoc[]
