@@ -1,0 +1,38 @@
+.Get started
+* xref:ROOT:index.adoc[]
+* xref:getting-started:index.adoc[]
+* xref:getting-started:operator.adoc[]
+* xref:getting-started:stack.adoc[]
+* xref:getting-started:upgrades.adoc[]
+* xref:getting-started:upgrade-0-2-0.adoc[]
+
+.Migrate
+* xref:migration:migrate-cluster.adoc[]
+
+.Authentication
+* xref:authentication:index.adoc[]
+* xref:authentication:auth-jwt.adoc[]
+* xref:authentication:auth-tls.adoc[]
+
+.Scaling components
+* xref:scaling-components:index.adoc[]
+* xref:scaling-components:autoscale-bookies.adoc[]
+* xref:scaling-components:autoscale-brokers.adoc[]
+* xref:scaling-components:kafka.adoc[]
+
+.Resource sets
+* xref:resource-sets:index.adoc[]
+* xref:resource-sets:bookies.adoc[]
+* xref:resource-sets:pods.adoc[]
+* xref:resource-sets:proxies.adoc[]
+* xref:resource-sets:racks.adoc[]
+
+.CRD spec
+* xref:crd-spec:Autorecovery.openapi.adoc[]
+* xref:crd-spec:Bastion.openapi.adoc[]
+* xref:crd-spec:BookKeeper.openapi.adoc[]
+* xref:crd-spec:Broker.openapi.adoc[]
+* xref:crd-spec:FunctionsWorker.openapi.adoc[]
+* xref:crd-spec:Proxy.openapi.adoc[]
+* xref:crd-spec:PulsarCluster.openapi.adoc[]
+* xref:crd-spec:ZooKeeper.openapi.adoc[]

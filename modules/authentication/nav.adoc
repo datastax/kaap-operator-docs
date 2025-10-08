@@ -1,4 +1,0 @@
-.Authentication
-* xref:index.adoc[]
-* xref:auth-jwt.adoc[]
-* xref:auth-tls.adoc[]

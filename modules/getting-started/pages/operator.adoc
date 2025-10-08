@@ -1,8 +1,5 @@
 = Install {pulsar-operator} Helm chart
 
-// Operator Hub
-// The install will be updated when chart is available publicly
-
 {pulsar-operator} is installed using Helm.
 You can install just the operator and the PulsarCluster CRDs, or you can install xref:stack.adoc[Kaap Stack], which includes the operator, CRDs, and the Prometheus monitoring stack.
 
