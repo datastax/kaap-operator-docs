@@ -97,7 +97,7 @@ kubectl logs -f deploy/pulsar-operator
 +
 [source,shell]
 ----
-kubectl scale deploy/kafka-client-consumer  --replicas 10
+kubectl scale deploy/kafka-client-consumer --replicas 10
 ----
 
 As the load increases you will see the Operator scales out the Broker STS.

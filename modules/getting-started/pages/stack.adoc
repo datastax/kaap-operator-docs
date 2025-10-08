@@ -10,24 +10,18 @@ Check out the {pulsar-stack}.
 * Cert Manager
 * Keycloak
 
-To install a PulsarCluster with the {pulsar-stack} included:
+. Install a PulsarCluster with the {pulsar-stack} included:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 helm repo add kaap https://datastax.github.io/kaap
 helm repo update
 helm install pulsar kaap/kaap-stack --values helm/examples/dev-cluster/values.yaml
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 NAME: kaap
@@ -37,25 +31,18 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
---
 ====
 
 . Ensure kaap-stack is up and running:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 kubectl get deployment
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
@@ -67,25 +54,18 @@ pulsar-kube-prometheus-sta-operator   1/1     1            1           5m19s
 pulsar-kube-state-metrics             1/1     1            1           5m19s
 pulsar-proxy                          1/1     1            1           3m19s
 ----
---
 ====
 
 . Describe the deployment:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 kubectl describe deployment kaap-stack
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 Name:                   kaap
@@ -139,35 +119,29 @@ Events:
   ----    ------             ----  ----                   -------
   Normal  ScalingReplicaSet  12m   deployment-controller  Scaled up replica set kaap-76dfd8ddf9 to 1
 ----
---
 ====
 
 You've now installed {pulsar-stack}.
 
 == Uninstall
-To uninstall the KAAP operator and the cluster:
-[tabs]
-====
-Helm::
-+
---
+
+Uninstall the KAAP operator and the cluster:
+
 [source,shell]
 ----
 helm uninstall kaap-stack
 ----
---
 
-Result::
-+
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 release "kaap-stack" uninstalled
 ----
---
 ====
 
-== What's next?
+== Next steps
 
 * xref:authentication:index.adoc[]
 * xref:scaling-components:autoscale-bookies.adoc[]
