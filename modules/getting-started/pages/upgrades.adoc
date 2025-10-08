@@ -1,10 +1,14 @@
 = Upgrade deployments
 
 The {pulsar-operator} performs cluster upgrades in a very conservative manner, with the primary goal of reducing maintenance time during upgrades.
-Components are updated and then restarted *only* if strictly needed. For example, if only the broker needs to be upgraded, then all other services will be left up and running.
+Components are updated and then restarted *only* if strictly needed.
+For example, if only the broker needs to be upgraded, then all other services will be left up and running.
 If there is an error or interruption during upgrade, the operator will apply the desired state defined in the PulsarCluster custom resource until the resource matches the actual state.
 
+== Upgrade schema
+
 The {pulsar-operator} follows a fixed schema to upgrade the cluster:
+
 [source,console]
 ----
 stateDiagram-v2
@@ -32,23 +36,18 @@ stateDiagram-v2
     ar --> [*] : Ready
 ----
 
-== Example
+== Upgrade example
 
-For example, if you've installed the operator and a Pulsar cluster with this yaml file:
-[tabs]
-====
-Helm::
-+
---
+For this example, assume you installed the operator and a Pulsar cluster with the following yaml file:
+
 [source,shell]
 ----
 helm install pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
 ----
---
 
-Result::
-+
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 NAME: pulsar
@@ -58,12 +57,10 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
---
 ====
 
-. While looking over your configuration, you decide you also need more brokers to handle requests.
-Edit the helm/examples/bookie-autoscaling/values.yaml file to change the number of Brokers from 1 to 3:
-+
+If you want to add more brokers to handle requests, edit `helm/examples/bookie-autoscaling/values.yaml` to change the `broker.replicas` and `broker.config.managedLedgerDefault*` properties from `1` to `3`:
+
 [source,shell]
 ----
 broker:
@@ -78,22 +75,16 @@ broker:
           memory: "128Mi"
 ----
 
-. Upgrade the cluster with the new values.yaml file:
-+
-[tabs]
-====
-Helm::
-+
---
+Then, upgrade the cluster with the new `values.yaml` file:
+
 [source,shell]
 ----
 helm upgrade pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
 ----
---
 
-Result::
-+
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 Release "pulsar" has been upgraded. Happy Helming!
@@ -104,25 +95,19 @@ STATUS: deployed
 REVISION: 5
 TEST SUITE: None
 ----
---
 ====
 
-. The operator will upgrade the cluster to the new desired state. In this case, the operator adds two more broker pods, and touches nothing else.
-+
-[tabs]
-====
-Kubectl::
-+
---
+The operator upgrades the cluster to the new desired state.
+In this case, the operator adds two more broker pods, and touches nothing else.
+
 [source,shell]
 ----
 kubectl get pods -A
 ----
---
 
-Result::
-+
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 pulsar-cluster   pulsar-autorecovery-57cfc8b84d-xvchb                       1/1     Running     0          150m
@@ -136,28 +121,22 @@ pulsar-cluster   pulsar-proxy-5bd5cc4fb6-9pnl7                              1/1 
 pulsar-cluster   pulsar-zookeeper-0                                         1/1     Running     0          155m
 pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1     Completed   0          153m
 ----
---
 ====
 
-. You've successfully upgraded your deployment by just managing a single .yaml file. Thanks, {pulsar-operator}!
+You've successfully upgraded your deployment by changing only one YAML file.
 
 == Upgrade CRDs
 
-To upgrade CRDs:
-[tabs]
-====
-Helm::
-+
---
+To upgrade CRDs, run the following command:
+
 [source,shell]
 ----
 kubectl replace -f helm/pulsar-operator/crds
 ----
---
 
-Result::
-+
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 customresourcedefinition.apiextensions.k8s.io/autorecoveries.pulsar.oss.datastax.com replaced
@@ -169,18 +148,10 @@ customresourcedefinition.apiextensions.k8s.io/proxies.pulsar.oss.datastax.com re
 customresourcedefinition.apiextensions.k8s.io/pulsarclusters.pulsar.oss.datastax.com replaced
 customresourcedefinition.apiextensions.k8s.io/zookeepers.pulsar.oss.datastax.com replaced
 ----
---
 ====
 
-== What's next?
+== Next steps
 
 * xref:authentication:index.adoc[]
 * xref:scaling-components:autoscale-bookies.adoc[]
 * xref:resource-sets:index.adoc[]
-
-
-
-
-
-
-

@@ -3,7 +3,7 @@
 Have an Apache Kafka(R) workload you want to control with {pulsar-operator}?
 Thanks to Starlight for Kafka, you can run your Kafka workload on a Pulsar cluster, and with {pulsar-operator}, the scaling of the Kafka pods is handled for you.
 
-== Scaling the Pulsar Broker with a Kafka Client Workload
+== Scale the Pulsar Broker with a Kafka Client Workload
 
 This folder contains a sample configuration and demo about how to run a workload
 on an Apache Pulsar(R) cluster with the Broker Auto Scaling feature.
@@ -84,7 +84,7 @@ kubectl apply -f helm/examples/kafka/kafka-consumer-perf.yaml
 kubectl logs -f deploy/kafka-client-consumer
 ----
 
-== Scaling the client workloads
+== Scale the client workloads
 
 . Open a terminal and view the logs of the Operator.
 +
@@ -97,7 +97,7 @@ kubectl logs -f deploy/pulsar-operator
 +
 [source,shell]
 ----
-kubectl scale deploy/kafka-client-consumer  --replicas 10
+kubectl scale deploy/kafka-client-consumer --replicas 10
 ----
 
 As the load increases you will see the Operator scales out the Broker STS.
