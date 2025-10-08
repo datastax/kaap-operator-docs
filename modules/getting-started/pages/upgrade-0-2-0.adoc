@@ -1,21 +1,22 @@
 = Upgrade to KAAP v0.2.0
 
-KAAP 0.2.0 is a major release that includes a new version of the CRDs, which means you must migrate your existing v0.1.0 CRDs to v0.2.0 CRDs.
+KAAP 0.2.0 is a major release that includes a new version of the CRDs.
+This means that you must migrate your existing v0.1.0 CRDs to v0.2.0 CRDs.
 
-The CRDs specs are fully compatible, but it's *required* to change the existing custom resource definition version to `v1beta1` during upgrade.
+[IMPORTANT]
+====
+The CRDs specs are fully compatible, but you _must_ change the existing custom resource definition version to `v1beta1` during the upgrade.
+====
 
-This process ensures no downtime. One full cluster upgrade is required to complete the migration, and it’s done automatically.
+This process ensures no downtime during the upgrade.
+One full cluster upgrade is required to complete the migration, and it's done automatically.
 
-To upgrade to Kaap v0.2.0, follow the steps below.
+Use these steps to upgrade to Kaap v0.2.0:
 
 . Apply the new CRD versions.
++
 This process will update the CRD by adding a new version `v1beta1`.
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2.0/autorecoveries.kaap.oss.datastax.com-v1-migration.yml --server-side --force-conflicts
@@ -27,11 +28,10 @@ kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2
 kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2.0/zookeepers.kaap.oss.datastax.com-v1-migration.yml --server-side --force-conflicts
 kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2.0/pulsarclusters.kaap.oss.datastax.com-v1-migration.yml --server-side --force-conflicts
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 customresourcedefinition.apiextensions.k8s.io/autorecoveries.kaap.oss.datastax.com serverside-applied
@@ -49,16 +49,10 @@ customresourcedefinition.apiextensions.k8s.io/functionsworkers.kaap.oss.datastax
 customresourcedefinition.apiextensions.k8s.io/proxies.kaap.oss.datastax.com serverside-applied
 customresourcedefinition.apiextensions.k8s.io/zookeepers.kaap.oss.datastax.com serverside-applied
 ----
---
 ====
 
-. Copy the KAAP custom resources and move them to `v1beta1`.
+. Copy the KAAP custom resources and move them to `v1beta1`:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 namespace=default # change this according to your kaap namespace
@@ -72,11 +66,10 @@ kubectl get -n $namespace proxies $name-proxy -o yaml | sed 's/apiVersion: kaap.
 kubectl get -n $namespace zookeepers $name-zookeeper -o yaml | sed 's/apiVersion: kaap.oss.datastax.com\/v1alpha1/apiVersion: kaap.oss.datastax.com\/v1beta1/' | kubectl apply -f -
 kubectl get -n $namespace pulsarclusters $name -o yaml | sed 's/apiVersion: kaap.oss.datastax.com\/v1alpha1/apiVersion: kaap.oss.datastax.com\/v1beta1/' | kubectl apply -f -
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 autorecovery.kaap.oss.datastax.com/pulsar-autorecovery configured
@@ -88,51 +81,37 @@ proxy.kaap.oss.datastax.com/pulsar-proxy configured
 zookeeper.kaap.oss.datastax.com/pulsar-zookeeper configured
 pulsarcluster.kaap.oss.datastax.com/pulsar configured
 ----
---
 ====
 
-. Ensure the resources exist.
+. Ensure the resources exist:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 kubectl get -n $namespace pulsarclusters.v1beta1.kaap.oss.datastax.com $name
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,plain]
 ----
 NAME     AGE
 pulsar   12m
 ----
---
 ====
 
 . Upgrade the Helm chart to version 0.2.0:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,helm]
 ----
 helm repo update
 helm pull https://datastax.github.io/kaap
 helm upgrade kaap --version 0.2.0 -n $namespace kaap/kaap-stack -f helm/examples/dev-cluster/values.yaml
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,plain]
 ----
 ...Successfully got an update from the "kaap" chart repository
@@ -145,22 +124,18 @@ STATUS: deployed
 REVISION: 2
 TEST SUITE: None
 ----
---
 ====
 
 . Ensure everything is working correctly.
-
-The KAAP pod should now be watching the `v1beta1` resources.
-
-You should expect each component to be restarted.
-
-Run this command until it returns only one match:
-
++
+The KAAP pod should now be watching the `v1beta1` resources, and you can expect each component to be restarted.
++
+Run the following command until it returns only one or two matches, depending on your configuration.
+The one match should be the ZooKeeper job, unless the broker has transactions enabled, in which case you'll see two matches.
++
 [source,shell]
 ----
 kubectl get -n $namespace all -o yaml | grep kaap.oss.datastax.com/v1alpha1
 ----
-
-The one match should be the ZooKeeper job, unless the broker has transactions enabled, in which case you'll see two matches.
-
-You've upgraded to KAAP v0.2.0!
++
+You've now successfully upgraded to KAAP v0.2.0.

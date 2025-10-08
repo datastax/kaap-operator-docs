@@ -12,7 +12,7 @@ Check out the {pulsar-stack}.
 
 To install a PulsarCluster with the {pulsar-stack} included, do the following:
 
-. Install the DataStax Helm repository.
+. Install the DataStax Helm repository:
 +
 [source,shell]
 ----
@@ -20,22 +20,16 @@ helm repo add kaap https://datastax.github.io/kaap
 helm repo update
 ----
 
-. Install the {pulsar-stack} Helm chart.
+. Install the {pulsar-stack} Helm chart:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 helm install pulsar kaap/kaap-stack --values helm/examples/dev-cluster/values.yaml
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 NAME: kaap
@@ -45,25 +39,18 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
---
 ====
 
 . Ensure kaap-stack is up and running:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 kubectl get deployment
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
@@ -75,25 +62,18 @@ pulsar-kube-prometheus-sta-operator   1/1     1            1           5m19s
 pulsar-kube-state-metrics             1/1     1            1           5m19s
 pulsar-proxy                          1/1     1            1           3m19s
 ----
---
 ====
 
 . Describe the deployment:
 +
-[tabs]
-====
-Kubectl::
-+
---
 [source,shell]
 ----
 kubectl describe deployment kaap-stack
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 Name:                   kaap
@@ -121,7 +101,7 @@ Pod Template:
                     prometheus.io/port: 8080
                     prometheus.io/scheme: http
                     prometheus.io/scrape: true
-  Service Account:  kaap
+  Service Account: kaap
   Containers:
    kaap:
     Image:      datastax/kaap:latest
@@ -132,7 +112,7 @@ Pod Template:
     Environment Variables from:
       kaap  ConfigMap  Optional: false
     Environment:
-      KUBERNETES_NAMESPACE:   (v1:metadata.namespace)
+      KUBERNETES_NAMESPACE: (v1:metadata.namespace)
     Mounts:                  <none>
   Volumes:                   <none>
 Conditions:
@@ -147,35 +127,29 @@ Events:
   ----    ------             ----  ----                   -------
   Normal  ScalingReplicaSet  12m   deployment-controller  Scaled up replica set kaap-76dfd8ddf9 to 1
 ----
---
 ====
 
 You've now installed {pulsar-stack}.
 
 == Uninstall
-To uninstall the KAAP operator and the cluster:
-[tabs]
-====
-Helm::
-+
---
+
+Uninstall the KAAP operator and the cluster:
+
 [source,shell]
 ----
 helm uninstall kaap-stack
 ----
---
 
-Result::
-+
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 release "kaap-stack" uninstalled
 ----
---
 ====
 
-== What's next?
+== Next steps
 
 * xref:authentication:index.adoc[]
 * xref:scaling-components:autoscale-bookies.adoc[]

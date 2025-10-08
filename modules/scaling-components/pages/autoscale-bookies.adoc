@@ -5,19 +5,27 @@ In a Pulsar cluster managed by KAAP, BookKeeper nodes are scaled up in response 
 When KAAP sees low storage usage on a Bookkeeper node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down bookies has been a consistent pain point in Pulsar, and KAAP automates this without sacrifing Pulsar's data guarantees.
 
 == Install Operator with Bookkeeper autoscaler enabled
+
+Use this command to install the operator with Bookkeeper autoscaling enabled:
+
 [source,shell]
 ----
 helm install pulsar-operator helm/pulsar-operator \
-    --values helm/examples/bookie-autoscaling/values.yaml
+  --values helm/examples/bookie-autoscaling/values.yaml
 ----
 
 == Bookkeeper autoscaler configuration
 
 The operator will scale the number of bookies pods in a cluster up and down based on current disk usage.
-The operator checks the disk usage percentage of all bookies at a regular interval. If all of the bookies' memory is over a percentage threshold, the operator will add bookies, and if under the low threshold, will decommission a bookie to save resources.
+The operator checks the disk usage percentage of all bookies at a regular interval.
+
+If all of the bookies' memory is over a percentage threshold, the operator will add bookies, and if under the low threshold, will decommission a bookie to save resources.
+
 When a bookie's memory is underutilized, you want to decommission it to save resources.
-The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/[Kubernetes Horizontal Pod Autoscaler.
-The operator's thresholds are set in the values.yaml file. +
+The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/[Kubernetes Horizontal Pod Autoscaler].
+
+The operator's thresholds are set in the `values.yaml` file:
+
 [source,shell]
 ----
     bookkeeper:
@@ -32,6 +40,7 @@ The operator's thresholds are set in the values.yaml file. +
         scaleDownBy: 1
         stabilizationWindowMs: 30000
 ----
+
 .Bookkeeper autoscaler configuration
 [cols=4*,options="header"]
 |===
@@ -89,9 +98,11 @@ The operator's thresholds are set in the values.yaml file. +
 == Test bookie autoscaler
 
 Once you've deployed a Pulsar cluster with bookie autoscaling enabled, test it by adding load to the cluster and watching the operator pod's logs.
-[NOTE]
+
+[TIP]
 ====
-If you don't have a bastion pod, you can add it to your cluster in the same values.yaml file you used to deploy the operator.
+If you don't have a bastion pod, you can add it to your cluster in the same `values.yaml` file you used to deploy the operator:
+
 [source,shell]
 ----
 bastion:
@@ -103,40 +114,31 @@ bastion:
 ----
 ====
 
-. Exec into your bastion pod.
+. Exec into your bastion pod:
 +
 [source,shell]
 ----
 kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 ----
 
-. Run a https://pulsar.apache.org/docs/performance-pulsar-perf/[Pulsar perf] test in your deployment, and follow the operator's logs to see the autoscaler in action.
+. Run a https://pulsar.apache.org/docs/performance-pulsar-perf/[Pulsar perf] test in your deployment, and then follow the operator's logs to see the autoscaler in action:
 +
-[tabs]
-====
-Bastion pod::
-+
---
 [source,shell]
 ----
 bin/pulsar-perf produce topic
 ----
---
-
-Result::
 +
---
+.Result
 [source,console]
 ----
 2023-05-19T14:39:34,726+0000 [pulsar-perf-producer-exec-1-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Created 1 producers
 2023-05-19T14:39:34,778+0000 [pulsar-client-io-2-1] INFO  com.scurrilous.circe.checksum.Crc32cIntChecksum - SSE4.2 CRC32C provider initialized
 2023-05-19T14:39:43,190+0000 [main] INFO  org.apache.pulsar.testclient.PerformanceProducer - Throughput produced:     817 msg ---     81.7 msg/s ---      0.6 Mbit/s  --- failure      0.0 msg/s --- Latency: mean:  12.008 ms - med:  10.571 - 95pct:  20.821 - 99pct:  32.194 - 99.9pct:  46.759 - 99.99pct:  56.243 - Max:  56.243
 ----
---
-====
-
-. The operator notices the differing values and patches the bookkeeper-set to keep up with the increased memory usage of the bookkeeper pods.
 +
+The operator notices the differing values and patches the bookkeeper-set to keep up with the increased memory usage of the bookkeeper pods:
++
+.Result
 [source,console]
 ----
 | 14:41:07 INFO  [com.dat.oss.pul.crd.SpecDiffer] (ReconcilerExecutor-pulsar-bk-controller-69) 'bookkeeper.replicas' value differs:
@@ -147,8 +149,12 @@ Result::
 │ 14:41:07 INFO  [com.dat.oss.pul.con.boo.BookKeeperResourcesFactory] (ReconcilerExecutor-pulsar-bk-controller-69) Cleaning up orphan PVCs for bookie-s
 ----
 
-. Cancel the Pulsar perf test with Ctrl-C. The operator will notice the decreased load and scale down the number of bookies. Notice that the operator scales down the number of bookies by 1 at a time, as specified in the `scaleDownBy` parameter, and properly decommissions them.
+. Cancel the Pulsar perf test with Ctrl-C.
 +
+The operator will notice the decreased load and scale down the number of bookies.
+Notice that the operator scales down the bookies one by one, as specified in the `scaleDownBy` parameter, and properly decommissions them:
++
+.Result
 [source,console]
 ----
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed │

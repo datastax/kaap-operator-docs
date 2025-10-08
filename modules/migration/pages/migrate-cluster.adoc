@@ -7,11 +7,13 @@ The migration tool simulates what would happen if the generated PulsarCluster wo
 You can then examine the report and decide if you want to proceed with the cluster migration, or if you need to make some changes first.
 
 == Prerequisites
+
 * Java 17
 * An existing Apache Pulsar cluster
 * Migration-tool JAR downloaded from the https://github.com/datastax/kaap/releases[latest release].
 
 == Scan and generate cluster CRDs
+
 . Create an input file called `input-cluster-specs.yaml` with the following content:
 +
 [source,yaml]
@@ -21,57 +23,54 @@ namespace: <namespace>
 clusterName: <cluster-name>
 ----
 
-.. To retrieve the context-name:
+.. To retrieve the `context`:
 +
-[tabs]
-====
-Helm::
-+
---
 [source,shell]
 ----
 kubectl config get-contexts
 ----
---
-
-Result::
 +
---
+.Result
+[%collapsible]
+====
 [source,console]
 ----
 CURRENT   NAME                                         CLUSTER                                      AUTHINFO                                     NAMESPACE
 *         gke_gcp-techpubs_us-east1-b_pulsar-cluster   gke_gcp-techpubs_us-east1-b_pulsar-cluster   gke_gcp-techpubs_us-east1-b_pulsar-cluster   pulsar-cluster
 ----
---
 ====
 +
-[NOTE]
-====
-We recommend switching to K8's current context and ensuring connectivity (`kubectl get pods`, for example) before running the migration tool.
-====
+Before running the migration tool, {company} recommends switching to K8's current context and ensuring connectivity, such as with `kubectl get pods`.
 
-.. The namespace is the namespace with the Apache Pulsar resources you wish to scan.
-.. The clusterName is the prefix of each pod. For example, if the broker pod is `pulsar-prod-cluster-broker-0`, the `clusterName` is `pulsar-prod-cluster`.
+.. The `namespace` is the namespace with the Apache Pulsar resources you wish to scan.
 
-. After you've added the retrieved values to input-cluster-specs.yaml, generate the report with:
+.. The `clusterName` is the prefix of each pod.
+For example, if the broker pod is `pulsar-prod-cluster-broker-0`, then the `clusterName` is `pulsar-prod-cluster`.
+
+. After you've added the retrieved values to `input-cluster-specs.yaml`, generate the report:
 +
 [source,java]
 ----
 java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
 ----
 
-. You'll find a link to the generated report in the logs.
-Open the generated report in your browser and examine the differences between the existing cluster and the KAAP operator.
-If everything looks good, proceed to the migration procedure.
-If you find you need to change the generated CRD and simulate the migration again, run:
+. Find the link to the generated report in the logs, open the generated report in your browser, and then examine the differences between the existing cluster and the KAAP operator.
++
+If everything looks good, proceed to the <<migration-procedure,migration procedure>>.
++
+If you need to change the generated CRD and simulate the migration again, run the following command after making the necessary changes:
 +
 [source,java]
 ----
 java -jar migration-tool.jar diff -d output/<context-name>
 ----
 
+[#migration-procedure]
 == Migration procedure
-. Create a new `values.yaml` file for the operator. Then in the `pulsar-operator.cluster` section, copy the generated CRD's spec.
+
+. Create a new `values.yaml` file for the operator.
+
+. In the `pulsar-operator.cluster` section, enter the generated CRD's spec:
 +
 [source,yaml]
 ----
@@ -80,47 +79,45 @@ pulsar-operator:
         create: true
         name: <cluster-name>
         spec:
-            <copy the generated spec from the CRD>
+            <generated spec from the CRD>
 ----
 
-. Install the operator release with the above values file.
+. Install the operator release with the new `values.yaml` file:
 +
 [source,shell]
 ----
 helm install pulsar kaap/kaap-stack --values <values.yaml>
 ----
 
-. Wait for the PulsarCluster status to be in a Ready state, indicating the operator has assumed control of the cluster.
-Since the generated resources will match the existing cluster's resources, the following behaviours are expected:
-
-* The operator will not create any new resources.
-* The operator will not delete any existing resources.
-* The operator will restart every statefulset/deployment. This will be done in a safe manner using the staged upgrades feature of the operator.
+. Wait for the PulsarCluster status to be in a Ready state, which indicates that the operator has assumed control of the cluster.
+Since the generated resources will match the existing cluster's resources, the following behaviors are expected:
++
+* The operator doesn't create any new resources.
+* The operator doesn't delete any existing resources.
+* The operator doesn't restart every statefulset/deployment.
+This is done in a safe manner using the operator's staged upgrades feature.
 
 == Cleanup
 
-. Delete the existing chart release.
+. Delete the existing chart release:
 +
 [source,shell]
 ----
 kubectl delete secret -l name=<old-release-name>,owner=helm
 ----
 
-. Clean up Helm annotations and labels.
+. Clean up Helm annotations and labels:
++
+* You can safely remove the following annotations:
+** `meta.helm.sh/release-name`
+** `meta.helm.sh/release-namespace`
+* You can safely remove the following labels:
+** `app.kubernetes.io/managed-by`
+** `chart`
+** `release`
+** `heritage`
 
-.. You can safely remove the following annotations:
-
-* meta.helm.sh/release-name
-* meta.helm.sh/release-namespace
-
-.. You can safely remove the following labels:
-
-* app.kubernetes.io/managed-by
-* chart
-* release
-* heritage
-
-== What's next?
+== Next steps
 
 Now that you've migrated your existing cluster to the operator, you can start using the operator's features to manage your cluster.
 
