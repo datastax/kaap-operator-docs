@@ -1,6 +1,6 @@
 = JWT authentication
 
-To enable https://pulsar.apache.org/docs/2.11.x/security-jwt/[[JWT Authentication], set authentication to `true`:
+To enable https://pulsar.apache.org/docs/2.11.x/security-jwt/[JWT Authentication], set authentication to `true`:
 [source,yaml]
 ----
 global:
