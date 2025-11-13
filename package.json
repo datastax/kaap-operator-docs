@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "kaap-operator-docs",
-  "description": "The content source for DataStax Astra CLI documentation.",
+  "description": "The content source for Kubernetes Autoscaling for Apache Pulsar (KAAP) documentation.",
   "author": "DataStax Inc.",
   "homepage": "https://docs.datastax.com",
   "repository": {
