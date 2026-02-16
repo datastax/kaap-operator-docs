@@ -4,7 +4,7 @@ Need more monitoring and management capabilities?
 Check out the {pulsar-stack}.
 {pulsar-stack} includes:
 
-* {pulsar-short} Operator
+* {pulsar-operator}
 * Prometheus Stack (Grafana)
 * {pulsar-short} Grafana dashboards
 * Cert Manager

@@ -17,7 +17,7 @@ Some of the key features and benefits of the {pulsar-operator} include:
 
 We also offer the xref:getting-started:stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your {pulsar-short} cluster. Along with the PulsarCluster CRDs, {pulsar-stack} also includes:
 
-* {pulsar-short} Operator
+* {pulsar-operator}
 * Prometheus Stack (Grafana)
 * {pulsar-short} Grafana dashboards
 * Cert Manager
@@ -88,9 +88,9 @@ pulsarAdminConsole:
 
 {pulsar-operator} can be installed in two ways.
 
-* xref:getting-started:operator.adoc[{pulsar-short} Operator] - Installs just the operator and PulsarCluster CRDs into an existing {pulsar-short} cluster.
+* xref:getting-started:operator.adoc[{pulsar-operator}] - Installs just the operator and PulsarCluster CRDs into an existing {pulsar-short} cluster.
 
-* xref:getting-started:stack.adoc[{pulsar-short} Stack] - Installs and deploys the operator, a {pulsar-short} cluster, and a full Prometheus monitoring stack.
+* xref:getting-started:stack.adoc[{pulsar-stack}] - Installs and deploys the operator, a {pulsar-short} cluster, and a full Prometheus monitoring stack.
 
 [TIP]
 ====

@@ -15,7 +15,7 @@ The client work load is generated using the basic Kafka Performance tools.
 == Install
 
 . Install the operator and a {pulsar-short} cluster.
-In this case, we're installing xref:getting-started:stack.adoc[{pulsar-short} Stack] with the Kafka protocol enabled.
+In this case, we're installing xref:getting-started:stack.adoc[{pulsar-stack}] with the Kafka protocol enabled.
 +
 [source,shell]
 ----

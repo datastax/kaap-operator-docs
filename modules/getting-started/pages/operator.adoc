@@ -115,7 +115,7 @@ Events:
 You've now installed KAAP.
 +
 By default, when KAAP is installed, the PulsarCluster CRDs are also created.
-This setting is defined in the {pulsar-short} operator values.yaml file as `crd: create: true`.
+This setting is defined in the {pulsar-operator} values.yaml file as `crd: create: true`.
 
 . Get the available CRDs:
 +
