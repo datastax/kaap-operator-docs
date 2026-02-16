@@ -1,6 +1,6 @@
 = Resource sets
 
-The operator allows you to create multiple sets of Pulsar proxies, brokers, and bookies, called resource sets.
+The operator allows you to create multiple sets of {pulsar-short} proxies, brokers, and bookies, called resource sets.
 Each set is a dedicated deployment/statefulset with its own service and configmap.
 When multiple sets are specified, an umbrella service is created as the main entrypoint of the cluster, but otherwise, a dedicated service is created for each set. You can customize the service per set - for example, you might assign different DNS domains for each resource set.
 

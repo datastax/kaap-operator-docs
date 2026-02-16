@@ -4,9 +4,9 @@
 
 * xref:getting-started:operator.adoc[{pulsar-operator}] - Installs just the operator pod and PulsarCluster CRDs.
 
-* xref:getting-started:stack.adoc[{pulsar-stack}] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
+* xref:getting-started:stack.adoc[{pulsar-stack}] - Installs and deploys the operator, a {pulsar-short} cluster, and a full Prometheus monitoring stack.
 
 [TIP]
 ====
-If you have an existing Pulsar cluster, you can scan and generate an equivalent PulsarCluster CRD. For more, see xref:migration:migrate-cluster.adoc[].
+If you have an existing {pulsar-short} cluster, you can scan and generate an equivalent PulsarCluster CRD. For more, see xref:migration:migrate-cluster.adoc[].
 ====

@@ -1,14 +1,14 @@
-= Migrate existing cluster to KAAP operator
+= Migrate existing cluster to {pulsar-operator}
 
-Migrating an existing Apache Pulsar cluster to one controlled by the {pulsar-operator} is a manual process, but we've included a migration tool to help you along the way.
+Migrating an existing {pulsar-reg} cluster to one controlled by the {pulsar-operator} is a manual process, but we've included a migration tool to help you along the way.
 
-The migration tool is a CLI application that connects to an existing Apache Pulsar cluster and generates a valid and equivalent PulsarCluster CRD.
+The migration tool is a CLI application that connects to an existing {pulsar} cluster and generates a valid and equivalent PulsarCluster CRD.
 The migration tool simulates what would happen if the generated PulsarCluster would be submitted, retrieves the Kubernetes resources that would be created, and compares them with the existing cluster's resources, generating a detailed HTML report.
 You can then examine the report and decide if you want to proceed with the cluster migration, or if you need to make some changes first.
 
 == Prerequisites
 * Java 17
-* An existing Apache Pulsar cluster
+* An existing {pulsar} cluster
 * Migration-tool JAR downloaded from the https://github.com/datastax/kaap/releases[latest release].
 
 == Scan and generate cluster CRDs
@@ -41,7 +41,7 @@ CURRENT   NAME                                         CLUSTER                  
 +
 Before running the migration tool, {company} recommends switching to K8's current context and ensuring connectivity, such as with `kubectl get pods`.
 
-.. The `namespace` is the namespace with the Apache Pulsar resources you wish to scan.
+.. The `namespace` is the namespace with the {pulsar} resources you wish to scan.
 
 .. The `clusterName` is the prefix of each pod.
 For example, if the broker pod is `pulsar-prod-cluster-broker-0`, then the `clusterName` is `pulsar-prod-cluster`.
@@ -53,7 +53,7 @@ For example, if the broker pod is `pulsar-prod-cluster-broker-0`, then the `clus
 java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
 ----
 
-. Find the link to the generated report in the logs, open the generated report in your browser, and then examine the differences between the existing cluster and the KAAP operator.
+. Find the link to the generated report in the logs, open the generated report in your browser, and then examine the differences between the existing cluster and the {pulsar-operator}.
 +
 If everything looks good, proceed to the <<migration-procedure,migration procedure>>.
 +

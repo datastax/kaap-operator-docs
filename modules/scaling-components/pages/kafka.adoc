@@ -1,12 +1,12 @@
 = Kafka
 
 Have an Apache Kafka(R) workload you want to control with {pulsar-operator}?
-Thanks to Starlight for Kafka, you can run your Kafka workload on a Pulsar cluster, and with {pulsar-operator}, the scaling of the Kafka pods is handled for you.
+Thanks to Starlight for Kafka, you can run your Kafka workload on a {pulsar-short} cluster, and with {pulsar-operator}, the scaling of the Kafka pods is handled for you.
 
-== Scale the Pulsar Broker with a Kafka Client Workload
+== Scale the {pulsar-short} Broker with a Kafka Client Workload
 
 This folder contains a sample configuration and demo about how to run a workload
-on an Apache Pulsar(R) cluster with the Broker Auto Scaling feature.
+on an {pulsar-reg} cluster with the Broker Auto Scaling feature.
 
 Support for the Kafka wire protocol is provided by xref:starlight-for-kafka:ROOT:index.adoc[Starlight for Kafka].
 
@@ -14,8 +14,8 @@ The client work load is generated using the basic Kafka Performance tools.
 
 == Install
 
-. Install the operator and a Pulsar cluster.
-In this case, we're installing xref:getting-started:stack.adoc[Pulsar Stack] with the Kafka protocol enabled.
+. Install the operator and a {pulsar-short} cluster.
+In this case, we're installing xref:getting-started:stack.adoc[{pulsar-stack}] with the Kafka protocol enabled.
 +
 [source,shell]
 ----
@@ -41,7 +41,7 @@ kafka:
     config: {}
 ----
 +
-Additionally, you can proxy the Kafka connection in the Pulsar Proxy with `kafka:enabled:true`.
+Additionally, you can proxy the Kafka connection in the {pulsar-short} Proxy with `kafka:enabled:true`.
 +
 [source,yaml]
 ----
