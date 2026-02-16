@@ -6,7 +6,7 @@ Thanks to Starlight for Kafka, you can run your Kafka workload on a Pulsar clust
 == Scale the Pulsar Broker with a Kafka Client Workload
 
 This folder contains a sample configuration and demo about how to run a workload
-on an Apache Pulsar(R) cluster with the Broker Auto Scaling feature.
+on an {pulsar-reg} cluster with the Broker Auto Scaling feature.
 
 Support for the Kafka wire protocol is provided by xref:starlight-for-kafka:ROOT:index.adoc[Starlight for Kafka].
 

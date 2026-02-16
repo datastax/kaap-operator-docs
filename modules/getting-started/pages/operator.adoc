@@ -5,7 +5,9 @@ You can install just the operator and the PulsarCluster CRDs, or you can install
 
 [#operator]
 == Install {pulsar-operator}
-Install the DataStax Helm repository:
+
+. Install the {company} Helm repository:
++
 [source,shell]
 ----
 helm repo add kaap https://datastax.github.io/kaap
