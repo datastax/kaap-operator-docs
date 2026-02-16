@@ -1,4 +1,4 @@
-= Migrate existing cluster to KAAP operator
+= Migrate existing cluster to {pulsar-operator}
 
 Migrating an existing {pulsar-reg} cluster to one controlled by the {pulsar-operator} is a manual process, but we've included a migration tool to help you along the way.
 
@@ -53,7 +53,7 @@ For example, if the broker pod is `pulsar-prod-cluster-broker-0`, then the `clus
 java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
 ----
 
-. Find the link to the generated report in the logs, open the generated report in your browser, and then examine the differences between the existing cluster and the KAAP operator.
+. Find the link to the generated report in the logs, open the generated report in your browser, and then examine the differences between the existing cluster and the {pulsar-operator}.
 +
 If everything looks good, proceed to the <<migration-procedure,migration procedure>>.
 +

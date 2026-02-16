@@ -1,88 +1,88 @@
 = {pulsar-operator-full-name}
 :navtitle: About {pulsar-operator-full-name}
 
-{pulsar-operator-full-name} simplifies running https://pulsar.apache.org[{pulsar-reg}] on Kubernetes by applying the familiar https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Operator pattern] to Pulsar's components, and horizonally scaling resources up or down based on CPU and memory workloads.
+{pulsar-operator-full-name} simplifies running https://pulsar.apache.org[{pulsar-reg}] on Kubernetes by applying the familiar https://kubernetes.io/docs/concepts/extend-kubernetes/operator/[Operator pattern] to the {pulsar-short} components, and horizontally scaling resources up or down based on CPU and memory workloads.
 
-Operating and maintaining {pulsar} clusters traditionally involves complex manual configurations, making it challenging for developers and operators to effectively manage the system's lifecycle. However, with the KAAP operator, these complexities are abstracted away, enabling developers to focus on their applications rather than the underlying infrastructure.
+Operating and maintaining {pulsar} clusters traditionally involves complex manual configurations, making it challenging for developers and operators to effectively manage the system's lifecycle. However, with the {pulsar-operator}, these complexities are abstracted away, enabling developers to focus on their applications rather than the underlying infrastructure.
 
-Some of the key features and benefits of the KAAP operator include:
+Some of the key features and benefits of the {pulsar-operator} include:
 
 - **Easy Deployment**: Deploying an {pulsar} cluster on Kubernetes is simplified through declarative configurations and automation provided by the operator.
 
-- **Scalability**: The KAAP operator enables effortless scaling of Pulsar clusters by automatically handling the creation and configuration of new Pulsar brokers and bookies as per defined rules. The broker autoscaling is integrated with the Pulsar broker load balancer to make smart resource management decisions, and bookkeepers are scaled up and down based on storage usage in a safe, controlled manner.
+- **Scalability**: The {pulsar-operator} enables effortless scaling of {pulsar-short} clusters by automatically handling the creation and configuration of new {pulsar-short} brokers and bookies as per defined rules. The broker autoscaling is integrated with the {pulsar-short} broker load balancer to make smart resource management decisions, and bookkeepers are scaled up and down based on storage usage in a safe, controlled manner.
 
-- **High Availability**: The operator implements best practices for high availability, ensuring that Pulsar clusters are fault-tolerant and can sustain failures without service disruptions.
+- **High Availability**: The operator implements best practices for high availability, ensuring that {pulsar-short} clusters are fault-tolerant and can sustain failures without service disruptions.
 
-- **Lifecycle Management**: The operator takes care of common Pulsar cluster lifecycle tasks, such as cluster creation, upgrade, configuration updates, and graceful shutdowns.
+- **Lifecycle Management**: The operator takes care of common {pulsar-short} cluster lifecycle tasks, such as cluster creation, upgrade, configuration updates, and graceful shutdowns.
 
-We also offer the xref:getting-started:stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your Pulsar cluster. Along with the PulsarCluster CRDs, KAAP stack also includes:
+We also offer the xref:getting-started:stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your {pulsar-short} cluster. Along with the PulsarCluster CRDs, {pulsar-stack} also includes:
 
-* Pulsar Operator
+* {pulsar-operator}
 * Prometheus Stack (Grafana)
-* Pulsar Grafana dashboards
+* {pulsar-short} Grafana dashboards
 * Cert Manager
 * Keycloak
 
-Whether you are a developer looking to leverage the power of {pulsar} in your Kubernetes environment or an operator seeking to streamline the management of Pulsar clusters, the {pulsar-operator} provides a robust and user-friendly solution.
+Whether you are a developer looking to leverage the power of {pulsar} in your Kubernetes environment or an operator seeking to streamline the management of {pulsar-short} clusters, the {pulsar-operator} provides a robust and user-friendly solution.
 
 This guide offers a starting point for {pulsar-operator}.
-We will cover installation and deployment, configuration points, and further options for managing Pulsar components with the {pulsar-operator}.
+We will cover installation and deployment, configuration points, and further options for managing {pulsar-short} components with the {pulsar-operator}.
 
 == Features
 
 After a new custom resource type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
-The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a Pulsar cluster.
+The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a {pulsar-short} cluster.
 
 * xref:scaling-components:autoscale-bookies.adoc[Bookkeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
 * xref:scaling-components:autoscale-brokers.adoc[Broker autoscaler] - Automatically scale the number of brokers based on CPU load.
 * xref:resource-sets:index.adoc[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
-* xref:scaling-components:kafka.adoc[Kafka API] - Use the Starlight for Kafka API to bring your Kafka message traffic to Pulsar.
+* xref:scaling-components:kafka.adoc[Kafka API] - Use the Starlight for Kafka API to bring your Kafka message traffic to {pulsar-short}.
 
-== How {pulsar-operator} makes Pulsar easier
+== How {pulsar-operator} makes {pulsar-short} easier
 
 Operators are a common pattern for packaging, deploying, and managing Kubernetes applications.
 Operators extend Kubernetes functionality to automate common tasks in stateful applications.
-Think of {pulsar-operator} as a manager for the individual components of Pulsar. By implementing the pulsarCluster Custom Resource Definition, the operator knows enough to manage the deployment, configuration, and scaling of Pulsar components with re-usable and automated tasks, such as:
+Think of {pulsar-operator} as a manager for the individual components of {pulsar-short}. By implementing the pulsarCluster Custom Resource Definition, the operator knows enough to manage the deployment, configuration, and scaling of {pulsar-short} components with re-usable and automated tasks, such as:
 
-* Deploying a Pulsar cluster
+* Deploying a {pulsar-short} cluster
 * Deploying monitoring and logging components
 * Autoscaling bookies based on memory usage, or brokers based on CPU load
 * Assigning resources to specific availability zones (AZs)
 
 {pulsar-operator} is configured, deployed, and packaged with Helm charts and based on the https://quarkiverse.github.io/quarkiverse-docs/quarkus-operator-sdk/dev/index.html[Quarkus Operator SDK].
 
-== Pulsar component architecture
+== {pulsar-short} component architecture
 
-A typical Pulsar cluster *requires* the following components:
+A typical {pulsar-short} cluster *requires* the following components:
 
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#metadata-store[Zookeeper - This is Pulsar's meta data store. It stores data about a cluster's configuration, helps the proxy direct messages to the correct broker, and holds Bookie configurations.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#metadata-store[Zookeeper] - This is the {pulsar-short} metadata store. It stores data about a cluster's configuration, helps the proxy direct messages to the correct broker, and holds Bookie configurations.
 
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#brokers[Broker - This is Pulsar's message router.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#brokers[Broker] - This is the {pulsar-short} message router.
 
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#apache-bookkeeper[Bookkeeper (bookie) - This is Pulsar's data store.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#apache-bookkeeper[Bookkeeper (bookie)] - This is the {pulsar-short} data store.
 Bookkeeper stores message data in a low-latency, resilient way.
 
 In addition to the required components, you might want to include some *optional components*:
 
-* https://bookkeeper.apache.org/docs/admin/autorecovery[Bookkeeper AutoRecovery - This is a Pulsar component that recovers Bookkeeper data in the event of a bookie outage.
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#pulsar-proxy[Pulsar proxy - The Pulsar proxy is just that - a proxy that runs at the edge of the cluster with public facing endpoints.
-Pulsar proxy also offers special options for cluster extensions, like our [Starlight Suite of APIs].
-* https://pulsar.apache.org/docs/functions-worker-run-separately/[Dedicated functions worker(s) - You can optionally run dedicated function workers in a Pulsar cluster.
-* xref:luna-streaming:components:admin-console-tutorial.adoc[Pulsar AdminConsole] - This is an optional web-based admin console for managing Pulsar clusters.
-* xref:luna-streaming:components:heartbeat-vm.adoc[Pulsar Heartbeat] - This is an optional component that monitors the health of Pulsar cluster and emits metrics about the cluster that are helpful for observing and debugging issues.
+* https://bookkeeper.apache.org/docs/admin/autorecovery[Bookkeeper AutoRecovery] - This is a {pulsar-short} component that recovers Bookkeeper data in the event of a bookie outage.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#pulsar-proxy[{pulsar-short} proxy] - The {pulsar-short} proxy is just that - a proxy that runs at the edge of the cluster with public facing endpoints.
+{pulsar-short} proxy also offers special options for cluster extensions, like our [Starlight Suite of APIs].
+* https://pulsar.apache.org/docs/functions-worker-run-separately/[Dedicated functions worker(s)] - You can optionally run dedicated function workers in a {pulsar-short} cluster.
+* xref:luna-streaming:components:admin-console-tutorial.adoc[{pulsar-short} AdminConsole] - This is an optional web-based admin console for managing {pulsar-short} clusters.
+* xref:luna-streaming:components:heartbeat-vm.adoc[{pulsar-short} Heartbeat] - This is an optional component that monitors the health of {pulsar-short} cluster and emits metrics about the cluster that are helpful for observing and debugging issues.
 * Prometheus/Grafana/Alert manager stack - This is the default observability stack for a cluster. The Luna Helm chart includes pre-made dashboards in Grafana and pre-wires all the metrics scraping.
 
-== How {pulsar-operator} installs Pulsar
+== How {pulsar-operator} installs {pulsar-short}
 
 {pulsar-operator} can be installed in two ways.
 
-* xref:getting-started:operator.adoc[Pulsar Operator] - Installs just the operator and PulsarCluster CRDs into an existing Pulsar cluster.
+* xref:getting-started:operator.adoc[{pulsar-operator}] - Installs just the operator and PulsarCluster CRDs into an existing {pulsar-short} cluster.
 
-* xref:getting-started:stack.adoc[Pulsar Stack] - Installs and deploys the operator, a Pulsar cluster, and a full Prometheus monitoring stack.
+* xref:getting-started:stack.adoc[{pulsar-stack}] - Installs and deploys the operator, a {pulsar-short} cluster, and a full Prometheus monitoring stack.
 
 [TIP]
 ====
-You can also scan an existing Pulsar cluster and generate an equivalent PulsarCluster CRD. For more, see xref:migration:migrate-cluster.adoc[].
+You can also scan an existing {pulsar-short} cluster and generate an equivalent PulsarCluster CRD. For more, see xref:migration:migrate-cluster.adoc[].
 ====
 
 To get started, see xref:getting-started:index.adoc[Getting Started].

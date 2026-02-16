@@ -1,7 +1,7 @@
 = Proxy Sets
 
-Proxy resource sets are used to create multiple sets of Pulsar proxies. Each resource set has its own configuration.
-Pulsar can communicate with many different application clients, such as Apache Kafka and RabbitMQ, through proxy extensions.
+Proxy resource sets are used to create multiple sets of {pulsar-short} proxies. Each resource set has its own configuration.
+{pulsar-short} can communicate with many different application clients, such as Apache Kafka and RabbitMQ, through proxy extensions.
 {pulsar-operator} can manage these dedicated proxy extensions with resource sets.
 [source,shell]
 ----
