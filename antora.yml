@@ -8,7 +8,11 @@ nav:
 
 asciidoc:
   attributes:
+    company: 'DataStax'
     protocol_version: '2.10'
     pulsar-operator: 'KAAP Operator'
     pulsar-operator-full-name: 'Kubernetes Autoscaling for Apache Pulsar (KAAP)'
     pulsar-stack: 'KAAP stack'
+    pulsar: 'Apache Pulsar'
+    pulsar-short: 'Pulsar'
+    pulsar-reg: 'Apache Pulsar(TM)'

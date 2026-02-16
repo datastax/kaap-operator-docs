@@ -34,7 +34,7 @@ global:
 ----
 
 With `requireRackAffinity=false`, each pod of the same rack will be placed where a new pod of the same rack exists (if any exists), *if possible*.
-Set `requireRackAffinity=true` to strictly enforce this behavior. If the target node is full (it can’t accept the new pod with the stated requirements), the upgrade will be blocked and the pod will wait until the node is able to accept new pods.
+Set `requireRackAffinity=true` to strictly enforce this behavior. If the target node is full (it can't accept the new pod with the stated requirements), the upgrade will be blocked and the pod will wait until the node is able to accept new pods.
 
 With `requireRackAntiAffinity=false`, each pod of the same rack will be placed in a node where any other pod of any other racks is already scheduled, if possible.
 Set `requireRackAntiAffinity=true`, to strictly enforce this behavior. If no node is free, the pod will wait until a new node is added.
@@ -55,7 +55,7 @@ With `enableHostAntiAffinity=true`, unless you're placing pods in different avai
 
 Within a single resource set, you can specify anti-affinity behaviors in the relationships between pods and nodes.
 There are two types of anti-affinity, `zone` and `host`.
-`zone` will set the failure domain to the region’s availability zone.
+`zone` will set the failure domain to the region's availability zone.
 `host` will set the failure domain to the node.
 
 Soft or preferred constraints are acceptable - for example, you might prefer to place pods in different zones, but it's not a requirement.
@@ -104,4 +104,4 @@ global:
             required: true
 ----
 
-If an availability zone is not available during upgrade, the pod won’t be scheduled and the upgrade will be blocked until a pod is manually deleted and the zone is free again.
+If an availability zone is not available during upgrade, the pod won't be scheduled and the upgrade will be blocked until a pod is manually deleted and the zone is free again.
