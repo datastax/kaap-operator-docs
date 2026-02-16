@@ -1,8 +1,8 @@
 = Bookkeeper autoscaler
 
-In a Pulsar cluster managed by KAAP, BookKeeper nodes are scaled up in response to running low on storage, and because of Bookkeeper's segment-based design, the new storage is available immediately for use by the cluster, with no log stream rebalancing required.
+In a {pulsar-short} cluster managed by KAAP, BookKeeper nodes are scaled up in response to running low on storage, and because of Bookkeeper's segment-based design, the new storage is available immediately for use by the cluster, with no log stream rebalancing required.
 
-When KAAP sees low storage usage on a Bookkeeper node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down bookies has been a consistent pain point in Pulsar, and KAAP automates this without sacrifing Pulsar's data guarantees.
+When KAAP sees low storage usage on a Bookkeeper node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down bookies has been a consistent pain point in {pulsar-short}, and KAAP automates this without sacrifing {pulsar-short}'s data guarantees.
 
 == Install Operator with Bookkeeper autoscaler enabled
 
@@ -97,7 +97,7 @@ The operator's thresholds are set in the `values.yaml` file:
 
 == Test bookie autoscaler
 
-Once you've deployed a Pulsar cluster with bookie autoscaling enabled, test it by adding load to the cluster and watching the operator pod's logs.
+Once you've deployed a {pulsar-short} cluster with bookie autoscaling enabled, test it by adding load to the cluster and watching the operator pod's logs.
 
 [TIP]
 ====
@@ -121,7 +121,7 @@ bastion:
 kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 ----
 
-. Run a https://pulsar.apache.org/docs/performance-pulsar-perf/[Pulsar perf] test in your deployment, and then follow the operator's logs to see the autoscaler in action:
+. Run a https://pulsar.apache.org/docs/performance-pulsar-perf/[{pulsar-short} perf] test in your deployment, and then follow the operator's logs to see the autoscaler in action:
 +
 [source,shell]
 ----
@@ -149,7 +149,7 @@ The operator notices the differing values and patches the bookkeeper-set to keep
 │ 14:41:07 INFO  [com.dat.oss.pul.con.boo.BookKeeperResourcesFactory] (ReconcilerExecutor-pulsar-bk-controller-69) Cleaning up orphan PVCs for bookie-s
 ----
 
-. Cancel the Pulsar perf test with Ctrl-C.
+. Cancel the {pulsar-short} perf test with Ctrl-C.
 +
 The operator will notice the decreased load and scale down the number of bookies.
 Notice that the operator scales down the bookies one by one, as specified in the `scaleDownBy` parameter, and properly decommissions them:

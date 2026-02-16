@@ -4,15 +4,15 @@ Need more monitoring and management capabilities?
 Check out the {pulsar-stack}.
 {pulsar-stack} includes:
 
-* Pulsar Operator
+* {pulsar-short} Operator
 * Prometheus Stack (Grafana)
-* Pulsar Grafana dashboards
+* {pulsar-short} Grafana dashboards
 * Cert Manager
 * Keycloak
 
 To install a PulsarCluster with the {pulsar-stack} included, do the following:
 
-. Install the DataStax Helm repository:
+. Install the {company} Helm repository:
 +
 [source,shell]
 ----
@@ -133,7 +133,7 @@ You've now installed {pulsar-stack}.
 
 == Uninstall
 
-Uninstall the KAAP operator and the cluster:
+Uninstall the {pulsar-operator} and the cluster:
 
 [source,shell]
 ----
