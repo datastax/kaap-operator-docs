@@ -1,28 +1,28 @@
-= Kafka
+= {kafka-short}
 
-Have an Apache Kafka(R) workload you want to control with {pulsar-operator}?
-Thanks to Starlight for Kafka, you can run your Kafka workload on a {pulsar-short} cluster, and with {pulsar-operator}, the scaling of the Kafka pods is handled for you.
+Have an {kafka-reg} workload you want to control with {product-short}?
+Thanks to {starlight-kafka}, you can run your {kafka-short} workload on a {pulsar-short} cluster, and with {product-short}, the scaling of the {kafka-short} pods is handled for you.
 
-== Scale the {pulsar-short} Broker with a Kafka Client Workload
+== Scale the {pulsar-short} Broker with a {kafka-short} client Workload
 
 This folder contains a sample configuration and demo about how to run a workload
 on an {pulsar-reg} cluster with the Broker Auto Scaling feature.
 
-Support for the Kafka wire protocol is provided by xref:starlight-for-kafka:ROOT:index.adoc[Starlight for Kafka].
+Support for the {kafka-short} wire protocol is provided by xref:starlight-for-kafka:ROOT:index.adoc[{starlight-kafka}].
 
-The client work load is generated using the basic Kafka Performance tools.
+The client work load is generated using the basic {kafka-short} performance tools.
 
 == Install
 
 . Install the operator and a {pulsar-short} cluster.
-In this case, we're installing xref:getting-started:stack.adoc[{pulsar-stack}] with the Kafka protocol enabled.
+In this case, we're installing xref:getting-started:stack.adoc[{pulsar-stack}] with the {kafka-short} protocol enabled.
 +
 [source,shell]
 ----
 helm install pos helm/pulsar-stack --values helm/examples/kafka/values.yaml
 ----
 +
-The Kafka protocol is controlled in the deployment's `values.yaml` file.
+The {kafka-short} protocol is controlled in the deployment's `values.yaml` file.
 +
 [source,yaml]
 ----
@@ -41,7 +41,7 @@ kafka:
     config: {}
 ----
 +
-Additionally, you can proxy the Kafka connection in the {pulsar-short} Proxy with `kafka:enabled:true`.
+Additionally, you can proxy the {kafka-short} connection in the {pulsar-short} Proxy with `kafka:enabled:true`.
 +
 [source,yaml]
 ----
@@ -56,28 +56,28 @@ proxy:
         config: {}
 ----
 
-. Deploy the Kafka producers.
+. Deploy the {kafka-short} producers.
 +
 [source,shell]
 ----
 kubectl apply -f helm/examples/kafka/kafka-producer-perf.yaml
 ----
 
-. See the logs of the Kafka producers.
+. See the logs of the {kafka-short} producers.
 +
 [source,shell]
 ----
 kubectl logs -f deploy/kafka-client-producer
 ----
 
-. Deploy the Kafka consumers.
+. Deploy the {kafka-short} consumers.
 +
 [source,shell]
 ----
 kubectl apply -f helm/examples/kafka/kafka-consumer-perf.yaml
 ----
 
-. See the logs of the Kafka consumers.
+. See the logs of the {kafka-short} consumers.
 +
 [source,shell]
 ----
