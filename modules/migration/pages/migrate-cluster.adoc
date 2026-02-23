@@ -1,9 +1,9 @@
-= Migrate existing cluster to {pulsar-operator}
+= Migrate existing cluster to {product-short}
 
-Migrating an existing {pulsar-reg} cluster to one controlled by the {pulsar-operator} is a manual process, but we've included a migration tool to help you along the way.
+Migrating an existing {pulsar-reg} cluster to one controlled by the {product-short} is a manual process, but we've included a migration tool to help you along the way.
 
-The migration tool is a CLI application that connects to an existing {pulsar} cluster and generates a valid and equivalent PulsarCluster CRD.
-The migration tool simulates what would happen if the generated PulsarCluster would be submitted, retrieves the Kubernetes resources that would be created, and compares them with the existing cluster's resources, generating a detailed HTML report.
+The migration tool is a CLI application that connects to an existing {pulsar} cluster and generates a valid and equivalent `PulsarCluster` {crd}.
+The migration tool simulates what would happen if the generated `PulsarCluster` would be submitted, retrieves the Kubernetes resources that would be created, and compares them with the existing cluster's resources, generating a detailed HTML report.
 You can then examine the report and decide if you want to proceed with the cluster migration, or if you need to make some changes first.
 
 == Prerequisites
@@ -12,7 +12,7 @@ You can then examine the report and decide if you want to proceed with the clust
 * An existing {pulsar} cluster
 * Migration-tool JAR downloaded from the https://github.com/datastax/kaap/releases[latest release].
 
-== Scan and generate cluster CRDs
+== Scan and generate cluster {crd-short}s
 
 . Create an input file called `input-cluster-specs.yaml` with the following content:
 +
@@ -54,11 +54,11 @@ For example, if the broker pod is `pulsar-prod-cluster-broker-0`, then the `clus
 java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
 ----
 
-. Find the link to the generated report in the logs, open the generated report in your browser, and then examine the differences between the existing cluster and the {pulsar-operator}.
+. Find the link to the generated report in the logs, open the generated report in your browser, and then examine the differences between the existing cluster and the {product-short}.
 +
 If everything looks good, proceed to the <<migration-procedure,migration procedure>>.
 +
-If you need to change the generated CRD and simulate the migration again, run the following command after making the necessary changes:
+If you need to change the generated {crd-short} and simulate the migration again, run the following command after making the necessary changes:
 +
 [source,java]
 ----
@@ -70,7 +70,7 @@ java -jar migration-tool.jar diff -d output/<context-name>
 
 . Create a new `values.yaml` file for the operator.
 
-. In the `pulsar-operator.cluster` section, enter the generated CRD's spec:
+. In the `pulsar-operator.cluster` section, enter the generated {crd-short} spec:
 +
 [source,yaml]
 ----
