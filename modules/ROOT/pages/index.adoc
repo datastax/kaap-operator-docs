@@ -47,7 +47,7 @@ The Kubernetes API can be extended to support the new resource type, automating 
 
 Operators are a common pattern for packaging, deploying, and managing Kubernetes applications.
 Operators extend Kubernetes functionality to automate common tasks in stateful applications.
-Think of {product-short} as a manager for the individual components of {pulsar-short}. By implementing the `PulsarCluster` {crd}, the operator knows enough to manage the deployment, configuration, and scaling of {pulsar-short} components with re-usable and automated tasks, such as:
+Think of {product-short} as a manager for the individual components of {pulsar-short}. By implementing the `PulsarCluster` {crd-short}, the operator knows enough to manage the deployment, configuration, and scaling of {pulsar-short} components with re-usable and automated tasks, such as:
 
 * Deploying a {pulsar-short} cluster
 * Deploying monitoring and logging components
