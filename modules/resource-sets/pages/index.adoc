@@ -4,7 +4,7 @@ The operator allows you to create multiple sets of {pulsar-short} proxies, broke
 Each set is a dedicated deployment/statefulset with its own service and configmap.
 When multiple sets are specified, an umbrella service is created as the main entrypoint of the cluster, but otherwise, a dedicated service is created for each set. You can customize the service per set - for example, you might assign different DNS domains for each resource set.
 
-Resource sets are a very powerful addition to a {pulsar-operator}-managed cluster, allowing you to create different configurations for the same components. For example, you might dedicate a set of brokers to a single customer, or you can create a set of brokers with a different configuration for testing purposes.
+Resource sets are a very powerful addition to a {product-short}-managed cluster, allowing you to create different configurations for the same components. For example, you might dedicate a set of brokers to a single customer, or you can create a set of brokers with a different configuration for testing purposes.
 
 Racks, proxies, bookies, and pods can likewise be created as resource sets with their own configurations.
 

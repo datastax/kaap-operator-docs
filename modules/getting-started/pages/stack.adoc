@@ -4,7 +4,7 @@ Need more monitoring and management capabilities?
 Check out the {pulsar-stack}.
 {pulsar-stack} includes:
 
-* {pulsar-operator}
+* {product-short}
 * Prometheus Stack (Grafana)
 * {pulsar-short} Grafana dashboards
 * Cert Manager
@@ -133,7 +133,7 @@ You've now installed {pulsar-stack}.
 
 == Uninstall
 
-Uninstall the {pulsar-operator} and the cluster:
+Uninstall the {product-short} and the cluster:
 
 [source,shell]
 ----
