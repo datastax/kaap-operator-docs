@@ -1,10 +1,10 @@
-= Install {pulsar-operator} Helm chart
+= Install {product-short} Helm chart
 
-{pulsar-operator} is installed using Helm.
-You can install just the operator and the PulsarCluster CRDs, or you can install xref:stack.adoc[{pulsar-stack}], which includes the operator, CRDs, and the Prometheus monitoring stack.
+{product-short} is installed using Helm.
+You can install just the operator and the `PulsarCluster` {crd}, or you can install xref:stack.adoc[{pulsar-stack}], which includes the operator, {crd-short}, and the Prometheus monitoring stack.
 
 [#operator]
-== Install {pulsar-operator}
+== Install {product-short}
 
 . Install the {company} Helm repository:
 +
@@ -14,9 +14,9 @@ helm repo add kaap https://datastax.github.io/kaap
 helm repo update
 ----
 
-. The {pulsar-operator} Helm chart is available for download (https://github.com/datastax/kaap/releases/latest)[here].
+. The {product-short} Helm chart is available for download (https://github.com/datastax/kaap/releases/latest)[here].
 
-. Install the {pulsar-operator} Helm chart:
+. Install the {product-short} Helm chart:
 +
 [source,shell]
 ----
@@ -30,7 +30,7 @@ REVISION: 1
 TEST SUITE: None
 ----
 
-. Ensure {pulsar-operator} is up and running:
+. Ensure {product-short} is up and running:
 +
 [source,shell]
 ----
@@ -114,10 +114,10 @@ Events:
 +
 You've now installed KAAP.
 +
-By default, when KAAP is installed, the PulsarCluster CRDs are also created.
-This setting is defined in the {pulsar-operator} values.yaml file as `crd: create: true`.
+By default, when KAAP is installed, the `PulsarCluster` {crd-short}s are also created.
+This setting is defined in the {product-short} values.yaml file as `crd: create: true`.
 
-. Get the available CRDs:
+. Get the available {crd-short}s:
 +
 [source,shell]
 ----
@@ -142,7 +142,7 @@ zookeepers.kaap.oss.datastax.com               2023-05-12T16:36:06Z
 
 == Uninstall
 
-Uninstall the {pulsar-operator}:
+Uninstall the {product-short}:
 
 [source,shell]
 ----
