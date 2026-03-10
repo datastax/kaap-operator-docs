@@ -86,6 +86,6 @@ This will generate all the secrets needed by the components. The name of each se
 
 See the repository for examples:
 
-* https://github.com/datastax/k8saap/tree/main/helm/examples/cert-manager-acme[Real TLS example with acme](
+* https://github.com/datastax/kaap/tree/main/helm/examples/cert-manager-acme[Real TLS example with acme]
 
-* https://github.com/datastax/k8saap/tree/main/helm/examples/cert-manager-self-signed[self-signed certificates]
+* https://github.com/datastax/kaap/tree/main/helm/examples/cert-manager-self-signed[self-signed certificates]

@@ -77,7 +77,7 @@ In addition to the required components, you might want to include some *optional
 * xref:luna-streaming:components:heartbeat-vm.adoc[{pulsar-short} Heartbeat] - This is an optional component that monitors the health of {pulsar-short} cluster and emits metrics about the cluster that are helpful for observing and debugging issues.
 * Prometheus/Grafana/Alert manager stack - This is the default observability stack for a cluster. The Luna Helm chart includes pre-made dashboards in Grafana and pre-wires all the metrics scraping.
 
-To enable these optional components, set them in the Helm chart values. For example, to enable the {pulsar-short} Admin Console in your {pulsar-stack} deployment, add the following configuration to your https://github.com/datastax/kaap/blob/755807d3744735b6f6ae0400365e159e5dcf5dd0/helm/kaap-stack/values.yaml#L25C1-L26C17[values.yaml] file:
+To enable these optional components, set them in the Helm chart values. For example, to enable the {pulsar-short} Admin Console in your {pulsar-stack} deployment, add the following configuration to your https://github.com/datastax/kaap/blob/main/helm/kaap-stack/values.yaml#L25[values.yaml] file:
 [source,yaml]
 ----
 pulsarAdminConsole:
