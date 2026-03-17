@@ -70,7 +70,7 @@ In addition to the required components, you might want to include some *optional
 * https://pulsar.apache.org/docs/functions-worker-run-separately/[Dedicated functions worker(s)] - You can optionally run dedicated function workers in a {pulsar-short} cluster.
 * xref:luna-streaming:components:admin-console-tutorial.adoc[{pulsar-short} AdminConsole] - This is an optional web-based admin console for managing {pulsar-short} clusters.
 * xref:luna-streaming:components:heartbeat-vm.adoc[{pulsar-short} Heartbeat] - This is an optional component that monitors the health of {pulsar-short} cluster and emits metrics about the cluster that are helpful for observing and debugging issues.
-* Prometheus/Grafana/Alert manager stack - This is the default observability stack for a cluster. The Luna Helm chart includes pre-made dashboards in Grafana and pre-wires all the metrics scraping.
+* Prometheus/Grafana/Alert manager stack - This is the default observability stack for a cluster. The {company} {pulsar-short} Helm chart includes pre-made dashboards in Grafana and pre-wires all the metrics scraping.
 
 == How {product-short} installs {pulsar-short}
 
