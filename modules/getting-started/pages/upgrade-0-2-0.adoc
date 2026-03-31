@@ -1,11 +1,11 @@
 = Upgrade to KAAP v0.2.0
 
-{product} 0.2.0 is a major release that includes new {crd} versions.
-This means that you must migrate your existing v0.1.0 {crd-short}s to v0.2.0 {crd-short}s.
+{product} 0.2.0 is a major release that includes new custom resource definition (CRD) versions.
+This means that you must migrate your existing v0.1.0 CRDs to v0.2.0 CRDs.
 
 [IMPORTANT]
 ====
-The {crd-short} specs are fully compatible, but you _must_ change the existing {crd-short} version to `v1beta1` during the upgrade.
+The CRD specs are fully compatible, but you _must_ change the existing CRD version to `v1beta1` during the upgrade.
 ====
 
 This process ensures no downtime during the upgrade.
@@ -13,9 +13,9 @@ One full cluster upgrade is required to complete the migration, and it's done au
 
 Use these steps to upgrade to KAAP v0.2.0:
 
-. Apply the new {crd-short} versions.
+. Apply the new CRD versions.
 +
-This process will update the {crd-short} by adding a new version `v1beta1`.
+This process will update the CRDs by adding a new version `v1beta1`.
 +
 [source,shell]
 ----
@@ -51,7 +51,7 @@ customresourcedefinition.apiextensions.k8s.io/zookeepers.kaap.oss.datastax.com s
 ----
 ====
 
-. Copy the KAAP {cr-short}s and move them to `v1beta1`:
+. Copy the KAAP custom resources (CRs) and move them to `v1beta1`:
 +
 [source,shell]
 ----
