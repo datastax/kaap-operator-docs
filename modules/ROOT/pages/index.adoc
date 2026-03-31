@@ -15,7 +15,7 @@ Some of the key features and benefits of the {product-short} include:
 
 - **Lifecycle Management**: The operator takes care of common {pulsar-short} cluster lifecycle tasks, such as cluster creation, upgrade, configuration updates, and graceful shutdowns.
 
-We also offer the xref:getting-started:stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your {pulsar-short} cluster. Along with the `PulsarCluster` {crd}, {pulsar-stack} also includes:
+We also offer the xref:getting-started:stack.adoc[{pulsar-stack}] if you're looking for more Kubernetes-native tooling deployed with your {pulsar-short} cluster. Along with the `PulsarCluster` custom resource definition (CRD), {pulsar-stack} also includes:
 
 * {product-short}
 * Prometheus Stack (Grafana)
@@ -30,7 +30,7 @@ We will cover installation and deployment, configuration points, and further opt
 
 == Features
 
-After a new {cr} type is added to your cluster by installing a {crd-short}, you can create instances of the resource based on its specification.
+After a new custom resource (CR) type is added to your cluster by installing a CRD, you can create instances of the resource based on its specification.
 The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a {pulsar-short} cluster.
 
 * xref:scaling-components:autoscale-bookies.adoc[BookKeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
@@ -42,7 +42,7 @@ The Kubernetes API can be extended to support the new resource type, automating 
 
 Operators are a common pattern for packaging, deploying, and managing Kubernetes applications.
 Operators extend Kubernetes functionality to automate common tasks in stateful applications.
-Think of {product-short} as a manager for the individual components of {pulsar-short}. By implementing the `PulsarCluster` {crd-short}, the operator knows enough to manage the deployment, configuration, and scaling of {pulsar-short} components with re-usable and automated tasks, such as:
+Think of {product-short} as a manager for the individual components of {pulsar-short}. By implementing the `PulsarCluster` CRD, the operator knows enough to manage the deployment, configuration, and scaling of {pulsar-short} components with re-usable and automated tasks, such as:
 
 * Deploying a {pulsar-short} cluster
 * Deploying monitoring and logging components
@@ -76,13 +76,13 @@ In addition to the required components, you might want to include some *optional
 
 {product-short} can be installed in two ways.
 
-* xref:getting-started:operator.adoc[{product-short}] - Installs just the operator and the `PulsarCluster` {crd-short} into an existing {pulsar-short} cluster.
+* xref:getting-started:operator.adoc[{product-short}] - Installs just the operator and the `PulsarCluster` CRD into an existing {pulsar-short} cluster.
 
 * xref:getting-started:stack.adoc[{pulsar-stack}] - Installs and deploys the operator, a {pulsar-short} cluster, and a full Prometheus monitoring stack.
 
 [TIP]
 ====
-You can also scan an existing {pulsar-short} cluster and generate an equivalent `PulsarCluster` {crd-short}. For more, see xref:migration:migrate-cluster.adoc[].
+You can also scan an existing {pulsar-short} cluster and generate an equivalent `PulsarCluster` CRD. For more, see xref:migration:migrate-cluster.adoc[].
 ====
 
 To get started, see xref:getting-started:index.adoc[Getting Started].

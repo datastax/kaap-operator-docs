@@ -2,11 +2,11 @@
 
 {product-short} can be installed in two ways.
 
-* xref:getting-started:operator.adoc[{product-short}] - Installs just the operator pod and the `PulsarCluster` {crd}.
+* xref:getting-started:operator.adoc[{product-short}] - Installs just the operator pod and the `PulsarCluster` custom resource definition (CRD).
 
 * xref:getting-started:stack.adoc[{pulsar-stack}] - Installs and deploys the operator, a {pulsar-short} cluster, and a full Prometheus monitoring stack.
 
 [TIP]
 ====
-If you have an existing {pulsar-short} cluster, you can scan and generate an equivalent `PulsarCluster` {crd-short}. For more, see xref:migration:migrate-cluster.adoc[].
+If you have an existing {pulsar-short} cluster, you can scan and generate an equivalent `PulsarCluster` CRD. For more, see xref:migration:migrate-cluster.adoc[].
 ====
