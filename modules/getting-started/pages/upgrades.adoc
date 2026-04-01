@@ -3,11 +3,11 @@
 The {product-short} performs cluster upgrades in a very conservative manner, with the primary goal of reducing maintenance time during upgrades.
 Components are updated and then restarted *only* if strictly needed.
 For example, if only the broker needs to be upgraded, then all other services will be left up and running.
-If there is an error or interruption during upgrade, the operator will apply the desired state defined in the `PulsarCluster` {cr} until the resource matches the actual state.
+If there is an error or interruption during upgrade, the operator will apply the desired state defined in the `PulsarCluster` custom resource (CR) until the resource matches the actual state.
 
-== {crd-short} requirement for KAAP v0.2.0
+== CRD requirement for KAAP v0.2.0
 
-If you're upgrading from KAAP v0.1.0 to v0.2.0, you must upgrade the {crd} version to `v1beta1`.
+If you're upgrading from KAAP v0.1.0 to v0.2.0, you must upgrade the custom resource definition (CRD) version to `v1beta1`.
 See xref:getting-started:upgrade-0-2-0.adoc[].
 
 == Upgrade schema
@@ -130,9 +130,9 @@ pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1 
 
 You've successfully upgraded your deployment by changing only one YAML file.
 
-== Upgrade the {crd-short}s
+== Upgrade the CRDs
 
-To upgrade the {crd-short}s, run the following command:
+To upgrade the CRDs, run the following command:
 
 [source,shell]
 ----

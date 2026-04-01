@@ -2,7 +2,7 @@
 
 Migrating an existing {pulsar-reg} cluster to one controlled by the {product-short} is a manual process, but we've included a migration tool to help you along the way.
 
-The migration tool is a CLI application that connects to an existing {pulsar} cluster and generates a valid and equivalent `PulsarCluster` {crd}.
+The migration tool is a CLI application that connects to an existing {pulsar} cluster and generates a valid and equivalent `PulsarCluster` custom resource definition (CRD).
 The migration tool simulates what would happen if the generated `PulsarCluster` would be submitted, retrieves the Kubernetes resources that would be created, and compares them with the existing cluster's resources, generating a detailed HTML report.
 You can then examine the report and decide if you want to proceed with the cluster migration, or if you need to make some changes first.
 
@@ -12,7 +12,7 @@ You can then examine the report and decide if you want to proceed with the clust
 * An existing {pulsar} cluster
 * Migration-tool JAR downloaded from the https://github.com/datastax/kaap/releases[latest release].
 
-== Scan and generate cluster {crd-short}s
+== Scan and generate cluster CRDs
 
 . Create an input file called `input-cluster-specs.yaml` with the following content:
 +
@@ -58,7 +58,7 @@ java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
 +
 If everything looks good, proceed to the <<migration-procedure,migration procedure>>.
 +
-If you need to change the generated {crd-short} and simulate the migration again, run the following command after making the necessary changes:
+If you need to change the generated CRD and simulate the migration again, run the following command after making the necessary changes:
 +
 [source,java]
 ----
@@ -70,7 +70,7 @@ java -jar migration-tool.jar diff -d output/<context-name>
 
 . Create a new `values.yaml` file for the operator.
 
-. In the `pulsar-operator.cluster` section, enter the generated {crd-short} spec:
+. In the `pulsar-operator.cluster` section, enter the generated CRD spec:
 +
 [source,yaml]
 ----

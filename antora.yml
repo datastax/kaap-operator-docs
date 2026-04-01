@@ -19,7 +19,3 @@ asciidoc:
     starlight-kafka: 'Starlight for Kafka'
     kafka-reg: 'Apache Kafka(R)'
     kafka-short: 'Kafka'
-    cr: 'custom resource (CR)'
-    cr-short: 'CR'
-    crd: 'custom resource definition (CRD)'
-    crd-short: 'CRD'

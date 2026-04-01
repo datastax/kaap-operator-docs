@@ -27,7 +27,7 @@
 * xref:resource-sets:proxies.adoc[]
 * xref:resource-sets:racks.adoc[]
 
-.{crd-short} spec
+.CRD spec
 * xref:crd-spec:Autorecovery.openapi.adoc[]
 * xref:crd-spec:Bastion.openapi.adoc[]
 * xref:crd-spec:BookKeeper.openapi.adoc[]
