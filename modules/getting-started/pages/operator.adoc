@@ -1,7 +1,7 @@
 = Install {product-short} Helm chart
 
 {product-short} is installed using Helm.
-You can install just the operator and the `PulsarCluster` {crd}, or you can install xref:stack.adoc[{pulsar-stack}], which includes the operator, {crd-short}, and the Prometheus monitoring stack.
+You can install just the operator and the `PulsarCluster` custom resource definition (CRD), or you can install xref:stack.adoc[{pulsar-stack}], which includes the operator, CRD, and the Prometheus monitoring stack.
 
 [#operator]
 == Install {product-short}
@@ -114,10 +114,10 @@ Events:
 +
 You've now installed KAAP.
 +
-By default, when KAAP is installed, the `PulsarCluster` {crd-short}s are also created.
+By default, when KAAP is installed, the `PulsarCluster` CRDs are also created.
 This setting is defined in the {product-short} values.yaml file as `crd: create: true`.
 
-. Get the available {crd-short}s:
+. Get the available CRDs:
 +
 [source,shell]
 ----
