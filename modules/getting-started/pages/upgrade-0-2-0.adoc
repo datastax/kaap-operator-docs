@@ -30,8 +30,6 @@ kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2
 ----
 +
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 customresourcedefinition.apiextensions.k8s.io/autorecoveries.kaap.oss.datastax.com serverside-applied
@@ -49,7 +47,6 @@ customresourcedefinition.apiextensions.k8s.io/functionsworkers.kaap.oss.datastax
 customresourcedefinition.apiextensions.k8s.io/proxies.kaap.oss.datastax.com serverside-applied
 customresourcedefinition.apiextensions.k8s.io/zookeepers.kaap.oss.datastax.com serverside-applied
 ----
-====
 
 . Copy the KAAP custom resources (CRs) and move them to `v1beta1`:
 +
@@ -68,8 +65,6 @@ kubectl get -n $namespace pulsarclusters $name -o yaml | sed 's/apiVersion: kaap
 ----
 +
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 autorecovery.kaap.oss.datastax.com/pulsar-autorecovery configured
@@ -81,7 +76,6 @@ proxy.kaap.oss.datastax.com/pulsar-proxy configured
 zookeeper.kaap.oss.datastax.com/pulsar-zookeeper configured
 pulsarcluster.kaap.oss.datastax.com/pulsar configured
 ----
-====
 
 . Ensure the resources exist:
 +
@@ -91,14 +85,11 @@ kubectl get -n $namespace pulsarclusters.v1beta1.kaap.oss.datastax.com $name
 ----
 +
 .Result
-[%collapsible]
-====
 [source,plain]
 ----
 NAME     AGE
 pulsar   12m
 ----
-====
 
 . Upgrade the Helm chart to version 0.2.0:
 +
@@ -110,8 +101,6 @@ helm upgrade kaap --version 0.2.0 -n $namespace kaap/kaap-stack -f helm/examples
 ----
 +
 .Result
-[%collapsible]
-====
 [source,plain]
 ----
 ...Successfully got an update from the "kaap" chart repository
@@ -124,7 +113,6 @@ STATUS: deployed
 REVISION: 2
 TEST SUITE: None
 ----
-====
 
 . Ensure everything is working correctly.
 +

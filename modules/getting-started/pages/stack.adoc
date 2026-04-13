@@ -28,8 +28,6 @@ helm install pulsar kaap/kaap-stack --values helm/examples/dev-cluster/values.ya
 ----
 +
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 NAME: kaap
@@ -39,7 +37,6 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
-====
 
 . Ensure kaap-stack is up and running:
 +
@@ -49,8 +46,6 @@ kubectl get deployment
 ----
 +
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
@@ -62,7 +57,6 @@ pulsar-kube-prometheus-sta-operator   1/1     1            1           5m19s
 pulsar-kube-state-metrics             1/1     1            1           5m19s
 pulsar-proxy                          1/1     1            1           3m19s
 ----
-====
 
 . Describe the deployment:
 +
@@ -72,8 +66,6 @@ kubectl describe deployment kaap-stack
 ----
 +
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 Name:                   kaap
@@ -127,7 +119,6 @@ Events:
   ----    ------             ----  ----                   -------
   Normal  ScalingReplicaSet  12m   deployment-controller  Scaled up replica set kaap-76dfd8ddf9 to 1
 ----
-====
 
 You've now installed {pulsar-stack}.
 
@@ -141,13 +132,10 @@ helm uninstall kaap-stack
 ----
 
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 release "kaap-stack" uninstalled
 ----
-====
 
 == Next steps
 
