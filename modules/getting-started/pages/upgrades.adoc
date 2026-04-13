@@ -46,8 +46,6 @@ helm install pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/val
 ----
 
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 NAME: pulsar
@@ -57,7 +55,6 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ----
-====
 
 If you want to add more brokers to handle requests, edit `helm/examples/bookie-autoscaling/values.yaml` to change the `broker.replicas` and `broker.config.managedLedgerDefault*` properties from `1` to `3`:
 
@@ -83,8 +80,6 @@ helm upgrade pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/val
 ----
 
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 Release "pulsar" has been upgraded. Happy Helming!
@@ -95,7 +90,6 @@ STATUS: deployed
 REVISION: 5
 TEST SUITE: None
 ----
-====
 
 The operator upgrades the cluster to the new desired state.
 In this case, the operator adds two more broker pods, and touches nothing else.
@@ -106,8 +100,6 @@ kubectl get pods -A
 ----
 
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 pulsar-cluster   pulsar-autorecovery-57cfc8b84d-xvchb                       1/1     Running     0          150m
@@ -121,7 +113,6 @@ pulsar-cluster   pulsar-proxy-5bd5cc4fb6-9pnl7                              1/1 
 pulsar-cluster   pulsar-zookeeper-0                                         1/1     Running     0          155m
 pulsar-cluster   pulsar-zookeeper-metadata-zgfn4                            0/1     Completed   0          153m
 ----
-====
 
 You've successfully upgraded your deployment by changing only one YAML file.
 
@@ -135,8 +126,6 @@ kubectl replace -f helm/pulsar-operator/crds
 ----
 
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 customresourcedefinition.apiextensions.k8s.io/autorecoveries.pulsar.oss.datastax.com replaced
@@ -148,7 +137,6 @@ customresourcedefinition.apiextensions.k8s.io/proxies.pulsar.oss.datastax.com re
 customresourcedefinition.apiextensions.k8s.io/pulsarclusters.pulsar.oss.datastax.com replaced
 customresourcedefinition.apiextensions.k8s.io/zookeepers.pulsar.oss.datastax.com replaced
 ----
-====
 
 == Next steps
 
