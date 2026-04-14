@@ -31,14 +31,11 @@ kubectl config get-contexts
 ----
 +
 .Result
-[%collapsible]
-====
 [source,console]
 ----
 CURRENT   NAME                                         CLUSTER                                      AUTHINFO                                     NAMESPACE
 *         gke_gcp-techpubs_us-east1-b_pulsar-cluster   gke_gcp-techpubs_us-east1-b_pulsar-cluster   gke_gcp-techpubs_us-east1-b_pulsar-cluster   pulsar-cluster
 ----
-====
 +
 Before running the migration tool, {company} recommends switching to K8's current context and ensuring connectivity, such as with `kubectl get pods`.
 
