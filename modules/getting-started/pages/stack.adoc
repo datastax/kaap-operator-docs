@@ -1,8 +1,8 @@
 = Install {pulsar-stack} Helm chart
 
-Need more monitoring and management capabilities?
-Check out the {pulsar-stack}.
-{pulsar-stack} includes:
+The {pulsar-stack} Helm chart installs and deploys the operator pod, a {pulsar-short} cluster with a `PulsarCluster` custom resource definition (CRD), and a full Prometheus monitoring stack.
+
+{pulsar-stack} includes the following:
 
 * {product-short}
 * Prometheus Stack (Grafana)
@@ -10,7 +10,19 @@ Check out the {pulsar-stack}.
 * Cert Manager
 * Keycloak
 
-. Install a `PulsarCluster` with the {pulsar-stack} included:
+For a minimal installation, xref:getting-started:operator.adoc[install {product-short}], which includes only the operator pod and the `PulsarCluster` CRD.
+
+[TIP]
+====
+If you have an existing {pulsar-short} cluster, you can scan and generate an equivalent `PulsarCluster` CRD.
+For more information, see xref:migration:migrate-cluster.adoc[].
+====
+
+== Install {pulsar-stack}
+
+Use Helm to install {pulsar-stack}:
+
+. Install the {company} Helm repository:
 +
 [source,shell]
 ----
@@ -22,7 +34,7 @@ helm install pulsar kaap/kaap-stack --values helm/examples/dev-cluster/values.ya
 .Result
 [source,console]
 ----
-NAME: kaap
+NAME: kaap-stack
 LAST DEPLOYED: Wed Jun 28 15:46:27 2023
 NAMESPACE: pulsar-cluster
 STATUS: deployed
@@ -60,26 +72,26 @@ kubectl describe deployment kaap-stack
 .Result
 [source,console]
 ----
-Name:                   kaap
+Name:                   kaap-stack
 Namespace:              pulsar-cluster
 CreationTimestamp:      Wed, 28 Jun 2023 16:03:51 -0400
 Labels:                 app.kubernetes.io/managed-by=Helm
-                        app.kubernetes.io/name=kaap
-                        helm.sh/chart=kaap-0.1.0
+                        app.kubernetes.io/name=kaap-stack
+                        helm.sh/chart=kaap-stack-0.1.0
 Annotations:            deployment.kubernetes.io/revision: 1
-                        meta.helm.sh/release-name: kaap
+                        meta.helm.sh/release-name: kaap-stack
                         meta.helm.sh/release-namespace: pulsar-cluster
                         prometheus.io/path: /q/metrics
                         prometheus.io/port: 8080
                         prometheus.io/scheme: http
                         prometheus.io/scrape: true
-Selector:               app.kubernetes.io/name=kaap
+Selector:               app.kubernetes.io/name=kaap-stack
 Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
 StrategyType:           RollingUpdate
 MinReadySeconds:        0
 RollingUpdateStrategy:  25% max unavailable, 25% max surge
 Pod Template:
-  Labels:           app.kubernetes.io/name=kaap
+  Labels:           app.kubernetes.io/name=kaap-stack
   Annotations:      checksum/config: bf2ad27453a7deeb74c2e0b177154649cb6cf292a31b80855c92d28f6a141134
                     prometheus.io/path: /q/metrics
                     prometheus.io/port: 8080
@@ -112,11 +124,9 @@ Events:
   Normal  ScalingReplicaSet  12m   deployment-controller  Scaled up replica set kaap-76dfd8ddf9 to 1
 ----
 
-You've now installed {pulsar-stack}.
-
 == Uninstall
 
-Uninstall the {product-short} and the cluster:
+Uninstall the {pulsar-stack} and the cluster:
 
 [source,shell]
 ----
@@ -131,6 +141,7 @@ release "kaap-stack" uninstalled
 
 == Next steps
 
-* xref:authentication:index.adoc[]
+* xref:authentication:auth-jwt.adoc[]
+* xref:authentication:auth-tls.adoc[]
 * xref:scaling-components:autoscale-bookies.adoc[]
-* xref:resource-sets:index.adoc[]
+* xref:ROOT:resource-sets.adoc[]

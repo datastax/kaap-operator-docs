@@ -1,17 +1,21 @@
-= BookKeeper autoscaler
+= {bookkeeper-reg} autoscaler
+:navtitle: {bookkeeper-short} autoscaler
+:page-aliases: scaling-components:index.adoc
 
-In a {pulsar-short} cluster managed by KAAP, BookKeeper nodes are scaled up in response to running low on storage, and because of BookKeeper's segment-based design, the new storage is available immediately for use by the cluster, with no log stream rebalancing required.
+In a {pulsar-short} cluster managed by KAAP, {bookkeeper-short} nodes are scaled up in response to running low on storage.
+Due to the segment-based design of {bookkeeper-short}, the new storage is available immediately for use by the cluster, with no log stream rebalancing required.
 
-When KAAP sees low storage usage on a BookKeeper node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down bookies has been a consistent pain point in {pulsar-short}, and KAAP automates this without sacrificing the {pulsar-short} data guarantees.
+When KAAP sees low storage usage on a {bookkeeper-short} node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down {bookkeeper-short} nodes has been a consistent pain point in {pulsar-short}, and KAAP automates this without sacrificing the {pulsar-short} data guarantees.
 
-== Install Operator with BookKeeper autoscaler enabled
+== Install {product-short} with {bookkeeper-short} autoscaler enabled
+
 [source,shell]
 ----
 helm install pulsar-operator helm/pulsar-operator \
   --values helm/examples/bookie-autoscaling/values.yaml
 ----
 
-== BookKeeper autoscaler configuration
+== {bookkeeper-short} autoscaler configuration
 
 The operator will scale the number of bookies pods in a cluster up and down based on current disk usage.
 The operator checks the disk usage percentage of all bookies at a regular interval.
@@ -23,7 +27,7 @@ The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-appl
 
 The operator's thresholds are set in the values.yaml file:
 
-[source,shell]
+[source,yaml]
 ----
     bookkeeper:
       replicas: 2
@@ -38,7 +42,7 @@ The operator's thresholds are set in the values.yaml file:
         stabilizationWindowMs: 30000
 ----
 
-.BookKeeper autoscaler configuration
+.{bookkeeper-short} autoscaler configuration
 [cols=4*,options="header"]
 |===
 |Name
@@ -100,7 +104,7 @@ Once you've deployed a {pulsar-short} cluster with bookie autoscaling enabled, t
 ====
 If you don't have a bastion pod, you can add it to your cluster in the same `values.yaml` file you used to deploy the operator:
 
-[source,shell]
+[source,yaml]
 ----
 bastion:
   replicas: 1
@@ -154,7 +158,7 @@ Notice that the operator scales down the bookies one by one, as specified in the
 .Result
 [source,console]
 ----
-│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed) │
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Some writable bookies can be released, removing 1                                     │
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Bookies scaled up/down from 10 to 9                                                   │
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Start decommissioning bookies: pulsar-bookkeeper-9.puls │
@@ -162,3 +166,8 @@ Notice that the operator scales down the bookies one by one, as specified in the
 │ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Attempting decommission of bookie pulsar-bookkeeper-9 w │
 │ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.PodExecBookieAdminClient] (ReconcilerExecutor-pulsar-bk-controller-74) Starting bookie recovery for bookie pulsar-bookkeeper │
 ----
+
+== See also
+
+* xref:scaling-components:autoscale-brokers.adoc[]
+* xref:ROOT:resource-sets.adoc[Rack-aware bookkeeper placement]

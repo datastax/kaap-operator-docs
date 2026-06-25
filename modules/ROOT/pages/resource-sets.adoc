@@ -1,0 +1,215 @@
+= Resource sets
+:page-aliases: resource-sets:index.adoc, resource-sets:bookies.adoc, resource-sets:pods.adoc, resource-sets:proxies.adoc, resource-sets:racks.adoc
+
+The operator allows you to create multiple sets of {pulsar-short} proxies, brokers, and bookies, called resource sets.
+Each set is a dedicated deployment/statefulset with its own service and configmap.
+
+When multiple sets are specified, an umbrella service is created as the main entrypoint of the cluster.
+Otherwise, a dedicated service is created for each set, and you can customize the service per set.
+For example, you might assign different DNS domains for each resource set.
+
+Resource sets are useful for a {product-short}-managed cluster because you can create different configurations for the same components.
+For example, you might dedicate a set of brokers to a single customer, or you can create a set of brokers with a dedicated configuration for testing purposes.
+
+Components like racks, proxies, bookies, and pods can be created as resource sets with their own configurations.
+
+== Install {product-short} with resource sets enabled
+
+[source,shell]
+----
+helm install pulsar-operator helm/pulsar-operator \
+  --values helm/examples/resource-sets/values.yaml
+----
+
+== {bookkeeper-short} sets
+
+With a https://pulsar.apache.org/docs/administration-isolation-bookie/#rack-aware-placement-policy[rack-aware deployment], {product-short} can set the data placement policy automatically.
+Every entry will be stored as much as possible in different failure domains to guarantee rack-level fault tolerance.
+
+The auto-configuration of rack-awareness is enabled by default, and is configured in the `bookkeeper` configuration section:
+
+[source,yaml]
+----
+bookkeeper:
+	autoRackConfig:
+		enabled: true
+		periodMs: 60000
+----
+
+[TIP]
+====
+The `autoRackConfig` feature requires `bookkeeperClientRegionawarePolicyEnabled=true` in the broker configuration.
+{product-short} automatically adds this configuration property in the broker and autorecovery values.
+====
+
+To disable the region-aware policy, you must explicitly set `bookkeeperClientRegionawarePolicyEnabled=false` in the broker and autorecovery configuration.
+
+== Proxy sets
+
+Proxy resource sets are used to create multiple sets of {pulsar-short} proxies.
+Each resource set has its own configuration.
+
+{pulsar-short} can communicate with many different application clients, such as {kafka-reg} and RabbitMQ, through proxy extensions.
+
+{product-short} can manage these dedicated proxy extensions with resource sets.
+
+[source,yaml,subs="+quotes"]
+----
+spec:
+    global:
+      resourceSets:
+        shared: {}
+        kafka: {}
+    proxy:
+        sets:
+            shared:
+              replicas: 5
+              service:
+                annotations:
+                  external-dns.alpha.kubernetes.io/hostname: proxy.pulsar.local
+            kafka:
+              replicas: 3
+              config:
+                **CONFIG_TO_ENABLE_PROXY_EXTENSION**
+              service:
+                annotations:
+                  external-dns.alpha.kubernetes.io/hostname: kafka.proxy.pulsar.local
+----
+
+== Racks
+
+A rack defines a failure domain, which can be a region's availability zone (`zone`), or a cluster node (`host`).
+
+A resource set can be mapped to a rack.
+For example, to guarantee high availability over different availability zones, multiple resource sets are created in different racks.
+You can also enforce affinity and anti-affinity rules to minimize cross-AZ traffic.
+
+When a resource set is mapped to a rack, all of the resource set's replicas are placed in the same failure domain.
+
+To use a rack, assign it to a resource set:
+
+[source,yaml]
+----
+spec:
+    global:
+      racks:
+        rack1: {}
+        rack2: {}
+        rack3: {}
+      resourceSets:
+        shared-az1:
+            rack: rack1
+        shared-az2:
+            rack: rack2
+        shared-az3:
+            rack: rack3
+----
+
+=== Pod placement affinity
+
+When a resource set is mapped to a rack, that set's replicas are placed in the same failure domain (`zone` or `host`).
+
+When a rack is specified, the default configuration disables placement policy:
+
+[source,yaml]
+----
+global:
+  racks:
+    rack1:
+      host:
+        enabled: false
+        requireRackAffinity: false
+        requireRackAntiAffinity: true
+      zone:
+        enabled: false
+        requireRackAffinity: false
+        requireRackAntiAffinity: true
+        enableHostAntiAffinity: true
+        requireRackHostAntiAffinity: true
+----
+
+To place all pods in the same node:
+
+[source,yaml]
+----
+global:
+  racks:
+    rack1:
+      host:
+        enabled: true
+----
+
+With `requireRackAffinity=false`, each pod of the same rack will be placed where a new pod of the same rack exists (if any exists), *if possible*.
+Set `requireRackAffinity=true` to strictly enforce this behavior. If the target node is full (it can't accept the new pod with the stated requirements), the upgrade will be blocked and the pod will wait until the node is able to accept new pods.
+
+With `requireRackAntiAffinity=false`, each pod of the same rack will be placed in a node where any other pod of any other racks is already scheduled, if possible.
+Set `requireRackAntiAffinity=true`, to strictly enforce this behavior. If no node is free, the pod will wait until a new node is added.
+
+To place all pods in the same zone:
+
+[source,yaml]
+----
+global:
+  racks:
+    rack1:
+	    zone:
+	      enabled: true
+----
+
+With `enableHostAntiAffinity=true`, unless you're placing pods in different availability zones, a different node will be chosen for each pod. These requirements can be disabled (`enableHostAntiAffinity=false`), enforced (`requireRackHostAntiAffinity: true`) or done in best-effort (`requireRackHostAntiAffinity: false`)
+
+=== Pod placement anti-affinity
+
+Within a single resource set, you can specify anti-affinity behaviors in the relationships between pods and nodes.
+There are two types of anti-affinity, `zone` and `host`.
+`zone` will set the failure domain to the region's availability zone.
+`host` will set the failure domain to the node.
+
+Soft or preferred constraints are acceptable - for example, you might prefer to place pods in different zones, but it's not a requirement.
+Pod placement anti-affinity rules leverage the K8s `requiredDuringSchedulingIgnoredDuringExecution` and `preferredDuringSchedulingIgnoredDuringExecution` properties.
+
+The default configuration is as follows:
+
+[source,yaml]
+----
+global:
+  antiAffinity:
+    host:
+      enabled: true
+      required: true
+    zone:
+      enabled: false
+      required: false
+----
+
+In this configuration, each replica of any deployment/statefulset will be forced to be placed on different host nodes. There is no requirement for the pods to be placed in different availability zones, therefore each pod could still be in the same zone.
+
+For multi-zone availability where each pod is placed in a different zone, if possible:
+
+[source,yaml]
+----
+global:
+  antiAffinity:
+    host:
+      enabled: true
+      required: true
+    zone:
+      enabled: true
+      required: false
+----
+
+To force zone anti-affinity:
+
+[source,yaml]
+----
+global:
+  antiAffinity:
+    host:
+      enabled: true
+      required: true
+    zone:
+      enabled: true
+      required: true
+----
+
+If an availability zone is not available during upgrade, the pod won't be scheduled and the upgrade will be blocked until a pod is manually deleted and the zone is free again.
