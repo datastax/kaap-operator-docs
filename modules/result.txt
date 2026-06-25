@@ -1166,13 +1166,3 @@ StrategyType:           RollingUpdate
 TcpSocket
 TEST SUITE: None
 The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a {pulsar-short} cluster.
-Transactions
-type: Opaque
-UpdateStrategy
-ValueFrom
-VolumeClaimTemplate
-Volumes
-VsphereVolume
-WebSocket
-WindowsOptions
-Zookeeper
