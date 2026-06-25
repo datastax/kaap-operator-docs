@@ -1,4 +1,7 @@
 = JWT authentication
+:page-aliases: authentication:index.adoc
+
+Authentication in {product-short} is controlled with https://jwt.io/[JWT tokens] for cluster access, and with xref:authentication:auth-tls.adoc[TLS] for communication between applications within the cluster.
 
 To enable https://pulsar.apache.org/docs/2.11.x/security-jwt/[JWT Authentication], set authentication to `true`:
 
@@ -58,6 +61,7 @@ data:
 The operator also generates tokens for super user roles.
 By default, the super users are `superuser`, `admin`, `websocket` and `proxy`.
 If you wish to use another set of super users, specify them in the `superUserRoles` option, along with the `proxyRoles`:
+
 [source,yaml]
 ----
 global:
@@ -77,6 +81,7 @@ global:
 ----
 
 To generate a token for a given subject, login to the bastion pod (the bastion pod already mounts the super user token):
+
 [source,bash]
 ----
 PULSAR_TOKEN=$(kubectl exec deployment/pulsar-bastion -- bin/pulsar tokens create --private-key token-private-key/my-private.key --subject myuser)
@@ -84,4 +89,3 @@ echo $PULSAR_TOKEN
 kubectl exec deployment/pulsar-bastion -- bin/pulsar-shell -e 'admin namespaces grant-permission --role myuser --actions produce,consume public/default'
 kubectl exec deployment/pulsar-bastion -- bin/pulsar-shell -e "client --auth-params \"token:$PULSAR_TOKEN\" produce -m hello public/default/topic"
 ----
-

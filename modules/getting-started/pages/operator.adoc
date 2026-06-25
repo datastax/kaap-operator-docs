@@ -158,6 +158,7 @@ release "kaap" uninstalled
 
 == Next steps
 
-* xref:authentication:index.adoc[]
+* xref:authentication:auth-jwt.adoc[]
+* xref:authentication:auth-tls.adoc[]
 * xref:scaling-components:autoscale-bookies.adoc[]
 * xref:resource-sets:index.adoc[]

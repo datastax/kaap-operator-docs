@@ -9,7 +9,6 @@
 * xref:migration:migrate-cluster.adoc[]
 
 .Authentication
-* xref:authentication:index.adoc[]
 * xref:authentication:auth-jwt.adoc[]
 * xref:authentication:auth-tls.adoc[]
 
