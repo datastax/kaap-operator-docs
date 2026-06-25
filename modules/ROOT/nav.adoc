@@ -18,13 +18,9 @@
 * xref:scaling-components:kafka.adoc[]
 
 .Resource sets
-* xref:resource-sets:index.adoc[]
-* xref:resource-sets:bookies.adoc[]
-* xref:resource-sets:pods.adoc[]
-* xref:resource-sets:proxies.adoc[]
-* xref:resource-sets:racks.adoc[]
+* xref:ROOT:resource-sets.adoc[]
 
-.CRD spec
+.CRD specifications
 * xref:crd-spec:Autorecovery.openapi.adoc[]
 * xref:crd-spec:Bastion.openapi.adoc[]
 * xref:crd-spec:BookKeeper.openapi.adoc[]

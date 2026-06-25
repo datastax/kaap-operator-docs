@@ -3,7 +3,7 @@
 After a new custom resource (CR) type is added to your cluster by installing a custom resource definition (CRD), you can create instances of the resource based on its specification.
 The Kubernetes API can be extended to support the new resource type, automating away the tedious aspects of managing a {pulsar-short} cluster.
 
-* xref:scaling-components:autoscale-bookies.adoc[BookKeeper autoscaler] - Automatically scale the number of bookies based on memory usage.
+* xref:scaling-components:autoscale-bookies.adoc[] - Automatically scale the number of bookies based on memory usage.
 * xref:scaling-components:autoscale-brokers.adoc[Broker autoscaler] - Automatically scale the number of brokers based on CPU load.
-* xref:resource-sets:bookies.adoc[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
+* xref:ROOT:resource-sets.adoc[Rack-aware bookkeeper placement] - Place bookies in different racks to guarantee high availability.
 * xref:scaling-components:kafka.adoc[{kafka-short} API] - Use the {starlight-kafka} API to bring your {kafka-short} message traffic to {pulsar-short}.

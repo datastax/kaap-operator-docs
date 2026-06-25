@@ -144,4 +144,4 @@ release "kaap-stack" uninstalled
 * xref:authentication:auth-jwt.adoc[]
 * xref:authentication:auth-tls.adoc[]
 * xref:scaling-components:autoscale-bookies.adoc[]
-* xref:resource-sets:index.adoc[]
+* xref:ROOT:resource-sets.adoc[]

@@ -19,3 +19,6 @@ asciidoc:
     starlight-kafka: 'Starlight for Kafka'
     kafka-reg: 'Apache Kafka(R)'
     kafka-short: 'Kafka'
+    bookkeeper-reg: 'Apache BookKeeper(TM)'
+    bookkeeper: 'Apache BookKeeper'
+    bookkeeper-short: 'BookKeeper'
