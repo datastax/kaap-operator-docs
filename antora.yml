@@ -22,3 +22,6 @@ asciidoc:
     bookkeeper-reg: 'Apache BookKeeper(TM)'
     bookkeeper: 'Apache BookKeeper'
     bookkeeper-short: 'BookKeeper'
+    zookeeper-reg: 'Apache ZooKeeper(TM)'
+    zookeeper: 'Apache ZooKeeper'
+    zookeeper-short: 'ZooKeeper'

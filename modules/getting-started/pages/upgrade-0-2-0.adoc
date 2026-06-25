@@ -119,7 +119,7 @@ TEST SUITE: None
 The KAAP pod should now be watching the `v1beta1` resources, and you can expect each component to be restarted.
 +
 Run the following command until it returns only one or two matches, depending on your configuration.
-The one match should be the ZooKeeper job, unless the broker has transactions enabled, in which case you'll see two matches.
+The one match should be the `zookeeper` job, unless the broker has transactions enabled, in which case you'll see two matches.
 +
 [source,shell]
 ----
