@@ -164,3 +164,8 @@ was: 7
 now: 6
 │ 17:18:40 INFO  [com.dat.oss.pul.con.AbstractResourceSetsController] (ReconcilerExecutor-pulsar-broker-controller-74) broker-set 'broker' patched
 ----
+
+== See also
+
+* xref:scaling-components:autoscale-bookies.adoc[]
+* xref:scaling-components:kafka.adoc[]

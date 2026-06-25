@@ -13,7 +13,6 @@
 * xref:authentication:auth-tls.adoc[]
 
 .Scaling components
-* xref:scaling-components:index.adoc[]
 * xref:scaling-components:autoscale-bookies.adoc[]
 * xref:scaling-components:autoscale-brokers.adoc[]
 * xref:scaling-components:kafka.adoc[]
