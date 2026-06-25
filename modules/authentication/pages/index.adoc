@@ -1,6 +1,6 @@
 = Authentication
 
-Authentication in {product-short} is controlled with https://jwt.io/[JWT tokens] for cluster access and TLS for communication between applications within the cluster.
+Authentication in {product-short} is controlled with https://jwt.io/[JWT tokens] for cluster access and TLS for communication between applications within the cluster:
 
-* See xref:auth-jwt.adoc[] for JWT authentication.
-* See xref:auth-tls.adoc[] for TLS communication.
+* xref:authentication:auth-jwt.adoc[]
+* xref:authentication:auth-tls.adoc[]
