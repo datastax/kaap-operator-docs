@@ -1,7 +1,7 @@
 = Install {product-short} Helm chart
 
 {product-short} is installed using Helm.
-You can install just the operator and the `PulsarCluster` custom resource definition (CRD), or you can install xref:stack.adoc[{pulsar-stack}], which includes the operator, CRD, and the Prometheus monitoring stack.
+You can install just the operator and the `PulsarCluster` custom resource definition (CRD), or you can install xref:getting-started:stack.adoc[{pulsar-stack}], which includes the operator, CRD, and the Prometheus monitoring stack.
 
 [#operator]
 == Install {product-short}
