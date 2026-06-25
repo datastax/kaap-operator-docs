@@ -85,7 +85,7 @@ kubectl get -n $namespace pulsarclusters.v1beta1.kaap.oss.datastax.com $name
 ----
 +
 .Result
-[source,plain]
+[source,console]
 ----
 NAME     AGE
 pulsar   12m
@@ -93,7 +93,7 @@ pulsar   12m
 
 . Upgrade the Helm chart to version 0.2.0:
 +
-[source,helm]
+[source,shell]
 ----
 helm repo update
 helm pull https://datastax.github.io/kaap
@@ -101,7 +101,7 @@ helm upgrade kaap --version 0.2.0 -n $namespace kaap/kaap-stack -f helm/examples
 ----
 +
 .Result
-[source,plain]
+[source,console]
 ----
 ...Successfully got an update from the "kaap" chart repository
 Update Complete. ⎈Happy Helming!⎈
