@@ -61,7 +61,7 @@ Think of {product-short} as a manager for the individual components of {pulsar-s
 
 A typical {pulsar-short} cluster _requires_ the following components:
 
-* https://pulsar.apache.org/docs/concepts-architecture-overview/#metadata-store[Zookeeper] - This is the {pulsar-short} metadata store. It stores data about a cluster's configuration, helps the proxy direct messages to the correct broker, and holds Bookie configurations.
+* https://pulsar.apache.org/docs/concepts-architecture-overview/#metadata-store[{zookeeper-reg}] - This is the {pulsar-short} metadata store. It stores data about a cluster's configuration, helps the proxy direct messages to the correct broker, and holds Bookie configurations.
 
 * https://pulsar.apache.org/docs/concepts-architecture-overview/#brokers[Broker] - This is the {pulsar-short} message router.
 
