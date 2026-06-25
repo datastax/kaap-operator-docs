@@ -22,7 +22,7 @@ helm install pulsar-operator helm/pulsar-stack \
 
 The operator's thresholds are set in the `values.yaml` file:
 
-[source,shell]
+[source,yaml]
 ----
       broker:
         replicas: 2

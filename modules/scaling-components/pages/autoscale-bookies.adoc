@@ -27,7 +27,7 @@ The scaling behavior is similar to the https://kubernetes.io/docs/tasks/run-appl
 
 The operator's thresholds are set in the `values.yaml` file:
 
-[source,shell]
+[source,yaml]
 ----
     bookkeeper:
       replicas: 2
