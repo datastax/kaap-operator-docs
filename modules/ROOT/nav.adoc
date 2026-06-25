@@ -1,6 +1,5 @@
 .Get started
 * xref:ROOT:index.adoc[]
-* xref:getting-started:index.adoc[]
 * xref:getting-started:operator.adoc[]
 * xref:getting-started:stack.adoc[]
 * xref:getting-started:upgrades.adoc[]

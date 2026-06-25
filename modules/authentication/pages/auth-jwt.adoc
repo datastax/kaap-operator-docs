@@ -1,6 +1,7 @@
 = JWT authentication
 
 To enable https://pulsar.apache.org/docs/2.11.x/security-jwt/[JWT Authentication], set authentication to `true`:
+
 [source,yaml]
 ----
 global:
@@ -13,6 +14,7 @@ If you want to use a different authentication mechanism, disable authentication 
 
 When setting up authentication, the operator will automatically generate the secret containing a private and public key.
 If you wish to use your own key pairs, disable the secret generation by setting `initialize` to false:
+
 [source,yaml]
 ----
 global:
@@ -21,12 +23,16 @@ global:
         token:
             initialize: false
 ----
-[NOTE]
+
+[IMPORTANT]
 ====
 The operator expects secrets with the same name to be already present in the namespace.
 
 Secrets must be named `token-private-key` and `token-public-key`.
+
+Symmetric secret keys are not supported.
 ====
+
 [source,yaml]
 ----
 apiVersion: v1
@@ -48,11 +54,6 @@ type: Opaque
 data:
   my-public.key: <base64 encoded private key>
 ----
-
-[NOTE]
-====
-Symmetric secret keys are not supported.
-====
 
 The operator also generates tokens for super user roles.
 By default, the super users are `superuser`, `admin`, `websocket` and `proxy`.

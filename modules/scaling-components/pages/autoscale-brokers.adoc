@@ -100,7 +100,7 @@ Once you've deployed a {pulsar-short} cluster with broker autoscaling enabled, t
 ====
 If you don't have a bastion pod, you can add it to your cluster in the same `values.yaml` file you used to deploy the operator:
 
-[source,shell]
+[source,yaml]
 ----
 bastion:
   replicas: 1
