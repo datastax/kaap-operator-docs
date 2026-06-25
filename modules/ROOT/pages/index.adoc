@@ -8,6 +8,8 @@ However, with the {product-short}, these complexities are abstracted away, enabl
 
 == Benefits and features
 
+Whether you are a developer looking to leverage the power of {pulsar} in your Kubernetes environment or an operator seeking to streamline the management of {pulsar-short} clusters, the {product-short} provides benefits and features that make it a robust and user-friendly solution:
+
 Easy deployment::
 Deploying an {pulsar} cluster on Kubernetes is simplified through declarative configurations and automation provided by the operator.
 +
@@ -51,11 +53,6 @@ Along with the `PulsarCluster` custom resource definition (CRD), {pulsar-stack} 
 * {pulsar-short} Grafana dashboards
 * Cert Manager
 * Keycloak
-
-Whether you are a developer looking to leverage the power of {pulsar} in your Kubernetes environment or an operator seeking to streamline the management of {pulsar-short} clusters, the {product-short} provides a robust and user-friendly solution.
-
-This guide offers a starting point for {product-short}.
-It covers installation and deployment, configuration points, and further options for managing {pulsar-short} components with the {product-short}.
 
 == {pulsar-short} component architecture
 
