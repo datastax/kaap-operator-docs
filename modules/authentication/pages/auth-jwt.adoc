@@ -36,7 +36,7 @@ Secrets must be named `token-private-key` and `token-public-key`.
 Symmetric secret keys are not supported.
 ====
 
-[source,yaml]
+[source,yaml,subs="+quotes"]
 ----
 apiVersion: v1
 kind: Secret
@@ -44,10 +44,10 @@ metadata:
   name: token-private-key
 type: Opaque
 data:
-  my-private.key: <base64 encoded private key>
+  my-private.key: **BASE64_ENCODED_PRIVATE_KEY**
 ----
 
-[source,yaml]
+[source,yaml,subs="+quotes"]
 ----
 apiVersion: v1
 kind: Secret
@@ -55,7 +55,7 @@ metadata:
   name: token-public-key
 type: Opaque
 data:
-  my-public.key: <base64 encoded private key>
+  my-public.key: **BASE64_ENCODED_PUBLIC_KEY**
 ----
 
 The operator also generates tokens for super user roles.

@@ -15,11 +15,11 @@ You can then examine the report and decide if you want to proceed with the clust
 
 . Create an input file called `input-cluster-specs.yaml` with the following content:
 +
-[source,yaml]
+[source,yaml,subs="+quotes"]
 ----
-context: <context-name>
-namespace: <namespace>
-clusterName: <cluster-name>
+context: **CONTEXT_NAME**
+namespace: **NAMESPACE**
+clusterName: **CLUSTER_NAME**
 ----
 
 .. To retrieve the `context`:
@@ -45,7 +45,7 @@ For example, if the broker pod is `pulsar-prod-cluster-broker-0`, then the `clus
 
 . After you've added the retrieved values to `input-cluster-specs.yaml`, generate the report:
 +
-[source,java]
+[source,shell]
 ----
 java -jar migration-tool.jar generate -i input-cluster-specs.yaml -o output
 ----
@@ -56,9 +56,9 @@ If everything looks good, proceed to the <<migration-procedure,migration procedu
 +
 If you need to change the generated CRD and simulate the migration again, run the following command after making the necessary changes:
 +
-[source,java]
+[source,shell,subs="+quotes"]
 ----
-java -jar migration-tool.jar diff -d output/<context-name>
+java -jar migration-tool.jar diff -d output/**CONTEXT_NAME**
 ----
 
 [#migration-procedure]
@@ -68,21 +68,21 @@ java -jar migration-tool.jar diff -d output/<context-name>
 
 . In the `pulsar-operator.cluster` section, enter the generated CRD spec.
 +
-[source,yaml]
+[source,yaml,subs="+quotes"]
 ----
 pulsar-operator:
     cluster:
         create: true
-        name: <cluster-name>
+        name: **CLUSTER_NAME**
         spec:
-            <generated spec from the CRD>
+            **GENERATED_SPEC_FROM_CRD**
 ----
 
 . Install the operator release with the new `values.yaml` file:
 +
-[source,shell]
+[source,shell,subs="+quotes"]
 ----
-helm install pulsar kaap/kaap-stack --values <values.yaml>
+helm install pulsar kaap/kaap-stack --values **PATH/TO/VALUES.YAML**
 ----
 
 . Wait for the `PulsarCluster` status to be in a Ready state, which indicates that the operator has assumed control of the cluster.
@@ -97,9 +97,9 @@ This is done in a safe manner using the operator's staged upgrades feature.
 
 . Delete the existing chart release:
 +
-[source,shell]
+[source,shell,subs="+quotes"]
 ----
-kubectl delete secret -l name=<old-release-name>,owner=helm
+kubectl delete secret -l name=**EXISTING_RELEASE_NAME**,owner=helm
 ----
 
 . Clean up Helm annotations and labels:

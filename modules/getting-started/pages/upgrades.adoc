@@ -58,7 +58,7 @@ TEST SUITE: None
 
 If you want to add more brokers to handle requests, edit `helm/examples/bookie-autoscaling/values.yaml` to change the `broker.replicas` and `broker.config.managedLedgerDefault*` properties from `1` to `3`:
 
-[source,shell]
+[source,yaml]
 ----
 broker:
       replicas: 3
