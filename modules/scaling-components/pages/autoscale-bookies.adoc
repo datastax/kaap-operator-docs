@@ -100,7 +100,7 @@ Once you've deployed a {pulsar-short} cluster with bookie autoscaling enabled, t
 ====
 If you don't have a bastion pod, you can add it to your cluster in the same `values.yaml` file you used to deploy the operator:
 
-[source,shell]
+[source,yaml]
 ----
 bastion:
   replicas: 1
@@ -154,7 +154,7 @@ Notice that the operator scales down the bookies one by one, as specified in the
 .Result
 [source,console]
 ----
-│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed │
+│ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed) │
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Some writable bookies can be released, removing 1                                     │
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) Bookies scaled up/down from 10 to 9                                                   │
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Start decommissioning bookies: pulsar-bookkeeper-9.puls │

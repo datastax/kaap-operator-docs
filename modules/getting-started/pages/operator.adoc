@@ -1,10 +1,20 @@
 = Install {product-short} Helm chart
+:page-aliases: getting-started:index.adoc
 
-{product-short} is installed using Helm.
-You can install just the operator and the `PulsarCluster` custom resource definition (CRD), or you can install xref:getting-started:stack.adoc[{pulsar-stack}], which includes the operator, CRD, and the Prometheus monitoring stack.
+The {product-short} Helm chart installs only the operator pod and the `PulsarCluster` custom resource definition (CRD).
+
+Alternatively, you can xref:getting-started:stack.adoc[install {pulsar-stack}], which includes the operator, CRD, and a full Prometheus monitoring stack.
+
+[TIP]
+====
+If you have an existing {pulsar-short} cluster, you can scan and generate an equivalent `PulsarCluster` CRD.
+For more information, see xref:migration:migrate-cluster.adoc[].
+====
 
 [#operator]
 == Install {product-short}
+
+Use Helm to install {product-short}:
 
 . Install the {company} Helm repository:
 +
