@@ -1,7 +1,7 @@
 = Scale the {pulsar-short} Broker with a {kafka-short} client workload
 :navtitle: {kafka-short}
 
-This guide demonstrates how to configure and run an {kafka-reg} workload on an {pulsar-reg} cluster with the Broker Auto Scaling feature.
+This guide demonstrates how to configure and run an {kafka-reg} workload on an {pulsar-reg} cluster with the xref:scaling-components:autoscale-brokers.adoc[Broker Auto Scaling] feature.
 
 Support for the {kafka-short} wire protocol is provided by xref:starlight-for-kafka:ROOT:index.adoc[{starlight-kafka}].
 

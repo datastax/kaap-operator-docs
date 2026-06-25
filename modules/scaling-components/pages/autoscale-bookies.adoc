@@ -1,5 +1,6 @@
 = {bookkeeper-reg} autoscaler
 :navtitle: {bookkeeper-short} autoscaler
+:page-aliases: scaling-components:index.adoc
 
 In a {pulsar-short} cluster managed by KAAP, {bookkeeper-short} nodes are scaled up in response to running low on storage.
 Due to the segment-based design of {bookkeeper-short}, the new storage is available immediately for use by the cluster, with no log stream rebalancing required.
@@ -165,3 +166,8 @@ Notice that the operator scales down the bookies one by one, as specified in the
 │ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.BookieDecommissionUtil] (ReconcilerExecutor-pulsar-bk-controller-74) Attempting decommission of bookie pulsar-bookkeeper-9 w │
 │ 15:32:22 INFO  [com.dat.oss.pul.aut.boo.PodExecBookieAdminClient] (ReconcilerExecutor-pulsar-bk-controller-74) Starting bookie recovery for bookie pulsar-bookkeeper │
 ----
+
+== See also
+
+* xref:scaling-components:autoscale-brokers.adoc[]
+* xref:ROOT:resource-sets.adoc[Rack-aware bookkeeper placement]
