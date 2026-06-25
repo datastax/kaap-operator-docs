@@ -10,9 +10,7 @@ When the operator sees that the CPU usage of all brokers is low, it will scale d
 CPU usage is tightly coupled to traffic, so you can expect to see significant scaling activity with broker autoscaler enabled.
 This value can be controlled with the `stabilizationWindowMs` parameter, which tells the operator how long to wait between scaling events.
 
-== Install Operator with broker autoscaler enabled
-
-Use this command to install the operator with broker autoscaling enabled:
+== Install {product-short} with broker autoscaler enabled
 
 [source,shell]
 ----
@@ -20,7 +18,9 @@ helm install pulsar-operator helm/pulsar-stack \
   --values helm/examples/broker-autoscaling/values.yaml
 ----
 
-The operator's thresholds are set in the values.yaml file:
+== Broker autoscaler configuration
+
+The operator's thresholds are set in the `values.yaml` file:
 
 [source,shell]
 ----

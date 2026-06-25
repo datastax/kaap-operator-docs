@@ -1,6 +1,6 @@
 = Migrate existing cluster to {product-short}
 
-Migrating an existing {pulsar-reg} cluster to one controlled by the {product-short} is a manual process, but we've included a migration tool to help you along the way.
+Migrating an existing {pulsar-reg} cluster to one controlled by the {product-short} is a manual process, but {product-short} has a built-in migration tool to support this process.
 
 The migration tool is a CLI application that connects to an existing {pulsar} cluster and generates a valid and equivalent `PulsarCluster` custom resource definition (CRD).
 The migration tool simulates what would happen if the generated `PulsarCluster` would be submitted, retrieves the Kubernetes resources that would be created, and compares them with the existing cluster's resources, generating a detailed HTML report.

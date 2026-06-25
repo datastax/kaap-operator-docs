@@ -6,7 +6,7 @@ Due to the segment-based design of {bookkeeper-short}, the new storage is availa
 
 When KAAP sees low storage usage on a {bookkeeper-short} node, the node is automatically scaled down (decommissioned) to free up volume usage and reduce storage costs. This scale-down is done in a safe, controlled manner which ensures no data loss and guarantees the configured replication factor for all messages. For example, if your replication factor is 3 (write and ack quorum of 3), 3 replicas are maintained at all times during the scale down to ensure data can be recovered, even if there is a failure during the scale-down phase. Scaling down {bookkeeper-short} nodes has been a consistent pain point in {pulsar-short}, and KAAP automates this without sacrificing the {pulsar-short} data guarantees.
 
-== Install Operator with {bookkeeper-short} autoscaler enabled
+== Install {product-short} with {bookkeeper-short} autoscaler enabled
 
 [source,shell]
 ----
