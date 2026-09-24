@@ -129,7 +129,6 @@ kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 bin/pulsar-perf produce topic
 ----
 +
-.Result
 [source,console]
 ----
 2023-05-19T14:39:34,726+0000 [pulsar-perf-producer-exec-1-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Created 1 producers
@@ -139,7 +138,6 @@ bin/pulsar-perf produce topic
 +
 The operator notices the differing values and patches the bookkeeper-set to keep up with the increased memory usage of the bookkeeper pods.
 +
-.Result
 [source,console]
 ----
 | 14:41:07 INFO  [com.dat.oss.pul.crd.SpecDiffer] (ReconcilerExecutor-pulsar-bk-controller-69) 'bookkeeper.replicas' value differs:
@@ -155,7 +153,6 @@ The operator notices the differing values and patches the bookkeeper-set to keep
 The operator will notice the decreased load and scale down the number of bookies.
 Notice that the operator scales down the bookies one by one, as specified in the `scaleDownBy` parameter, and properly decommissions them:
 +
-.Result
 [source,console]
 ----
 │ 15:32:19 INFO  [com.dat.oss.pul.aut.BookKeeperSetAutoscaler] (pool-9-thread-1) isDiskUsageAboveTolerance: false for pulsar-bookkeeper-8 (BookieAdminClient.BookieLed) │

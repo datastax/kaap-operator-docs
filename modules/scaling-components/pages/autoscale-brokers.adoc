@@ -1,7 +1,7 @@
 = Broker autoscaler
 
 The operator scales the number of broker pods in a cluster up and down based on current CPU usage.
-The CPU usage of each broker is checked at the {pulsar-short} load balancer, not just at the Kubenetes pod level.
+The CPU usage of each broker is checked at the {pulsar-short} load balancer, not just at the Kubernetes pod level.
 This means that the operator can scale brokers based on the CPU usage of all brokers in the cluster, not just the CPU usage of a single broker pod.
 
 When the operator sees that the {pulsar-short} load balancer is having trouble finding brokers to assign topic bundles to, it will scale up the number of brokers to handle the load.
@@ -125,7 +125,6 @@ kubectl exec --stdin --tty <pulsar-bastion-74777cbbf9-blb4t> -- /bin/bash
 bin/pulsar-perf produce topic
 ----
 +
-.Result
 [source,console]
 ----
 2023-05-19T14:39:34,726+0000 [pulsar-perf-producer-exec-1-1] INFO  org.apache.pulsar.testclient.PerformanceProducer - Created 1 producers
@@ -135,7 +134,6 @@ bin/pulsar-perf produce topic
 +
 The operator notices the differing values and patches the broker-set to keep up with the increased CPU usage of the broker pods:
 +
-.Result
 [source,console]
 ----
 17:06:09 INFO  [com.dat.oss.pul.aut.bro.LoadReportResourceUsageSource] (pool-9-thread-1) Broker pulsar-broker-0 cpu usage: 7.000000 %
@@ -154,7 +152,6 @@ You might need to reduce these values in `values.yaml` to trigger broker scaling
 The operator will notice the decreased load and scale down the number of brokers.
 Notice that the operator scales down the brokers one by one, as specified in the `scaleDownBy` parameter, and properly decommissions them:
 +
-.Result
 [source,console]
 ----
 17:18:39 INFO  [com.dat.oss.pul.aut.bro.LoadReportResourceUsageSource] (pool-9-thread-1) Broker pulsar-broker-6 cpu usage: 2.000000 %
