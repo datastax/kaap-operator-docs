@@ -13,9 +13,7 @@ One full cluster upgrade is required to complete the migration, and it's done au
 
 Use these steps to upgrade to KAAP v0.2.0:
 
-. Apply the new CRD versions.
-+
-This process will update the CRDs by adding a new version `v1beta1`.
+. Apply the new CRD versions:
 +
 [source,shell]
 ----
@@ -29,7 +27,8 @@ kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2
 kubectl apply -f https://github.com/datastax/kaap/releases/download/operator-0.2.0/pulsarclusters.kaap.oss.datastax.com-v1-migration.yml --server-side --force-conflicts
 ----
 +
-.Result
+This process updates the CRDs by adding a new version `v1beta1`:
++
 [source,console]
 ----
 customresourcedefinition.apiextensions.k8s.io/autorecoveries.kaap.oss.datastax.com serverside-applied
@@ -64,7 +63,8 @@ kubectl get -n $namespace zookeepers $name-zookeeper -o yaml | sed 's/apiVersion
 kubectl get -n $namespace pulsarclusters $name -o yaml | sed 's/apiVersion: kaap.oss.datastax.com\/v1alpha1/apiVersion: kaap.oss.datastax.com\/v1beta1/' | kubectl apply -f -
 ----
 +
-.Result
+The output indicates that each resource is configured with the new `v1beta1` API version:
++
 [source,console]
 ----
 autorecovery.kaap.oss.datastax.com/pulsar-autorecovery configured
@@ -84,7 +84,6 @@ pulsarcluster.kaap.oss.datastax.com/pulsar configured
 kubectl get -n $namespace pulsarclusters.v1beta1.kaap.oss.datastax.com $name
 ----
 +
-.Result
 [source,console]
 ----
 NAME     AGE
@@ -100,7 +99,6 @@ helm pull https://datastax.github.io/kaap
 helm upgrade kaap --version 0.2.0 -n $namespace kaap/kaap-stack -f helm/examples/dev-cluster/values.yaml
 ----
 +
-.Result
 [source,console]
 ----
 ...Successfully got an update from the "kaap" chart repository

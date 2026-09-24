@@ -50,7 +50,6 @@ For this example, assume you installed the operator and a {pulsar-short} cluster
 helm install pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
 ----
 
-.Result
 [source,console]
 ----
 NAME: pulsar
@@ -84,7 +83,6 @@ Then, upgrade the cluster with the new `values.yaml` file:
 helm upgrade pulsar helm/pulsar-operator -f helm/examples/bookie-autoscaling/values.yaml
 ----
 
-.Result
 [source,console]
 ----
 Release "pulsar" has been upgraded. Happy Helming!
@@ -104,7 +102,6 @@ In this case, the operator adds two more broker pods, and touches nothing else.
 kubectl get pods -A
 ----
 
-.Result
 [source,console]
 ----
 pulsar-cluster   pulsar-autorecovery-57cfc8b84d-xvchb                       1/1     Running     0          150m
@@ -130,7 +127,6 @@ To upgrade the CRDs, run the following command:
 kubectl replace -f helm/pulsar-operator/crds
 ----
 
-.Result
 [source,console]
 ----
 customresourcedefinition.apiextensions.k8s.io/autorecoveries.pulsar.oss.datastax.com replaced
