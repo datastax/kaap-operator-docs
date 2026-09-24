@@ -35,7 +35,6 @@ global:
         secretName: fnw-tls
 ----
 
-
 Each component has its own secret name.
 The secret name is auto-provisioned by the operator using `cert-manager`. You can share the same certificate across multiple components, although it's not a recommended practice for security reasons.
 

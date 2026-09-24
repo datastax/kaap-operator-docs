@@ -30,7 +30,6 @@ clusterName: **CLUSTER_NAME**
 kubectl config get-contexts
 ----
 +
-.Result
 [source,console]
 ----
 CURRENT   NAME                                         CLUSTER                                      AUTHINFO                                     NAMESPACE
