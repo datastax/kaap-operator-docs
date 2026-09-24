@@ -31,7 +31,6 @@ helm repo update
 helm install pulsar kaap/kaap-stack --values helm/examples/dev-cluster/values.yaml
 ----
 +
-.Result
 [source,console]
 ----
 NAME: kaap-stack
@@ -49,7 +48,6 @@ TEST SUITE: None
 kubectl get deployment
 ----
 +
-.Result
 [source,console]
 ----
 NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE
@@ -69,7 +67,6 @@ pulsar-proxy                          1/1     1            1           3m19s
 kubectl describe deployment kaap-stack
 ----
 +
-.Result
 [source,console]
 ----
 Name:                   kaap-stack
@@ -133,7 +130,6 @@ Uninstall the {pulsar-stack} and the cluster:
 helm uninstall kaap-stack
 ----
 
-.Result
 [source,console]
 ----
 release "kaap-stack" uninstalled
