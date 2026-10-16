@@ -11,7 +11,7 @@ If you have an existing {pulsar-short} cluster, you can scan and generate an equ
 For more information, see xref:migration:migrate-cluster.adoc[].
 ====
 
-[#operator]
+[#install-operator]
 == Install {product-short}
 
 Use Helm to install {product-short}:
