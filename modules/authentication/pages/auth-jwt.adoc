@@ -1,5 +1,4 @@
 = JWT authentication
-:page-aliases: authentication:index.adoc
 
 Authentication in {product-short} is controlled with https://jwt.io/[JWT tokens] for cluster access, and with xref:authentication:auth-tls.adoc[TLS] for communication between applications within the cluster.
 

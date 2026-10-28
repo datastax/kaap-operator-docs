@@ -1,5 +1,4 @@
 = Install {product-short} Helm chart
-:page-aliases: getting-started:index.adoc
 
 The {product-short} Helm chart installs only the operator pod and the `PulsarCluster` custom resource definition (CRD).
 
