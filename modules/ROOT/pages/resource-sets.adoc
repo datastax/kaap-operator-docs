@@ -1,5 +1,4 @@
 = Resource sets
-:page-aliases: resource-sets:index.adoc, resource-sets:bookies.adoc, resource-sets:pods.adoc, resource-sets:proxies.adoc, resource-sets:racks.adoc
 
 The operator allows you to create multiple sets of {pulsar-short} proxies, brokers, and bookies, called resource sets.
 Each set is a dedicated deployment/statefulset with its own service and configmap.
