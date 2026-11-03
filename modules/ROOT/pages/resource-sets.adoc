@@ -30,9 +30,9 @@ The auto-configuration of rack-awareness is enabled by default, and is configure
 [source,yaml]
 ----
 bookkeeper:
-	autoRackConfig:
-		enabled: true
-		periodMs: 60000
+  autoRackConfig:
+    enabled: true 
+    periodMs: 60000 
 ----
 
 [TIP]
@@ -151,8 +151,8 @@ To place all pods in the same zone:
 global:
   racks:
     rack1:
-	    zone:
-	      enabled: true
+      zone:
+        enabled: true 
 ----
 
 With `enableHostAntiAffinity=true`, unless you're placing pods in different availability zones, a different node will be chosen for each pod. These requirements can be disabled (`enableHostAntiAffinity=false`), enforced (`requireRackHostAntiAffinity: true`) or done in best-effort (`requireRackHostAntiAffinity: false`)
